@@ -118,12 +118,12 @@ export default function About() {
     />
     <h3 className="text-lg font-semibold">Dr. Asa Siegel</h3>
     <p className="text-slate-500 dark:text-slate-400">CEO &amp; Co-Founder</p>
-    <a
+    {/* <a
       href="https://www.linkedin.com/in/asa-siegel/"
       className="inline-flex mt-3 text-indigo-600 dark:text-indigo-400 hover:underline"
     >
       <Linkedin size={20} />
-    </a>
+    </a> */}
   </div>
 
   {/* CTO */}
@@ -135,12 +135,12 @@ export default function About() {
     />
     <h3 className="text-lg font-semibold">Ethan Nakamura</h3>
     <p className="text-slate-500 dark:text-slate-400">CTO</p>
-    <a
+    {/* <a
       href="https://www.linkedin.com/in/hkshambesh/"
       className="inline-flex mt-3 text-indigo-600 dark:text-indigo-400 hover:underline"
     >
       <Linkedin size={20} />
-    </a>
+    </a> */}
   </div>
 
   {/* Head of AI Research */}
@@ -152,12 +152,12 @@ export default function About() {
     />
     <h3 className="text-lg font-semibold">Sofia Martinez</h3>
     <p className="text-slate-500 dark:text-slate-400">Head of AI Research</p>
-    <a
+    {/* <a
       href="https://www.linkedin.com/in/louizefischer/"
       className="inline-flex mt-3 text-indigo-600 dark:text-indigo-400 hover:underline"
     >
       <Linkedin size={20} />
-    </a>
+    </a> */}
   </div>
 </div>
       </section>
