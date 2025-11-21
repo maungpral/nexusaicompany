@@ -1,0 +1,1714 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!-- Mirrored from blaize.tech/blog/how-to-develop-blockchain-based-lending-platform/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+      <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVDP48D');
+    </script>
+    <script>(function (w, d, u) { w.readyQ = []; w.bindReadyQ = []; function p(x, y) { if (x == "ready") { w.bindReadyQ.push(y); } else { w.readyQ.push(x); } } var a = { ready: p, bind: p }; w.$ = w.jQuery = function (f) { if (f === d || f === u) { return a } else { p(f) } } })(window, document)</script>
+
+  <meta name="google-site-verification" content="ZrAKmMj6IFKukIukR3WwBfWnGUtWgF5nVGfGXBFKBU0" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="preload" href="../../wp-content/themes/blaize-tech/mont-fonts.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css"
+    href="../../wp-content/themes/blaize-tech/assets/new-stylesc04c.css?v=1735038221">
+  
+  
+  
+  
+  
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Build a Peer-to-peer Lending Blockchain Platform</title>
+	<meta name="description" content="Learn how to build a peer-to-peer lending blockchain platform with our comprehensive guide. Discover the benefits of using blockchain for P2P lending and how to create your own platform." />
+	<link rel="canonical" href="../../article-type/how-to-develop-blockchain-based-lending-platform/index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to Build a Peer-to-peer Lending Blockchain Platform" />
+	<meta property="og:description" content="Learn how to build a peer-to-peer lending blockchain platform with our comprehensive guide. Discover the benefits of using blockchain for P2P lending and how to create your own platform." />
+	<meta property="og:url" content="../../article-type/how-to-develop-blockchain-based-lending-platform/index.html" />
+	<meta property="og:site_name" content="Blaize" />
+	<meta property="article:published_time" content="2021-01-19T13:02:08+00:00" />
+	<meta property="article:modified_time" content="2024-10-29T11:10:06+00:00" />
+	<meta property="og:image" content="../../wp-content/uploads/2021/01/lending-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Dmytro Kovalchuk" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Dmytro Kovalchuk" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="12 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-to-develop-blockchain-based-lending-platform/","url":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/","name":"How to Build a Peer-to-peer Lending Blockchain Platform","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/#primaryimage"},"image":{"@id":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2021/01/lending-image.png","datePublished":"2021-01-19T13:02:08+00:00","dateModified":"2024-10-29T11:10:06+00:00","author":{"@id":"https://blaize.tech/#/schema/person/d1ccf26e4f3d2fe940bf1f087d1a8f9b"},"description":"Learn how to build a peer-to-peer lending blockchain platform with our comprehensive guide. Discover the benefits of using blockchain for P2P lending and how to create your own platform.","breadcrumb":{"@id":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2021/01/lending-image.png","contentUrl":"https://blaize.tech/wp-content/uploads/2021/01/lending-image.png","width":1200,"height":630,"caption":"add blockchain to your current p2p lending solution"},{"@type":"BreadcrumbList","@id":"https://blaize.tech/article-type/how-to-develop-blockchain-based-lending-platform/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"How to Develop a P2P Lending Blockchain Platform"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/d1ccf26e4f3d2fe940bf1f087d1a8f9b","name":"Dmytro Kovalchuk","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://blaize.tech/wp-content/uploads/2020/04/dima.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/04/dima.png","caption":"Dmytro Kovalchuk"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blaize.tech\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='mpp_gutenberg-css' href='../../wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='../../wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-core-css' href='../../wp-content/themes/blaize-tech/assets/css/build-core.css' type='text/css' media='' />
+<link rel='stylesheet' id='other-css' href='../../wp-content/themes/blaize-tech/assets/css/other.css' type='text/css' media='' />
+<script type="text/javascript" src="../../wp-content/themes/blaize-tech/js/jquery-3.4.1.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/js/jquery-migrate-3.1.0.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/intlTelInput.min.js" id="nb-intlTelInput-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/custom_script.js" id="nb-intlTelInput-custom-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.liMarquee.js" id="liMarquee-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.inputmask.bundle.js" id="inputmask-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/fm.revealator.jquery.js" id="revealator-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/main.js" id="main-js-js"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/3729.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.html?rsd" />
+
+<link rel='shortlink' href='../../indexf81a.html?p=3729' />
+<link rel="amphtml" href="amp/index.html"><link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/01/Group-1.png" />
+<meta name="msapplication-TileImage" content="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+      <link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min6619.css?ver=5.2.5'
+      type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'
+      href='../../wp-includes/css/dist/block-library/theme.min6619.css?ver=5.2.5' type='text/css' media='all' />
+    
+  <style>
+    .blog_ajax .searchandfilter ul li.sf-field-tag ul li label {
+      padding: 5px 7px 3px 7px !important;
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/jquery.mask.min.js"></script>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/utils.js" defer></script>
+
+  </head>
+
+<body class="post-template-default single single-post postid-3729 single-format-standard wp-embed-responsive singular image-filters-enabled ">
+      <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDP48D" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  
+  
+  <header id="header"
+    class="sticky no-scroll">
+
+
+    <div
+      class="guides__block logo-header  fs-menu-header">
+      <div class="desktop-logo">
+                  <a href="../../index.html" class="logo logo-small">
+            <img src="../../wp-content/themes/blaize-tech/assets/img/blaize_logo.svg" alt="Blaize" loading="lazy">
+          </a>
+              </div>
+
+      <div class="mobile-logo">
+        <a href="../../index.html"
+          class="logo logo-blog" aria-label="Logo">
+          <svg x="0px" y="0px" viewBox="0 0 202.4 162.6" xml:space="preserve">
+            <g transform="matrix(1.3333333,0,0,-1.3333333,0,1122.52)">
+              <g transform="translate(332.3824,384.1128)">
+                <path d="M-241.5,360l-10.4-7.6l-61.2,0v39.6h61.2l10.4-7.5l4-12.3L-241.5,360z M-313.2,440.9l56.5,0l8.4-6.1
+                        l3.2-9.9l-3.2-9.9l-8.4-6.1h-56.5V440.9z M-227.5,394.8l-10,7.3l3.6,2.6l6.6,20.3l-6.6,20.3l-17.3,12.5l-81.2,0V335.9h85.8
+                        l19.1,13.9l7.3,22.5L-227.5,394.8z" />
+              </g>
+              <g transform="translate(379.6422,359.9819)">
+                <path d="M-241.5,360l-13.7,13.7l13.7,13.7l13.7-13.7L-241.5,360z" />
+              </g>
+            </g>
+          </svg>
+                      <div class="blog-title">log</div>        </a>
+      </div>
+
+      
+
+      <div class="btn-menu">
+        <a href="../../index.html#contacts" class="contacts-link">Contact us</a>
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fs-menu">
+
+
+      <div class="guides__block">
+        <ul class="guides__block-list"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>        <div class="modeling_element"></div>
+        <div class="blockchain_element"></div>
+        <div class="mobile_element"></div>
+        <div class="front_end_element"></div>
+      </div>
+      <div class="content-menu">
+        <nav class="cd-dropdown dropdown-is-active">
+          <ul class="cd-dropdown-content"><li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2340"><a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2341" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2341"><a href="#back">Back</a></li>
+	<li id="menu-item-75842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75842"><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+	<li id="menu-item-75843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75843"><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+	<li id="menu-item-75844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75844"><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+	<li id="menu-item-75845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75845"><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+	<li id="menu-item-75846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75846"><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+	<li id="menu-item-75847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75847"><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+	<li id="menu-item-75848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75848"><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-2332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2332"><a href="#" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-2333" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2333"><a href="#back">Back</a></li>
+	<li id="menu-item-75849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75849"><a href="../../decentralized-application/index.html">dApp Development</a></li>
+	<li id="menu-item-75850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75850"><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+	<li id="menu-item-75851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75851"><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+	<li id="menu-item-75852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75852"><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+	<li id="menu-item-75853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75853"><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+	<li id="menu-item-75854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75854"><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+	<li id="menu-item-75855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75855"><a href="../../token-development-services/index.html">Token Development Services</a></li>
+	<li id="menu-item-75856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75856"><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+	<li id="menu-item-75857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75857"><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+	<li id="menu-item-75858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75858"><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+	<li id="menu-item-75859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75859"><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+</li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="../../clients/index.html">Cases</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2347"><a href="../index.html">Blog</a></li>
+<li id="menu-item-67576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67576"><a href="../../whitepaper/index.html">Whitepaper</a></li>
+</ul>        </nav>
+      </div>
+
+      <div class="foot-menu">
+        <div class="content">
+          <div class="mainBlock_social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/blaize.tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/facebook-main.svg" alt="fb" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/blaizetech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/linkedin-main.svg" alt="LinkedIn" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/blaize_tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/twitter-main.svg" alt="Twitter" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="location">
+            <a href="../../cdn-cgi/l/email-protection.html#02226b6c646d42606e636b78672c7667616a"><span class="__cf_email__" data-cfemail="f990979f96b99b959890839cd78d9c9a91">[email&#160;protected]</span></a>
+            <a href="tel:+351966034344">+351 966 034 344</a>
+          </div>
+          <div class="location">
+            <p>Kyiv, Ukraine </p>
+            <p>26 Metalistiv St</p>
+          </div>
+          <div class="location">
+            <p>Dnipro, Ukraine 20 </p>
+            <p>Sichovykh Striltsiv St</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    
+            <main class="blog single-post">
+    <section class="pageHeader blogPage">
+        <div class="wrapper">
+            <div class="guides__block">
+                <div class="single-post-item">
+
+                    <div class="content">
+                        <div class="post-content">
+                            <div class="breadcrumb">
+                                <div>
+                                    <!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blaize." href="../../index.html" class="home" ><span property="name">Blaize</span></a><meta property="position" content="1"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="../index.html" class="post-root post post-post" ><span property="name">Blog</span></a><meta property="position" content="2"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">How to Develop a P2P Lending Blockchain Platform</span><meta property="url" content="index.html"><meta property="position" content="3"></span>                                </div>
+                            </div>
+
+                                                            
+                                    <div class="head redimg">
+                                        <h1 class="title">
+                                            How to Develop a P2P Lending Blockchain Platform                                        </h1>
+                                        <div class="foot">
+                                            <div class="author">
+                                                <div class="photo">
+                                                    <img width="120" height="120" src="../../wp-content/uploads/2020/04/dima.png" class="avatar avatar-120 photo wt-author-img" alt="Dmytro.K" decoding="async" />                                                </div>
+                                                <div class="details">
+                                                    <a href="../author/dmytro-k/index.html">
+                                                        <h4>
+                                                            Dmytro.K                                                        </h4>
+                                                    </a>
+                                                    <div class="date">19.01.2021</div>
+                                                </div>
+                                            </div>
+                                            <div class="share"><link rel='stylesheet' id='scriptlesssocialsharing-css' href='../../wp-content/plugins/scriptless-social-sharing/includes/css/scriptlesssocialsharing-style.css' type='text/css' media='all' />
+<style id='scriptlesssocialsharing-inline-css' type='text/css'>
+.scriptlesssocialsharing__buttons a.button { padding: 12px; flex: 1; }
+</style>
+<div class="scriptlesssocialsharing"><h3 class="scriptlesssocialsharing__heading">Share:</h3><div class="scriptlesssocialsharing__buttons"><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-to-develop-blockchain-based-lending-platform%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on Facebook</span></a><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=How%20to%20Develop%20a%20P2P%20Lending%20Blockchain%20Platform&amp;url=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-to-develop-blockchain-based-lending-platform%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on X (Twitter)</span></a></div></div></div>
+                                        </div>
+                                    </div>
+                                                            
+                            <div class="text">
+                                                                
+<p>A lending platform is a marketplace that allows for lending and borrowing money directly from individuals or from a pool. Thus, it helps to omit traditional financial institutions like banks or any other third party intermediaries. The system has proven its usefulness for both fiat and cryptocurrency markets.&nbsp;</p>
+
+
+
+<p>Crypto lending platforms started to attract more and more liquidity with the boost of DeFi. Therefore, we want to share our experience on how to create a P2P lending blockchain platform from scratch or add blockchain to your current p2p lending solution.&nbsp;</p>
+
+
+
+<p>Follow this navigation to find the right answers:&nbsp;</p>
+
+
+
+<ul>
+<li><a href="#HOW-TO-ADD-BLOCKCHAIN-TO-YOUR-CURRENT-P2P-LENDING-SOLUTION">build p2p lending with blockchain-based solution</a></li>
+
+
+
+<li><a href="#HOW-TO-CREATE-A-DEFI-LENDING-PROTOCOL-">build DeFi crypto lending platform</a></li>
+</ul>
+
+
+
+<p>We will also tell the difference between p2p and pool-based lending and describe the advantages and disadvantages of both.&nbsp;</p>
+
+
+
+<p>By the way, our team is ready to help you in many areas of blockchain development. We specialize in <strong><a href="../../gamefi-development-company/index.html">GameFi development</a></strong>, NFT, DeFi and other blockchain protocols. So if you need help, please contact us.</p>
+
+
+
+<h2 class="wp-block-heading">How Blockchain Could Improve P2P lending platform&nbsp;</h2>
+
+
+
+<p>A peer-to-peer (P2P) lending is a commonly known practice of getting financing from the individuals directly through the digital services. The platform connects lenders with borrowers through the application interface and allows for a number of advantages for both sides of the deal.&nbsp;</p>
+
+
+
+<p>With the help of blockchain technology, peer-to-peer lending using blockchain can be implemented, which adds a higher level of transparency and security to the lending process.</p>
+
+
+
+<p>First of all, it offers better interest rates for lenders and more flexible time frames along with lower return rates for borrowers. However, despite the numerous pros and privileges the system offers, the p2p loans are often called unsecured loans due to the lack of collateral, enough level of transparency and tracking.&nbsp;</p>
+
+
+
+<p><strong><em>This is where blockchain can help.</em></strong></p>
+
+
+
+<p>The introduction of blockchain to the current p2p lending solution may turn to the list of benefits.&nbsp;<strong><em>Blockchain peer to peer lending help to resolve the following issues:&nbsp;</em></strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="750" height="150" src="../../wp-content/uploads/2022/06/creating-Blockchain-P2P-lending-platform.png" alt="creating Blockchain P2P lending platform" class="wp-image-7522"/></figure></div>
+
+
+<h5 class="wp-block-heading"><span style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-red-color">Automation </span></h5>
+
+
+
+<p>Since a majority of p2p lending services are centralized, the application management along with the whole loan transfer process is held by the platform. In blockchain p2p lending, the main job will be held by a smart contract that avoids a middleman involvement and leads to a higher level of program automation.&nbsp;</p>
+
+
+
+<h5 class="wp-block-heading"><span style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-red-color">Immutability </span></h5>
+
+
+
+<p>Blockchain technology ensures versatility and immutability of data. The main advantage of this feature is that once the information is provided to the system it cannot be changed or deleted. This can significantly increase the level of security for peer-to-peer lending users.&nbsp;</p>
+
+
+
+<h5 class="wp-block-heading"><span style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-red-color">Transparency </span></h5>
+
+
+
+<p>The distributed ledger technology used in the sense of data storing is able to create transparency and decentralization within a trustless environment. Thus, adding blockchain technology to your current p2p lending service may lead to easier data tracking and the highest level of transparency.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading" id="HOW-TO-ADD-BLOCKCHAIN-TO-YOUR-CURRENT-P2P-LENDING-SOLUTION">How to add blockchain to your current p2p lending solution</h2>
+
+
+
+<p>In this part we would like to tell you how to secure a lending platform with the <a href="../../blockchain-integration/index.html">integration of blockchain</a> based solutions. Those are several fundamental steps for creating a Blockchain P2P lending platform:&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img loading="lazy" decoding="async" width="1170" height="772" src="../../wp-content/uploads/2022/06/P2P-lending-platform.png" alt="" class="wp-image-7524"/><figcaption class="wp-element-caption"><em>The example of project scope for creating blockchain-based p2p solution</em></figcaption></figure></div>
+
+
+<h2 class="wp-block-heading"><strong>Define your business case&nbsp;</strong></h2>
+
+
+
+<p>In Blaize we often conduct business analysis of the clients use case during the discovery stage. The thorough research of the case&#8217;s exact business goal helps to define the right scope for development and justify the blockchain adoption.&nbsp;</p>
+
+
+
+<h5 class="wp-block-heading"><em><span class="has-inline-color has-primary-red-color">See</span></em><a href="../../article-type/how-to-build-a-successful-defi-project/index.html#Business-analysis" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-primary-red-color"><strong><em> how Blaize team works on SRS and technical task</em></strong></span></a><em><span class="has-inline-color has-primary-red-color"> preparation during the business analysis of our projects.&nbsp;&nbsp;</span></em></h5>
+
+
+
+<p>In terms of integrating blockchain into the existing solution, the platform already has its own business case and the task for developers is to know how to translate or transform it to the blockchain.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Choose the best blockchain&nbsp;</strong></h2>
+
+
+
+<p>It will probably be very hard to define just one or two of the best blockchain platforms. Mainly because every project has its unique requirements and available toolset so every case should have detailed research to pick the best solution.&nbsp;</p>
+
+
+
+<p>From our experience, we can say that Substrate framework with its modularity can be a very suitable option for blockchain P2P lending platform development. As an alternative, you can see the R3 Corda blockchain solution. Its permissioned access nature along with chaincode structure can add additional points to the security p2p services needs.&nbsp;</p>
+
+
+
+<p><em>Find detailed explanations OF MENTIONED BLOCKCHAINS IN </em><a href="../../article-type/best-platforms-for-blockchain-development/index.html" target="_blank" rel="noreferrer noopener"><em>BEST PLATFORMS FOR BLOCKCHAIN DEVELOPMENT</em></a><em>.&nbsp;</em></p>
+
+
+
+<h2 class="wp-block-heading"><strong>Smart contract development&nbsp;</strong></h2>
+
+
+
+<p>The development of initial smart contract architecture is one of the vital parts of adding blockchain to your existing peer-to-peer lending.&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img loading="lazy" decoding="async" width="1400" height="787" src="../../wp-content/uploads/2022/06/develop-a-crypto-lending-platform.png" alt="develop a crypto lending platform" class="wp-image-7525"/><figcaption class="wp-element-caption"><em>The example of blockchain p2p lending platform architecture</em></figcaption></figure></div>
+
+
+<p>When building smart contracts for a p2p lending platform, <strong>the main goal is to establish which data are stored on-chain and which are stored off-chain</strong>.</p>
+
+
+
+<p>For example, with a high level of trust within the platform, the on-chain part can store transaction IDs, user IDs, and transferred amounts, relying on the fact that the main part of data is stored in the database and can be provided any time by the platform itself. In a peer-to-peer lending blockchain platform, a p2p lending smart contract can automate the lending process, execute payments and enforce repayment terms. <strong>We recommend storing as little as possible on-chain, but all stored data should be available for validation.&nbsp;</strong></p>
+
+
+
+<p>Read: <strong><a href="../../article-type/how-to-launch-a-project-on-polkadot-dapp-parachain-and-bridge/index.html">How to launch a project on Polkadot</a></strong></p>
+
+
+
+<p>Since all data is stored on-chain and is easily validated, the process of collecting debts by collectors (as well as bargaining in overdue debts) becomes more convenient. On the other hand, <strong>the biggest challenge is to configure this process with KYC to prevent leakage of private and sensible client data </strong>as blockchain (in most cases) provides public access to all on-chain information. That is why, defining the explicit amount and format of on-chain data is crucial in this case.</p>
+
+
+
+<p>We shall remind you that every developed smart contract requires unit tests coverage before making integration with the application. Thus, <a href="../../smart-contracts/index.html">the smart contact developers&#8217; team</a> check the proper work of formal contract logic. The additional implementation of <a href="../../services/how-to-boost-smart-contract-security-and-mitigate-risks-in-defi/index.html">smart contract security </a>audit on its part helps to evaluate whether the developed environment meets business case requirements and works in a proper way.&nbsp;Check out the <strong><a href="../../article-type/top-startups-on-polkadot-that-will-rock-in-2021/index.html">best Polkadot projects</a></strong> in our article.</p>
+
+
+
+<h5 class="wp-block-heading"><strong><em><span class="has-inline-color has-primary-red-color">Read </span></em></strong><a href="../../article-type/how-to-conduct-a-smart-contract-security-audit-of-your-project-and-why-this-is-important/index.html" target="_blank" rel="noreferrer noopener"><strong><span class="has-inline-color has-primary-red-color"><em>why testing and auditing smart contracts is that important</em></span></strong></a><strong><em><span class="has-inline-color has-primary-red-color">.&nbsp;</span></em></strong></h5>
+
+
+
+<p>Summarizing this part integrating blockchain to the p2p lending solution might bring a lot of advantages and increase platform’s security. Hence, the implementation needs a qualified business analysis in order to justify the relevancy of <a href="../../article-type/blockchain-adoption-to-contact-center-industry-qubicles-use-case/index.html">blockchain technology adoption</a>.&nbsp;</p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background"><strong>Such platforms as </strong><a href="https://lendoit.com/" target="_blank" rel="noreferrer noopener"><strong>Lendoit</strong></a><strong> or </strong><a href="https://www.myconstant.com/" target="_blank" rel="noreferrer noopener"><strong>MyConstant</strong></a><strong> have already proven its usefulness for peer-to-peer lending transfers. </strong><a href="#post_contact"><strong>Contact Blaize </strong></a><strong><a href="#post_contact">experts</a> for building a custom crypto lending service you need!</strong></p>
+
+
+
+<h2 class="wp-block-heading">DeFi crypto lending platform&nbsp;</h2>
+
+
+
+<p>Previously discussed peer-to-peer lending services may offer a wide list of possible currencies for loans and ways of its management. Thus, building a peer to peer lending blockchain platform or integrating smart contract technology to the existing one enables following loan options:&nbsp;</p>
+
+
+
+<ul>
+<li>fiat to crypto and vice versa (MyConstant),</li>
+
+
+
+<li>crypto-to-crypto loans (Lendoit).&nbsp;</li>
+</ul>
+
+
+
+<p>In contrast,<strong> DeFi crypto lending platforms are concentrated on </strong>crypto-to-crypto loans where <a href="../../article-type/understanding-stablecoin/index.html">stablecoins</a> are the most preferable assets. The other distinctive feature of DeFi lending is the necessity of providing the collateral in a form of other cryptocurrencies offered against the loan.&nbsp;</p>
+
+
+
+<p>Often, ETH (or Bitcoin) is used as a secured form of collateral, yet many platforms also use DAI as sufficient insurance. The majority of lendings in decentralized finance establish a very high loan-to-value (LTV) ratio, even up to 60% which means the borrower will get less than 60% of needed crypto in comparison to the collateral provided.&nbsp;</p>
+
+
+
+<p>However, the principle of decentralization, anonymity, and the possibility of getting a loan in a trice is the advantage that distinguishes DeFi lending pools. Additionally, this type of lending creates very convenient opportunities for borrowers who like to take part in margin trading.&nbsp;</p>
+
+
+
+<p>The instantaneous growth of DeFi has attracted an impressive amount of liquidity that helped some protocols gain an absolute market priority. AAVE, Maker, Compound, dX/dY are just a few among the top DeFi platforms that offer lending opportunities for their users.&nbsp;</p>
+
+
+
+<h4 class="wp-block-heading">Read the full list of <a href="../../article-type/top-successful-defi-startups/index.html">Most Successful DeFi Startups</a> in this article.&nbsp;</h4>
+
+
+
+<p><em>In the next part of this article we want to concentrate on how to </em><em>build a successful defi lending platform in 2021.</em><em> So if you want to create something similar to AAVE or Compound crypto lending read further parts.</em></p>
+
+
+
+<h2 class="wp-block-heading" id="HOW-TO-CREATE-A-DEFI-LENDING-PROTOCOL-">How to create a DeFi lending protocol&nbsp;</h2>
+
+
+
+<p>Entering a decentralized finance market becomes challenging due to the growing amount of successful and working projects. In this part, we want to tell you how to start building a custom crypto lending platform.&nbsp;&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img loading="lazy" decoding="async" width="1400" height="743" src="../../wp-content/uploads/2022/06/crypto-lending-platform.png" alt="building a custom crypto lending platform" class="wp-image-7526"/><figcaption class="wp-element-caption"><em>Example of project scope for building DeFi lending protocol&nbsp;</em></figcaption></figure></div>
+
+
+<h2 class="wp-block-heading"><strong>Detailed use case analysis&nbsp;</strong></h2>
+
+
+
+<p>In order to make your lending dApp prosperous and useful, you need to prepare an analysis of your business case. There is a high chance for a project to go into dust due to a lack of strong business logic and use case justification.&nbsp;</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background">Are you interested in <strong><a href="../../decentralized-application/index.html">dApp development services</a></strong>? Find out more by contacting us.</p>
+
+
+
+<p>During the discovery stage, Blaize experts consider perspectives of product delivery to the market, tokenomics and product main features to adjust the best operating environment. After every discovery phase, we prepare a Software Requirement Specification (SRS) document and provide it to the client.&nbsp;</p>
+
+
+
+<p><em>The distinctive feature of DeFi lending platform against p2p lending service is the possibility of token issuing with its further listing on the exchanges. The ability to possess a protocol token allows its users to get additional benefits from liquidity mining. Therefore, if you consider this feature as a prior, you should prepare a thorough tokenomy analysis at the discovery stage.</em>&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Architecture planning &amp; initial development&nbsp;</strong></h2>
+
+
+
+<p>Creating a peer-to-peer lending platform based on the blockchain can be a challenging task, especially for those who have no experience in the blockchain development process.</p>
+
+
+
+<p>Blaize team of DeFi developers has developed and deployed a significant number of smart contracts. That is why we know all the obstacles inexperienced programmers might face and strongly recommend <a href="../../article-type/how-to-choose-a-reliable-blockchain-company-for-your-project/index.html" target="_blank" rel="noreferrer noopener">choosing a solid blockchain contractor</a> to develop your crypto lending platform.&nbsp;</p>
+
+
+
+<p>During the initial project planning of DeFi lending protocol, the important thing is to <strong><em>establish the type of lending pool and the interest accrual format.</em></strong>&nbsp;</p>
+
+
+
+<p>There are basically two types of pools &#8211; isolated pools (like trading pairs on Uniswap) or give access to all the coins of the protocol (like Compound) that allows you to leave any coin for any asset as collateral. The next thing is to consider between fixed (<a href="https://torque.loans/">Torque</a>) or floating interest rates (Compound) and perform the right architecture planning in advance.&nbsp;</p>
+
+
+
+<p>Read also: <strong><a href="../../article-type/amm-types-differentiations/index.html">AMM Types &amp; Differentiations</a></strong></p>
+
+
+
+<p>The usage cost of smart contracts is one of the biggest challenges developers confront while developing DeFi lending. Such specifics of decentralized finance projects as gas optimization may cut down even a good and reliable smart contract because it will be simply too expensive for users to pay for gas.</p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background"><em><strong>We have shared a lot of other important aspects of </strong></em><a href="../../article-type/how-to-build-a-successful-defi-project/index.html#Smart-contracts-development" target="_blank" rel="noreferrer noopener"><strong><em>DeFi smart contract development</em></strong></a><em><strong> in this article. Get some insight there, or </strong></em><a href="#post_contact"><strong><em>write to our expert</em></strong></a><em><strong> to clarify all your doubts.&nbsp;</strong></em></p>
+
+
+
+<h2 class="wp-block-heading"><strong>Testing &amp; project launch&nbsp;</strong></h2>
+
+
+
+<p>DeFi lending protocol surely deals with a huge amount in swaps and therefore big capitals are at stake. <strong><em>The main goal of testing is to check that there is no possibility to block the pool, as this will make the collaterals irrecoverable.</em></strong>&nbsp;</p>
+
+
+
+<p>The eventual transfer issues may lead to the block or loss of user collateral which is very painful because it&#8217;s always greater than the loan itself. In addition, the team should eliminate the possibility of leaving shitcoins as collateral, so that the user cannot take something valuable for something unnecessary.</p>
+
+
+
+<p><em>Considering all of those points, Blaize team always prepares several levels of project testing to eliminate transferring issues or money locked into smart contracts.&nbsp;</em></p>
+
+
+
+<p>The market has seen a lot of projects launched without proper testing in the dev environment or <a href="../../article-type/how-to-conduct-a-smart-contract-security-audit-of-your-project-and-why-this-is-important/index.html">security audits of smart contracts</a>. The experience shows this practice has faced a lot of problems regarding security issues and numerous hacks on the <a href="../../article-type/how-to-build-a-successful-defi-project/index.html">custom DeFi projects</a>.&nbsp;</p>
+
+
+
+<p>See the detailed overview of the most significant events regarding DeFi security in those articles:&nbsp;</p>
+
+
+
+<ul>
+<li><a href="../../services/how-to-prevent-liquidity-vampire-attacks-in-defi/index.html" target="_blank" rel="noreferrer noopener">How to Prevent Liquidity Vampire Attacks in DeFi</a>?</li>
+
+
+
+<li><a href="../../article-type/defi-security-how-to-prevent-your-defi-project-from-hacking/index.html" target="_blank" rel="noreferrer noopener">DeFi Security: How to Prevent Your Project From Hacking</a>?&nbsp;</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Conclusion&nbsp;</h2>
+
+
+
+<p>From this article, you know how to create a DeFi lending platform or integrate blockchain solution to your current p2p lending service. As you see the process of development may vary and should contain a prior analysis of the main business goal and use case.&nbsp;</p>
+
+
+
+<p>Every approach has its own pros and cons and needs to be studied carefully before starting the initial development. Go through the table of advantages and disadvantages comparing both.&nbsp;&nbsp;</p>
+
+
+
+<h4 class="wp-block-heading has-text-align-center"><strong>Blockchain P2P lending vs DeFi lending protocol comparison&nbsp;</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>P2P Blockchain-based lending&nbsp;</strong></td><td><strong>DeFi lending pool</strong></td></tr><tr><td><br>+    individual interest rate&nbsp;<br>+    gas fees price savings<br>+    no need for crypto collateral (in the majority of cases)&nbsp;<br>+    wider lists of loaning options (fiat to crypto <br>(CoinLoan) and vice versa, crypto-to-crypto loans)&nbsp;<br>+   well-known and trustable practice&nbsp;<br><br><br>&#8211;    prolonged operational time&nbsp;<br>&#8211;    less decentralization&nbsp;<br>&#8211;    no (direct) liquidity mining opportunities&nbsp;&nbsp;<br>&#8211;    KYC obligation&nbsp;<br></td><td>+  the highest level of decentralization and anonymity&nbsp;<br>+  instant loans (flash loans in AAVE or Uniswap)<br>+  easier/faster access to other DeFi opportunities&nbsp;<br>+  liquidity mining opportunities with native protocol token&nbsp;<br>+  fixed interest rates in some protocols (<a href="https://torque.loans/">Torque</a>)&nbsp;<br>+  no KYC&nbsp;<br><br>&#8211;   the terms of the loan are often limited by collateral only&nbsp;<br>&#8211;   high LTV ratio <br>&#8211;   crypto collateral obligation&nbsp;<br>&#8211;   higher gas fees&nbsp;limited to crypto loans only</td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading has-text-align-center has-primary-red-color has-white-background-color has-text-color has-background"><strong><span class="has-inline-color has-primary-red-color">See the best for yourself and Blaize will take care of the development process! <a href="#post_contact">Contact us</a> for further discussion of your project idea.</span></strong></h4>
+
+
+
+<h2 class="wp-block-heading">FAQ</h2>
+
+
+
+<ul>
+<li><strong>What are some examples of P2P crypto lending platforms?</strong></li>
+</ul>
+
+
+
+<p>Aave: A decentralized lending platform offering variable and stable interest rates</p>
+
+
+
+<p>Compound: A popular DeFi lending platform that enables users to earn interest and borrow assets</p>
+
+
+
+<p>MakerDAO: A platform that allows users to generate stablecoins (DAI) by locking up collateral</p>
+
+
+
+<ul>
+<li><strong>How long does it take to create a blockchain peer-to-peer lending platform?</strong></li>
+</ul>
+
+
+
+<p>The time required to create a P2P lending platform depends on factors such as the project&#8217;s complexity, team expertise, and chosen blockchain framework. Typically, it may take anywhere from a few months to over a year to develop, test, and launch a robust and secure platform.</p>
+
+
+
+<ul>
+<li><strong>What risks should be considered when creating a P2P crypto lending platform?</strong></li>
+</ul>
+
+
+
+<p>Smart contract vulnerabilities: Ensure thorough audits and testing to identify and mitigate potential flaws</p>
+
+
+
+<p>Regulatory compliance: Stay up to date with relevant regulations to maintain a compliant platform</p>
+
+
+
+<p>Market risks: Be prepared for market volatility and the potential impact on collateralized assets</p>
+
+
+
+<p>User adoption: Develop a marketing strategy and user-friendly interface to attract and retain users</p>
+
+                                <div class="block-author">
+                                    <h4 class="author-title">Post author</h4>
+                                    <div class="content">
+                                        <div class="photo">
+                                            <img width="120" height="120" src="../../wp-content/uploads/2020/04/dima.png" class="avatar avatar-120 photo wt-author-img" alt="Dmytro.K" decoding="async" loading="lazy" />                                        </div>
+                                        <div class="details">
+                                            <a href="../author/dmytro-k/index.html">
+                                                <h4>Dmytro Kovalchuk</h4>
+                                            </a>
+                                                                                            <p class="position">Co-founder & COO of Blaize</p>
+                                                                                                                                        <p class="description">Expert on blockchain technology, 
+app development and
+investments consulting</p>
+                                            
+                                                                                            <div class="socials">
+                                                                                                                                                                                                                                <a href="https://www.linkedin.com/in/dima-kovalchuk-33a374132/" target="_blank"><i class="icon-linkedin"></i></a>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sidebar">
+                                <div class="info">
+                                    <h4>Post info</h4>
+                                    <div class="cats">
+                                        <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>                                                    <a href="../../blockchain-integration/index.html">Blockchain Integration</a>
+                                                                                    </div>
+                                                                                                                <div class="tags">
+                                            <a href="../index596c.html?_sft_post_tag=defi" class="tagname_link">DeFi</a><a href="../indexf349.html?_sft_post_tag=integration" class="tagname_link">integration</a>                                        </div>
+                                    
+                                                                                                                <div class="related-services">
+                                                                                                                                            <div class="related-service red-rotate">
+                                                                                                        <h4>Smart Contracts Development</h4>
+                                                                                                                                                                        <a href="../../smart-contracts/index.html">
+                                                                <span>More details</span>
+                                                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 476.213 476.213" xml:space="preserve"><polygon points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 "/></svg>
+                                                            </a>
+                                                                                                                                                                                                                </div>
+
+                                                                                    </div>
+                                                                    </div>
+                                <div class="navigation"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <section id="post_contact">
+            <div class="guides__block">
+                <div class="content">
+                    <div class="text">
+                        <h3>Let's discuss your project</h3>
+                        <p>Fill out the form and get an individual consultation from our specialist!</p>
+                    </div>
+                    <div class="form">
+                        
+<div class="wpcf7 no-js" id="wpcf7-f3898-p3729-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="https://blaize.tech/blog/how-to-develop-blockchain-based-lending-platform/#wpcf7-f3898-p3729-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="3898" />
+<input type="hidden" name="_wpcf7_version" value="5.8.6" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3898-p3729-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="3729" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+<input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="your-name" /></span>
+	</p>
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="your-email" /></span>
+	</p>
+</div>
+<p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span><br />
+<span class="wpcf7-form-control-wrap" data-name="your-subject"><input size="40" class="wpcf7-form-control wpcf7-text hidden" aria-invalid="false" value="Contact us" type="text" name="your-subject" /></span><br />
+<label class="control control--checkbox"><br />
+<span class="wpcf7-form-control-wrap" data-name="your-policy"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-policy" value="1" aria-invalid="false" /></span></span></span><br />
+<span class="checkbox-text">I agree with <a href="../../terms-and-conditions/index.html">Terms &amp; Conditions</a></span><br />
+</label>
+</p>
+<div class="input_block recaptcha">
+	<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+	</p>
+</div>
+<p><span id="wpcf7-6920861b9558d-wrapper" class="wpcf7-form-control-wrap honeypot-339-wrap" style="display:none !important; visibility:hidden !important;"><input type="hidden" name="honeypot-339-time-start" value="1763739163"><input type="hidden" name="honeypot-339-time-check" value="3"><label for="wpcf7-6920861b9558d-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-6920861b9558d-field"  class="wpcf7-form-control wpcf7-text" type="text" name="honeypot-339" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input class="wpcf7-form-control wpcf7-submit has-spinner btn btn-black" type="submit" value="Send" />
+</p><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+            <div id="relatedposts">
+                <div class="guides__block">
+                    <div class="head">
+                        <h3>Related posts</h3>
+                    </div>
+                    <div class="posts-list-wrap">
+                        <div class="posts-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/index.html" class="title">Introduction to DeFi Prediction Markets</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../blockchain-digital-identity/index.html" class="title">Introduction to Digital Identity Blockchain</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../decentralized-social-media/index.html" class="title">What Stands for Mysterious DeSo: The Power of Decentralized Social Media</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../index03e3.html?_sft_category=case-study" class="sub_link">Case study</a><div style="clear: both;"></div>	</div>
+	<a href="../build-crypto-telegram-bot/index.html" class="title">How to Build a Telegram Bot</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../what-is-desci/index.html" class="title">What is DeSci: The Revolution of Decentralized Science</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../defi-lending-protocol-development/index.html" class="title">Lending Protocol instead of Money Maker Protocol</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../dex-development-guide/index.html" class="title">All You Need to Know on How to Develop a Decentralized Exchange</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div>                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            </main><!-- #main -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blaize.tech/blog/how-to-develop-blockchain-based-lending-platform/"
+  },
+  "headline": "How to Develop a P2P Lending Blockchain Platform",
+  "description": "A lending platform is a marketplace that allows for lending and borrowing money directly from ... Read More",
+  "image": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+  "author": {
+    "@type": "Person",
+    "name": "Dmytro Kovalchuk",
+    "url": "https://blaize.tech/blog/author/dmytro-k/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blaize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png"
+    }
+  },
+  "datePublished": "19.01.2021"
+}
+</script>
+</main>
+
+<!-- <link type="text/css" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/styles/components/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<footer id="footer" class="footer">
+    <div class="guides__block">
+        <div class="footer__row footer__logo-wrap">
+            <a href="../../index.html">
+                <img src="../../wp-content/themes/blaize-tech/assets/img/footer_logo.svg" alt="Blaize" width="120" height="33" loading="lazy">
+            </a>
+            <div id="text-10" class="widget widget_text">    <p><strong>Blaize</strong> is a Web3 software development company deeply committed to blockchain technology.</p>
+<p>Through our strategic partnership with <a href="https://ideasoft.io/" target="_blank" rel="noopener"><strong>IdeaSoft</strong></a>, we combine expertise to create impactful solutions for our clients.</p>
+    </div>        </div>
+        <div class="footer__row">
+            <div class="footer__col">
+                <div id="text-3" class="widget widget_text"><h3>Contact Us</h3>    <ul>
+<li>E-mail: <a href="../../cdn-cgi/l/email-protection.html#066f68606946646a676f7c63287263656e"><span class="__cf_email__" data-cfemail="056c6b636a456769646c7f602b7160666d">[email&#160;protected]</span></a></li>
+</ul>
+    </div><div id="text-5" class="widget widget_text"><h3>Socials</h3>    <ul class="socials-responsive">
+<li><a href="https://www.facebook.com/blaize.tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/facebook_new.svg" alt="facebook" width="24" height="24" /></a></li>
+<li><a href="https://twitter.com/blaize_tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/twitter_new.svg" alt="twitter" width="24" height="24" /></a></li>
+<li><a href="https://www.linkedin.com/company/blaizetech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/linkedin_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+<li><a href="https://medium.com/blaize-tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/medium_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-4" class="widget widget_text"><h3>About Us</h3>    <ul>
+<li><a href="../../clients/index.html">Cases</a></li>
+<li><a href="../index.html">Blog</a></li>
+<li><a href="../../whitepaper/index.html">Whitepaper</a></li>
+<li><a href="../../careers/index.html">Careers</a></li>
+<li><a href="../../vacancies/index.html">Vacancies</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-6" class="widget widget_text"><h3>Services</h3>    <ul>
+<li><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+<li><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+<li><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+<li><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+<li><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+<li><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+<li><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-9" class="widget widget_text"><h3>Solutions</h3>    <ul>
+<li><a href="../../decentralized-application/index.html">dApp Development</a></li>
+<li><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+<li><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+<li><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+<li><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+<li><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+<li><a href="../../token-development-services/index.html">Token Development Services</a></li>
+<li><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+<li><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+<li><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+<li><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+    </div>            </div>
+        </div>
+        <div class="footer__row part">
+            <div class="partners">
+              <!--<div class="clath"><script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="1096403"></div></div>
+                -->
+              <!-- Clutch -->
+              <div id="clutch">
+                <div class="dark_theme">
+                  <div class="widgets_wrapper">
+                    <div class="content">
+                      <div class="small_widget_logo_wrapper">
+                        <span class="small_widget_logo_text">Reviewed on</span>
+                        <a class="logotype" target="_blank" data-ga-action="logo_click" href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=logo&amp;utm_term=blaize.dv" aria-label="Reviewed on Clutch">
+                        </a>
+                      </div>
+                      <div class="small_widget_text">
+                        <span class="rating">5.0</span>
+                        <div class="reviews-totals-stars">
+                          <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            <div class="fivestar-static-item">
+                              <div class="form-item form-type-item">
+                                <div class="fivestar-widget-static fivestar-widget-static-vote clearfix">
+                                  <div class="fivestar"><div class="star star-1 star-odd"><span class="on">5.000000</span></div><div class="star star-2 star-even"><span class="on"></span></div><div class="star star-3 star-odd"><span class="on"></span></div><div class="star star-4 star-even"><span class="on"></span></div><div class="star star-5 star-odd"><span class="on"></span></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <span class="reviews-count">
+                           <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=num_reviews&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            5
+                            reviews
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Clutch -->
+              <div class="top_dev">
+                    <a href="https://www.topdevelopers.co/directory/blockchain-developers" target="_blank"> <img src="../../wp-content/uploads/2023/04/topDev.png" alt="top blockchain developers" title="Top Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://topappdevelopmentcompanies.com/directory/app-developers/blockchain" target="_blank"> <img src="../../wp-content/uploads/2020/08/topdev_logo-1.png" alt="top blockchain developers" title="Top Blockchain Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://techreviewer.co/companies/blaize-tech" target="_blank"><img src="../../wp-content/uploads/2023/03/Blockchain-1.svg" alt="techreviewer" loading="lazy"></a>
+                </div>
+                <div class="GoodFirms">
+                    <a target="_blank" href="https://www.goodfirms.co/company/blaize"><img src="../../wp-content/uploads/2020/08/googfirm.svg" alt="GoodFirms Badge" width="188" height="42" loading="lazy"></a>
+                </div>
+                <div class="defisec">
+                    <a href="https://defisec.info/tproduct/1-451395809121-blaize-security" target="_blank"><img src="../../wp-content/uploads/2023/04/DSAmember.png" alt="defisec" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <p class="copyright">Copyright © Blaize - blockchain development company 2018-2025</p>
+            <ul class="privacy">
+                <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                <li><a href="../../terms-and-conditions/index.html">Terms & Conditions</a></li>
+            </ul>
+            <!-- <p class="marketing">B2B inbound marketing with <a href="https://growpad.pro/" target="_blank"><img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/foot_marketing.svg" alt=""></a></p> -->
+        </div>
+    </div>
+    <!--<script>window.lintrk('track', { conversion_id: 11292828 });</script>-->
+</footer><!-- #colophon -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var wpcf7_recaptcha = {"sitekey":"6LcrqiAqAAAAAI1UXBtZ9jRUqTeAWWLpEeKjCIM8","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+
+
+    <progress value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+
+<script type="text/javascript" defer src="../../wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blaize.tech\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+  <script>
+    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+  </script>
+  
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Blaize",
+        "alternateName": "Blaize Tech",
+        "url": "https://blaize.tech/",
+        "logo": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/blaize.tech/",
+            "https://twitter.com/blaize_tech",
+            "https://ua.linkedin.com/company/blaizetech"
+        ],                "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "11"
+        }
+            }
+</script>
+
+
+
+<div class="popup">
+  <div class="popup__wrapper"></div>
+  <div class="popup__window">
+    <div class="popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+    <div class="popup__img">
+      <svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none"><path fill="#FF5C5C" d="M21 20.711h100v100H21z"/><path fill="#fff" d="M.29 70.71 71 0l70.711 70.71-70.71 70.711z"/><path fill="#FF5C5C" d="M66.75 79.75 58 71l-2.916 2.917 11.667 11.666 25-25-2.917-2.916L66.751 79.75Z"/></svg>
+    </div>
+    <p class="popup__title">Thank you!</p>
+          <p class="popup__text">We received your request and will be in touch shortly.</p>
+              <a href="#" class="btn btn-black popup__btn" onclick="return false;">okay</a>
+      </div>
+</div>
+      <script>
+      const setCookie = () => {
+        let a = new Date();
+        a = new Date(a.getTime() + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = 'blaize-cookies-info=true; path=/; expires=' + a.toGMTString() + ';';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const t = document.getElementsByClassName('js-cookies-info')[0];
+        const b = document.getElementsByClassName('js-cookies-info__button')[0];
+        const c = document.getElementsByClassName('js-cookies-close')[0];
+        b.addEventListener('click', () => {
+          setCookie()
+          t.classList.remove('active');
+        });
+        c.addEventListener('click', (e) => {
+          e.preventDefault();
+          t.classList.remove('active');
+        })
+      });
+    </script>
+    <div class="cookies-info js-cookies-info active">
+      <div class="guides__block">
+        <div class="cookies-info__text">
+          <div><div>This site uses cookies to offer you a better browsing experience.<br />
+Find out more on <a href="../../privacy-policy/index.html">how we use cookies</a></div>
+</div>
+          <span class="btn btn-gray js-cookies-close">Decline</span>
+          <span class="btn btn-black js-cookies-info__button">Accept all cookies</span>
+        </div>
+      </div>
+    </div>
+  
+
+<a class="popup-w" href="../../whitepaper/index.html">
+  <div class="popup-w__title">transform your asset management now!</div>
+  <div class="popup-w__text">Download the whitepaper now and start your journey towards a more efficient, inclusive, and secure future in the Web3 world.</div>
+  <button class="popup-w__btn">download it now!</button>
+  <div class="popup-w__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+  <div class="popup-w__square square1"></div>
+  <div class="popup-w__square square2"></div>
+  <div class="popup-w__square square3"></div>
+  <div class="popup-w__square square4"></div>
+</a>
+
+<style>
+.popup-w {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 115px 25px 60px 25px;
+  background: #ededed;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .24);
+  z-index: 9;
+  overflow: hidden;
+  transition: .3s;
+  transform: rotateY(90deg);
+}
+
+.active + .popup-w {
+  bottom: 106px;
+}
+
+.popup-w.show {
+  transform: rotateY(0deg);
+}
+
+.popup-w.hide {
+  transform: rotateY(90deg);
+}
+
+.popup-w__square {
+  position: absolute;
+  background: #fc5959;
+}
+
+.popup-w__square.square1 {
+  top: 0;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+.popup-w__square.square2 {
+  top: -50px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-35deg);
+}
+
+.popup-w__square.square3 {
+  bottom: -20px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(25deg);
+}
+
+.popup-w__square.square4 {
+  bottom: -5px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-40deg);
+}
+
+.popup-w__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-w__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.popup-w__text {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.popup-w__btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #fc5959;
+  border: 1px solid transparent;
+  margin: auto auto 0;
+  padding: 0;
+  transition: .3s;
+}
+
+.popup-w__btn:hover {
+  color: #fc5959;
+  background: transparent;
+  border: 1px solid #fc5959;
+}
+
+@media screen and (max-width: 1366px) {
+  .popup-w {
+    width: 350px;
+    height: 450px;
+    padding: 90px 25px 60px 25px;
+  }
+
+  .popup-w__title {
+    font-size: 22px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+  }
+
+  .popup-w__btn {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .popup-w__square.square1 {
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .active + .popup-w {
+    bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup-w {
+    width: 300px;
+    height: 400px;
+    padding: 75px 25px 50px 25px;
+  }
+
+  .active + .popup-w {
+    bottom: 225px;
+  }
+
+  .popup-w__square.square1 {
+    top: -50px;
+  }
+
+  .popup-w__close {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-w__title {
+    font-size: 18px;
+  }
+
+  .popup-w__text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-w__btn {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+  }
+
+  .popup-w__title {
+    font-size: 24px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .popup-w__btn {
+    height: 40px;
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+</style>
+
+<script>
+$(function() {
+  $('.popup-w').on('click', function(e) {
+    $(this).addClass('hide');
+    $('body').removeClass('no-scroll');
+    document.cookie = "popupWhitepaper=true; path=/; max-age=2592000";
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=0";
+
+    if ( $(e.target).parents('.popup-w__close')[0] ) {
+      e.preventDefault();
+    }
+  });
+});
+
+let elemPopup;
+let elemPopupPosition;
+let elemPopupHeight;
+let elemPopupPositionEnd;
+
+if ( document.querySelector('#development') ) {
+  elemPopup = document.querySelector('#development');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else if ( document.querySelector('.decentralized') ) {
+  elemPopup = document.querySelector('.decentralized');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else {
+  elemPopup = document.querySelector('body');
+  elemPopupPosition = elemPopup.offsetHeight * 0.7;
+  elemPopupHeight = 0;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+}
+
+document.addEventListener('scroll', function() {
+  let currentPosition = document.querySelector('html').scrollTop;
+
+  if ( currentPosition >= elemPopupPositionEnd || document.cookie.indexOf('popupWhitepaperOpened') !== -1 ) {
+    $('.popup-w').addClass('show');
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=2592000";
+
+    if ( window.matchMedia('(max-width: 767px)').matches && !$('.popup-w').hasClass('hide') ) {
+      $('body').addClass('no-scroll');
+    }
+  }
+});
+</script>
+
+
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)
+
+    jQuery(window).scroll(function () {
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && archivePage === false
+            && pageBlog === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+    });
+
+    jQuery(document).ready(function(){
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && pageBlog === false
+            && archivePage === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+
+        // Add red dot for parent li (active children) - on load page
+        $(".post-type-archive-clients .searchandfilter ul li.sf-field-taxonomy-clientcat ul li > ul > li, body.post-type-archive-vacancies .searchandfilter ul li.sf-field-taxonomy-vacancycat ul li > ul > li").each(function() {
+            const activeLabel = $(this).hasClass('sf-option-active');
+            if (activeLabel === true) {
+                jQuery(this).closest('li.sf-level-0').addClass('active-child');
+            }
+        });
+
+        // For drop-down cat-list (clients services)
+        jQuery('.post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>label, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>label').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery(this).closest('li').children('ul').stop().slideToggle(300);
+            e.preventDefault();
+            return false;
+        });
+
+        // Add red dot for parent li (active children)
+        $( ".post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>ul>li, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>ul>li" ).on( "change", function() {
+            const findActive = jQuery(this).closest('ul').find('input:checked').length;
+            if (findActive >= 1) {
+                jQuery(this).parent().closest('li').addClass('active-child');
+            } else {
+                jQuery(this).parent().closest('li').removeClass('active-child');
+            }
+        });
+    });
+
+    $('.wpcf7-form').on('wpcf7mailsent', function() {
+        $('.popup').fadeIn();
+        $('body').addClass('noscroll');
+    });
+
+    $('.popup__close, .popup__btn, .popup__wrapper').on('click', function() {
+        $('.popup').fadeOut();
+        $('body').removeClass('noscroll');
+    });
+
+    $('.wpcf7-form').on('submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', true);
+    });
+
+    $('.wpcf7-form').on('wpcf7submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', false);
+    });
+
+    if ( $('.navigation').length ) {
+        var navHTML = '' +
+            '<p class="navigation__title">Table of Content</p>' +
+            '<ol class="navigation__list"></ol>';
+
+        $( navHTML ).appendTo( $('.navigation') );
+
+        var navNumber = 0;
+        var h2Number = 1;
+
+        $('.text h2, .text h3').each(function() {
+            $(this).attr({
+                id: navNumber
+            });
+            if ($(this).is('h2')) {
+                $('.navigation > .navigation__list').append(
+                    '<li class="navigation__item navigation__item_' + h2Number + '">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+                h2Number++;
+            } else {
+                if ( $('.navigation__item_' + (h2Number - 1)).children('ol').length === 0 ) {
+                    $('.navigation__item_' + (h2Number - 1)).append(
+                        '<ol class="navigation__list"></ol>'
+                    );
+                }
+                $('.navigation__item_' + (h2Number - 1)).children('ol').append(
+                    '<li class="navigation__item">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+            }
+            navNumber++;
+        });
+
+        function resize() {
+            if ( $(window).width() >= 1201 ) {
+                $('.navigation').insertAfter( $('.info') );
+            } else {
+                $('.navigation').prependTo( $('.post-content .text') );
+            }
+        }
+
+        resize();
+
+        $(window).on('resize', function() {
+            resize();
+        });
+    }
+
+    $('.navigation').on('click', 'a', function (e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var top = $(link).offset().top - $('#header').height();
+        $('html').animate({scrollTop: top}, 1000);
+    });
+
+    function scriptsDefer(src) {
+      let script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.body.append(script);
+    }
+
+    document.addEventListener('scroll', load_script);
+    document.addEventListener('mousedown', load_script);
+    document.addEventListener('mousemove', load_script);
+    document.addEventListener('touchstart', load_script);
+    document.addEventListener('keydown', load_script);
+
+    function load_script() {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/lftracker.js');
+      scriptsDefer('../../../tools.luckyorange.com/core/lo4c35.js?site-id=f50de86c');
+      if (window.matchMedia('(max-width: 799px)').matches) {
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+      }
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/swiper.js');
+      scriptsDefer('../../../www.recaptcha.net/recaptcha/api3398.js?render=' + wpcf7_recaptcha.sitekey + '&#038;ver=3.0');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/recaptcha.js');
+
+      document.removeEventListener('scroll', load_script);
+      document.removeEventListener('mousedown', load_script);
+      document.removeEventListener('mousemove', load_script);
+      document.removeEventListener('touchstart', load_script);
+      document.removeEventListener('keydown', load_script);
+    }
+
+    if (window.matchMedia('(min-width: 800px)').matches) {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+    }
+</script>
+
+<script>
+    function countDigits(n) {
+        let i;
+        for(i = 0; n > 1; i++) {
+            n /= 10;
+        }
+        return i;
+    }
+
+    jQuery('.wpcf7-form').submit(function(){
+        const form = jQuery(this);
+        const countryCode = form.find('.custom-select .phoneInput .selected-dial-code').text();
+        const contactName = form.find('.custom-select .active-feed-field .label-title').text();
+        form.find('.userCountryCode').val(countryCode);
+        form.find('.userContactName').val(contactName);
+
+        const userContactVal = form.find('input.userContact').val();
+
+        if (userContactVal === '') {
+            form.find('.select-box .trigger').addClass('not-valid');
+            return false;
+        }
+    });
+
+    var timer;
+
+    function trackLeave(ev) {
+        if (ev.pageY > 0) {
+            return;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        if ($.exitIntent.settings.sensitivity <= 0) {
+            $.event.trigger('exitintent');
+            return;
+        }
+
+        timer = setTimeout(
+            function() {
+                timer = null;
+                $.event.trigger('exitintent');
+            }, $.exitIntent.settings.sensitivity);
+    }
+
+    function trackEnter() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+    }
+
+    $.exitIntent = function(enable, options) {
+        $.exitIntent.settings = $.extend($.exitIntent.settings, options);
+
+        if (enable === 'enable') {
+            $(window).mouseleave(trackLeave);
+            $(window).mouseenter(trackEnter);
+        } else if (enable === 'disable') {
+            trackEnter(); // Turn off any outstanding timer
+            $(window).unbind('mouseleave', trackLeave);
+            $(window).unbind('mouseenter', trackEnter);
+        } else {
+            throw "Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";
+        }
+    }
+
+    $.exitIntent.settings = {
+        'sensitivity': 300
+    };
+
+    jQuery('.exitModal-close').click(function () {
+        jQuery('#exitPopup').removeClass('active');
+        jQuery('#exitPopup').addClass('closed-modal');
+    });
+
+    jQuery(function() {
+        jQuery.exitIntent('enable');
+        jQuery(document).bind('exitintent', function() {
+            if (jQuery("#exitPopup").hasClass("closed-modal")) {
+                //
+            } else {
+                jQuery("#exitPopup").addClass("active");
+                jQuery("#exitPopup").addClass("opened-modal");
+            }
+        });
+    });
+
+    (function () {
+        const t = jQuery(".exitModal-popup");
+        t.find(".exitModal-close").on("click", function () {
+            jQuery( 'body' ).toggleClass( 'active-modal' );
+            localStorage.setItem("Blaize_exit_popup", "closed"), t.addClass("closed-modal");
+        }),
+            "closed" === localStorage.getItem("Blaize_exit_popup") ? (t.addClass("closed-modal")) : t.addClass("show-modal");
+    })();
+
+    let box = document.querySelector("#preloader");
+
+    function fadeOut() {
+        box.classList.add("visuallyhidden");
+        box.addEventListener(
+            "transitionend",
+            function (e) {
+                box.classList.add("hidden");
+            },
+            {
+                capture: false,
+                once: true,
+                passive: false
+            }
+        );
+    }
+
+    (function($) {
+        $(function() {
+            $(".userContact").intlTelInput({
+                autoPlaceholder: "off",
+                geoIpLookup: function(callback) {
+                  $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                  });
+                },
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                separateDialCode: true,
+                // utilsScript: "assets/nb_intl/js/utils.js"
+            });
+        });
+    })(jQuery);
+</script>
+
+<link rel="preload" href="../../wp-content/themes/blaize-tech/assets/nb_intl/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0a02c653bc51442fac3378bc1fc85895","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from blaize.tech/blog/how-to-develop-blockchain-based-lending-platform/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:37:33 GMT -->
+</html>

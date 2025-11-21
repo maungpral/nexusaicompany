@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Mont";
+    src: url("assets/fonts/Mont/Mont-Light.woff2");
+    font-display:swap;
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Mont";
+    src: url("assets/fonts/Mont/Mont-Book.woff2");
+    font-display:swap;
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Mont";
+    src: url("assets/fonts/Mont/Mont-Regular.woff2");
+    font-display:swap;
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Mont";
+    src: url("assets/fonts/Mont/Mont-SemiBold.woff2");
+    font-display:swap;
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Mont";
+    src: url("assets/fonts/Mont/Mont-Heavy.woff2");
+    font-display:swap;
+    font-style: normal;
+    font-weight: 900;
+}

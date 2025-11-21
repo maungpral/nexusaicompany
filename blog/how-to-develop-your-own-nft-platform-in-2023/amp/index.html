@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html amp lang="en-US" data-amp-auto-lightbox-disable transformed="self;v=1" i-amphtml-layout="" i-amphtml-no-boilerplate="">
+
+<!-- Mirrored from blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><link rel="preconnect" href="https://cdn.ampproject.org/"><style amp-runtime="" i-amphtml-version="012510081644000">html{overflow-x:hidden!important}html.i-amphtml-fie{height:100%!important;width:100%!important}html:not([amp4ads]),html:not([amp4ads]) body{height:auto!important}html:not([amp4ads]) body{margin:0!important}body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y pinch-zoom;touch-action:pan-y pinch-zoom}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important}html.i-amphtml-fie:not(.i-amphtml-inabox)>body,html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body{position:relative!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}#i-amphtml-wrapper+body{visibility:visible}#i-amphtml-wrapper+body .i-amphtml-lightbox-element,#i-amphtml-wrapper+body[i-amphtml-lightbox]{visibility:hidden}#i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element{visibility:visible}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}amp-instagram{padding:54px 0px 0px!important;background-color:#fff}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}amp-experiment,amp-live-list>[update]{display:none}amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden{display:none!important}amp-list [fetch-error],amp-list[load-more] [load-more-button],amp-list[load-more] [load-more-end],amp-list[load-more] [load-more-failed],amp-list[load-more] [load-more-loading]{display:none}amp-list[diffable] div[role=list]{display:block}amp-story-page,amp-story[standalone]{min-height:1px!important;display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#000!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .amp-active>div,amp-story .i-amphtml-loader-background{display:none!important}amp-story-page:not(:first-of-type):not([distance]):not([active]){transform:translateY(1000vh)!important}amp-autocomplete{position:relative!important;display:inline-block!important}amp-autocomplete>input,amp-autocomplete>textarea{padding:0.5rem;border:1px solid rgba(0,0,0,.33)}.i-amphtml-autocomplete-results,amp-autocomplete>input,amp-autocomplete>textarea{font-size:1rem;line-height:1.5rem}[amp-fx^=fly-in]{visibility:hidden}amp-script[nodom],amp-script[sandboxed]{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}
+/*# sourceURL=/css/ampdoc.css*/[hidden]{display:none!important}.i-amphtml-element{display:inline-block}.i-amphtml-blurry-placeholder{transition:opacity 0.3s cubic-bezier(0.0,0.0,0.2,1)!important;pointer-events:none}[layout=nodisplay]:not(.i-amphtml-element){display:none!important}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic,[layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic){display:inline-block;position:relative;max-width:100%}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]:not(.i-amphtml-layout-fixed-height){display:block;position:relative}.i-amphtml-layout-fill,.i-amphtml-layout-fill.i-amphtml-notbuilt,[layout=fill]:not(.i-amphtml-layout-fill),body noscript>*{display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}body noscript>*{position:absolute!important;width:100%;height:100%;z-index:2}body noscript{display:inline!important}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}@supports (aspect-ratio:1/1){i-amphtml-sizer.i-amphtml-disable-ar{display:none!important}}.i-amphtml-blurry-placeholder,.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}.i-amphtml-select-disabled{-webkit-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*,[width][height][heights]:not([layout]):not(.i-amphtml-element)>*,[width][height][sizes]:not([layout]):not(.i-amphtml-element)>*{display:none}amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content{display:block}.i-amphtml-notbuilt:not(.i-amphtml-layout-container),[layout]:not([layout=container]):not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){color:transparent!important;line-height:0!important}.i-amphtml-ghost{visibility:hidden!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder],[width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],[width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder]{display:block;line-height:normal}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback],.i-amphtml-layout-container>[placeholder].amp-hidden,.i-amphtml-layout-container>[placeholder].hidden{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}amp-img[i-amphtml-ssr]:not(.i-amphtml-element)>[placeholder]{z-index:auto}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;pointer-events:none;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden;display:initial;line-height:normal}.i-amphtml-layout-size-defined>[overflow]{position:absolute}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-analytics,amp-auto-ads,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-story{visibility:hidden!important}html.i-amphtml-fie>amp-analytics{position:initial!important}[visible-when-invalid]:not(.visible),form [submit-error],form [submit-success],form [submitting]{display:none}amp-accordion{display:block!important}@media (min-width:1px){:where(amp-accordion>section)>:first-child{margin:0;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}:where(amp-accordion>section)>:last-child{margin:0}}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}amp-accordion,amp-accordion>section{margin:0}amp-accordion:not(.i-amphtml-built)>section>:last-child{display:none!important}amp-accordion:not(.i-amphtml-built)>section[expanded]>:last-child{display:block!important}
+/*# sourceURL=/css/ampshared.css*/</style><meta name="description" content="Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide."><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Create a NFT Marketplace: 2024 Guide"><meta property="og:description" content="Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide."><meta property="og:url" content="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/"><meta property="og:site_name" content="Blaize"><meta property="article:published_time" content="2022-11-22T14:19:43+00:00"><meta property="article:modified_time" content="2024-10-29T11:09:59+00:00"><meta property="og:image" content="https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:image:type" content="image/jpeg"><meta name="author" content="Sergey Onyshchenko"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@S_Onishchenko"><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Sergey Onyshchenko"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="17 minutes"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="generator" content="AMP Plugin v2.5.2; mode=reader; theme=legacy"><script async="" src="https://cdn.ampproject.org/v0.mjs" type="module" crossorigin="anonymous"></script><script async nomodule src="../../../../cdn.ampproject.org/v0.js" crossorigin="anonymous"></script><style amp-custom="">:root .has-primary-red-background-color{background-color:#fc5959;color:#fff}:root .has-light-gray-background-color{background-color:#9f9fa0;color:#000}:root .has-primary-red-color{color:#fc5959}:root .has-dark-gray-color{color:#1e1e23}:root .has-white-color{color:#fff}#amp-mobile-version-switcher{left:0;position:absolute;width:100%;z-index:100}#amp-mobile-version-switcher>a{background-color:#444;border:0;color:#eaeaea;display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;font-weight:600;padding:15px 0;text-align:center;-webkit-text-decoration:none;text-decoration:none}#amp-mobile-version-switcher>a:active,#amp-mobile-version-switcher>a:focus,#amp-mobile-version-switcher>a:hover{-webkit-text-decoration:underline;text-decoration:underline}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}h1.has-background,h2.has-background,h3.has-background{padding:1.25em 2.375em}.wp-block-image amp-img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}.wp-block-image figcaption{margin-bottom:1em;margin-top:.5em}.wp-block-image :where(.has-border-color){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-color]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-color]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-color]){border-left-style:solid}.wp-block-image :where([data-amp-original-style*=border-width]){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-width]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-width]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-width]){border-left-style:solid}.wp-block-image figure{margin:0}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}ul{box-sizing:border-box}ul.has-background{padding:1.25em 2.375em}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}@keyframes overlay-menu__fade-in-animation{0%{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:translateY(0)}}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-excerpt){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-pullquote){margin:0 0 1em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}:where(.wp-block-term-description){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}html :where(.has-border-color){border-style:solid}html :where([data-amp-original-style*=border-top-color]){border-top-style:solid}html :where([data-amp-original-style*=border-right-color]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-color]){border-left-style:solid}html :where([data-amp-original-style*=border-width]){border-style:solid}html :where([data-amp-original-style*=border-top-width]){border-top-style:solid}html :where([data-amp-original-style*=border-right-width]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-width]){border-left-style:solid}html :where(amp-img[class*=wp-image-]),html :where(amp-anim[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.wp-block-image{margin:0 0 1em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}amp-img.amp-wp-enforced-sizes{object-fit:contain}amp-img img,amp-img noscript{image-rendering:inherit;object-fit:inherit;object-position:inherit}.amp-wp-enforced-sizes{max-width:100%;margin:0 auto}.amp-wp-article-content > p.has-background{margin-left:-2.375em;margin-right:-2.375em;margin-block-start:0;margin-block-end:16px}html{background:#0a5f85}body{background:#fff;color:#353535;font-family:Georgia,"Times New Roman",Times,Serif;font-weight:300;line-height:1.75}p,ul,figure{margin:0 0 1em;padding:0}a,a:visited{color:#0a5f85}a:hover,a:active,a:focus{color:#353535}.amp-wp-meta,.amp-wp-header div,.amp-wp-title,.amp-wp-tax-category,.amp-wp-tax-tag,.amp-wp-footer p,.back-to-top{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}.amp-wp-header{background-color:#0a5f85}.amp-wp-header div{color:#fff;font-size:1em;font-weight:400;margin:0 auto;max-width:calc(840px - 32px);padding:.875em 16px;position:relative}.amp-wp-header a{color:#fff;text-decoration:none}.amp-wp-header .amp-wp-site-icon{background-color:#fff;border:1px solid #fff;border-radius:50%;position:absolute;right:18px;top:10px}.amp-wp-article{color:#353535;font-weight:400;margin:1.5em auto;max-width:840px;overflow-wrap:break-word;word-wrap:break-word}.amp-wp-article-header{align-items:center;align-content:stretch;display:flex;flex-wrap:wrap;justify-content:space-between;margin:1.5em 16px 0}.amp-wp-title{color:#353535;display:block;flex:1 0 100%;font-weight:900;margin:0 0 .625em;width:100%}.amp-wp-meta{color:#696969;display:inline-block;flex:2 1 50%;font-size:.875em;line-height:1.5em;margin:0 0 1.5em;padding:0}.amp-wp-article-header .amp-wp-meta:last-of-type{text-align:right}.amp-wp-article-header .amp-wp-meta:first-of-type{text-align:left}.amp-wp-byline amp-img,.amp-wp-byline .amp-wp-author{display:inline-block;vertical-align:middle}.amp-wp-byline amp-img{border:1px solid #0a5f85;border-radius:50%;position:relative;margin-right:6px}.amp-wp-posted-on{text-align:right}.amp-wp-article-featured-image{margin:0 0 1em}.amp-wp-article-featured-image img:not(amp-img){max-width:100%;height:auto;margin:0 auto}.amp-wp-article-featured-image amp-img{margin:0 auto}.amp-wp-article-content{margin:0 16px}.amp-wp-article-content ul{margin-left:1em}.amp-wp-article-content .wp-caption{max-width:100%}.amp-wp-article-content amp-img{margin:0 auto}.wp-caption{padding:0}.amp-wp-article-footer .amp-wp-meta{display:block}.amp-wp-tax-category,.amp-wp-tax-tag{color:#696969;font-size:.875em;line-height:1.5em;margin:1.5em 16px}.amp-wp-footer{border-top:1px solid #c2c2c2;margin:calc(1.5em - 1px) 0 0}.amp-wp-footer div{margin:0 auto;max-width:calc(840px - 32px);padding:1.25em 16px 1.25em;position:relative}.amp-wp-footer h2{font-size:1em;line-height:1.375em;margin:0 0 .5em}.amp-wp-footer p{color:#696969;font-size:.8em;line-height:1.5em;margin:0 85px 0 0}.amp-wp-footer a{text-decoration:none}.back-to-top{bottom:1.275em;font-size:.8em;font-weight:600;line-height:2em;position:absolute;right:16px}
+
+/*# sourceURL=amp-custom.css */</style><link rel="canonical" href="../index.html"><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/","url":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/","name":"How to Create a NFT Marketplace: 2024 Guide","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","datePublished":"2022-11-22T14:19:43+00:00","dateModified":"2024-10-29T11:09:59+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide.","breadcrumb":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","contentUrl":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","width":1200,"height":600},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"A Comprehensive Guide to Developing Your Own NFT Platform"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","contentUrl":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script><title>How to Create a NFT Marketplace: 2024 Guide</title></head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../../index.html">
+										<amp-img src="../../../wp-content/uploads/2020/01/Group-1.png" width="32" height="32" class="amp-wp-site-icon amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" data-hero-candidate="" alt="Site icon" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Site icon" src="../../../wp-content/uploads/2020/01/Group-1.png"></amp-img>
+						<span class="amp-site-title">
+				Blaize			</span>
+		</a>
+	</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">A Comprehensive Guide to Developing Your Own NFT Platform</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g" srcset="
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=24&amp;d=mm&amp;r=g 1x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=48&amp;d=mm&amp;r=g 2x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g 3x
+				" alt="Sergey Onyshchenko" width="24" height="24" layout="fixed" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:24px;height:24px" i-amphtml-layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Sergey Onyshchenko</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2022-11-22T14:19:43+00:00">
+		3 years ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="640" height="320" src="../../../wp-content/uploads/2022/11/blaize.security-3.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" alt="" data-hero-candidate="" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyMCIgd2lkdGg9IjY0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" loading="lazy" alt="" src="../../../wp-content/uploads/2022/11/blaize.security-3.jpg"></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		
+<p>NFT platform development has become a hot topic in the world of cryptocurrency and blockchain, as more and more projects seek to implement NFT into their businesses.</p>
+
+
+
+<p>The NFT market has gone through a hard journey in the past three years. 2021 witnessed an explosive eruption, reaching an estimated total sales volume of $41 billion. This surge was fueled by excitement surrounding digital art, collectibles, and the burgeoning play-to-earn gaming sector. </p>
+
+
+
+<p>The following year witnessed a continuation of this boom, with the market surpassing a staggering $100 billion fueled by sustained hype and diversification into previously untapped domains like music, sports, and metaverse projects.</p>
+
+
+
+<p>However, after scaling such heights of popularity and value, the NFT market encountered a decline. The year 2023 ushered in a sharp correction, with sales volume plummeting to approximately $25 billion. This downturn can be attributed to a confluence of factors, including broader macroeconomic challenges and a sense of market saturation that dampened initial enthusiasm. As a result, concerns regarding the long-term sustainability and future of NFT art proliferated. Despite these apprehensions, key industry players remain optimistic, actively contemplating and even anticipating a market rebirth.</p>
+
+
+
+<p>That is why developing an NFT platform in 2024 is a perfect idea – the enduring relevance of NFTs extends beyond the current year: NFTs present new utility opportunities besides just objects of art. Indeed, 2024 presents a great moment for the development of innovative NFT platforms.</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-00850f0fc854a9a880165af6f96996bb">Here at Blaize, we’ve been working with NFTs for years, developing custom solutions for <a href="../../../clients/index.html"><strong>world-known clients</strong></a>. We have <strong>successfully launched several NFT projects</strong> and released numerous collections that were quickly recognized by the general public.</p>
+
+
+
+<p>But today, we won’t be deploying anything – our main goal is to share experience and guide you through the exciting NFT platform development. Let’s take a closer look at the intricacies of the process of developing an NFT platform.</p>
+
+
+
+<h2 class="wp-block-heading">HOW TO CREATE AN NFT PLATFORM IN 10 STEPS</h2>
+
+
+
+<p>1.<strong>Define the concept of your platform:</strong></p>
+
+
+
+<p>Clearly define the purpose, target audience, core functionalities of your platform and revenue-generating opportunities. Who are you trying to serve? What unique experience will you offer? Imagine your ideal user and tailor the platform experience to their specific needs and preferences.</p>
+
+
+
+<p>2.<strong>Gather a reliable and experienced team:</strong></p>
+
+
+
+<p>Building a successful platform requires a skilled and experienced team. Hire developers with expertise in blockchain technology and NFT development, alongside talented designers, marketing professionals, and anyone else crucial to your vision. Prioritize individuals with a proven track record in relevant fields.</p>
+
+
+
+<p>3.<strong>Take care of the technical development:</strong></p>
+
+
+
+<p>Choosing the right blockchain is paramount. Consider factors like users engagement, ecosystem, and liquidity. There’re several options which offer ready to work infrastructure solutions. Develop secure smart contracts to govern core functionalities and seamlessly integrate them with your chosen blockchain. Ensure your platform adheres to industry standards and best securitypractices.</p>
+
+
+
+<p>4.<strong>Select and connect all the necessary infrastructure, including the chosen metadata storage provider:</strong></p>
+
+
+
+<p>Select and connect reliable 3rd-parties that seamlessly integrate with popular NFT marketplaces, wallets, and metadata storage providers. Prioritize reliability, security, and SDKs that align seamlessly with your platform’s overall architecture and functionalities.</p>
+
+
+
+<p>5.<strong>Work on the UI/UX design:</strong></p>
+
+
+
+<p>Create an intuitive and user-friendly interface that makes navigating and interacting with your platform a joy. Prioritize visual appeal, accessibility, and a smooth user journey. Remember, first impressions matter – make sure your design is both beautiful and functional.</p>
+
+
+
+<p>6.<strong>Complete the front-end part of the product development:</strong></p>
+
+
+
+<p>Translate your stunning UI/UX design into a functional and responsive front-end application. Optimize performance for speed and ensure cross-browser compatibility to reach a wider audience. Meticulously craft every pixel to deliver an exceptional user experience on any device.</p>
+
+
+
+<p>7.<strong>Prioritize a comprehensive smart contract security audit before public release: </strong></p>
+
+
+
+<p>Similar to testing of any final product, meticulously examining your platform’s smart contracts for vulnerabilities and potential exploits is crucial. Enlist qualified security professionals like <a href="../../../index.html">Blaize</a> to conduct this audit. By proactively addressing identified vulnerabilities, you significantly mitigate financial losses, reputational damage, and foster additional trust among your users.</p>
+
+
+
+<p>8.<strong>Test the final product before public release:</strong></p>
+
+
+
+<p>Before unleashing your platform to the world, put it through rigorous testing. Conduct thorough functionality, security, and user experience tests across various devices and scenarios. Consider involving potential users in beta testing to gather valuable feedback and identify areas for improvement.</p>
+
+
+
+<p>9.<strong>Deploy the platform and launch it in the market:</strong></p>
+
+
+
+<p>Deploy your platform on the chosen infrastructure and <a href="../../../services/blockchain-marketing/marketing-for-blockchain-projects-a-comprehensive-guide/index.html">initiate a strategic marketing campaign</a>. Build community engagement, attract early adopters, and generate media coverage to create buzz and excitement. Remember, a successful launch is just the beginning.</p>
+
+
+
+<p>10.<strong>Provide continuous support and maintenance:</strong></p>
+
+
+
+<p>The whole process doesn’t end with launch. Continuously provide technical support, address user feedback, and implement platform updates to ensure its long-term success. Don’t forget to carry on security audits on a regular basis. Stay adaptable to evolving industry trends and user needs to keep your platform at the forefront of the NFT market.</p>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-3777d8b377acae5ca367180485d95aa2"><a href="../../../security/index.html">Discover more about Blaize expertise in security auditing services here</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Decide on The Type of Your NFT Platform</h2>
+
+
+
+<p>The first crucial step is selecting the platform that aligns with your vision. Remember, an NFT platform isn’t solely a marketplace – it’s your launchpad for diverse possibilities. Let’s explore various platform types to aid your informed decision:</p>
+
+
+
+<p>1. Marketplaces: These familiar platforms facilitate buying, selling, and trading NFTs. They excel at connecting creators and collectors, providing exposure and liquidity. Ideal for established creators with ready-to-sell collections or projects focused on tradable assets.</p>
+
+
+
+<p>2. Minting Platforms: Focus on creating and launching NFT collections. They offer tools for minting, setting smart contracts, and managing drops. Well-suited for artists, startups, or projects with unique collections needing tailored minting solutions.</p>
+
+
+
+<p>3. Tokenization Platforms: These delve deeper, tokenizing real-world assets (e.g., real estate, artwork) into NFTs (think security token offerings or fractional ownership platforms). They bridge the gap between traditional and digital assets, unlocking new investment and ownership opportunities. Consider this if your project involves tokenizing tangible assets or creating unique ownership structures.</p>
+
+
+
+<p>4. Gaming Platforms: Integrate NFTs into the gaming experience. These platforms enable in-game item ownership, character creation, and even play-to-earn mechanics. Perfect for projects aiming to build NFT-powered games or metaverses where users interact and derive value through NFTs.</p>
+
+
+
+<p>We’ll describe the major types of NFT platforms below so that you can assess your needs and make a well-grounded decision.</p>
+
+
+
+<p>Read Also: <a href="../../../article-type/web3-security/best-practices-for-secure-nft-development/index.html">Best practices for secure NFT development</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT MARKETPLACE</strong></h3>
+
+
+
+<p>The first option we’d like to mention is a universal trading platform for non-fungible assets. By creating your own NFT marketplace platform, you make NFTs a bit more available to a wider audience and, thus, speed up their global adoption.</p>
+
+
+
+<p>Currently, there are a few popular websites for such purposes, so if you’d like to build an NFT marketplace platform, you’d better do thorough research before you kick into gear.</p>
+
+
+
+<p>Here are just a few honorable mentions:</p>
+
+
+
+<ul>
+<li><strong>Blur </strong>– currently the biggest NFT marketplace, a rising star for professional traders, offering low fees, fast interface, and innovative features like fee-less bidding. Targets high-volume traders with advanced portfolio management tools.</li>
+
+
+
+<li><strong>OpenSea</strong> – is the world’s first web3 marketplace for NFTs and crypto collectibles. It enables creating and trading NFTs, starting auctions, and browsing digital art for inspiration.</li>
+
+
+
+<li><strong>Element Market</strong> – focuses on curated experiences and community. Offers a selective, high-quality collection of NFTs and fosters connections between collectors and creators through events and dedicated channels. Caters to collectors seeking unique pieces and a vibrant community.</li>
+
+
+
+<li><strong>Rarible </strong>– a multichain community-centric NFT marketplace that is known for low fees for NFT creators.</li>
+</ul>
+
+
+
+<p>Most NFT marketplaces allow users to mint and trade different types of non-interchangeable tokens on Ethereum, BNB Chain, or other blockchains. In return for their services, marketplaces get a commission, which is the foundation of their revenue.</p>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background has-link-color wp-elements-d2c4d5c8946cc94b8cd1acd10a5e3828">By the way, hiring a professional <a href="../../../token-development-services/index.html"><strong>web3 development company</strong></a> can help ensure a successful launch of your NFT marketplace platform.</p>
+
+
+
+<p><a href="../../../article-type/overview/crypto-art-explained/index.html">Read More about the NFT art marketplaces and the tendencies of its development</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT COLLECTION</strong></h3>
+
+
+
+<p>The digital art is still one of the most common NFT utilities no matter whether it’s the initial generation of monsters for a new game, the initial balance of shares from a tokenized villa, or even a preliminary art collection to raise money for further development of your platform.</p>
+
+
+
+<p>The pros of NFT collections include the following:</p>
+
+
+
+<ul>
+<li>Relatively simple development process as you won’t actually need to build an NFT platform – you can easily mint your NFTs on one of the existing marketplaces.</li>
+
+
+
+<li>The possibility to receive quick profit if you have a strong community or market your collection well.</li>
+
+
+
+<li>Plenty of choices when it comes to NFT utility – your collection can consist of digital art, music, AR/VR items, real-world objects, metaverse real estate, and much more.</li>
+</ul>
+
+
+
+<p>Even though NFT collections don’t require separate platforms, you can still create one for your company. Yet, in this case, the whole NFT platform development would take much more time and resources.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT GAMING SOLUTION</strong></h3>
+
+
+
+<p>The GameFi segment is another major type of NFT platforms. Blockchain games with NFT rewards and in-game objects have been on the rise regardless of the overall market decline. And we are sure this will remain so.</p>
+
+
+
+<p>According to the research held at the beginning of 2022, some NFT games <a href="https://www.statista.com/statistics/1266486/blockchain-games-user-number/"><strong>attracted up to 1.1 million unique users</strong></a> monthly, which is an incredible number for a rather niche product.</p>
+
+
+
+<p>And the best part about gamefi is that you don’t need to limit your imagination. While standard NFT platforms, such as marketplaces, offer similar functions, games are definitely not meant to put you in the box. </p>
+
+
+
+<p>However, you should keep in mind that NFT gaming platform development requires much more dedication and resources than many other types of NFT utility. On top of blockchain development expertise, your team must have experience working with game mechanics, creating engaging plots, and designing characters. </p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT IN DEFI</strong></h3>
+
+
+
+<p>Decentralized finance also provides a vast field for NFT application. However, NFT utility here is much less evident than when it comes to gaming or marketplaces, so let us guide you through it.</p>
+
+
+
+<p>First, NFTs might serve as liquidity provider (LP) position representation, similar to the Uniswap V3 solution. Based on the pool and the selected parameters, users will receive a unique NFT representing their position in that specific pool.</p>
+
+
+
+<p>Second, there is a separate niche of NFT lending that allows for collateralizing users’ NFTs as a loan in exchange for immediate crypto payment.</p>
+
+
+
+<p>Third, we have various financial instruments inherited from traditional finance and transformed into DeFi NFT-based solutions. These are NFT bonds, options, and different derivatives in the form of NFTs.</p>
+
+
+
+<p>NFTs can have many other DeFi utilities, like serving as a yield farming boost, so we’ll leave the rest to your imagination and business needs.</p>
+
+
+
+<p>Did you know that by using the power of <a href="../../../for-enterprises/index.html"><strong>enterprise blockchain</strong></a>, businesses can unlock new revenue streams, reduce costs, and streamline operations? So why not explore the full potential of enterprise blockchain and NFTs for your business today?</p>
+
+
+
+<h2 class="wp-block-heading">NFT AS A KEY TO SMART ACCOUNTS</h2>
+
+
+
+<p>Beyond their current application as static assets, NFTs are poised to unlock a new dimension of user interaction – serving as the keys to smart accounts enabled by the ERC-6551 standard. This transformative integration elevates NFTs from ownership tokens into personalized passports to a secure, on-chain identity. </p>
+
+
+
+<p>Imagine an NFT not simply representing digital ownership, but acting as the exclusive key to a smart contract wallet – your gateway to interacting with DeFi protocols, managing digital assets, and executing complex financial transactions, all without the traditional vulnerabilities of custodial wallets.</p>
+
+
+
+<h2 class="wp-block-heading">NFT PLATFORM COMPONENTS</h2>
+
+
+
+<p>NFT platforms exhibit diverse specializations, including marketplaces, tokenization platforms, RWA protocols, simple minting pages, and sophisticated digital art auctions. Despite their distinct functionalities, these platforms share many common components and necessitate a comprehensive development approach involving a team of professionals.</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="900" src="../../../wp-content/uploads/2024/01/pic_6-_3_.webp" alt="NFT platforms exhibit diverse specializations, including marketplaces, tokenization platforms, RWA protocols, simple minting pages, and sophisticated digital art auctions." class="wp-image-53719 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_.webp 1600w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1536x864.webp 1536w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1568x882.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjkwMCIgd2lkdGg9IjE2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="900" src="../../../wp-content/uploads/2024/01/pic_6-_3_.webp" alt="NFT platforms exhibit diverse specializations, including marketplaces, tokenization platforms, RWA protocols, simple minting pages, and sophisticated digital art auctions." srcset="https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_.webp 1600w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1536x864.webp 1536w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1568x882.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<p class="has-dark-gray-color has-text-color has-link-color wp-elements-02470407ea245289a534e5c690ad7bb1"><strong>Smart Contracts at the Core</strong>: Smart contracts are fundamental in decentralizing protocols, with NFTs being a primary application. Platforms typically require standards such as ERC721, ERC1155, or newer ones like ERC-5956 and ERC-6220. Their implementations are often straightforward, thanks to libraries like OpenZeppelin and ERC721A, which provide fully audited contracts with essential plugins. While other chains have unique NFT standards, most adhere to traditional EVM standards, facilitating development across various platforms including Solana and Sui.<br>However, there are a few points that require additional attention:</p>
+
+
+
+<ul>
+<li>Royalty: This may involve ERC-2981 or other formats agreed upon by the marketplace and demands high attention from the security team.</li>
+
+
+
+<li>Minting Process: Airdrops, batch mints, auctions, and sales usually incorporate custom logic, necessitating an experienced team to adapt proven concepts to the protocol’s needs.</li>
+</ul>
+
+
+
+<p><strong>Metadata and Storage</strong>: A crucial element of any NFT platform is the metadata associated with NFTs, including the infrastructure for its storage, which involves SDKs and gateways. </p>
+
+
+
+<p>For storage, there are many reliable solutions like Moralis, Alchemy, Arweave, and Filecoin, offering both storage and tools for efficient metadata management. Integration into the project’s pipeline is essential. While working with pure IPFS might not be necessary, automating metadata formatting, optimizing the NFT minting process, and connecting storage SDK endpoints with your dApp and backend services are crucial. </p>
+
+
+
+<p>Blaize manages all integration processes and additional development for rapid metadata management for thousands of NFTs, handling metadata updates for flippers and metaverse projects, or uploading digital certificates for RWA protocols.</p>
+
+
+
+<p><strong>dApp and UI</strong>: The purpose of your NFT platform might vary, but essential components include:</p>
+
+
+
+<ul>
+<li>Explorer Functionality: To view assets or browse existing collections.</li>
+
+
+
+<li>Basic Transfer, Minting, and Sale Interfaces: Allowing users to interact with NFTs on your platform.</li>
+
+
+
+<li>Integrated Wallets: Such as MetaMask, WalletConnect, Coinbase wallet, or specific chain wallets like Phantom and Solflare for Solana, or Martian and SuiWallet for Sui.</li>
+</ul>
+
+
+
+<p>Frontend and web3 engineers are required to build the dApp with all necessary functionality. Additionally, UI/UX design, covered by our in-house designers, is crucial for an engaging user experience.</p>
+
+
+
+<p><strong>Offchain Services</strong>: Despite their decentralized nature, every dApp requires backend services. NFT platforms are no exception, necessitating services for aggregating and indexing on-chain information, bootstrapping and caching metadata, providing reliable price feeds, and maintaining databases for prices, transaction histories, and user accounts. Even a small NFT minting page will need integration with tools like Subgraph, Airstack, or Moralis SDK, enabling functionalities like displaying all NFT owners and sales history. A backend engineer is thus an indispensable part of the team.</p>
+
+
+
+<p><strong>Even More Smart Contracts</strong>: Depending on the platform type, additional functionality often requires the development of more smart contracts, such as:</p>
+
+
+
+<ul>
+<li><strong>Upgrades and Wraps for NFTs</strong></li>
+
+
+
+<li><strong>Various Auctions, Drops, and Sale Types</strong></li>
+
+
+
+<li><strong>NFT Locks, Staking, Depositing as Collateral</strong></li>
+
+
+
+<li><strong>Tokenization Pipelines and Vaults for NFT Fractioning</strong></li>
+
+
+
+<li><strong>Custom Solutions or Protocol Integrations as Needed by the Platform</strong></li>
+</ul>
+
+
+
+<p>Blaize is well-equipped with a team of specialists covering all necessary development areas, ensuring comprehensive and effective NFT platform development. This way, you will be sure that the project is done according to industry best practices and that the <a href="../../../article-type/web3-security/best-practices-for-secure-nft-development/index.html">final product is reliable and secure</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT MARKETPLACE FEATURES FOR DIFFERENT PARTIES</strong></h3>
+
+
+
+<p>Let’s say you decided to create an NFT platform<strong> </strong>for trading assets. What should you start with, and which functionality should you include?</p>
+
+
+
+<p>If you’re wondering how to develop your own NFT marketplace, one of the most important things to consider is business logic. The underlying smart contracts must work impeccably so that none of the involved parties could get deceived or feel uncomfortable while using your product.</p>
+
+
+
+<p>We’ll describe the key functionality for different categories of users, including buyers, sellers, and administrators. Make sure to develop a solution that considers all of these points, and don’t hesitate to add custom features that would be unique to your project.</p>
+
+
+
+<p>Please note that we also provide <a href="../../../for-startups/index.html"><strong>blockchain development services for startups</strong></a>, so if you need additional advice, please contact us.</p>
+
+
+
+<p>So, the parties of this process include:</p>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-05374acffe9b514b1f77e393371b7240">1.<strong>NFT Buyer:</strong></p>
+
+
+
+<ul>
+<li>Registration and authorization.</li>
+
+
+
+<li>Connecting the wallet.</li>
+
+
+
+<li>Browsing NFTs, searching with keywords or tags.</li>
+
+
+
+<li>Completing the purchase, whether through a fixed payment or an auction.</li>
+
+
+
+<li>Completing the transaction, including gas fees and a platform commission.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-40e67b06616414d838b5d90189be1cdc">2.<strong>NFT Seller:</strong></p>
+
+
+
+<ul>
+<li>Registration and authorization.</li>
+
+
+
+<li>A dedicated space for creating NFTs.</li>
+
+
+
+<li>The possibility to transfer NFTs from other marketplaces.</li>
+
+
+
+<li>Choosing a place to store NFTs before minting them.</li>
+
+
+
+<li>The possibility to select a custom name, description, store images and other files when creating an NFT.</li>
+
+
+
+<li>Creating collections.</li>
+
+
+
+<li>Selecting the type of payment – fixed or auctioned. Creating auctions.</li>
+
+
+
+<li>Putting the NFT for sale and ending the sale if their intentions have changed.</li>
+
+
+
+<li>Revising the price of an NFT.</li>
+
+
+
+<li>Receiving the funds for the sold NFTs.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-9a056ac36b5bf698c220a994cfef7c8e">3.<strong>Administrator:</strong></p>
+
+
+
+<ul>
+<li>Viewing all NFTs created on the platform.</li>
+
+
+
+<li>Viewing all users and their trading history.</li>
+
+
+
+<li>The possibility to remove NFTs in case there are duplicated assets or ones that break the Terms of Use of the platform.</li>
+
+
+
+<li>Editing and adding categories of assets.</li>
+
+
+
+<li>Adding users to the whitelist if necessary and blocking them.</li>
+
+
+
+<li>Managing fees for buyers and sellers.</li>
+
+
+
+<li>Setting up the integration with IPFS for file storage.</li>
+
+
+
+<li>Other necessary technical functionality peculiar to your platform.</li>
+</ul>
+
+
+
+<p>Regardless of the chosen NFT platform features and its type, you’ll need to use APIs and third-party services to extend the functionality. Most of these solutions will be connected with data storage, which is crucial for the NFT industry.</p>
+
+
+
+<p>The vital part is choosing a secure service and integrating it into your platform correctly. That is why hiring NFT developers with proven expertise should be your number one priority.</p>
+
+
+
+<h2 class="wp-block-heading">Final Architecture of a Typical NFT Platform</h2>
+
+
+
+<p>As soon as you understand the main business logic behind your NFT platform, all the features, and user flows, it’s time to create the final architecture. Don’t get frustrated if it turns out pretty complex because your product might also be far from simple.</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="1444" src="../../../wp-content/uploads/2024/01/image-1.jpg" alt="" class="wp-image-53720 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/01/image-1.jpeg 1600w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1536x1386.jpeg 1536w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1568x1415.jpeg 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0NDQiIHdpZHRoPSIxNjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="1444" src="../../../wp-content/uploads/2024/01/image-1.jpg" alt="" srcset="https://blaize.tech/wp-content/uploads/2024/01/image-1.jpeg 1600w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1536x1386.jpeg 1536w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1568x1415.jpeg 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img><figcaption class="wp-element-caption"><em>An example of NFT game architecture </em><a href="../../../clients/decentralized-app-development-for-the-crypto-game/index.html"><em>created by Blaize for LeagueDAO</em></a></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">Scaling Your NFT Solution</h2>
+
+
+
+<p>After you <a href="../../../nft-marketplace-development-services/index.html">build an NFT marketplace platform</a> or other types of NFT platform and release it to a wider audience, the only thing to do is to take care of promoting it and growing the community.</p>
+
+
+
+<p>But as you achieve the majority of milestones on your roadmap, you’ll need to think of the next steps for your NFT platform. And the most obvious one is scaling it not only in terms of internal features and the number of users but also to other chains.</p>
+
+
+
+<p>Trust us, your NFT platform journey doesn’t stop at the moment you deploy the product – it only begins. And here at <a href="../../../index.html"><strong>Blaize</strong></a>, we have witnessed many projects that have scaled fast right after the public launch. Moreover, we have <a href="../../../clients/index.html"><strong>helped them do it</strong></a>, and we’ll be happy to assist your NFT platform in reaching success in the current market.</p>
+
+
+
+<h2 class="wp-block-heading">BUILD A NFT MARKETPLACE WITH BLAIZE</h2>
+
+
+
+<p>If you have an idea to create an NFT platform for your business, it’s time to act. Even though the market might not seem perfect, you can achieve great results with the help of knowledgeable blockchain developers.</p>
+
+
+
+<p>The Blaize team has over 6 years of experience in the blockchain industry, including vast expertise with NFT projects. So far, we have successfully completed 70+ projects. </p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-7595c7757f780c3a778db971ae267ada">We can help you grow your business with blockchain and NFT technologies fast and efficiently. <a href="../../../index.html#contacts">Book a call to discuss a custom solution for your company</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Final Thoughts</h2>
+
+
+
+<p>The realm of non-fungible tokens (NFTs) presents a captivating landscape, teeming with potential for enterprising individuals and organizations alike. The prospect of developing your own NFT platform beckons, offering the opportunity to carve a unique niche within this burgeoning market. This comprehensive guide serves as your navigational compass, equipping you with essential considerations and expert insights to ensure a successful voyage.</p>
+
+
+
+<p>While the NFT market remains nascent and, undeniably, imperfect, several indicators suggest its imminent maturation and subsequent flourish. The interest from established institutions, coupled with the continuous refinement of underlying technologies, fosters optimism for its sustained growth.</p>
+
+
+
+<p>To make an NFT marketplace successful when developing it from scratch, the following principles are recommended to be strictly maintained:</p>
+
+
+
+<ul>
+<li>Profound Market Analysis </li>
+
+
+
+<li>Assembling a Competent Crew </li>
+
+
+
+<li>Selecting the Right Blockchain</li>
+
+
+
+<li>Prioritizing Intuitive UI/UX</li>
+
+
+
+<li>Rigorous Testing and Quality Assurance</li>
+
+
+
+<li>Strategic Launch and Creating Community Engagement</li>
+
+
+
+<li>Ongoing Support and Maintenance</li>
+</ul>
+
+
+
+<p>By adhering to these guiding principles and drawing upon the insights provided, you can transform your NFT platform vision into a remarkable reality. Remember, the NFT market is a dynamic entity, demanding continuous adaptation and innovation. Embrace the ever-evolving landscape, and remain steadfast in your commitment to excellence.</p>
+
+
+
+<p>Should you require assistance in navigating the intricacies of NFT platform development, the team at Blaize stands ready to offer its unwavering support.</p>
+
+
+
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading"><strong>What are the main types of NFT platforms?</strong></h3>
+
+
+
+<p>There are many different platforms for all kinds of NFT utilities. The most popular solutions on the market include NFT marketplaces, P2E gaming platforms, collections, and multiple DeFi solutions.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How can I </strong><strong>develop an NFT platform</strong><strong>?</strong></h3>
+
+
+
+<p>To create an NFT platform, you should follow these steps:</p>
+
+
+
+<ul>
+<li>Conduct market research and analysis.</li>
+
+
+
+<li>Create the concept of your platform.</li>
+
+
+
+<li>Gather a reliable and experienced team.</li>
+
+
+
+<li>Take care of the technical development.</li>
+
+
+
+<li>Select and connect all the necessary APIs, including the chosen metadata storage provider.</li>
+
+
+
+<li>Work on the UI/UX design.</li>
+
+
+
+<li>Complete the front-end part of the product development.</li>
+
+
+
+<li>Test the final product before public release.</li>
+
+
+
+<li>Deploy the platform and launch it in the market.</li>
+
+
+
+<li>Provide continuous support and maintenance.</li>
+</ul>
+
+
+
+<p>Learn more in our full article.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How to choose a reliable team for </strong><strong>NFT platform development</strong><strong>?</strong></h3>
+
+
+
+<p>When looking for a reliable team of NFT developers, you should consider their experience first. Specialized blockchain teams will be happy to share their case studies and guide you briefly through the whole development process before you start working with them.</p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../category/article-type/analysis/index.html" rel="category tag">Analysis</a>, <a href="../../category/services/nft-development-services/index.html" rel="category tag">NFT development</a>, <a href="../../category/article-type/overview/index.html" rel="category tag">Overview</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="../../tag/blockchain-platforms/index.html" rel="tag">blockchain platforms</a>, <a href="../../tag/defi/index.html" rel="tag">DeFi</a>, <a href="../../tag/nft-development/index.html" rel="tag">NFT development</a>, <a href="../../tag/smart-contract/index.html" rel="tag">smart contract</a>	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Blaize</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+		<div id="amp-mobile-version-switcher">
+			<a rel="nofollow" href="../index1862.html?noamp=mobile">
+				Exit mobile version			</a>
+		</div>
+
+				  
+  
+
+</body>
+<!-- Mirrored from blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:46 GMT -->
+</html>

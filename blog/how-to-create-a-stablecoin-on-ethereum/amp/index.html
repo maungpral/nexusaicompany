@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html amp lang="en-US" data-amp-auto-lightbox-disable transformed="self;v=1" i-amphtml-layout="" i-amphtml-no-boilerplate="">
+
+<!-- Mirrored from blaize.tech/blog/how-to-create-a-stablecoin-on-ethereum/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><link rel="preconnect" href="https://cdn.ampproject.org/"><style amp-runtime="" i-amphtml-version="012510081644000">html{overflow-x:hidden!important}html.i-amphtml-fie{height:100%!important;width:100%!important}html:not([amp4ads]),html:not([amp4ads]) body{height:auto!important}html:not([amp4ads]) body{margin:0!important}body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y pinch-zoom;touch-action:pan-y pinch-zoom}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important}html.i-amphtml-fie:not(.i-amphtml-inabox)>body,html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body{position:relative!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}#i-amphtml-wrapper+body{visibility:visible}#i-amphtml-wrapper+body .i-amphtml-lightbox-element,#i-amphtml-wrapper+body[i-amphtml-lightbox]{visibility:hidden}#i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element{visibility:visible}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}amp-instagram{padding:54px 0px 0px!important;background-color:#fff}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}amp-experiment,amp-live-list>[update]{display:none}amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden{display:none!important}amp-list [fetch-error],amp-list[load-more] [load-more-button],amp-list[load-more] [load-more-end],amp-list[load-more] [load-more-failed],amp-list[load-more] [load-more-loading]{display:none}amp-list[diffable] div[role=list]{display:block}amp-story-page,amp-story[standalone]{min-height:1px!important;display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#000!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .amp-active>div,amp-story .i-amphtml-loader-background{display:none!important}amp-story-page:not(:first-of-type):not([distance]):not([active]){transform:translateY(1000vh)!important}amp-autocomplete{position:relative!important;display:inline-block!important}amp-autocomplete>input,amp-autocomplete>textarea{padding:0.5rem;border:1px solid rgba(0,0,0,.33)}.i-amphtml-autocomplete-results,amp-autocomplete>input,amp-autocomplete>textarea{font-size:1rem;line-height:1.5rem}[amp-fx^=fly-in]{visibility:hidden}amp-script[nodom],amp-script[sandboxed]{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}
+/*# sourceURL=/css/ampdoc.css*/[hidden]{display:none!important}.i-amphtml-element{display:inline-block}.i-amphtml-blurry-placeholder{transition:opacity 0.3s cubic-bezier(0.0,0.0,0.2,1)!important;pointer-events:none}[layout=nodisplay]:not(.i-amphtml-element){display:none!important}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic,[layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic){display:inline-block;position:relative;max-width:100%}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]:not(.i-amphtml-layout-fixed-height){display:block;position:relative}.i-amphtml-layout-fill,.i-amphtml-layout-fill.i-amphtml-notbuilt,[layout=fill]:not(.i-amphtml-layout-fill),body noscript>*{display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}body noscript>*{position:absolute!important;width:100%;height:100%;z-index:2}body noscript{display:inline!important}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}@supports (aspect-ratio:1/1){i-amphtml-sizer.i-amphtml-disable-ar{display:none!important}}.i-amphtml-blurry-placeholder,.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}.i-amphtml-select-disabled{-webkit-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*,[width][height][heights]:not([layout]):not(.i-amphtml-element)>*,[width][height][sizes]:not([layout]):not(.i-amphtml-element)>*{display:none}amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content{display:block}.i-amphtml-notbuilt:not(.i-amphtml-layout-container),[layout]:not([layout=container]):not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){color:transparent!important;line-height:0!important}.i-amphtml-ghost{visibility:hidden!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder],[width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],[width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder]{display:block;line-height:normal}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback],.i-amphtml-layout-container>[placeholder].amp-hidden,.i-amphtml-layout-container>[placeholder].hidden{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}amp-img[i-amphtml-ssr]:not(.i-amphtml-element)>[placeholder]{z-index:auto}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;pointer-events:none;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden;display:initial;line-height:normal}.i-amphtml-layout-size-defined>[overflow]{position:absolute}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-analytics,amp-auto-ads,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-story{visibility:hidden!important}html.i-amphtml-fie>amp-analytics{position:initial!important}[visible-when-invalid]:not(.visible),form [submit-error],form [submit-success],form [submitting]{display:none}amp-accordion{display:block!important}@media (min-width:1px){:where(amp-accordion>section)>:first-child{margin:0;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}:where(amp-accordion>section)>:last-child{margin:0}}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}amp-accordion,amp-accordion>section{margin:0}amp-accordion:not(.i-amphtml-built)>section>:last-child{display:none!important}amp-accordion:not(.i-amphtml-built)>section[expanded]>:last-child{display:block!important}
+/*# sourceURL=/css/ampshared.css*/</style><meta name="description" content="Stablecoins are cryptocurrencies that are aimed to be stable and eliminate fluctuations so building a stablecoin became a common practice."><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Create a Stablecoin on Ethereum - Blaize"><meta property="og:description" content="Stablecoins are cryptocurrencies that are aimed to be stable and eliminate fluctuations so building a stablecoin became a common practice."><meta property="og:url" content="https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/"><meta property="og:site_name" content="Blaize"><meta property="article:published_time" content="2021-01-12T09:40:32+00:00"><meta property="article:modified_time" content="2024-10-29T11:10:06+00:00"><meta property="og:image" content="https://blaize.tech/wp-content/uploads/2021/01/stablecoin-launch.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="author" content="Sergey Onyshchenko"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@S_Onishchenko"><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Sergey Onyshchenko"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="11 minutes"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="generator" content="AMP Plugin v2.5.2; mode=reader; theme=legacy"><script async="" src="https://cdn.ampproject.org/v0.mjs" type="module" crossorigin="anonymous"></script><script async nomodule src="../../../../cdn.ampproject.org/v0.js" crossorigin="anonymous"></script><style amp-custom="">:root .has-primary-red-background-color{background-color:#fc5959;color:#fff}:root .has-light-gray-background-color{background-color:#9f9fa0;color:#000}:root .has-primary-red-color{color:#fc5959}:root .has-dark-gray-color{color:#1e1e23}:root .has-white-color{color:#fff}#amp-mobile-version-switcher{left:0;position:absolute;width:100%;z-index:100}#amp-mobile-version-switcher>a{background-color:#444;border:0;color:#eaeaea;display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;font-weight:600;padding:15px 0;text-align:center;-webkit-text-decoration:none;text-decoration:none}#amp-mobile-version-switcher>a:active,#amp-mobile-version-switcher>a:focus,#amp-mobile-version-switcher>a:hover{-webkit-text-decoration:underline;text-decoration:underline}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}h1.has-background,h2.has-background,h4.has-background{padding:1.25em 2.375em}.wp-block-image amp-img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}.wp-block-image[data-amp-original-style*=border-radius] amp-img,.wp-block-image[data-amp-original-style*=border-radius]>a{border-radius:inherit}.wp-block-image.aligncenter{text-align:center}.wp-block-image .aligncenter,.wp-block-image.aligncenter{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image.aligncenter>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image figcaption{margin-bottom:1em;margin-top:.5em}.wp-block-image :where(.has-border-color){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-color]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-color]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-color]){border-left-style:solid}.wp-block-image :where([data-amp-original-style*=border-width]){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-width]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-width]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-width]){border-left-style:solid}.wp-block-image figure{margin:0}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}ol,ul{box-sizing:border-box}ol.has-background,ul.has-background{padding:1.25em 2.375em}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}@keyframes overlay-menu__fade-in-animation{0%{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:translateY(0)}}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-excerpt){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-pullquote){margin:0 0 1em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}:where(.wp-block-term-description){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-text-align-center{text-align:center}.aligncenter{clear:both}html :where(.has-border-color){border-style:solid}html :where([data-amp-original-style*=border-top-color]){border-top-style:solid}html :where([data-amp-original-style*=border-right-color]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-color]){border-left-style:solid}html :where([data-amp-original-style*=border-width]){border-style:solid}html :where([data-amp-original-style*=border-top-width]){border-top-style:solid}html :where([data-amp-original-style*=border-right-width]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-width]){border-left-style:solid}html :where(amp-img[class*=wp-image-]),html :where(amp-anim[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.wp-block-image{margin:0 0 1em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}amp-img.amp-wp-enforced-sizes{object-fit:contain}amp-img img,amp-img noscript{image-rendering:inherit;object-fit:inherit;object-position:inherit}.aligncenter{margin-top:1em;margin-right:auto;margin-bottom:1em;margin-left:auto}.aligncenter{display:block;text-align:center;margin-left:auto;margin-right:auto}.amp-wp-enforced-sizes{max-width:100%;margin:0 auto}.amp-wp-article-content > p.has-background{margin-left:-2.375em;margin-right:-2.375em;margin-block-start:0;margin-block-end:16px}html{background:#0a5f85}body{background:#fff;color:#353535;font-family:Georgia,"Times New Roman",Times,Serif;font-weight:300;line-height:1.75}p,ol,ul,figure{margin:0 0 1em;padding:0}a,a:visited{color:#0a5f85}a:hover,a:active,a:focus{color:#353535}.amp-wp-meta,.amp-wp-header div,.amp-wp-title,.amp-wp-tax-category,.amp-wp-tax-tag,.amp-wp-footer p,.back-to-top{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}.amp-wp-header{background-color:#0a5f85}.amp-wp-header div{color:#fff;font-size:1em;font-weight:400;margin:0 auto;max-width:calc(840px - 32px);padding:.875em 16px;position:relative}.amp-wp-header a{color:#fff;text-decoration:none}.amp-wp-header .amp-wp-site-icon{background-color:#fff;border:1px solid #fff;border-radius:50%;position:absolute;right:18px;top:10px}.amp-wp-article{color:#353535;font-weight:400;margin:1.5em auto;max-width:840px;overflow-wrap:break-word;word-wrap:break-word}.amp-wp-article-header{align-items:center;align-content:stretch;display:flex;flex-wrap:wrap;justify-content:space-between;margin:1.5em 16px 0}.amp-wp-title{color:#353535;display:block;flex:1 0 100%;font-weight:900;margin:0 0 .625em;width:100%}.amp-wp-meta{color:#696969;display:inline-block;flex:2 1 50%;font-size:.875em;line-height:1.5em;margin:0 0 1.5em;padding:0}.amp-wp-article-header .amp-wp-meta:last-of-type{text-align:right}.amp-wp-article-header .amp-wp-meta:first-of-type{text-align:left}.amp-wp-byline amp-img,.amp-wp-byline .amp-wp-author{display:inline-block;vertical-align:middle}.amp-wp-byline amp-img{border:1px solid #0a5f85;border-radius:50%;position:relative;margin-right:6px}.amp-wp-posted-on{text-align:right}.amp-wp-article-featured-image{margin:0 0 1em}.amp-wp-article-featured-image img:not(amp-img){max-width:100%;height:auto;margin:0 auto}.amp-wp-article-featured-image amp-img{margin:0 auto}.amp-wp-article-content{margin:0 16px}.amp-wp-article-content ul,.amp-wp-article-content ol{margin-left:1em}.amp-wp-article-content .wp-caption{max-width:100%}.amp-wp-article-content amp-img{margin:0 auto}.wp-caption{padding:0}.amp-wp-article-footer .amp-wp-meta{display:block}.amp-wp-tax-category,.amp-wp-tax-tag{color:#696969;font-size:.875em;line-height:1.5em;margin:1.5em 16px}.amp-wp-footer{border-top:1px solid #c2c2c2;margin:calc(1.5em - 1px) 0 0}.amp-wp-footer div{margin:0 auto;max-width:calc(840px - 32px);padding:1.25em 16px 1.25em;position:relative}.amp-wp-footer h2{font-size:1em;line-height:1.375em;margin:0 0 .5em}.amp-wp-footer p{color:#696969;font-size:.8em;line-height:1.5em;margin:0 85px 0 0}.amp-wp-footer a{text-decoration:none}.back-to-top{bottom:1.275em;font-size:.8em;font-weight:600;line-height:2em;position:absolute;right:16px}.amp-wp-cefb454:not(#_#_#_#_#_){background-color:rgba(0,0,0,0)}
+
+/*# sourceURL=amp-custom.css */</style><link rel="canonical" href="../../../article-type/how-to-create-a-stablecoin-on-ethereum/index.html"><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-to-create-a-stablecoin-on-ethereum/","url":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/","name":"How to Create a Stablecoin on Ethereum - Blaize","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/#primaryimage"},"image":{"@id":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2021/01/stablecoin-launch.png","datePublished":"2021-01-12T09:40:32+00:00","dateModified":"2024-10-29T11:10:06+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"Stablecoins are cryptocurrencies that are aimed to be stable and eliminate fluctuations so building a stablecoin became a common practice.","breadcrumb":{"@id":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2021/01/stablecoin-launch.png","contentUrl":"https://blaize.tech/wp-content/uploads/2021/01/stablecoin-launch.png","width":1200,"height":630,"caption":"Create Stablecoin on Ethereum"},{"@type":"BreadcrumbList","@id":"https://blaize.tech/article-type/how-to-create-a-stablecoin-on-ethereum/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"How to Create a Stablecoin on Ethereum"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","contentUrl":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script><title>How to Create a Stablecoin on Ethereum - Blaize</title></head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../../index.html">
+										<amp-img src="../../../wp-content/uploads/2020/01/Group-1.png" width="32" height="32" class="amp-wp-site-icon amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" data-hero-candidate="" alt="Site icon" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Site icon" src="../../../wp-content/uploads/2020/01/Group-1.png"></amp-img>
+						<span class="amp-site-title">
+				Blaize			</span>
+		</a>
+	</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">How to Create a Stablecoin on Ethereum</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g" srcset="
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=24&amp;d=mm&amp;r=g 1x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=48&amp;d=mm&amp;r=g 2x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g 3x
+				" alt="Sergey Onyshchenko" width="24" height="24" layout="fixed" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:24px;height:24px" i-amphtml-layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Sergey Onyshchenko</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2021-01-12T09:40:32+00:00">
+		5 years ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="640" height="336" src="../../../wp-content/uploads/2021/01/stablecoin-launch.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" alt="Create Stablecoin on Ethereum" data-hero-candidate="" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMzNiIgd2lkdGg9IjY0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" loading="lazy" alt="Create Stablecoin on Ethereum" src="../../../wp-content/uploads/2021/01/stablecoin-launch.png"></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		
+<p>Following its name, stablecoins are cryptocurrencies that are aimed to be stable and eliminate asset fluctuations. The current market offers more than 70 stable assets so building a stablecoin became a common practice. </p>
+
+
+
+<p>In this article, we would like to show you Blaize’s stablecoin creation guide and share an example of creating a stablecoin on Ethereum. We will also concentrate on different approaches to stablecoin development and which one suits best to your business case. </p>
+
+
+
+<h2 class="wp-block-heading">How to create a stablecoin? </h2>
+
+
+
+<p>The process of stablecoin development is quite complex and needs to take into account a list of important factors. Those specifications significantly impact the development process length and scope and therefore should be discussed and explained in a detailed way. </p>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">The main points to consider before creating your own stablecoin: </span></strong></p>
+
+
+
+<ol>
+<li><strong><a href="#TYPES-OF-STABLECOINS">Type of stablecoin</a></strong></li>
+
+
+
+<li><strong><a href="#CHOOSE-THE-TARGET-BLOCKCHAIN-PLATFORM">Target blockchain platform</a></strong></li>
+
+
+
+<li><a href="#IDENTIFY-STABLECOIN-DEVELOPMENT-APPROACH"><strong>Stablecoin development approach </strong></a></li>
+
+
+
+<li><strong><a href="#LIQUIDITY-FLOW-MAINTENANCE">Ways for maintaining liquidity flow</a></strong></li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="TYPES-OF-STABLECOINS"><strong>Types of stablecoins</strong></h2>
+
+
+
+<p>By its definition stablecoin keeps the same price as the asset it is pegged to, like USD, EUR or even cryptocurrency. The stability of a price can be embodied in different ways. The most common one is backing the coin by other assets, so the emission of stablecoin is simultaneously stimulated and bounded by the finite collateral liquidity. In this terms we differentiate: </p>
+
+
+
+<ul>
+<li>crypto-backed stablecoins </li>
+
+
+
+<li>fiat-backed stablecoins</li>
+
+
+
+<li>commodity-backed stablecoins </li>
+</ul>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background"><em>Blaize has been sharing a thorough explanation of those in the article about <a href="../../../article-type/understanding-stablecoin/index.html" target="_blank" rel="noreferrer noopener">types of stablecoins</a>. Check it for a deeper understanding of the topic.  </em></p>
+
+
+
+<p>However, there is a type of stablecoins that does not require any collateral, meaning <strong>algorithmic stablecoin</strong>. This helps to achieve the required decentralization, which is a big issue in terms of classic collateral-backed stable assets. </p>
+
+
+
+<p>Unlike previous examples, algorithmic stablecoin does not rely on any real asset while stability is modeled algorithmically. The set of smart contracts regulates the value of such stablecoin by managing supply with applied algorithms. You can see <a href="https://www.ampleforth.org/" target="_blank" rel="noreferrer noopener">Ampleforth</a> as a living example of this type. </p>
+
+
+
+<p>Read also: <strong><a href="../../../article-type/9-most-common-smart-contract-vulnerabilities-found-by-blaize/index.html">Types of Smart Contracts Vulnerabilities</a></strong>.</p>
+
+
+
+<p><em><strong>This type of stablecoin requires the most complicated development toolset with previous experience in blockchain and smart contracts in particular. This is highly important when choosing the type of stablecoin you want to create and reliable stablecoin developers. Read </strong></em><a href="../../../article-type/how-to-choose-a-reliable-blockchain-company-for-your-project/index.html" target="_blank" rel="noreferrer noopener"><strong><em>how to find a solid blockchain outsourcing company</em></strong></a><em><strong> for such a task. </strong></em></p>
+
+
+
+<h2 class="wp-block-heading" id="CHOOSE-THE-TARGET-BLOCKCHAIN-PLATFORM"><strong>Choose the target blockchain platform </strong></h2>
+
+
+
+<p>After you get an understanding of what type of stablecoin your project needs, there is a place for considering the best platform for its implementation. The first thing to mention is that this is not a far 2016 when Ethereum was considered as one and only. </p>
+
+
+
+<p>The market has plenty of blockchains hosting stablecoins of different types. Stellar, EOS and TRON blockchains are the first to overtake Ethereum. </p>
+
+
+
+<h4 class="wp-block-heading"><em>Read more specifications of mentioned blockchains in <a href="../../../article-type/best-platforms-for-blockchain-development/index.html" target="_blank" rel="noreferrer noopener">Best Platforms for Blockchain Development</a>. </em></h4>
+
+
+
+<p>Due to a number of advantages like low transaction costs or higher scalability the third generation blockchains are seemed to be a very attractive place for stablecoin development. Thus, such giants as Tether (USDT) decided to run on TRON and EOS besides Ethereum. In addition, EOS is hosting such stablecoin projects as Carbon (CUSD), <a href="https://eosdt.com/en" target="_blank" rel="noreferrer noopener">EOSDT</a> and EUSD. </p>
+
+
+
+<p>However, the main question regarding choosing the right platform to launch a stablecoin should cover the demand occurring within this particular blockchain ecosystem. To clarify this notion, you can issue a stablecoin on any existing blockchain, but the project will not gain a lot of success because of low demand or the wrong use case of the coin. That is why we recommend preparing a thorough business analysis and do not omit the discovery stage during project planning. </p>
+
+
+
+<p>Therefore, building a stablecoin on the Ethereum platform seems very reasonable for a <strong><a href="../../../token-development-services/index.html">token development firm</a></strong> due to a robust infrastructure and usage of ERC-20 token standard. Ethereum has the biggest ecosystem with high demand for custom currencies which will ensure constant and sustainable liquidity flow for your stablecoin. </p>
+
+
+
+<p>Additionally, Ethereum is a home for almost all DeFi protocols which significantly increases the need for stablecoins. Those who are pegged to ETH (like DAI) have shown <a href="../../../article-type/what-to-expect-blaize-predictions-of-blockchain-development-trends-in-2021/index.html#STABLECOINS" target="_blank" rel="noreferrer noopener">great results last year</a> and the demand is expecting to grow accordingly to Ethereum 2.0 transitions. </p>
+
+
+
+<p class="mb-0 has-white-color has-light-gray-background-color has-text-color has-background"><em>To sum up this part, while choosing the right blockchain platform to </em><em>launch a stablecoin</em><em> the main focus should be turned to the supply and demand volume desired for your project. It is worth noting, that if you want to </em><em>create your own decentralized stablecoin</em><em> (like Dai or Ampleforth) you should remember that it will be tied to the chosen blockchain. </em></p>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background"><em>Then, the possibility of moving it to another network will either be absent or will be extremely limited. In case of creating centralized stablecoin (like Tether or PAX) on EOS, TRON or other blockchain you will need an additional bridge to be able</em><em> to run an Ethereum stablecoin</em><em>. In this case, you are not limited by the choice, but it may take more time and require more skills for the development.   </em></p>
+
+
+
+<h2 class="wp-block-heading" id="IDENTIFY-STABLECOIN-DEVELOPMENT-APPROACH"><strong>Identify stablecoin development approach </strong></h2>
+
+
+
+<p>This step requires an understanding of the needed trust mechanism you want to implement in your stablecoin architecture. In further explanation, <strong>the trust mechanism establishes the rules under which the price for the coin stays stable and the emission supports that stable price</strong>. This is very crucial in terms of understanding the level of decentralization you want to achieve. </p>
+
+
+
+<p>Each approach to stablecoin development corresponds to different purposes and the client’s specifications on how to make a stablecoin. Let’s describe them for a deeper understanding. But before you get started, learn more about the <strong><a href="../../../nft-development-services/index.html">NFT token development</a></strong> process.</p>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">1. <b>Create your own blockchain </b></span></strong></p>
+
+
+
+<p>The first way is to create your own blockchain and make a stablecoin on top of it. You can see Celo blockchain with its <a href="https://docs.celo.org/celo-codebase/protocol/stability/doto" target="_blank" rel="noreferrer noopener">cUSD stablecoin</a> as an example of this approach. </p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="882" height="520" src="../../../wp-content/uploads/2023/05/0aQgCUQCRU-2TGTO6.png" alt="building a stablecoin on ethereum" class="wp-image-33039 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUyMCIgd2lkdGg9Ijg4MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="882" height="520" src="../../../wp-content/uploads/2023/05/0aQgCUQCRU-2TGTO6.png" alt="building a stablecoin on ethereum"></noscript></amp-img><figcaption class="wp-element-caption"><em>Celo stability protocol contraction</em>, source: <a href="https://medium.com/celoorg/arbitrage-and-winning-a-cryptocurrency-trading-competition-at-mit-32e183766e42" target="_blank" rel="noreferrer noopener">Celo blog</a></figcaption></figure>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">2. Create decentralized stablecoin</span></strong></p>
+
+
+
+<p>This approach means creating a stablecoin algorithm from scratch using one of the existing blockchains. The issue of coins will be ensured by <a href="../../../smart-contracts/index.html">smart contracts which we develop and provide as a service</a>. The trust mechanism in this case relies on the contract logic and is secured by it. </p>
+
+
+
+<p>As an example, we can define DAI stablecoin based on MakerDAO protocol or any other ETH pegged coins. So we recommend considering this development approach if you need to create a stablecoin on Ethereum. </p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1400" height="1050" src="../../../wp-content/uploads/2023/05/0fqbc6qjaqWj7UYUV.jpg" alt="create an Ethereum stablecoin" class="wp-image-33041 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwNTAiIHdpZHRoPSIxNDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1400" height="1050" src="../../../wp-content/uploads/2023/05/0fqbc6qjaqWj7UYUV.jpg" alt="create an Ethereum stablecoin"></noscript></amp-img><figcaption class="wp-element-caption"><em>DAI emission cycle scheme</em>, source <a href="https://medium.com/hackernoon/dai-a-decentralized-opposition-to-the-banking-cartel-of-stablecoins-accumulates-1-7-763461bc2008" target="_blank" rel="noreferrer noopener">Hackernoon</a> </figcaption></figure>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">3. Create trustable centralized stablecoin </span></strong></p>
+
+
+
+<p>This approach is used for developing the majority of stablecoins and Tether is the most prominent example. The idea is to make a simple ERC-20 contract on Ethereum that issues stablecoins. </p>
+
+
+
+<p><strong>One should consider this approach if it needs to benefit from blockchain advantages while having guarantees of stability provided by fiats.</strong> The trust mechanism then relies on the rule that the private key of the deployer belongs to the single person (script on the backend actually) who has the right to generate new coins. The full decentralization of your currency is very questionable in this case.</p>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">4. Adoption through the intermediate case </span></strong></p>
+
+
+
+<p>Another approach to stablecoin launch can be its adoption through the intermediate solution. This case was perfectly performed by Binance exchange. BUSD (Binance initial stablecoin) was created inside the exchange as an intermediate coin in order to match trading pairs. </p>
+
+
+
+<p>Then it was moved to BinanceChain through the creation of an app that wraps fiat and emits stablecoins in exchange and now acts as an independent stablecoin. After BUSD reached out from its native chain to Ethereum, many well-known DeFi services like Uniswap, 1Inch, Curve, Kyber, etc. started BUSD support. </p>
+
+
+
+<h4 class="wp-block-heading"><em><span class="has-inline-color has-primary-red-color">Find out more about </span></em><a href="../../../article-type/top-successful-defi-startups/index.html" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-primary-red-color"><em>successful DeFi startups</em></span></a><em><span class="has-inline-color has-primary-red-color"> in our previous article. </span></em></h4>
+
+
+
+<p><strong><span class="has-inline-color has-primary-red-color">5. Use existing cryptocurrency</span></strong></p>
+
+
+
+<p>As an alternative approach to the listed above, we can mention re-using existing <a href="../../../article-type/analysis/how-to-create-your-own-cryptocurrency-from-a-to-z/index.html">cryptocurrency as a base to build</a> an Ethereum stablecoin (or any other). The requirement for stablecoin usage within your business-case does not always mean the creation of the coin from scratch. </p>
+
+
+
+<p>If you are <a href="../../../article-type/ethereum-based-dapp-development-for-trading-platform/index.html" target="_blank" rel="noreferrer noopener">building a dApp on Ethereum</a>, you can re-use one of the existing currencies, since addresses of the most popular stablecoin contracts are known and trustable. Then, the integration of existing stablecoin projects like DAI seems very reasonable. </p>
+
+
+
+<p class="has-dark-gray-color has-text-color"><strong><em>We have been sharing our experience on blockchain forking in the previous article. Find out more information about </em><a href="../../../article-type/which-blockchain-to-fork-to-start-your-own-cryptocurrency/index.html" target="_blank" rel="noreferrer noopener"><em>starting your own cryptocurrency</em></a><em> there. </em> </strong></p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background">Ready to launch your own stablecoin project? <a href="#post_contact">Contact Blaize</a> and start the development process ASAP!</p>
+
+
+
+<h2 class="wp-block-heading" id="LIQUIDITY-FLOW-MAINTENANCE"><strong>Liquidity flow maintenance </strong></h2>
+
+
+
+<p>One of the most crucial basis of initial stablecoin development is ensuring the sustainable liquidy flow for this stablecoin. This point primarily deals with the blockchain platform and cryptocurrency you want to use as a collateral.  </p>
+
+
+
+<p>In further explanation, <em>liquidity maintenance</em> stays for the ongoing ability of minting stablecoins and also sending and receiving assets which your protocol uses as a collateral. Therefore, the main question you need to answer is <strong><em>will you have a constant demand for the kind of stablecoin you want to create?</em></strong> Because if there is no demand, the project will end up useless. </p>
+
+
+
+<p>Read also: <strong><a href="../../../article-type/bidling-for-a-startup-vs-developing-for-a-big-company/index.html">Startup vs. Developing for a Big Company</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">Example of creating a stablecoin on Ethereum </h2>
+
+
+
+<p>As it is shown, the process of creating stablecoin can be quite complex and require a lot of previous experience in the majority of cases. In this part, we will use <a href="https://github.com/masonforest/ethusd" target="_blank" rel="noreferrer noopener">EthUSD</a> stablecoin project development as an example to show and explain how to create stablecoin on Ethereum. </p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1400" height="744" src="../../../wp-content/uploads/2023/05/0Kv_W4d8WWzWVqIc3.png" alt="how to create a stablecoin on Ethereum" class="wp-image-33042 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijc0NCIgd2lkdGg9IjE0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1400" height="744" src="../../../wp-content/uploads/2023/05/0Kv_W4d8WWzWVqIc3.png" alt="how to create a stablecoin on Ethereum"></noscript></amp-img><figcaption class="wp-element-caption"><em>Creating a stablecoin on Ethereum: Blaize example of development scope</em></figcaption></figure>
+
+
+
+<p>As you know already, one of the vital things for launching a successful stablecoin project is to get an actual demand for a certain coin. Therefore, this type of development requires a lot of points into consideration during the discovery stage, for instance, the choice of target blockchain or its eventual development from scratch.</p>
+
+
+
+<p>The establishment of the desired trust mechanism with the algorithm for backing in crypto calculation, emission, total cap, etc. is another important question to consider. It has significant importance in terms of defining the level of decentralization we described above. </p>
+
+
+
+<h2 class="wp-block-heading"><strong>Ether-backed stablecoin development </strong></h2>
+
+
+
+<p>Once all of the above-mentioned points were established we can <a href="../../../for-startups/index.html">start the development</a> process. In this example, the second approach was applied where Ethereum smart contract is responsible for coin issuing. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><amp-img width="1007" height="563" src="../../../wp-content/uploads/2023/05/0Ig4HkmHIhnjNlVy0.png" alt="building a Stablecoin on the Ethereum platform" class="wp-image-33043 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjU2MyIgd2lkdGg9IjEwMDciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1007" height="563" src="../../../wp-content/uploads/2023/05/0Ig4HkmHIhnjNlVy0.png" alt="building a Stablecoin on the Ethereum platform"></noscript></amp-img><figcaption class="wp-element-caption"><em>The example of <a href="https://github.com/masonforest/ethusd/blob/master/contracts/EthUSD.sol" target="_blank" rel="noreferrer noopener">EthUSD</a> smart contract stablecoin issuing function</em></figcaption></figure></div>
+
+
+<p>For this type of development your project will need blockchain developers with experience in Solidity and a prior knowledge of Ethereum toolset. </p>
+
+
+
+<p>To increase the security of your stablecoin and gather more trust from users we recommend conducting a 100% unit test coverage and order several <a href="../../../security/index.html">smart contract audits</a> from different subcontractors. <em>Find out more about </em><a href="../../../article-type/how-to-conduct-a-smart-contract-security-audit-of-your-project-and-why-this-is-important/index.html" target="_blank" rel="noreferrer noopener"><em>smart contract audit importance</em></a><em> in this article.</em> </p>
+
+
+
+<h2 class="wp-block-heading"><strong>How to launch a Stablecoin?</strong></h2>
+
+
+
+<p>As soon as the development and testing is completed you should initiate the launch of your stablecoin. The first thing to do is to start the contract in the testnet (Ethereum test nets in our example). </p>
+
+
+
+<p>EthUSD is deployed on the following testnets: </p>
+
+
+
+<ul>
+<li><a href="https://kovan.etherscan.io/address/0x33fb4e08ecd73e6d851c4234d87680eb7b641868" target="_blank" rel="noreferrer noopener">Kovan</a> </li>
+
+
+
+<li><a href="https://rinkeby.etherscan.io/address/0x39c688b428c51fdccace92517bec295440e55343" target="_blank" rel="noreferrer noopener">Rinkeby</a></li>
+
+
+
+<li><a href="https://ropsten.etherscan.io/address/0x7a406e27b9f4feb58bf23e4fe36497a74882e2f8" target="_blank" rel="noreferrer noopener">Ropsten</a> </li>
+</ul>
+
+
+
+<p>After fixing eventual troubles you should prepare a few additional important things. Though, before delivering your stablecoin to the mainnet prepare initial liquidity and coins minting plan (e.g. airdrops, campaigns, swaps, rewards, incentivization mechanism description, etc.). This will eliminate occasional inconveniences and possible hacking attacks. </p>
+
+
+
+<h4 class="wp-block-heading"><em><span class="has-inline-color has-primary-red-color">Read more on </span></em><a href="../../../article-type/defi-security-how-to-prevent-your-defi-project-from-hacking/index.html" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-primary-red-color"><em>how to prevent your decentralized project from hacking</em></span></a><em><span class="has-inline-color has-primary-red-color"> in this article. </span></em></h4>
+
+
+
+<p>The next step should concentrate on listing your stablecoin on big exchanges like Binance or Poloniex, crypto price-tracking web pages for example CoinMarketCap or CoinGecko, and DEXes like Uniswap, Mooniswap, 1Inch, Kyber, etc. Also consider Curve.fi as a prior due to its specifications for stable swaps. </p>
+
+
+
+<h2 class="wp-block-heading"><strong>How much does it cost to develop a Stablecoin?</strong></h2>
+
+
+
+<p>The cost of creating stablecoin varies considerably regarding the type of development and trust mechanism the client chooses. As you know already, this raises a lot of questions crucial for establishing the project scope. That is why we recommend starting with the discovery stage and preparation of thorough SRS and technical specifications by the blockchain <a href="../../../decentralized-application/index.html">dApp developers team</a>. </p>
+
+
+
+<p class="has-text-align-center has-white-color has-light-gray-background-color has-text-color has-background"><em>See</em><a href="../../../article-type/how-to-build-a-successful-defi-project/index.html#Business-analysis" target="_blank" rel="noreferrer noopener"><em> how Blaize team works on SRS and technical task</em></a><em> preparation during the business analysis of our projects.  </em></p>
+
+
+
+<p>Defining the general scope of work, we can say with confidence that a collateral-backed stablecoin mechanism is relatively simpler. Therefore, it is less time-consuming to design the architecture and develop a stablecoin using a third development approach with a centralized trust mechanism. </p>
+
+
+
+<p>For its part, the creation of algorithmic stablecoin mechanisms will need high-skilled blockchain specialists that are able to create complex modules of code. The choice of a blockchain platform to launch a stablecoin and its further integration are also should be taken into account. Thus, the development time &amp; costs increase according to the project scope and can be very individual due to a list of factors. </p>
+
+
+
+<h4 class="wp-block-heading has-text-align-center has-white-background-color has-background"><span class="has-inline-color has-primary-red-color amp-wp-cefb454" data-amp-original-style="background-color:rgba(0, 0, 0, 0)"><em>Want to know an exact estimate of your stablecoin development? <a href="#post_contact">Contact Blaize</a> and get an offer for your future project!</em></span></h4>
+
+
+
+<h2 class="wp-block-heading">Conclusion </h2>
+
+
+
+<p>In this article, we have reviewed the most common approaches for stablecoin project development and have shown an indicative example of creating a stablecoin on Ethereum. </p>
+
+
+
+<p>The Stablecoin mechanism has proven its usability through a variety of applications. There are some notable advantages of stablecoin we cannot miss: </p>
+
+
+
+<ul>
+<li>limiting asset volatility;  </li>
+
+
+
+<li>securing crypto-asset long terms holding and prevention from inflation;</li>
+
+
+
+<li>easier transaction swaps without intermediaries using the benefits of a decentralized ecosystem. </li>
+</ul>
+
+
+
+<p>There you can see just several use cases for stablecoin adoption, so the list can be extended by a few more. <strong><em>So if you still have questions regarding starting a stablecoin project </em></strong><a href="../../../index.html#contacts" target="_blank" rel="noreferrer noopener"><strong><em>talk to Blaize experts</em></strong></a><strong><em> to dispel any doubts or </em></strong><a href="https://calendly.com/blaize-tech/30min/?month=2021-01" target="_blank" rel="noreferrer noopener"><strong><em>arrange a meeting</em></strong></a><strong><em> to start the project ASAP. </em></strong></p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../category/article-type/index.html" rel="category tag">Article type</a>, <a href="../../category/article-type/overview/index.html" rel="category tag">Overview</a>, <a href="../../category/services/index.html" rel="category tag">Services</a>, <a href="../../category/services/smart-contracts/index.html" rel="category tag">Smart contracts</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="../../tag/ethereum/index.html" rel="tag">Ethereum</a>, <a href="../../tag/smart-contract/index.html" rel="tag">smart contract</a>, <a href="../../tag/stablecoin/index.html" rel="tag">stablecoin</a>	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Blaize</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+		<div id="amp-mobile-version-switcher">
+			<a rel="nofollow" href="../index1862.html?noamp=mobile">
+				Exit mobile version			</a>
+		</div>
+
+				  
+  
+
+</body>
+<!-- Mirrored from blaize.tech/blog/how-to-create-a-stablecoin-on-ethereum/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:33 GMT -->
+</html>

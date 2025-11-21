@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="154" viewBox="0 0 154 154" fill="none">
+  <rect x="37" y="94.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="47" y="94.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="57" y="94.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="47" y="86.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="37" y="86.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="57" y="86.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="37" y="78.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect x="37" y="70.5" width="4" height="4" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 118 94.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 108 94.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 98 94.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 108 86.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 118 86.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 98 86.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 118 78.5)" fill="#FF5C5C"></rect>
+  <rect width="4" height="4" transform="matrix(-1 0 0 1 118 70.5)" fill="#FF5C5C"></rect>
+  <path d="M31 104.5H124" stroke="#1E1E23" stroke-width="1.5"></path>
+  <circle cx="78" cy="48.5" r="7.25" stroke="#1E1E23" stroke-width="1.5"></circle>
+  <path d="M91 81.5L91 58.5L97.1579 58.5L107 81.5L91 81.5Z" stroke="#1E1E23" stroke-width="1.5"></path>
+  <path d="M65 81.5L65 58.5L58.8421 58.5L49 81.5L65 81.5Z" stroke="#1E1E23" stroke-width="1.5"></path>
+  <path d="M54.25 48.5H31V117.5H124V48.5H100.75" stroke="#1E1E23" stroke-width="1.5"></path>
+  <path d="M108 132.5L96 117.5H59L47 132.5H108Z" stroke="#1E1E23" stroke-width="1.5"></path>
+  <path d="M87 95.5L83.2623 88.5H71.7377L68 95.5H87Z" stroke="#1E1E23" stroke-width="1.5"></path>
+  <path d="M65 35.5L78 22L91 35.5V88.5H78H65V35.5Z" stroke="#1E1E23" stroke-width="1.5"></path>
+</svg>

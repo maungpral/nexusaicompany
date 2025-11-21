@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html amp lang="en-US" data-amp-auto-lightbox-disable transformed="self;v=1" i-amphtml-layout="" i-amphtml-no-boilerplate="">
+
+<!-- Mirrored from blaize.tech/blog/how-amm-works-technology-basics/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><link rel="preconnect" href="https://cdn.ampproject.org/"><style amp-runtime="" i-amphtml-version="012510081644000">html{overflow-x:hidden!important}html.i-amphtml-fie{height:100%!important;width:100%!important}html:not([amp4ads]),html:not([amp4ads]) body{height:auto!important}html:not([amp4ads]) body{margin:0!important}body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y pinch-zoom;touch-action:pan-y pinch-zoom}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important}html.i-amphtml-fie:not(.i-amphtml-inabox)>body,html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body{position:relative!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}#i-amphtml-wrapper+body{visibility:visible}#i-amphtml-wrapper+body .i-amphtml-lightbox-element,#i-amphtml-wrapper+body[i-amphtml-lightbox]{visibility:hidden}#i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element{visibility:visible}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}amp-instagram{padding:54px 0px 0px!important;background-color:#fff}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}amp-experiment,amp-live-list>[update]{display:none}amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden{display:none!important}amp-list [fetch-error],amp-list[load-more] [load-more-button],amp-list[load-more] [load-more-end],amp-list[load-more] [load-more-failed],amp-list[load-more] [load-more-loading]{display:none}amp-list[diffable] div[role=list]{display:block}amp-story-page,amp-story[standalone]{min-height:1px!important;display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#000!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .amp-active>div,amp-story .i-amphtml-loader-background{display:none!important}amp-story-page:not(:first-of-type):not([distance]):not([active]){transform:translateY(1000vh)!important}amp-autocomplete{position:relative!important;display:inline-block!important}amp-autocomplete>input,amp-autocomplete>textarea{padding:0.5rem;border:1px solid rgba(0,0,0,.33)}.i-amphtml-autocomplete-results,amp-autocomplete>input,amp-autocomplete>textarea{font-size:1rem;line-height:1.5rem}[amp-fx^=fly-in]{visibility:hidden}amp-script[nodom],amp-script[sandboxed]{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}
+/*# sourceURL=/css/ampdoc.css*/[hidden]{display:none!important}.i-amphtml-element{display:inline-block}.i-amphtml-blurry-placeholder{transition:opacity 0.3s cubic-bezier(0.0,0.0,0.2,1)!important;pointer-events:none}[layout=nodisplay]:not(.i-amphtml-element){display:none!important}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic,[layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic){display:inline-block;position:relative;max-width:100%}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]:not(.i-amphtml-layout-fixed-height){display:block;position:relative}.i-amphtml-layout-fill,.i-amphtml-layout-fill.i-amphtml-notbuilt,[layout=fill]:not(.i-amphtml-layout-fill),body noscript>*{display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}body noscript>*{position:absolute!important;width:100%;height:100%;z-index:2}body noscript{display:inline!important}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}@supports (aspect-ratio:1/1){i-amphtml-sizer.i-amphtml-disable-ar{display:none!important}}.i-amphtml-blurry-placeholder,.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}.i-amphtml-select-disabled{-webkit-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*,[width][height][heights]:not([layout]):not(.i-amphtml-element)>*,[width][height][sizes]:not([layout]):not(.i-amphtml-element)>*{display:none}amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content{display:block}.i-amphtml-notbuilt:not(.i-amphtml-layout-container),[layout]:not([layout=container]):not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){color:transparent!important;line-height:0!important}.i-amphtml-ghost{visibility:hidden!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder],[width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],[width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder]{display:block;line-height:normal}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback],.i-amphtml-layout-container>[placeholder].amp-hidden,.i-amphtml-layout-container>[placeholder].hidden{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}amp-img[i-amphtml-ssr]:not(.i-amphtml-element)>[placeholder]{z-index:auto}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;pointer-events:none;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden;display:initial;line-height:normal}.i-amphtml-layout-size-defined>[overflow]{position:absolute}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-analytics,amp-auto-ads,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-story{visibility:hidden!important}html.i-amphtml-fie>amp-analytics{position:initial!important}[visible-when-invalid]:not(.visible),form [submit-error],form [submit-success],form [submitting]{display:none}amp-accordion{display:block!important}@media (min-width:1px){:where(amp-accordion>section)>:first-child{margin:0;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}:where(amp-accordion>section)>:last-child{margin:0}}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}amp-accordion,amp-accordion>section{margin:0}amp-accordion:not(.i-amphtml-built)>section>:last-child{display:none!important}amp-accordion:not(.i-amphtml-built)>section[expanded]>:last-child{display:block!important}
+/*# sourceURL=/css/ampshared.css*/</style><meta name="description" content="In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future."><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Automated Market Maker (AMM) &amp; How it Works - Blaize"><meta property="og:description" content="In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future."><meta property="og:url" content="https://blaize.tech/blog/how-amm-works-technology-basics/"><meta property="og:site_name" content="Blaize"><meta property="article:published_time" content="2020-09-14T13:18:32+00:00"><meta property="article:modified_time" content="2024-10-29T11:10:18+00:00"><meta property="og:image" content="https://blaize.tech/wp-content/uploads/2020/09/amm2.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:type" content="image/png"><meta name="author" content="Sergey Onyshchenko"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@S_Onishchenko"><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Sergey Onyshchenko"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="13 minutes"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="generator" content="AMP Plugin v2.5.2; mode=reader; theme=legacy"><script async="" src="https://cdn.ampproject.org/v0.mjs" type="module" crossorigin="anonymous"></script><script async nomodule src="../../../../cdn.ampproject.org/v0.js" crossorigin="anonymous"></script><style amp-custom="">:root .has-primary-red-background-color{background-color:#fc5959;color:#fff}:root .has-light-gray-background-color{background-color:#9f9fa0;color:#000}:root .has-primary-red-color{color:#fc5959}:root .has-dark-gray-color{color:#1e1e23}:root .has-white-color{color:#fff}#amp-mobile-version-switcher{left:0;position:absolute;width:100%;z-index:100}#amp-mobile-version-switcher>a{background-color:#444;border:0;color:#eaeaea;display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;font-weight:600;padding:15px 0;text-align:center;-webkit-text-decoration:none;text-decoration:none}#amp-mobile-version-switcher>a:active,#amp-mobile-version-switcher>a:focus,#amp-mobile-version-switcher>a:hover{-webkit-text-decoration:underline;text-decoration:underline}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}h1.has-background,h2.has-background,h3.has-background{padding:1.25em 2.375em}.wp-block-image amp-img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}.wp-block-image[data-amp-original-style*=border-radius] amp-img,.wp-block-image[data-amp-original-style*=border-radius]>a{border-radius:inherit}.wp-block-image.aligncenter{text-align:center}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image.aligncenter,.wp-block-image.alignleft{display:table}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(.has-border-color){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-color]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-color]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-color]){border-left-style:solid}.wp-block-image :where([data-amp-original-style*=border-width]){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-width]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-width]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-width]){border-left-style:solid}.wp-block-image figure{margin:0}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}ol{box-sizing:border-box}ol.has-background{padding:1.25em 2.375em}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}@keyframes overlay-menu__fade-in-animation{0%{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:translateY(0)}}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-excerpt){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-pullquote){margin:0 0 1em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}:where(.wp-block-term-description){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-text-align-center{text-align:center}.aligncenter{clear:both}html :where(.has-border-color){border-style:solid}html :where([data-amp-original-style*=border-top-color]){border-top-style:solid}html :where([data-amp-original-style*=border-right-color]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-color]){border-left-style:solid}html :where([data-amp-original-style*=border-width]){border-style:solid}html :where([data-amp-original-style*=border-top-width]){border-top-style:solid}html :where([data-amp-original-style*=border-right-width]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-width]){border-left-style:solid}html :where(amp-img[class*=wp-image-]),html :where(amp-anim[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}.wp-block-image{margin:0 0 1em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}amp-img.amp-wp-enforced-sizes{object-fit:contain}amp-img img,amp-img noscript{image-rendering:inherit;object-fit:inherit;object-position:inherit}.aligncenter,.alignleft{margin-top:1em;margin-right:auto;margin-bottom:1em;margin-left:auto}.alignleft{float:left}.aligncenter{display:block;text-align:center;margin-left:auto;margin-right:auto}.amp-wp-enforced-sizes{max-width:100%;margin:0 auto}.amp-wp-article-content > p.has-background{margin-left:-2.375em;margin-right:-2.375em;margin-block-start:0;margin-block-end:16px}html{background:#0a5f85}body{background:#fff;color:#353535;font-family:Georgia,"Times New Roman",Times,Serif;font-weight:300;line-height:1.75}p,ol,figure{margin:0 0 1em;padding:0}a,a:visited{color:#0a5f85}a:hover,a:active,a:focus{color:#353535}.amp-wp-meta,.amp-wp-header div,.amp-wp-title,.amp-wp-tax-category,.amp-wp-tax-tag,.amp-wp-footer p,.back-to-top{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}.amp-wp-header{background-color:#0a5f85}.amp-wp-header div{color:#fff;font-size:1em;font-weight:400;margin:0 auto;max-width:calc(840px - 32px);padding:.875em 16px;position:relative}.amp-wp-header a{color:#fff;text-decoration:none}.amp-wp-header .amp-wp-site-icon{background-color:#fff;border:1px solid #fff;border-radius:50%;position:absolute;right:18px;top:10px}.amp-wp-article{color:#353535;font-weight:400;margin:1.5em auto;max-width:840px;overflow-wrap:break-word;word-wrap:break-word}.amp-wp-article-header{align-items:center;align-content:stretch;display:flex;flex-wrap:wrap;justify-content:space-between;margin:1.5em 16px 0}.amp-wp-title{color:#353535;display:block;flex:1 0 100%;font-weight:900;margin:0 0 .625em;width:100%}.amp-wp-meta{color:#696969;display:inline-block;flex:2 1 50%;font-size:.875em;line-height:1.5em;margin:0 0 1.5em;padding:0}.amp-wp-article-header .amp-wp-meta:last-of-type{text-align:right}.amp-wp-article-header .amp-wp-meta:first-of-type{text-align:left}.amp-wp-byline amp-img,.amp-wp-byline .amp-wp-author{display:inline-block;vertical-align:middle}.amp-wp-byline amp-img{border:1px solid #0a5f85;border-radius:50%;position:relative;margin-right:6px}.amp-wp-posted-on{text-align:right}.amp-wp-article-featured-image{margin:0 0 1em}.amp-wp-article-featured-image img:not(amp-img){max-width:100%;height:auto;margin:0 auto}.amp-wp-article-featured-image amp-img{margin:0 auto}.amp-wp-article-content{margin:0 16px}.amp-wp-article-content ol{margin-left:1em}.amp-wp-article-content .wp-caption{max-width:100%}.amp-wp-article-content amp-img{margin:0 auto}.amp-wp-article-content amp-img.alignleft{margin:0 16px 1em 0}.wp-caption{padding:0}.wp-caption.alignleft{margin-right:16px}.amp-wp-article-footer .amp-wp-meta{display:block}.amp-wp-tax-category,.amp-wp-tax-tag{color:#696969;font-size:.875em;line-height:1.5em;margin:1.5em 16px}.amp-wp-footer{border-top:1px solid #c2c2c2;margin:calc(1.5em - 1px) 0 0}.amp-wp-footer div{margin:0 auto;max-width:calc(840px - 32px);padding:1.25em 16px 1.25em;position:relative}.amp-wp-footer h2{font-size:1em;line-height:1.375em;margin:0 0 .5em}.amp-wp-footer p{color:#696969;font-size:.8em;line-height:1.5em;margin:0 85px 0 0}.amp-wp-footer a{text-decoration:none}.back-to-top{bottom:1.275em;font-size:.8em;font-weight:600;line-height:2em;position:absolute;right:16px}.amp-wp-a0b4697:not(#_#_#_#_#_){background-color:#d6d6d6}
+
+/*# sourceURL=amp-custom.css */</style><link rel="canonical" href="../index.html"><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/","url":"https://blaize.tech/blog/how-amm-works-technology-basics/","name":"Automated Market Maker (AMM) \u0026 How it Works - Blaize","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","datePublished":"2020-09-14T13:18:32+00:00","dateModified":"2024-10-29T11:10:18+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future.","breadcrumb":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/how-amm-works-technology-basics/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","width":1200,"height":630},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"How AMM-based DEX Works: Technology Basics"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","contentUrl":"https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=96\u0026d=mm\u0026r=g","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script><title>Automated Market Maker (AMM) &amp; How it Works - Blaize</title></head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../../index.html">
+										<amp-img src="../../../wp-content/uploads/2020/01/Group-1.png" width="32" height="32" class="amp-wp-site-icon amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" data-hero-candidate="" alt="Site icon" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Site icon" src="../../../wp-content/uploads/2020/01/Group-1.png"></amp-img>
+						<span class="amp-site-title">
+				Blaize			</span>
+		</a>
+	</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">How AMM-based DEX Works: Technology Basics</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g" srcset="
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=24&amp;d=mm&amp;r=g 1x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=48&amp;d=mm&amp;r=g 2x,
+					https://secure.gravatar.com/avatar/a4cf3a64fc0830c9da4a4d120ea0f2db?s=72&amp;d=mm&amp;r=g 3x
+				" alt="Sergey Onyshchenko" width="24" height="24" layout="fixed" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:24px;height:24px" i-amphtml-layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Sergey Onyshchenko</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2020-09-14T13:18:32+00:00">
+		5 years ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="640" height="336" src="../../../wp-content/uploads/2020/09/amm2.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" alt="" data-hero-candidate="" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMzNiIgd2lkdGg9IjY0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" loading="lazy" alt="" src="../../../wp-content/uploads/2020/09/amm2.png"></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		
+<p>In this article we will explain how AMM technology works and show the difference between AMM exchange and traditional order book. You will also know some basics of technology to <a href="../../../article-type/how-to-build-a-successful-defi-project/index.html">build your AMM-based DeFi solution</a> in future.</p>
+
+
+
+<p>The exchange has become a part of a traditional financial system a long time ago. Its mechanism of work is very well known, in a broad sense, an exchange is a market where sellers meet with buyers in order to make a transaction. The relationships on the exchange are supported by order books which are (electronic) lists of orders. </p>
+
+
+
+<p>This common mechanism has been successfully working until the crypto intervention. Along with the technology development and increase of locked amounts in crypto assets, holders started to seek new solutions. The automatic market maker mechanism had been known some years before that, but the creation of DEX became a huge step for its adaptation to the crypto market. </p>
+
+
+
+<p>Read Also: <strong><a href="../../../article-type/analysis/how-to-create-your-own-cryptocurrency-from-a-to-z/index.html">How to create your own cryptocurrency</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">Some of HISTORICAL BACKGROUND </h2>
+
+
+
+<p>The idea of so-called “on-chain market maker” was firstly described by Vitalik Buterin and explained as the idea of “<a href="https://vitalik.ca/general/2017/06/22/marketmakers.html" target="_blank" rel="noreferrer noopener">On Path Independence</a>”. It was further implemented in Bancor (V1) Protocol and introduced to the public in 2017. Yet, protocol gathered a lot of critics and doubts around it, so stayed kind of “behind the curtain” of the AMM fame. </p>
+
+
+
+<p>The first and probably still maintained, buzz around automated market maker and decentralized finance itself happened along with the <a href="https://uniswap.org/">Uniswap</a> release in 2018. It made a real breakthrough on the market because of a couple of features: fast and secured trading deals, earnings from liquidity, and decentralization of exchange itself.</p>
+
+
+
+<p>As long as Uniswap was aimed for token exchange, we experienced <a href="https://www.curve.fi/" target="_blank" rel="noreferrer noopener">Curve</a> invention in 2019, which enabled the decentralized and non-custodial exchange of <a href="../../../article-type/understanding-stablecoin/index.html">stablecoins</a>. Curve protocol has been always compared to Uniswap model and has been named as its follower, which is not really true in nature. <em><strong>This difference will be further discussed in an article dedicated to the <a href="../../../article-type/amm-types-differentiations/index.html" target="_blank" rel="noreferrer noopener">AMM types</a>. </strong></em></p>
+
+
+
+<p>Uniswap uses a so-called <strong>constant function market maker model which, as appeared, faces a few serious obstacles, for instance,</strong> front running. This contributed to the creation of other protocols like Balancer, Mooniswap or FairSwap, all in 2020, which led to the huge boom in dApps development and DeFi in particular. </p>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background">New protocols aimed to solve the common problems classic AMM exchanges experiences and therefore use other, quasi-AMM models to perform continuous token curves. In this article, we are going to concentrate on the “traditional” Defi AMM model in order to understand the basics. If you want to know more about Balancer and <a href="../../../article-type/overview/amm-solutions-to-impermanent-loss-and-front-running/index.html">how to solve the front-running problem</a> check the pinned article.</p>
+
+
+
+<h2 class="wp-block-heading">Centralized vs decentralized exchanges </h2>
+
+
+
+<p><em><strong>Well, how decentralized exchanges are different from traditional ones, and why users want to stay away from such a simple and universally known centralized model? </strong></em></p>
+
+
+
+<p>First of all, a centralized exchange contains risks for traders. One of the main reasons is that the custodian of all assets and information about all transactions is one organization. Additionally, the exchange requires users to deposit funds in a wallet that is owned and operated by the exchange itself. Furthermore, it is easier for hackers to detect and attack vulnerabilities concentrated in one center, so in case of attack, the hacker can shut down the exchange and “go away” with all funds. Due to traditional order book usage, the work of centralized exchange is relatively slower and sometimes may lead to funds loss, in case of certain technical mistakes. </p>
+
+
+
+<p>In contrast, the order book of a decentralized exchange is stored on the blockchain. All processes connected with order placement, <a href="../../../article-type/how-to-conduct-a-smart-contract-security-audit-of-your-project-and-why-this-is-important/index.html">smart contract security audit</a> and maintenance are under the smart contract power. If you were looking for a <strong><a href="../../../smart-contracts/index.html">smart contract audit company</a></strong>, you can contact us and get additional answers to your questions. IDEX is one of the well-known representatives of decentralized exchanges with traditional order book module. Yet, IDEX is rather should be called partially decentralized, because it uses a centralized order book which then sends the information to the smart contract on the blockchain. Hence, in order to get such a crucial decentralized environment, users can go to Dy/dx which is an IDEX mate, but with a totally decentralized order book in it. </p>
+
+
+
+<div class="wp-block-image"><figure class="alignleft size-full is-resized"><amp-img src="../../../wp-content/uploads/2022/06/create-AMM-based-DeFi.png" alt="" class="wp-image-7561 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" width="371" height="315" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMxNSIgd2lkdGg9IjM3MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" src="../../../wp-content/uploads/2022/06/create-AMM-based-DeFi.png" alt="" width="371" height="315"></noscript></amp-img></figure></div>
+
+
+
+<p><em><strong>So, why do we need an AMM model if DEXs are cool with the traditional order book practice? </strong></em></p>
+
+
+
+<p>Essentially, the work of order book lies in recording the buy/sell offers and then matching traders with the same or similar requests, but in terms of blockchain, this has become the main problem of this system. These processes make the work costly and make work slow. That is why the introduction of an AMM in DEXes has brought crypto trading to a completely new level giving the ability to atomic trading or instant feedback loops. </p>
+
+
+
+<p>The main difference between those two approaches lies in the fact that while using the AMM-based DEX model, users do not need to wait for another trader to place a desirable offer. Automatic market maker creates an environment where the user trades with the smart contract within the chosen pool and then gets the requested tokens and happily leaves. The algorithm of the smart contracts dictates how the assets should be traded and therefore do the whole work by itself. What kind of magic they use to fulfill such will be further explained below. </p>
+
+
+
+<h3 class="has-text-align-center has-white-background-color has-background wp-block-heading"><strong><em><span class="has-inline-color has-primary-red-color">Thinking of creating your own AMM-based DeFi solution? Start DeFi development with Blaize by <a href="../../../index.html#contacts" target="_blank" rel="noreferrer noopener">contacting our expert</a>!</span></em></strong></h3>
+
+
+
+<h2 class="wp-block-heading">What is AMM (Automated Market Maker)?</h2>
+
+
+
+<p>If say a general definition of an AMM model in crypto, it would sound that AMM is an automatic actor whose work is defined by conditional rules of trade inserted into smart contracts. Yet in Blaize we do not follow a general definition, so let’s dive deeper into the math. The formula for let’s call the “traditional” automatic market maker model looks as follows: </p>
+
+
+
+<p class="has-text-align-center">X*Y=C </p>
+
+
+
+<p>where X and Y are reserves of certain (chosen) assets in the AMM pool, and C is an unchangeable constant. Due to the presence of such a constant, this model is also called a constant product market maker.</p>
+
+
+
+<p>The next important part of the AMM model is a pool where actually the whole process is going on. Yet, this does not mean that the provider should put in the same amount of each token. Tokens equality in this case should be calculated out of the market price and then translated to the relevant conditional number. Imagine you create an AMM pool with ETH and Dai in it, the price for those two differs considerably on the market (when 1 ETH = $100; 1 DAI=$1), so in order to make them “equal” we need to put, for instance, 10 ETH to 1000 Dai, then the overall cost of each will be 1000:</p>
+
+
+
+<p class="has-text-align-center">$100 (ETH price) *10 = 1000    and, </p>
+
+
+
+<p class="has-text-align-center">$1 (DAI price) *10 = 1000. </p>
+
+
+
+<p>In this case we can say they are supplied equally to the pool. So in terms of AMM pools, what you should pay attention to is the relation between two (chosen) tokens and its volatility on the market.</p>
+
+
+
+<p>Coming back to formula, now we can easily establish our constant value for this pool. So having ETH as X and Dai as Y we will get: </p>
+
+
+
+<p class="has-text-align-center">10 (ETH)*1000(DAI)= 10000</p>
+
+
+
+<p>If nothing happens, the user will see these stable values for each. Yet, what if something does happen, and somebody wants to get in and take 1 ETH, as an example. Then, the formula will change as follows: </p>
+
+
+
+<p class="has-text-align-center">(X-1)*(Y+(1*a+fee))=C1</p>
+
+
+
+<p class="has-text-align-center has-dark-gray-color has-text-color has-background amp-wp-a0b4697" data-amp-original-style="background-color:#d6d6d6">(10ETH – 1ETH)*(1000DAI + (1ETH*price + fee) = C1</p>
+
+
+
+<p>where <em>X </em>and <em>Y </em>are reserves of certain (ETH and Dai) assets, 1 is the desirable withdrawal number, <em>a </em>is the price of 1 ETH in DAI (1 ETH = 100 DAI)  and <em>fee </em>is the amount the trader pays additionally to the DEX for the ability to fulfill such an operation. In this way, we see the constant has changed due to transaction fee, and will continuously change with every further trade. </p>
+
+
+
+<p><em><strong>But how can we say it is the “constant” if it actually changes? </strong></em></p>
+
+
+
+<p>The answer is, we can, as long as the product of <em>X*Y</em> is equal to <em>C</em>. Transaction fee does not dramatically influence the pool curve and varies each way thousands of times per day. In order to make a fair trade, AMM DEXs use the constant invariant equation to always balance assets in a pool, this happens thanks to the creation of a bonding curve. </p>
+
+
+
+<h2 class="wp-block-heading"><strong>How to detect an accurate price? </strong></h2>
+
+
+
+<p>In its sharp explanation, we can say that if you want to sell a token, then the price will be equal to the number of tokens in the pool, but if you want to buy a token, the price will be as if you have already purchased one. There are two main options of how the user can use the curve. Assume there are 10 certain tokens in the pool and the price is 10 for each. You want to sell back 3 tokens. </p>
+
+
+
+<ol><li>In the common scenario, for selling them all at once you will get 3×8=24 in return (because the price after your sell will be 8 already) </li><li>In a smarter scenario, you would pay out 1 token at a time, and then get 10+9+8=27 in return. </li></ol>
+
+
+
+<p>The only problem is the <strong>gas fee</strong> which is issued for each transaction, therefore the second option seemed reasonable only while dealing with bigger amounts of tokens and needs in-depth pre-calculation. </p>
+
+
+
+<h2 class="wp-block-heading"><strong>Where does the money come from ? </strong></h2>
+
+
+
+<p>One of the most important questions to ask is where exactly money comes from in all this. Well, the profit may come in two scenarios: while providing the liquidity and while fulfilling the trade. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><amp-img width="1026" height="630" src="../../../wp-content/uploads/2022/06/profit.png" alt="building amm dex" class="wp-image-7563 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" layout="intrinsic" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjYzMCIgd2lkdGg9IjEwMjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1026" height="630" src="../../../wp-content/uploads/2022/06/profit.png" alt="building amm dex"></noscript></amp-img></figure></div>
+
+
+
+<p>There are following types of actors participating in the process: </p>
+
+
+
+<ol><li><strong>Liquidity providers</strong> – users who want to supply their crypto assets into the pool and therefore make profit out of it;  </li><li><strong>Traders </strong>– users who want to buy or sell certain type and amount of tokens;</li><li><strong>Arbitrageurs </strong>– actors who maintain the pool price in exchange for reward.</li></ol>
+
+
+
+<h2 class="wp-block-heading">How do liquidity providers make profits? </h2>
+
+
+
+<p><em>Remember the “+fee” in the second formula? </em><strong><em>That is how. </em></strong></p>
+
+
+
+<p>For those, who want to supply their liquidity to the pool, DEX’s work is similar to traditional banking depositing. So you hold a certain amount of crypto (assume ETH) and you want your money “to work”, so you can “give” them to the chosen exchange (assume Uniswap) and therefore you become eligible to earn profit from your assets’ usage. </p>
+
+
+
+<p>In traditional AMM DEX it works as follows: liquidity provider A supplies (assumed) 1000 ETH to the ETH/Dai pool, where (assumed) 9000 ETH have been provided already. Now the total amount of ETH in the pool is 10000 ETH (9000 ETH + 1000 ETH). So the A “share” in the pool will be 10% of the whole ETH pool. When any trade within the pool occurs, the trader pays a transaction fee which is then transferred to the liquidity providers as a reward. </p>
+
+
+
+<p>The fee is split between liquidity providers in accordance with their share percentage. Therefore, in the case of A, he will get a 10% reward from each transaction in the poll he supplied money to. Read: <strong><a href="../../../article-type/how-to-prevent-liquidity-vampire-attacks-in-defi/index.html">How to Prevent Vampire Attacks in DeFi</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">How do arbitrageurs make profits? </h2>
+
+
+
+<p>Arbitrageurs are usually represented by bots that are aimed to catch the best deals, trade them to the pool and therefore maintain the balance of the curve (and token price). Using the previously mentioned equation we follow the same assumption and describe the trading process as follows: </p>
+
+
+
+<p class="has-text-align-center">(10-1)*(1000 + (1*a +fee)) = 10000</p>
+
+
+
+<p class="has-text-align-center">assume (1*a) as X </p>
+
+
+
+<p class="has-text-align-center">9*(1000+X)=10000</p>
+
+
+
+<p class="has-text-align-center">1000+X = 10000/9 </p>
+
+
+
+<p class="has-text-align-center">1000+X =1111.111….</p>
+
+
+
+<p class="has-text-align-center">X = 1111-1000=111 </p>
+
+
+
+<p>We can see that due to a trade fulfillment, the price of tokens in the pool has changed and the price of ETH increased to $111 (instead of $100). Yet, the normal price for ETH on the regular exchange (let’s assume CoinBase) still remains $100. When such happens, the arbitrageur buys  ETH from CoinBase and sells it to the pool (still for $111). In this particular example, the profit of the arbitrageur will be $11 (and all this from a single transaction!!!). </p>
+
+
+
+<h2 class="wp-block-heading">What is the difference between arbitration and trading ? </h2>
+
+
+
+<p>Traders are basically retailers who want to exchange their crypto assets at a good price. In traditional AMM, traders have no additional information about general market prices and have to trade only at the price offered by the pool. Well, fulfilling the trade they do influence the pool price, but this does not make them arbitrageurs. </p>
+
+
+
+<p><strong><em>The main difference lies in the purpose of conducting such an action, wherein the case of trading the purpose is to get a certain needed asset in exchange for what the trader has in the pocket, while in the case of arbitrageur the main purpose is to buy low – sell high and make a profit out of it.</em></strong> </p>
+
+
+
+<p>Another interesting feature of an automated market maker is that despite the insolent behavior of arbitrageurs the system basically cannot exist without them. In case of lack of permanent token supply or buy flow, the curve will not maintain at the same level so will not create a pleasant exchange environment for traders. </p>
+
+
+
+<p>As a leading <strong><a href="../../../for-startups/index.html">blockchain consulting company</a></strong>, our team can help you understand these concepts better and advise on the best way to incorporate automated market makers into your trading platform.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Final thought </strong></h2>
+
+
+
+<p>An automatic market maker is a convenient resolution and very vulnerable mechanism at the same time. </p>
+
+
+
+<p>As one of the main issues with AMM DEXes is that their mechanisms are sensible to front running and pumping attacks. The paradox is, the easier to find the intrinsic value of a token, the harder it is to manipulate the system. Yet, gladly, there are already a few solutions on the DeFi DEX market that successfully solves these problems. We have discussed various types of resistance increasing in <a href="../../../article-type/overview/amm-solutions-to-impermanent-loss-and-front-running/index.html" target="_blank" rel="noreferrer noopener">Impermanent loss and Front-running solutions for the AMM DEX</a> article. </p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background"><strong><em>Blaize team of DeFi developers has gathered extensive knowledge of the decentralized finance market and DeFi dApps development. If you are thinking of building AMM-based DeFi project similar to Uniswap, for example, do not hesitate to <a href="../../../index.html#contacts" target="_blank" rel="noreferrer noopener">contact Blaize</a> for further discussion. </em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+
+
+
+<p><strong>What is an AMM in crypto?</strong></p>
+
+
+
+<p>An AMM stands for an Automated Market Maker, which is the underlying protocol that powers a decentralized exchange. It pools liquidity from users and prices the assets within the pool using algorithms.</p>
+
+
+
+<p><strong>How does an AMM work?</strong></p>
+
+
+
+<p>In a nutshell, an AMM allows digital assets to be bought and sold automatically at market price on a DEX, with no middlemen. This can happen with liquidity from a liquidity pool on an AMM, which prices the assets and enables the trade.</p>
+
+
+
+<p><strong>Is AMM the same as DEX?</strong></p>
+
+
+
+<p>No, AMM is a protocol that runs on liquidity pool-based DEXes, but it is not a feature inherent to all decentralized exchanges.</p>
+
+
+
+<p><strong>How does AMM determine the price?</strong></p>
+
+
+
+<p>The price of tokens is determined by a constant mathematical formula at the heart of an AMM.</p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../category/article-type/analysis/index.html" rel="category tag">Analysis</a>, <a href="../../category/article-type/index.html" rel="category tag">Article type</a>, <a href="../../category/services/decentralized-application/index.html" rel="category tag">Decentralized application</a>, <a href="../../category/services/index.html" rel="category tag">Services</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="../../tag/dapps/index.html" rel="tag">dApps</a>, <a href="../../tag/defi/index.html" rel="tag">DeFi</a>	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Blaize</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+		<div id="amp-mobile-version-switcher">
+			<a rel="nofollow" href="../index1862.html?noamp=mobile">
+				Exit mobile version			</a>
+		</div>
+
+				  
+  
+
+</body>
+<!-- Mirrored from blaize.tech/blog/how-amm-works-technology-basics/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:38:30 GMT -->
+</html>

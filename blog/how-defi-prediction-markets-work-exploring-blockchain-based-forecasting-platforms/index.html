@@ -1,0 +1,1636 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!-- Mirrored from blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:35:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+      <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVDP48D');
+    </script>
+    <script>(function (w, d, u) { w.readyQ = []; w.bindReadyQ = []; function p(x, y) { if (x == "ready") { w.bindReadyQ.push(y); } else { w.readyQ.push(x); } } var a = { ready: p, bind: p }; w.$ = w.jQuery = function (f) { if (f === d || f === u) { return a } else { p(f) } } })(window, document)</script>
+
+  <meta name="google-site-verification" content="ZrAKmMj6IFKukIukR3WwBfWnGUtWgF5nVGfGXBFKBU0" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="preload" href="../../wp-content/themes/blaize-tech/mont-fonts.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css"
+    href="../../wp-content/themes/blaize-tech/assets/new-stylesc04c.css?v=1735038221">
+  
+  
+  
+  
+  
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Introduction to DeFi Prediction Markets - Blaize</title>
+	<meta name="description" content="Discover what DeFi prediction markets are and how to profit from them. Learn about prediction DeFi with transparent, decentralized platforms. Get started today!" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introduction to DeFi Prediction Markets - Blaize" />
+	<meta property="og:description" content="Discover what DeFi prediction markets are and how to profit from them. Learn about prediction DeFi with transparent, decentralized platforms. Get started today!" />
+	<meta property="og:url" content="index.html" />
+	<meta property="og:site_name" content="Blaize" />
+	<meta property="article:published_time" content="2024-11-18T13:56:26+00:00" />
+	<meta property="article:modified_time" content="2024-11-18T14:07:29+00:00" />
+	<meta property="og:image" content="../../wp-content/uploads/2024/11/DeFi-Prediction-Markets_1.svg" />
+	<meta name="author" content="Pavlo Horbonos" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Pavlo Horbonos" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="15 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/","url":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/","name":"Introduction to DeFi Prediction Markets - Blaize","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2024/11/DeFi-Prediction-Markets_1.svg","datePublished":"2024-11-18T13:56:26+00:00","dateModified":"2024-11-18T14:07:29+00:00","author":{"@id":"https://blaize.tech/#/schema/person/65ff2878fb8d703b83f16b3ef237db1a"},"description":"Discover what DeFi prediction markets are and how to profit from them. Learn about prediction DeFi with transparent, decentralized platforms. Get started today!","breadcrumb":{"@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2024/11/DeFi-Prediction-Markets_1.svg","contentUrl":"https://blaize.tech/wp-content/uploads/2024/11/DeFi-Prediction-Markets_1.svg","width":1600,"height":900},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"Introduction to DeFi Prediction Markets"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/65ff2878fb8d703b83f16b3ef237db1a","name":"Pavlo Horbonos","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://blaize.tech/wp-content/uploads/2023/01/Pasha-96x96.png","contentUrl":"https://blaize.tech/wp-content/uploads/2023/01/Pasha-96x96.png","caption":"Pavlo Horbonos"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blaize.tech\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='mpp_gutenberg-css' href='../../wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='../../wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-core-css' href='../../wp-content/themes/blaize-tech/assets/css/build-core.css' type='text/css' media='' />
+<link rel='stylesheet' id='other-css' href='../../wp-content/themes/blaize-tech/assets/css/other.css' type='text/css' media='' />
+<script type="text/javascript" src="../../wp-content/themes/blaize-tech/js/jquery-3.4.1.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/js/jquery-migrate-3.1.0.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/intlTelInput.min.js" id="nb-intlTelInput-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/custom_script.js" id="nb-intlTelInput-custom-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.liMarquee.js" id="liMarquee-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.inputmask.bundle.js" id="inputmask-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/fm.revealator.jquery.js" id="revealator-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/main.js" id="main-js-js"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/72475.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.html?rsd" />
+
+<link rel='shortlink' href='../../index6ae8.html?p=72475' />
+<link rel="amphtml" href="amp/index.html"><link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/01/Group-1.png" />
+<meta name="msapplication-TileImage" content="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+      <link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min6619.css?ver=5.2.5'
+      type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'
+      href='../../wp-includes/css/dist/block-library/theme.min6619.css?ver=5.2.5' type='text/css' media='all' />
+    
+  <style>
+    .blog_ajax .searchandfilter ul li.sf-field-tag ul li label {
+      padding: 5px 7px 3px 7px !important;
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/jquery.mask.min.js"></script>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/utils.js" defer></script>
+
+  </head>
+
+<body class="post-template-default single single-post postid-72475 single-format-standard wp-embed-responsive singular image-filters-enabled ">
+      <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDP48D" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  
+  
+  <header id="header"
+    class="sticky no-scroll">
+
+
+    <div
+      class="guides__block logo-header  fs-menu-header">
+      <div class="desktop-logo">
+                  <a href="../../index.html" class="logo logo-small">
+            <img src="../../wp-content/themes/blaize-tech/assets/img/blaize_logo.svg" alt="Blaize" loading="lazy">
+          </a>
+              </div>
+
+      <div class="mobile-logo">
+        <a href="../../index.html"
+          class="logo logo-blog" aria-label="Logo">
+          <svg x="0px" y="0px" viewBox="0 0 202.4 162.6" xml:space="preserve">
+            <g transform="matrix(1.3333333,0,0,-1.3333333,0,1122.52)">
+              <g transform="translate(332.3824,384.1128)">
+                <path d="M-241.5,360l-10.4-7.6l-61.2,0v39.6h61.2l10.4-7.5l4-12.3L-241.5,360z M-313.2,440.9l56.5,0l8.4-6.1
+                        l3.2-9.9l-3.2-9.9l-8.4-6.1h-56.5V440.9z M-227.5,394.8l-10,7.3l3.6,2.6l6.6,20.3l-6.6,20.3l-17.3,12.5l-81.2,0V335.9h85.8
+                        l19.1,13.9l7.3,22.5L-227.5,394.8z" />
+              </g>
+              <g transform="translate(379.6422,359.9819)">
+                <path d="M-241.5,360l-13.7,13.7l13.7,13.7l13.7-13.7L-241.5,360z" />
+              </g>
+            </g>
+          </svg>
+                      <div class="blog-title">log</div>        </a>
+      </div>
+
+      
+
+      <div class="btn-menu">
+        <a href="../../index.html#contacts" class="contacts-link">Contact us</a>
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fs-menu">
+
+
+      <div class="guides__block">
+        <ul class="guides__block-list"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>        <div class="modeling_element"></div>
+        <div class="blockchain_element"></div>
+        <div class="mobile_element"></div>
+        <div class="front_end_element"></div>
+      </div>
+      <div class="content-menu">
+        <nav class="cd-dropdown dropdown-is-active">
+          <ul class="cd-dropdown-content"><li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2340"><a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2341" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2341"><a href="#back">Back</a></li>
+	<li id="menu-item-75842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75842"><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+	<li id="menu-item-75843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75843"><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+	<li id="menu-item-75844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75844"><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+	<li id="menu-item-75845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75845"><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+	<li id="menu-item-75846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75846"><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+	<li id="menu-item-75847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75847"><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+	<li id="menu-item-75848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75848"><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-2332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2332"><a href="#" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-2333" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2333"><a href="#back">Back</a></li>
+	<li id="menu-item-75849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75849"><a href="../../decentralized-application/index.html">dApp Development</a></li>
+	<li id="menu-item-75850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75850"><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+	<li id="menu-item-75851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75851"><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+	<li id="menu-item-75852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75852"><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+	<li id="menu-item-75853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75853"><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+	<li id="menu-item-75854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75854"><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+	<li id="menu-item-75855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75855"><a href="../../token-development-services/index.html">Token Development Services</a></li>
+	<li id="menu-item-75856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75856"><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+	<li id="menu-item-75857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75857"><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+	<li id="menu-item-75858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75858"><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+	<li id="menu-item-75859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75859"><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+</li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="../../clients/index.html">Cases</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2347"><a href="../index.html">Blog</a></li>
+<li id="menu-item-67576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67576"><a href="../../whitepaper/index.html">Whitepaper</a></li>
+</ul>        </nav>
+      </div>
+
+      <div class="foot-menu">
+        <div class="content">
+          <div class="mainBlock_social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/blaize.tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/facebook-main.svg" alt="fb" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/blaizetech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/linkedin-main.svg" alt="LinkedIn" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/blaize_tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/twitter-main.svg" alt="Twitter" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="location">
+            <a href="../../cdn-cgi/l/email-protection.html#80a0e9eee6efc0e2ece1e9fae5aef4e5e3e8"><span class="__cf_email__" data-cfemail="83eaede5ecc3e1efe2eaf9e6adf7e6e0eb">[email&#160;protected]</span></a>
+            <a href="tel:+351966034344">+351 966 034 344</a>
+          </div>
+          <div class="location">
+            <p>Kyiv, Ukraine </p>
+            <p>26 Metalistiv St</p>
+          </div>
+          <div class="location">
+            <p>Dnipro, Ukraine 20 </p>
+            <p>Sichovykh Striltsiv St</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    
+            <main class="blog single-post">
+    <section class="pageHeader blogPage">
+        <div class="wrapper">
+            <div class="guides__block">
+                <div class="single-post-item">
+
+                    <div class="content">
+                        <div class="post-content">
+                            <div class="breadcrumb">
+                                <div>
+                                    <!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blaize." href="../../index.html" class="home" ><span property="name">Blaize</span></a><meta property="position" content="1"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="../index.html" class="post-root post post-post" ><span property="name">Blog</span></a><meta property="position" content="2"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">Introduction to DeFi Prediction Markets</span><meta property="url" content="index.html"><meta property="position" content="3"></span>                                </div>
+                            </div>
+
+                                                            
+                                    <div class="head grayimg">
+                                        <h1 class="title">
+                                            Introduction to DeFi Prediction Markets                                        </h1>
+                                        <div class="foot">
+                                            <div class="author">
+                                                <div class="photo">
+                                                    <img width="120" height="120" src="../../wp-content/uploads/2023/01/Pasha-150x150.png" class="avatar avatar-120 photo wt-author-img" alt="Pavlo Horbonos" decoding="async" srcset="https://blaize.tech/wp-content/uploads/2023/01/Pasha-150x150.png 150w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-24x24.png 24w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-48x48.png 48w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-96x96.png 96w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-300x300.png 300w, https://blaize.tech/wp-content/uploads/2023/01/Pasha.png 1032w" sizes="(max-width: 120px) 100vw, 120px" />                                                </div>
+                                                <div class="details">
+                                                    <a href="../author/pavel-gorbonos/index.html">
+                                                        <h4>
+                                                            Pavlo Horbonos                                                        </h4>
+                                                    </a>
+                                                    <div class="date">18.11.2024</div>
+                                                </div>
+                                            </div>
+                                            <div class="share"><link rel='stylesheet' id='scriptlesssocialsharing-css' href='../../wp-content/plugins/scriptless-social-sharing/includes/css/scriptlesssocialsharing-style.css' type='text/css' media='all' />
+<style id='scriptlesssocialsharing-inline-css' type='text/css'>
+.scriptlesssocialsharing__buttons a.button { padding: 12px; flex: 1; }
+</style>
+<div class="scriptlesssocialsharing"><h3 class="scriptlesssocialsharing__heading">Share:</h3><div class="scriptlesssocialsharing__buttons"><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on Facebook</span></a><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Introduction%20to%20DeFi%20Prediction%20Markets&amp;url=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on X (Twitter)</span></a></div></div></div>
+                                        </div>
+                                    </div>
+                                                            
+                            <div class="text">
+                                                                
+<p>DeFi has opened new avenues for financial innovation by eliminating the need for traditional intermediaries. One of the exciting emerging sectors within DeFi is prediction markets, where users can speculate on outcomes of real-world events such as elections, sports events, or cryptocurrency prices through decentralized platforms.</p>
+
+
+
+<figure class="wp-block-image size-large is-resized"><img fetchpriority="high" decoding="async" width="1600" height="900" src="../../wp-content/uploads/2024/11/DeFi-Prediction-Markets_1.svg" alt="DeFi prediction markets are blockchain-powered platforms that allow users to speculate on the outcomes of real-world events" class="wp-image-72476" style="width:1041px;height:auto"/></figure>
+
+
+
+<p>In 2024, prediction markets crypto is gaining success. The total value locked in these markets has grown to $55.1 million, marking a 57.7% increase year-to-date. Platforms like Polymarket, built on Polygon, have reported a surge in activity, with trading volumes rising from $6.1 million to $42 million per month within just one year. This growth reflects increasing public interest, driven in part by major global events like the U.S. presidential election and the UEFA Euro Cup, where speculation is especially popular.</p>
+
+
+
+<p>Decentralized prediction markets provide more than just a space to place bets – they offer transparency, fair odds, and security through blockchain technology. Unlike traditional platforms, where outcomes can be manipulated, DeFi prediction markets operate on smart contracts, ensuring tamper-proof transactions. With crypto prediction markets like Polymarket amassing over $128 million in trades on political outcomes alone, these platforms demonstrate how blockchain can empower users to profit from predictions while also contributing to public discourse.</p>
+
+
+
+<p>This article delves into how prediction DeFi works, its components, the variety of predictions available, and the advantages and challenges it faces as it becomes a core part of the evolving DeFi landscape.</p>
+
+
+
+<h2 class="wp-block-heading">How Do DeFi Prediction Markets Work?</h2>
+
+
+
+<p>DeFi prediction markets are blockchain-powered platforms that allow users to speculate on the outcomes of real-world events in a transparent, decentralized environment. These markets rely heavily on smart contracts and oracles to ensure fair, secure, and automated operations, without the need for centralized intermediaries. Below is a deeper look into the mechanics of how these markets function.</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1600" height="879" src="../../wp-content/uploads/2024/11/DeFi-Prediction-Markets_2.svg" alt="DeFi prediction markets rely on smart contracts and oracles to ensure fair, secure, and automated operations, without the need for centralized intermediaries" class="wp-image-72477"/></figure>
+
+
+
+<h3 class="wp-block-heading">Tokenized Predictions</h3>
+
+
+
+<p>Participants in crypto prediction markets buy tokens representing different possible outcomes of an event – referred to as outcome tokens. Each outcome (e.g., “Yes” or “No” for a binary event) has a specific token, and users purchase these tokens based on their predictions. The price of outcome tokens is determined dynamically through market sentiment – as more participants buy tokens for a particular outcome, its token price rises, reflecting greater market confidence in that outcome.</p>
+
+
+
+<p>These outcome tokens can be freely traded before the event’s conclusion. The token prices act like odds in traditional betting, fluctuating based on market sentiment and new information that influences expectations about the event outcome.</p>
+
+
+
+<p><br><strong>How it actually works? Let’s take a closer look at the example: </strong>Imagine a prediction market crypto platform offers tokens for the outcome of the next U.S. presidential election. Users can purchase outcome tokens such as “Candidate A Wins” or “Candidate B Wins.” If Candidate A’s victory appears likely, the token price for “Candidate A Wins” rises, while the “Candidate B Wins” token declines in value. Once the election is over, the oracle feeds the result into the blockchain, and the smart contract pays out users holding the winning tokens.</p>
+
+
+
+<h2 class="wp-block-heading">Key Components of DeFi Prediction Markets</h2>
+
+
+
+<p>The smooth functioning of decentralized prediction markets relies on several essential components, each playing a vital role in ensuring transparency, automation, and fairness. Below is a breakdown of the core elements that power these markets:</p>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1600" height="767" src="../../wp-content/uploads/2024/11/DeFi-Prediction-Markets_3.svg" alt="Key Components of DeFi Prediction Markets:
+- Smart Contracts
+- Blockchain Oracles
+- Outcome Tokens
+- Liquidity Providers
+- Decentralized Platform" class="wp-image-72478"/></figure>
+
+
+
+<h3 class="wp-block-heading">Smart Contracts: Automation and Transparency</h3>
+
+
+
+<p>Smart contracts are the backbone of DeFi prediction markets. These self-executing agreements, encoded directly on the blockchain, manage every aspect of the market without requiring human intervention. They automate the processes of:</p>
+
+
+
+<ul>
+<li>Creating markets and issuing outcome tokens.</li>
+
+
+
+<li>Collecting user deposits and tracking token trades.</li>
+
+
+
+<li>Settling payouts by distributing rewards to winning participants once the event outcome is verified.</li>
+</ul>
+
+
+
+<p>Because smart contracts operate on immutable blockchains, they ensure tamper-proof execution, eliminating the risk of fraud or manipulation. Once conditions are met – such as the verification of an event’s outcome – payouts are executed automatically, without intermediaries or delays.</p>
+
+
+
+<h3 class="wp-block-heading">Blockchain Oracles: Bridging On-Chain and Off-Chain Data</h3>
+
+
+
+<p>A critical element in prediction markets crypto is the oracle, which connects the blockchain with real-world data. Since blockchains cannot access external data directly, oracles like Chainlink or Pyth deliver verified, reliable information to smart contracts. This information can include election results, sports scores, or financial data.</p>
+
+
+
+<p>By using decentralized oracles that aggregate data from multiple sources, prediction markets avoid the risk of manipulation. For example, in the case of a sports match, the oracle pulls results from trusted sources, such as official sports websites, to feed the outcome into the blockchain. This ensures that market outcomes are resolved accurately and transparently.</p>
+
+
+
+<h3 class="wp-block-heading">Outcome Tokens: Speculation and Market Sentiment</h3>
+
+
+
+<p>In a prediction market, each possible outcome of an event is represented by a token. Participants buy and sell these outcome tokens based on their predictions. The price of tokens fluctuates dynamically throughout the event window, reflecting changes in market sentiment as new information becomes available. For example, if more users believe a particular candidate will win an election, the corresponding token&#8217;s price will rise, while the price of other tokens declines.</p>
+
+
+
+<p>These tokens serve as both investment instruments and sentiment indicators, showing real-time predictions from the market participants. Once the event concludes, users holding tokens for the correct outcome receive payouts, while other tokens lose their value.</p>
+
+
+
+<h3 class="wp-block-heading">Liquidity Providers: Ensuring Market Efficiency</h3>
+
+
+
+<p>Liquidity providers (LPs) play a crucial role in maintaining active and efficient markets. They supply the initial pool of funds required to create new markets and facilitate trading by ensuring that users can buy or sell tokens at fair prices. Without sufficient liquidity, prediction markets can suffer from slippage – the difference between the expected and actual trade price – discouraging participation.</p>
+
+
+
+<p>To incentivize liquidity provision, many platforms offer reward mechanisms, such as a share of transaction fees or platform-native tokens. This ensures that the markets remain liquid, even for niche events with lower participation.</p>
+
+
+
+<h3 class="wp-block-heading">Market Governance and Decentralized Platforms</h3>
+
+
+
+<p>Many decentralized prediction markets operate under community governance models. These platforms often issue governance tokens that allow users to vote on key decisions, such as creating new markets or adjusting platform fees. Governance ensures that no central entity controls the platform, making the market more transparent and aligned with participants&#8217; interests.</p>
+
+
+
+<h2 class="wp-block-heading">Types of Predictions in DeFi Markets</h2>
+
+
+
+<p>DeFi prediction markets cover a wide array of events, offering a versatile platform for users to speculate on real-world outcomes. These predictions are categorized based on the nature of the events they represent, and decentralized platforms like Polymarket and Augur enable users to engage in these predictions with real-time trading.&nbsp;</p>
+
+
+
+<p><strong>1. Binary Markets</strong></p>
+
+
+
+<p>Binary markets are the simplest form, offering only two possible outcomes, typically “Yes” or “No.”</p>
+
+
+
+<ul>
+<li><strong>Example</strong>: In Polymarket, users can predict the approval of an Ethereum spot ETF by a specific date. If the ETF is approved, those holding &#8220;Yes&#8221; tokens receive payouts; if not, the tokens become worthless.</li>
+</ul>
+
+
+
+<p><strong>2. Categorical Markets</strong></p>
+
+
+
+<p>These markets provide multiple possible outcomes, similar to elections with several candidates.</p>
+
+
+
+<ul>
+<li><strong>Example</strong>: During the 2024 U.S. presidential election campaign, Polymarket offered various markets allowing users to speculate on specific outcomes, such as Kamala Harris being nominated as the Democratic candidate or Trump’s VP pick being JD Vance.</li>
+</ul>
+
+
+
+<p><strong>3. Scalar Markets</strong></p>
+
+
+
+<p>Scalar markets are used to predict outcomes with numeric ranges or values, such as prices, population numbers, or temperature readings. These markets allow users to bet on whether a certain value will fall above or below a threshold.</p>
+
+
+
+<ul>
+<li><strong>Example</strong>: On platforms like Augur, users speculate on whether Bitcoin’s price will exceed $40,000 by a certain date, with payouts based on how close their predictions are to the final result.</li>
+</ul>
+
+
+
+<p>Decentralized platforms enable continuous trading on these events, with token prices fluctuating according to new information and market sentiment. These types of predictions help participants engage in a variety of speculative activities while benefiting from the transparency and immutability provided by blockchain technology.</p>
+
+
+
+<h3 class="wp-block-heading">The Advantages of DeFi Prediction Markets</h3>
+
+
+
+<p>DeFi prediction markets offer numerous benefits over traditional platforms. They provide transparency, better returns, and leverage the wisdom of the crowd for accurate forecasting. Below is a detailed breakdown of the key advantages.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Advantage</strong></td><td><strong>Description</strong></td><td><strong>Impact on Users</strong></td><td><strong>Example</strong></td></tr><tr><td><strong>Transparency</strong></td><td>All trades and market activities are recorded on the blockchain, ensuring complete visibility</td><td>Users can verify event outcomes and trade histories without relying on centralized authorities</td><td><strong>Polymarket</strong> uses blockchain to ensure that users have access to real-time event data and price changes</td></tr><tr><td><strong>Fair Odds and No Intermediaries</strong></td><td>Unlike traditional betting platforms, DeFi prediction markets remove middlemen, offering participants fairer odds</td><td>Users enjoy higher returns as fees are lower, and odds are not manipulated by centralized entities</td><td><strong>Augur</strong> provides direct peer-to-peer markets with competitive odds without intermediaries</td></tr><tr><td><strong>Higher Returns and Incentives</strong></td><td>DeFi platforms offer better profit potential through lower fees and yield farming incentives for liquidity providers</td><td>Participants earn more from correct predictions and liquidity providers receive platform-native token rewards</td><td>Augur rewards liquidity providers with <strong>REP tokens</strong> for ensuring market stability</td></tr><tr><td><strong>Global Accessibility</strong></td><td>DeFi prediction markets are open to anyone with internet access, regardless of location</td><td>Users worldwide can participate without facing restrictions imposed by local regulations or platforms</td><td><strong>Gnosis</strong> offers prediction markets across categories, with no geographic limitations for participants</td></tr><tr><td><strong>Wisdom of the Crowd</strong></td><td>Aggregating predictions from a large number of users often results in highly accurate forecasts</td><td>Market sentiment is reflected dynamically in token prices, leading to self-correcting and accurate outcomes</td><td>Polymarket’s election prediction markets have historically outperformed poll-based forecasts in accuracy</td></tr><tr><td><strong>Security and Immutability</strong></td><td>Blockchain-based markets ensure that trades and outcomes cannot be tampered with or altered</td><td>Users can trade with confidence, knowing that outcomes are fair and immutable once recorded on the blockchain</td><td>Augur leverages Ethereum’s blockchain to secure market transactions and outcomes</td></tr><tr><td><strong>Decentralized Governance</strong></td><td>Some platforms offer governance tokens, giving participants control over market policies</td><td>Users actively shape platform development and decision-making through votes</td><td><strong>Augur’s REP token</strong> allows holders to vote on platform upgrades and dispute resolution</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading">Challenges and Risks in DeFi Prediction Markets</h2>
+
+
+
+<p>While DeFi prediction markets offer innovative solutions and exciting opportunities, they also come with unique challenges and risks. Understanding these pitfalls is essential for both participants and platforms to ensure sustainable growth and mitigate potential issues. Below is an in-depth look at some of the key challenges in this sector.</p>
+
+
+
+<h3 class="wp-block-heading">Liquidity Issues and Market Depth</h3>
+
+
+
+<p>Prediction markets thrive on liquidity, ensuring participants can buy and sell outcome tokens at fair prices without significant slippage. However, smaller or niche markets often face liquidity shortages, making it difficult for users to enter and exit positions efficiently. Low liquidity not only discourages participation but can also result in high volatility and inaccurate odds.</p>
+
+
+
+<p>On platforms like Augur, niche prediction markets have struggled to maintain liquidity, leading to poor user experience and market inefficiency.</p>
+
+
+
+<h3 class="wp-block-heading">Lower Market Participation Compared to Traditional Platforms</h3>
+
+
+
+<p>Despite their promise, crypto prediction markets are still relatively niche and struggle to attract mainstream users. Many traditional bettors or investors are unfamiliar with blockchain technology or hesitant to use decentralized platforms due to perceived complexity. This limits the size and accuracy of predictions, as the &#8220;wisdom of the crowd&#8221; effect works best with large, active user bases.</p>
+
+
+
+<p>In contrast to centralized betting platforms like Betfair, decentralized platforms like Polymarket report lower user participation outside of high-profile events like elections​.</p>
+
+
+
+<h3 class="wp-block-heading">Regulatory Uncertainty and Legal Risks</h3>
+
+
+
+<p>Prediction markets face regulatory challenges, especially in jurisdictions that categorize them as gambling operations. DeFi platforms must navigate complex legal landscapes, which vary from region to region. Some countries prohibit prediction markets entirely, while others impose strict regulations that limit participation. The lack of regulatory clarity also exposes platforms to legal risks that could lead to fines, shutdowns, or market restrictions.</p>
+
+
+
+<p>In 2021, Polymarket was fined by the U.S. Commodity Futures Trading Commission (CFTC) for operating unregistered markets, highlighting the risks of regulatory non-compliance​.</p>
+
+
+
+<h3 class="wp-block-heading">Oracle Manipulation and Data Risks</h3>
+
+
+
+<p>DeFi prediction markets depend heavily on off-chain data provided by oracles to verify outcomes accurately. This reliance, however, exposes them to risks associated with oracle manipulation and data inaccuracies. A compromised or faulty oracle could feed incorrect information to the blockchain, leading to false outcomes and unfair payouts. Even trusted oracles can experience technical issues or delays, potentially causing disputes over market resolutions.</p>
+
+
+
+<p>Additionally, while theoretically possible to create prediction markets on virtually any event, these markets are naturally constrained by the availability of fact-checking agencies and oracles that provide the required data on-chain. Without reliable sources, certain types of predictions remain unfeasible, as there is no dependable mechanism to verify the outcome.</p>
+
+
+
+<p>To address these vulnerabilities, platforms like Chainlink utilize decentralized oracle networks to aggregate data from multiple sources. This approach reduces the risk of manipulation by distributing data verification across multiple, independent providers, enhancing data accuracy and minimizing the potential for compromised outcomes.</p>
+
+
+
+<h3 class="wp-block-heading">Insufficient security</h3>
+
+
+
+<p>While smart contracts enable the automation of essential processes in DeFi prediction markets, they require diligent security practices throughout the development lifecycle. Vulnerabilities in smart contracts often arise from neglecting best practices or adopting insufficiently secure development approaches. Without proper safeguards, issues like bugs or coding errors can lead to fund loss, market disruptions, or frozen assets.</p>
+
+
+
+<p>Once deployed, smart contracts are challenging to modify or correct on the blockchain without causing market interruptions, as demonstrated by early platforms like Augur, which encountered bugs in initial versions of its contracts. These technical difficulties required extensive upgrades to maintain functionality, highlighting the importance of a secure, well-tested codebase.</p>
+
+
+
+<p>To mitigate these risks, protocols should integrate modern security practices into every phase of development, including regular audits, a secure deployment process, continuous monitoring, and a bug bounty program. By proactively addressing potential vulnerabilities, DeFi prediction market platforms can better protect user funds and maintain reliable market operations.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="../../whitepaper/index.html" target="_blank" rel="noreferrer noopener"><img loading="lazy" decoding="async" width="1600" height="440" src="../../wp-content/uploads/2024/11/Pop-up.svg" alt="" class="wp-image-72485"/></a></figure>
+
+
+
+<h2 class="wp-block-heading">Prediction Markets: The Next Evolution in the DeFi Space</h2>
+
+
+
+<p>Prediction markets have emerged as an exciting progression within the DeFi ecosystem, offering users the opportunity to speculate on a wide range of outcomes while integrating more advanced financial mechanisms. Unlike traditional DeFi applications such as lending and staking, modern prediction markets incorporate binary options, complex derivatives, and premium payment structures that provide a sophisticated suite of financial instruments for both retail and institutional participants. This evolution has transformed prediction markets into a versatile sector, blending elements of traditional finance with decentralized, permissionless frameworks.</p>
+
+
+
+<h3 class="wp-block-heading">Binary Options: Simplifying Speculation</h3>
+
+
+
+<p>One of the foundational elements in prediction markets is the binary option structure. Binary options provide a straightforward approach to speculation, where participants predict an outcome with a simple yes-or-no result. This simplicity makes binary options accessible, allowing users to participate in markets with minimal complexity.</p>
+
+
+
+<p>For example, a prediction market might allow users to speculate on whether Ethereum will reach a specific price by a given date. If the prediction is correct, participants receive a payout; if not, they lose their initial stake. This format has become popular for a range of events, from price movements in crypto assets to real-world outcomes like election results.</p>
+
+
+
+<h3 class="wp-block-heading">Complex Derivatives: Enhancing Financial Flexibility</h3>
+
+
+
+<p>Beyond binary options, modern prediction markets are adapting derivative structures to cater to more sophisticated trading strategies. Derivatives in prediction markets can include products that track underlying assets or indexes, allowing users to speculate on an event or outcome’s impact on a larger set of factors. By offering more complex positions, derivatives provide hedging opportunities and leverage options that align prediction markets with traditional finance standards.</p>
+
+
+
+<p>For instance, Polymarket, a leading DeFi prediction market platform, offers a range of derivative-based prediction structures. Polymarket allows users to trade on real-world events such as economic indicators or policy outcomes with tailored derivatives, giving participants the flexibility to adopt both long and short positions. This approach creates a dynamic environment where users can manage risk and exposure with greater precision, mirroring the risk management tools available in traditional markets.</p>
+
+
+
+<h3 class="wp-block-heading">Premium Payment Schemes: Structuring Risk and Reward</h3>
+
+
+
+<p>To further enhance the risk-reward balance, some prediction markets have introduced premium payment schemes. In these markets, participants can pay a premium to gain access to potential payouts, similar to options contracts in traditional finance. Premium structures allow users to manage risk by capping potential losses to the premium paid while still providing exposure to favorable outcomes.</p>
+
+
+
+<p>Premium-based models are particularly useful for high-stakes events where risk is heightened. By paying a premium, participants can speculate on outcomes with defined risk parameters, ensuring that even in volatile scenarios, their losses remain limited to the initial premium. This structure adds a level of flexibility that appeals to both experienced traders and users looking to explore high-stakes prediction markets without excessive risk exposure.</p>
+
+
+
+<h3 class="wp-block-heading">Polymarket: Leading the Way in Derivative-Based Prediction Markets</h3>
+
+
+
+<p>Polymarket has established itself as a key player in the evolution of DeFi prediction markets, particularly through its derivative offerings. By leveraging a derivative-based approach, Polymarket allows users to speculate on a wide array of events, from political outcomes to macro-economic indicators. Polymarket’s platform provides advanced tools that cater to experienced traders seeking customizable options for risk management, while still maintaining the decentralized, transparent nature of blockchain-based prediction markets.</p>
+
+
+
+<p>With features like multi-layered derivatives and customizable positions, Polymarket exemplifies the direction of prediction markets as a sophisticated sector within DeFi. As these platforms evolve, they offer not only speculative opportunities but also comprehensive financial products that meet the needs of diverse market participants.</p>
+
+
+
+<h3 class="wp-block-heading">The Future of Prediction Markets in DeFi</h3>
+
+
+
+<p>As prediction markets continue to integrate these advanced financial structures, they are establishing themselves as a distinct asset class within DeFi, offering unique tools for speculation, risk management, and market engagement. The use of binary options, derivatives, and premium payment schemes reflects the increasing convergence of DeFi and traditional finance, pushing prediction markets beyond simple bets and toward full-fledged financial ecosystems.</p>
+
+
+
+<p>With the ongoing development of platforms like Polymarket and the adoption of best practices from traditional markets, prediction markets are poised to attract a broader range of users – from casual participants to seasoned traders – thereby reinforcing their role as a transformative element within the DeFi landscape.</p>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p>While decentralized prediction markets offer exciting opportunities, they also face significant challenges, including liquidity shortages, regulatory uncertainty, and oracle vulnerabilities,. Overcoming these hurdles will require a combination of technological improvements, regulatory alignment, and broader market adoption.</p>
+
+
+
+<p>As the prediction market ecosystem evolves, Layer-2 scaling solutions and enhanced governance models will play a key role in driving sustainable growth. Platforms that successfully navigate these challenges can unlock the full potential of prediction DeFi, offering transparent, efficient, and accessible forecasting solutions.</p>
+
+
+
+<p>Blaize is at the forefront of supporting businesses in leveraging blockchain technology to build decentralized platforms, including prediction markets. With expertise in smart contract development, Layer-2 integration, and blockchain-based governance, Blaize provides customized solutions that help platforms thrive in the rapidly changing DeFi landscape.</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-8efdf7d299ec6b03597c4b3740b008c2"><a href="../../index.html#contacts">Contact Blaize to explore how DeFi prediction markets can transform your business</a>  </p>
+
+                                <div class="block-author">
+                                    <h4 class="author-title">Post author</h4>
+                                    <div class="content">
+                                        <div class="photo">
+                                            <img width="120" height="120" src="../../wp-content/uploads/2023/01/Pasha-150x150.png" class="avatar avatar-120 photo wt-author-img" alt="Pavlo Horbonos" decoding="async" loading="lazy" srcset="https://blaize.tech/wp-content/uploads/2023/01/Pasha-150x150.png 150w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-24x24.png 24w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-48x48.png 48w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-96x96.png 96w, https://blaize.tech/wp-content/uploads/2023/01/Pasha-300x300.png 300w, https://blaize.tech/wp-content/uploads/2023/01/Pasha.png 1032w" sizes="(max-width: 120px) 100vw, 120px" />                                        </div>
+                                        <div class="details">
+                                            <a href="../author/pavel-gorbonos/index.html">
+                                                <h4>Pavlo Horbonos</h4>
+                                            </a>
+                                                                                            <p class="position">Head of Security Department</p>
+                                                                                        
+                                                                                            <div class="socials">
+                                                                                                                                                                                                                                <a href="https://www.linkedin.com/in/pavelmidvel/" target="_blank"><i class="icon-linkedin"></i></a>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sidebar">
+                                <div class="info">
+                                    <h4>Post info</h4>
+                                    <div class="cats">
+                                        <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>                                    </div>
+                                                                                                                <div class="tags">
+                                            <a href="../index596c.html?_sft_post_tag=defi" class="tagname_link">DeFi</a><a href="../indexfafa.html?_sft_post_tag=enterprise-blockchain" class="tagname_link">enterprise blockchain</a><a href="../index027d.html?_sft_post_tag=finance" class="tagname_link">finance</a><a href="../index1a94.html?_sft_post_tag=smart-contract" class="tagname_link">smart contract</a>                                        </div>
+                                    
+                                                                                                        </div>
+                                <div class="navigation"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+            <div id="relatedposts">
+                <div class="guides__block">
+                    <div class="head">
+                        <h3>Related posts</h3>
+                    </div>
+                    <div class="posts-list-wrap">
+                        <div class="posts-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+	<div class="category">
+    <a href="../indexe3e3.html?_sft_category=analysis" class="sub_link">Analysis</a><div style="clear: both;"></div>	</div>
+	<a href="../blockchain-platform-comparison-a-comprehensive-analysis/index.html" class="title">Blockchain Platform Comparison: A Comprehensive Analysis</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../unlocking-the-future-blockchain-solutions-for-the-wine-industry/index.html" class="title">Unlocking the Future: Blockchain Solutions for the Wine Industry</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../web3-in-finance/index.html" class="title">Web3 in Finance: A Detailed Overview</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../blockchain-digital-identity/index.html" class="title">Introduction to Digital Identity Blockchain</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../decentralized-social-media/index.html" class="title">What Stands for Mysterious DeSo: The Power of Decentralized Social Media</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../index03e3.html?_sft_category=case-study" class="sub_link">Case study</a><div style="clear: both;"></div>	</div>
+	<a href="../build-crypto-telegram-bot/index.html" class="title">How to Build a Telegram Bot</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../defi-lending-protocol-development/index.html" class="title">Lending Protocol instead of Money Maker Protocol</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div>                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            </main><!-- #main -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/"
+  },
+  "headline": "Introduction to DeFi Prediction Markets",
+  "description": "DeFi has opened new avenues for financial innovation by eliminating the need for traditional intermediaries. ... Read More",
+  "image": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+  "author": {
+    "@type": "Person",
+    "name": "Pavlo Horbonos",
+    "url": "https://blaize.tech/blog/author/pavel-gorbonos/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blaize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png"
+    }
+  },
+  "datePublished": "18.11.2024"
+}
+</script>
+</main>
+
+<!-- <link type="text/css" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/styles/components/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<footer id="footer" class="footer">
+    <div class="guides__block">
+        <div class="footer__row footer__logo-wrap">
+            <a href="../../index.html">
+                <img src="../../wp-content/themes/blaize-tech/assets/img/footer_logo.svg" alt="Blaize" width="120" height="33" loading="lazy">
+            </a>
+            <div id="text-10" class="widget widget_text">    <p><strong>Blaize</strong> is a Web3 software development company deeply committed to blockchain technology.</p>
+<p>Through our strategic partnership with <a href="https://ideasoft.io/" target="_blank" rel="noopener"><strong>IdeaSoft</strong></a>, we combine expertise to create impactful solutions for our clients.</p>
+    </div>        </div>
+        <div class="footer__row">
+            <div class="footer__col">
+                <div id="text-3" class="widget widget_text"><h3>Contact Us</h3>    <ul>
+<li>E-mail: <a href="../../cdn-cgi/l/email-protection.html#87eee9e1e8c7e5ebe6eefde2a9f3e2e4ef"><span class="__cf_email__" data-cfemail="523b3c343d12303e333b28377c2637313a">[email&#160;protected]</span></a></li>
+</ul>
+    </div><div id="text-5" class="widget widget_text"><h3>Socials</h3>    <ul class="socials-responsive">
+<li><a href="https://www.facebook.com/blaize.tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/facebook_new.svg" alt="facebook" width="24" height="24" /></a></li>
+<li><a href="https://twitter.com/blaize_tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/twitter_new.svg" alt="twitter" width="24" height="24" /></a></li>
+<li><a href="https://www.linkedin.com/company/blaizetech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/linkedin_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+<li><a href="https://medium.com/blaize-tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/medium_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-4" class="widget widget_text"><h3>About Us</h3>    <ul>
+<li><a href="../../clients/index.html">Cases</a></li>
+<li><a href="../index.html">Blog</a></li>
+<li><a href="../../whitepaper/index.html">Whitepaper</a></li>
+<li><a href="../../careers/index.html">Careers</a></li>
+<li><a href="../../vacancies/index.html">Vacancies</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-6" class="widget widget_text"><h3>Services</h3>    <ul>
+<li><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+<li><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+<li><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+<li><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+<li><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+<li><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+<li><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-9" class="widget widget_text"><h3>Solutions</h3>    <ul>
+<li><a href="../../decentralized-application/index.html">dApp Development</a></li>
+<li><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+<li><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+<li><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+<li><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+<li><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+<li><a href="../../token-development-services/index.html">Token Development Services</a></li>
+<li><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+<li><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+<li><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+<li><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+    </div>            </div>
+        </div>
+        <div class="footer__row part">
+            <div class="partners">
+              <!--<div class="clath"><script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="1096403"></div></div>
+                -->
+              <!-- Clutch -->
+              <div id="clutch">
+                <div class="dark_theme">
+                  <div class="widgets_wrapper">
+                    <div class="content">
+                      <div class="small_widget_logo_wrapper">
+                        <span class="small_widget_logo_text">Reviewed on</span>
+                        <a class="logotype" target="_blank" data-ga-action="logo_click" href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=logo&amp;utm_term=blaize.dv" aria-label="Reviewed on Clutch">
+                        </a>
+                      </div>
+                      <div class="small_widget_text">
+                        <span class="rating">5.0</span>
+                        <div class="reviews-totals-stars">
+                          <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            <div class="fivestar-static-item">
+                              <div class="form-item form-type-item">
+                                <div class="fivestar-widget-static fivestar-widget-static-vote clearfix">
+                                  <div class="fivestar"><div class="star star-1 star-odd"><span class="on">5.000000</span></div><div class="star star-2 star-even"><span class="on"></span></div><div class="star star-3 star-odd"><span class="on"></span></div><div class="star star-4 star-even"><span class="on"></span></div><div class="star star-5 star-odd"><span class="on"></span></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <span class="reviews-count">
+                           <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=num_reviews&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            5
+                            reviews
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Clutch -->
+              <div class="top_dev">
+                    <a href="https://www.topdevelopers.co/directory/blockchain-developers" target="_blank"> <img src="../../wp-content/uploads/2023/04/topDev.png" alt="top blockchain developers" title="Top Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://topappdevelopmentcompanies.com/directory/app-developers/blockchain" target="_blank"> <img src="../../wp-content/uploads/2020/08/topdev_logo-1.png" alt="top blockchain developers" title="Top Blockchain Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://techreviewer.co/companies/blaize-tech" target="_blank"><img src="../../wp-content/uploads/2023/03/Blockchain-1.svg" alt="techreviewer" loading="lazy"></a>
+                </div>
+                <div class="GoodFirms">
+                    <a target="_blank" href="https://www.goodfirms.co/company/blaize"><img src="../../wp-content/uploads/2020/08/googfirm.svg" alt="GoodFirms Badge" width="188" height="42" loading="lazy"></a>
+                </div>
+                <div class="defisec">
+                    <a href="https://defisec.info/tproduct/1-451395809121-blaize-security" target="_blank"><img src="../../wp-content/uploads/2023/04/DSAmember.png" alt="defisec" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <p class="copyright">Copyright © Blaize - blockchain development company 2018-2025</p>
+            <ul class="privacy">
+                <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                <li><a href="../../terms-and-conditions/index.html">Terms & Conditions</a></li>
+            </ul>
+            <!-- <p class="marketing">B2B inbound marketing with <a href="https://growpad.pro/" target="_blank"><img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/foot_marketing.svg" alt=""></a></p> -->
+        </div>
+    </div>
+    <!--<script>window.lintrk('track', { conversion_id: 11292828 });</script>-->
+</footer><!-- #colophon -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var wpcf7_recaptcha = {"sitekey":"6LcrqiAqAAAAAI1UXBtZ9jRUqTeAWWLpEeKjCIM8","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+
+
+    <progress value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-elements-8efdf7d299ec6b03597c4b3740b008c2 a{color:var(--wp--preset--color--white);}
+</style>
+<script type="text/javascript" defer src="../../wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blaize.tech\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+  <script>
+    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+  </script>
+  
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Blaize",
+        "alternateName": "Blaize Tech",
+        "url": "https://blaize.tech/",
+        "logo": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/blaize.tech/",
+            "https://twitter.com/blaize_tech",
+            "https://ua.linkedin.com/company/blaizetech"
+        ],                "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "11"
+        }
+            }
+</script>
+
+
+
+<div class="popup">
+  <div class="popup__wrapper"></div>
+  <div class="popup__window">
+    <div class="popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+    <div class="popup__img">
+      <svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none"><path fill="#FF5C5C" d="M21 20.711h100v100H21z"/><path fill="#fff" d="M.29 70.71 71 0l70.711 70.71-70.71 70.711z"/><path fill="#FF5C5C" d="M66.75 79.75 58 71l-2.916 2.917 11.667 11.666 25-25-2.917-2.916L66.751 79.75Z"/></svg>
+    </div>
+    <p class="popup__title">Thank you!</p>
+          <p class="popup__text">We received your request and will be in touch shortly.</p>
+              <a href="#" class="btn btn-black popup__btn" onclick="return false;">okay</a>
+      </div>
+</div>
+      <script>
+      const setCookie = () => {
+        let a = new Date();
+        a = new Date(a.getTime() + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = 'blaize-cookies-info=true; path=/; expires=' + a.toGMTString() + ';';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const t = document.getElementsByClassName('js-cookies-info')[0];
+        const b = document.getElementsByClassName('js-cookies-info__button')[0];
+        const c = document.getElementsByClassName('js-cookies-close')[0];
+        b.addEventListener('click', () => {
+          setCookie()
+          t.classList.remove('active');
+        });
+        c.addEventListener('click', (e) => {
+          e.preventDefault();
+          t.classList.remove('active');
+        })
+      });
+    </script>
+    <div class="cookies-info js-cookies-info active">
+      <div class="guides__block">
+        <div class="cookies-info__text">
+          <div><div>This site uses cookies to offer you a better browsing experience.<br />
+Find out more on <a href="../../privacy-policy/index.html">how we use cookies</a></div>
+</div>
+          <span class="btn btn-gray js-cookies-close">Decline</span>
+          <span class="btn btn-black js-cookies-info__button">Accept all cookies</span>
+        </div>
+      </div>
+    </div>
+  
+
+<a class="popup-w" href="../../whitepaper/index.html">
+  <div class="popup-w__title">transform your asset management now!</div>
+  <div class="popup-w__text">Download the whitepaper now and start your journey towards a more efficient, inclusive, and secure future in the Web3 world.</div>
+  <button class="popup-w__btn">download it now!</button>
+  <div class="popup-w__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+  <div class="popup-w__square square1"></div>
+  <div class="popup-w__square square2"></div>
+  <div class="popup-w__square square3"></div>
+  <div class="popup-w__square square4"></div>
+</a>
+
+<style>
+.popup-w {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 115px 25px 60px 25px;
+  background: #ededed;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .24);
+  z-index: 9;
+  overflow: hidden;
+  transition: .3s;
+  transform: rotateY(90deg);
+}
+
+.active + .popup-w {
+  bottom: 106px;
+}
+
+.popup-w.show {
+  transform: rotateY(0deg);
+}
+
+.popup-w.hide {
+  transform: rotateY(90deg);
+}
+
+.popup-w__square {
+  position: absolute;
+  background: #fc5959;
+}
+
+.popup-w__square.square1 {
+  top: 0;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+.popup-w__square.square2 {
+  top: -50px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-35deg);
+}
+
+.popup-w__square.square3 {
+  bottom: -20px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(25deg);
+}
+
+.popup-w__square.square4 {
+  bottom: -5px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-40deg);
+}
+
+.popup-w__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-w__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.popup-w__text {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.popup-w__btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #fc5959;
+  border: 1px solid transparent;
+  margin: auto auto 0;
+  padding: 0;
+  transition: .3s;
+}
+
+.popup-w__btn:hover {
+  color: #fc5959;
+  background: transparent;
+  border: 1px solid #fc5959;
+}
+
+@media screen and (max-width: 1366px) {
+  .popup-w {
+    width: 350px;
+    height: 450px;
+    padding: 90px 25px 60px 25px;
+  }
+
+  .popup-w__title {
+    font-size: 22px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+  }
+
+  .popup-w__btn {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .popup-w__square.square1 {
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .active + .popup-w {
+    bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup-w {
+    width: 300px;
+    height: 400px;
+    padding: 75px 25px 50px 25px;
+  }
+
+  .active + .popup-w {
+    bottom: 225px;
+  }
+
+  .popup-w__square.square1 {
+    top: -50px;
+  }
+
+  .popup-w__close {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-w__title {
+    font-size: 18px;
+  }
+
+  .popup-w__text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-w__btn {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+  }
+
+  .popup-w__title {
+    font-size: 24px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .popup-w__btn {
+    height: 40px;
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+</style>
+
+<script>
+$(function() {
+  $('.popup-w').on('click', function(e) {
+    $(this).addClass('hide');
+    $('body').removeClass('no-scroll');
+    document.cookie = "popupWhitepaper=true; path=/; max-age=2592000";
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=0";
+
+    if ( $(e.target).parents('.popup-w__close')[0] ) {
+      e.preventDefault();
+    }
+  });
+});
+
+let elemPopup;
+let elemPopupPosition;
+let elemPopupHeight;
+let elemPopupPositionEnd;
+
+if ( document.querySelector('#development') ) {
+  elemPopup = document.querySelector('#development');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else if ( document.querySelector('.decentralized') ) {
+  elemPopup = document.querySelector('.decentralized');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else {
+  elemPopup = document.querySelector('body');
+  elemPopupPosition = elemPopup.offsetHeight * 0.7;
+  elemPopupHeight = 0;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+}
+
+document.addEventListener('scroll', function() {
+  let currentPosition = document.querySelector('html').scrollTop;
+
+  if ( currentPosition >= elemPopupPositionEnd || document.cookie.indexOf('popupWhitepaperOpened') !== -1 ) {
+    $('.popup-w').addClass('show');
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=2592000";
+
+    if ( window.matchMedia('(max-width: 767px)').matches && !$('.popup-w').hasClass('hide') ) {
+      $('body').addClass('no-scroll');
+    }
+  }
+});
+</script>
+
+
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)
+
+    jQuery(window).scroll(function () {
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && archivePage === false
+            && pageBlog === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+    });
+
+    jQuery(document).ready(function(){
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && pageBlog === false
+            && archivePage === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+
+        // Add red dot for parent li (active children) - on load page
+        $(".post-type-archive-clients .searchandfilter ul li.sf-field-taxonomy-clientcat ul li > ul > li, body.post-type-archive-vacancies .searchandfilter ul li.sf-field-taxonomy-vacancycat ul li > ul > li").each(function() {
+            const activeLabel = $(this).hasClass('sf-option-active');
+            if (activeLabel === true) {
+                jQuery(this).closest('li.sf-level-0').addClass('active-child');
+            }
+        });
+
+        // For drop-down cat-list (clients services)
+        jQuery('.post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>label, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>label').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery(this).closest('li').children('ul').stop().slideToggle(300);
+            e.preventDefault();
+            return false;
+        });
+
+        // Add red dot for parent li (active children)
+        $( ".post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>ul>li, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>ul>li" ).on( "change", function() {
+            const findActive = jQuery(this).closest('ul').find('input:checked').length;
+            if (findActive >= 1) {
+                jQuery(this).parent().closest('li').addClass('active-child');
+            } else {
+                jQuery(this).parent().closest('li').removeClass('active-child');
+            }
+        });
+    });
+
+    $('.wpcf7-form').on('wpcf7mailsent', function() {
+        $('.popup').fadeIn();
+        $('body').addClass('noscroll');
+    });
+
+    $('.popup__close, .popup__btn, .popup__wrapper').on('click', function() {
+        $('.popup').fadeOut();
+        $('body').removeClass('noscroll');
+    });
+
+    $('.wpcf7-form').on('submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', true);
+    });
+
+    $('.wpcf7-form').on('wpcf7submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', false);
+    });
+
+    if ( $('.navigation').length ) {
+        var navHTML = '' +
+            '<p class="navigation__title">Table of Content</p>' +
+            '<ol class="navigation__list"></ol>';
+
+        $( navHTML ).appendTo( $('.navigation') );
+
+        var navNumber = 0;
+        var h2Number = 1;
+
+        $('.text h2, .text h3').each(function() {
+            $(this).attr({
+                id: navNumber
+            });
+            if ($(this).is('h2')) {
+                $('.navigation > .navigation__list').append(
+                    '<li class="navigation__item navigation__item_' + h2Number + '">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+                h2Number++;
+            } else {
+                if ( $('.navigation__item_' + (h2Number - 1)).children('ol').length === 0 ) {
+                    $('.navigation__item_' + (h2Number - 1)).append(
+                        '<ol class="navigation__list"></ol>'
+                    );
+                }
+                $('.navigation__item_' + (h2Number - 1)).children('ol').append(
+                    '<li class="navigation__item">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+            }
+            navNumber++;
+        });
+
+        function resize() {
+            if ( $(window).width() >= 1201 ) {
+                $('.navigation').insertAfter( $('.info') );
+            } else {
+                $('.navigation').prependTo( $('.post-content .text') );
+            }
+        }
+
+        resize();
+
+        $(window).on('resize', function() {
+            resize();
+        });
+    }
+
+    $('.navigation').on('click', 'a', function (e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var top = $(link).offset().top - $('#header').height();
+        $('html').animate({scrollTop: top}, 1000);
+    });
+
+    function scriptsDefer(src) {
+      let script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.body.append(script);
+    }
+
+    document.addEventListener('scroll', load_script);
+    document.addEventListener('mousedown', load_script);
+    document.addEventListener('mousemove', load_script);
+    document.addEventListener('touchstart', load_script);
+    document.addEventListener('keydown', load_script);
+
+    function load_script() {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/lftracker.js');
+      scriptsDefer('../../../tools.luckyorange.com/core/lo4c35.js?site-id=f50de86c');
+      if (window.matchMedia('(max-width: 799px)').matches) {
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+      }
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/swiper.js');
+      scriptsDefer('../../../www.recaptcha.net/recaptcha/api3398.js?render=' + wpcf7_recaptcha.sitekey + '&#038;ver=3.0');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/recaptcha.js');
+
+      document.removeEventListener('scroll', load_script);
+      document.removeEventListener('mousedown', load_script);
+      document.removeEventListener('mousemove', load_script);
+      document.removeEventListener('touchstart', load_script);
+      document.removeEventListener('keydown', load_script);
+    }
+
+    if (window.matchMedia('(min-width: 800px)').matches) {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+    }
+</script>
+
+<script>
+    function countDigits(n) {
+        let i;
+        for(i = 0; n > 1; i++) {
+            n /= 10;
+        }
+        return i;
+    }
+
+    jQuery('.wpcf7-form').submit(function(){
+        const form = jQuery(this);
+        const countryCode = form.find('.custom-select .phoneInput .selected-dial-code').text();
+        const contactName = form.find('.custom-select .active-feed-field .label-title').text();
+        form.find('.userCountryCode').val(countryCode);
+        form.find('.userContactName').val(contactName);
+
+        const userContactVal = form.find('input.userContact').val();
+
+        if (userContactVal === '') {
+            form.find('.select-box .trigger').addClass('not-valid');
+            return false;
+        }
+    });
+
+    var timer;
+
+    function trackLeave(ev) {
+        if (ev.pageY > 0) {
+            return;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        if ($.exitIntent.settings.sensitivity <= 0) {
+            $.event.trigger('exitintent');
+            return;
+        }
+
+        timer = setTimeout(
+            function() {
+                timer = null;
+                $.event.trigger('exitintent');
+            }, $.exitIntent.settings.sensitivity);
+    }
+
+    function trackEnter() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+    }
+
+    $.exitIntent = function(enable, options) {
+        $.exitIntent.settings = $.extend($.exitIntent.settings, options);
+
+        if (enable === 'enable') {
+            $(window).mouseleave(trackLeave);
+            $(window).mouseenter(trackEnter);
+        } else if (enable === 'disable') {
+            trackEnter(); // Turn off any outstanding timer
+            $(window).unbind('mouseleave', trackLeave);
+            $(window).unbind('mouseenter', trackEnter);
+        } else {
+            throw "Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";
+        }
+    }
+
+    $.exitIntent.settings = {
+        'sensitivity': 300
+    };
+
+    jQuery('.exitModal-close').click(function () {
+        jQuery('#exitPopup').removeClass('active');
+        jQuery('#exitPopup').addClass('closed-modal');
+    });
+
+    jQuery(function() {
+        jQuery.exitIntent('enable');
+        jQuery(document).bind('exitintent', function() {
+            if (jQuery("#exitPopup").hasClass("closed-modal")) {
+                //
+            } else {
+                jQuery("#exitPopup").addClass("active");
+                jQuery("#exitPopup").addClass("opened-modal");
+            }
+        });
+    });
+
+    (function () {
+        const t = jQuery(".exitModal-popup");
+        t.find(".exitModal-close").on("click", function () {
+            jQuery( 'body' ).toggleClass( 'active-modal' );
+            localStorage.setItem("Blaize_exit_popup", "closed"), t.addClass("closed-modal");
+        }),
+            "closed" === localStorage.getItem("Blaize_exit_popup") ? (t.addClass("closed-modal")) : t.addClass("show-modal");
+    })();
+
+    let box = document.querySelector("#preloader");
+
+    function fadeOut() {
+        box.classList.add("visuallyhidden");
+        box.addEventListener(
+            "transitionend",
+            function (e) {
+                box.classList.add("hidden");
+            },
+            {
+                capture: false,
+                once: true,
+                passive: false
+            }
+        );
+    }
+
+    (function($) {
+        $(function() {
+            $(".userContact").intlTelInput({
+                autoPlaceholder: "off",
+                geoIpLookup: function(callback) {
+                  $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                  });
+                },
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                separateDialCode: true,
+                // utilsScript: "assets/nb_intl/js/utils.js"
+            });
+        });
+    })(jQuery);
+</script>
+
+<link rel="preload" href="../../wp-content/themes/blaize-tech/assets/nb_intl/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0a02c653bc51442fac3378bc1fc85895","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:35:31 GMT -->
+</html>

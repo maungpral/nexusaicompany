@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html amp lang="en-US" data-amp-auto-lightbox-disable transformed="self;v=1" i-amphtml-layout="" i-amphtml-no-boilerplate="">
+
+<!-- Mirrored from blaize.tech/blog/account-abstraction-guide/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:37:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><link rel="preconnect" href="https://cdn.ampproject.org/"><style amp-runtime="" i-amphtml-version="012510081644000">html{overflow-x:hidden!important}html.i-amphtml-fie{height:100%!important;width:100%!important}html:not([amp4ads]),html:not([amp4ads]) body{height:auto!important}html:not([amp4ads]) body{margin:0!important}body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y pinch-zoom;touch-action:pan-y pinch-zoom}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important}html.i-amphtml-fie:not(.i-amphtml-inabox)>body,html.i-amphtml-singledoc:not(.i-amphtml-inabox)>body{position:relative!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}#i-amphtml-wrapper+body{visibility:visible}#i-amphtml-wrapper+body .i-amphtml-lightbox-element,#i-amphtml-wrapper+body[i-amphtml-lightbox]{visibility:hidden}#i-amphtml-wrapper+body[i-amphtml-lightbox] .i-amphtml-lightbox-element{visibility:visible}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}amp-instagram{padding:54px 0px 0px!important;background-color:#fff}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}amp-experiment,amp-live-list>[update]{display:none}amp-list[resizable-children]>.i-amphtml-loading-container.amp-hidden{display:none!important}amp-list [fetch-error],amp-list[load-more] [load-more-button],amp-list[load-more] [load-more-end],amp-list[load-more] [load-more-failed],amp-list[load-more] [load-more-loading]{display:none}amp-list[diffable] div[role=list]{display:block}amp-story-page,amp-story[standalone]{min-height:1px!important;display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#000!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .amp-active>div,amp-story .i-amphtml-loader-background{display:none!important}amp-story-page:not(:first-of-type):not([distance]):not([active]){transform:translateY(1000vh)!important}amp-autocomplete{position:relative!important;display:inline-block!important}amp-autocomplete>input,amp-autocomplete>textarea{padding:0.5rem;border:1px solid rgba(0,0,0,.33)}.i-amphtml-autocomplete-results,amp-autocomplete>input,amp-autocomplete>textarea{font-size:1rem;line-height:1.5rem}[amp-fx^=fly-in]{visibility:hidden}amp-script[nodom],amp-script[sandboxed]{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}
+/*# sourceURL=/css/ampdoc.css*/[hidden]{display:none!important}.i-amphtml-element{display:inline-block}.i-amphtml-blurry-placeholder{transition:opacity 0.3s cubic-bezier(0.0,0.0,0.2,1)!important;pointer-events:none}[layout=nodisplay]:not(.i-amphtml-element){display:none!important}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][heights]:not([layout]):not(.i-amphtml-layout-responsive),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic,[layout=intrinsic][width][height]:not(.i-amphtml-layout-intrinsic){display:inline-block;position:relative;max-width:100%}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]:not(.i-amphtml-layout-fixed-height){display:block;position:relative}.i-amphtml-layout-fill,.i-amphtml-layout-fill.i-amphtml-notbuilt,[layout=fill]:not(.i-amphtml-layout-fill),body noscript>*{display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}body noscript>*{position:absolute!important;width:100%;height:100%;z-index:2}body noscript{display:inline!important}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}@supports (aspect-ratio:1/1){i-amphtml-sizer.i-amphtml-disable-ar{display:none!important}}.i-amphtml-blurry-placeholder,.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}.i-amphtml-select-disabled{-webkit-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*,[width][height][heights]:not([layout]):not(.i-amphtml-element)>*,[width][height][sizes]:not([layout]):not(.i-amphtml-element)>*{display:none}amp-img:not(.i-amphtml-element)[i-amphtml-ssr]>img.i-amphtml-fill-content{display:block}.i-amphtml-notbuilt:not(.i-amphtml-layout-container),[layout]:not([layout=container]):not(.i-amphtml-element),[width][height][heights]:not([layout]):not(.i-amphtml-element),[width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element){color:transparent!important;line-height:0!important}.i-amphtml-ghost{visibility:hidden!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder],[width][height][heights]:not([layout]):not(.i-amphtml-element)>[placeholder],[width][height][sizes]:not([layout]):not(.i-amphtml-element)>[placeholder]{display:block;line-height:normal}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback],.i-amphtml-layout-container>[placeholder].amp-hidden,.i-amphtml-layout-container>[placeholder].hidden{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}amp-img[i-amphtml-ssr]:not(.i-amphtml-element)>[placeholder]{z-index:auto}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;pointer-events:none;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden;display:initial;line-height:normal}.i-amphtml-layout-size-defined>[overflow]{position:absolute}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-analytics,amp-auto-ads,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-story{visibility:hidden!important}html.i-amphtml-fie>amp-analytics{position:initial!important}[visible-when-invalid]:not(.visible),form [submit-error],form [submit-success],form [submitting]{display:none}amp-accordion{display:block!important}@media (min-width:1px){:where(amp-accordion>section)>:first-child{margin:0;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}:where(amp-accordion>section)>:last-child{margin:0}}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}amp-accordion,amp-accordion>section{margin:0}amp-accordion:not(.i-amphtml-built)>section>:last-child{display:none!important}amp-accordion:not(.i-amphtml-built)>section[expanded]>:last-child{display:block!important}
+/*# sourceURL=/css/ampshared.css*/</style><meta name="description" content="Discover how account abstraction enhances web3 businesses! Unlock advanced security, fee flexibility, and cross-chain capabilities. Click to learn more!"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="The Web3 2024 Trend: Mastering Account Abstraction"><meta property="og:description" content="Discover how account abstraction enhances web3 businesses! Unlock advanced security, fee flexibility, and cross-chain capabilities. Click to learn more!"><meta property="og:url" content="https://blaize.tech/blog/account-abstraction-guide/"><meta property="og:site_name" content="Blaize"><meta property="article:published_time" content="2024-02-15T16:44:57+00:00"><meta property="article:modified_time" content="2024-10-29T11:09:48+00:00"><meta property="og:image" content="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction1.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta property="og:image:type" content="image/webp"><meta name="author" content="Pavlo Horbonos"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Pavlo Horbonos"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="17 minutes"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="generator" content="AMP Plugin v2.5.2; mode=reader; theme=legacy"><script async="" src="https://cdn.ampproject.org/v0.mjs" type="module" crossorigin="anonymous"></script><script async nomodule src="../../../../cdn.ampproject.org/v0.js" crossorigin="anonymous"></script><style amp-custom="">:root .has-primary-red-background-color{background-color:#fc5959;color:#fff}:root .has-white-color{color:#fff}#amp-mobile-version-switcher{left:0;position:absolute;width:100%;z-index:100}#amp-mobile-version-switcher>a{background-color:#444;border:0;color:#eaeaea;display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;font-weight:600;padding:15px 0;text-align:center;-webkit-text-decoration:none;text-decoration:none}#amp-mobile-version-switcher>a:active,#amp-mobile-version-switcher>a:focus,#amp-mobile-version-switcher>a:hover{-webkit-text-decoration:underline;text-decoration:underline}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}:where(.wp-block-post-comments input[type=submit]){border:none}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:where(.wp-block-file){margin-bottom:1.5em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):is(a):active,:where(.wp-block-file__button):is(a):focus,:where(.wp-block-file__button):is(a):hover,:where(.wp-block-file__button):is(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}h1.has-background,h2.has-background,h3.has-background{padding:1.25em 2.375em}.wp-block-image amp-img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}.wp-block-image :where(.has-border-color){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-color]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-color]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-color]){border-left-style:solid}.wp-block-image :where([data-amp-original-style*=border-width]){border-style:solid}.wp-block-image :where([data-amp-original-style*=border-top-width]){border-top-style:solid}.wp-block-image :where([data-amp-original-style*=border-right-width]){border-right-style:solid}.wp-block-image :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}.wp-block-image :where([data-amp-original-style*=border-left-width]){border-left-style:solid}.wp-block-image figure{margin:0}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc(-50vw + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([data-amp-original-style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}ol,ul{box-sizing:border-box}ol.has-background,ul.has-background{padding:1.25em 2.375em}:where(.wp-block-navigation.has-background .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation.has-background .wp-block-navigation-submenu a:not(.wp-element-button)){padding:.5em 1em}:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content),:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content){padding:.5em 1em}@keyframes overlay-menu__fade-in-animation{0%{opacity:0;transform:translateY(.5em)}to{opacity:1;transform:translateY(0)}}p.has-background{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}:where(.wp-block-post-excerpt){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}:where(.wp-block-pullquote){margin:0 0 1em}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table td{border:1px solid;padding:.5em}:where(.wp-block-term-description){margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}:where(pre.wp-block-verse){font-family:inherit}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-text-align-center{text-align:center}html :where(.has-border-color){border-style:solid}html :where([data-amp-original-style*=border-top-color]){border-top-style:solid}html :where([data-amp-original-style*=border-right-color]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-color]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-color]){border-left-style:solid}html :where([data-amp-original-style*=border-width]){border-style:solid}html :where([data-amp-original-style*=border-top-width]){border-top-style:solid}html :where([data-amp-original-style*=border-right-width]){border-right-style:solid}html :where([data-amp-original-style*=border-bottom-width]){border-bottom-style:solid}html :where([data-amp-original-style*=border-left-width]){border-left-style:solid}html :where(amp-img[class*=wp-image-]),html :where(amp-anim[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}.wp-block-image{margin:0 0 1em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-table{margin:0 0 1em}.wp-block-table td{word-break:normal}amp-img.amp-wp-enforced-sizes{object-fit:contain}amp-img img,amp-img noscript{image-rendering:inherit;object-fit:inherit;object-position:inherit}.amp-wp-enforced-sizes{max-width:100%;margin:0 auto}.amp-wp-article-content > p.has-background{margin-left:-2.375em;margin-right:-2.375em;margin-block-start:0;margin-block-end:16px}html{background:#0a5f85}body{background:#fff;color:#353535;font-family:Georgia,"Times New Roman",Times,Serif;font-weight:300;line-height:1.75}p,ol,ul,figure{margin:0 0 1em;padding:0}a,a:visited{color:#0a5f85}a:hover,a:active,a:focus{color:#353535}.amp-wp-meta,.amp-wp-header div,.amp-wp-title,.amp-wp-tax-category,.amp-wp-tax-tag,.amp-wp-footer p,.back-to-top{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif}.amp-wp-header{background-color:#0a5f85}.amp-wp-header div{color:#fff;font-size:1em;font-weight:400;margin:0 auto;max-width:calc(840px - 32px);padding:.875em 16px;position:relative}.amp-wp-header a{color:#fff;text-decoration:none}.amp-wp-header .amp-wp-site-icon{background-color:#fff;border:1px solid #fff;border-radius:50%;position:absolute;right:18px;top:10px}.amp-wp-article{color:#353535;font-weight:400;margin:1.5em auto;max-width:840px;overflow-wrap:break-word;word-wrap:break-word}.amp-wp-article-header{align-items:center;align-content:stretch;display:flex;flex-wrap:wrap;justify-content:space-between;margin:1.5em 16px 0}.amp-wp-title{color:#353535;display:block;flex:1 0 100%;font-weight:900;margin:0 0 .625em;width:100%}.amp-wp-meta{color:#696969;display:inline-block;flex:2 1 50%;font-size:.875em;line-height:1.5em;margin:0 0 1.5em;padding:0}.amp-wp-article-header .amp-wp-meta:last-of-type{text-align:right}.amp-wp-article-header .amp-wp-meta:first-of-type{text-align:left}.amp-wp-byline amp-img,.amp-wp-byline .amp-wp-author{display:inline-block;vertical-align:middle}.amp-wp-byline amp-img{border:1px solid #0a5f85;border-radius:50%;position:relative;margin-right:6px}.amp-wp-posted-on{text-align:right}.amp-wp-article-featured-image{margin:0 0 1em}.amp-wp-article-featured-image img:not(amp-img){max-width:100%;height:auto;margin:0 auto}.amp-wp-article-featured-image amp-img{margin:0 auto}.amp-wp-article-content{margin:0 16px}.amp-wp-article-content ul,.amp-wp-article-content ol{margin-left:1em}.amp-wp-article-content .wp-caption{max-width:100%}.amp-wp-article-content amp-img{margin:0 auto}.wp-caption{padding:0}.amp-wp-article-footer .amp-wp-meta{display:block}.amp-wp-tax-category,.amp-wp-tax-tag{color:#696969;font-size:.875em;line-height:1.5em;margin:1.5em 16px}.amp-wp-footer{border-top:1px solid #c2c2c2;margin:calc(1.5em - 1px) 0 0}.amp-wp-footer div{margin:0 auto;max-width:calc(840px - 32px);padding:1.25em 16px 1.25em;position:relative}.amp-wp-footer h2{font-size:1em;line-height:1.375em;margin:0 0 .5em}.amp-wp-footer p{color:#696969;font-size:.8em;line-height:1.5em;margin:0 85px 0 0}.amp-wp-footer a{text-decoration:none}.back-to-top{bottom:1.275em;font-size:.8em;font-weight:600;line-height:2em;position:absolute;right:16px}
+
+/*# sourceURL=amp-custom.css */</style><link rel="canonical" href="../index.html"><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/account-abstraction-guide/","url":"https://blaize.tech/blog/account-abstraction-guide/","name":"The Web3 2024 Trend: Mastering Account Abstraction","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/account-abstraction-guide/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/account-abstraction-guide/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2024/02/account-abstraction1.webp","datePublished":"2024-02-15T16:44:57+00:00","dateModified":"2024-10-29T11:09:48+00:00","author":{"@id":"https://blaize.tech/#/schema/person/65ff2878fb8d703b83f16b3ef237db1a"},"description":"Discover how account abstraction enhances web3 businesses! Unlock advanced security, fee flexibility, and cross-chain capabilities. Click to learn more!","breadcrumb":{"@id":"https://blaize.tech/blog/account-abstraction-guide/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/account-abstraction-guide/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/account-abstraction-guide/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2024/02/account-abstraction1.webp","contentUrl":"https://blaize.tech/wp-content/uploads/2024/02/account-abstraction1.webp","width":1200,"height":675},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/account-abstraction-guide/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"Account Abstraction: A Complete Overview"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/65ff2878fb8d703b83f16b3ef237db1a","name":"Pavlo Horbonos","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=96\u0026d=mm\u0026r=g","contentUrl":"https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=96\u0026d=mm\u0026r=g","caption":"Pavlo Horbonos"}}]}</script><title>The Web3 2024 Trend: Mastering Account Abstraction</title></head>
+
+<body class="">
+
+<header id="top" class="amp-wp-header">
+	<div>
+		<a href="../../../index.html">
+										<amp-img src="../../../wp-content/uploads/2020/01/Group-1.png" width="32" height="32" class="amp-wp-site-icon amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" data-hero-candidate="" alt="Site icon" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMyIiB3aWR0aD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" alt="Site icon" src="../../../wp-content/uploads/2020/01/Group-1.png"></amp-img>
+						<span class="amp-site-title">
+				Blaize			</span>
+		</a>
+	</div>
+</header>
+
+<article class="amp-wp-article">
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">Account Abstraction: A Complete Overview</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=72&amp;d=mm&amp;r=g" srcset="
+					https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=24&amp;d=mm&amp;r=g 1x,
+					https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=48&amp;d=mm&amp;r=g 2x,
+					https://secure.gravatar.com/avatar/e1d8b08a3df966975b4b6f99514e755b?s=72&amp;d=mm&amp;r=g 3x
+				" alt="Pavlo Horbonos" width="24" height="24" layout="fixed" class="i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width:24px;height:24px" i-amphtml-layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">Pavlo Horbonos</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2024-02-15T16:44:57+00:00">
+		2 years ago	</time>
+</div>
+	</header>
+
+	<figure class="amp-wp-article-featured-image wp-caption">
+	<amp-img width="640" height="360" src="../../../wp-content/uploads/2024/02/account-abstraction1.webp" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" alt="" data-hero-candidate="" layout="intrinsic" data-hero i-amphtml-ssr i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM2MCIgd2lkdGg9IjY0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="></i-amphtml-sizer><img class="i-amphtml-fill-content i-amphtml-replaced-content" decoding="async" loading="lazy" alt="" src="../../../wp-content/uploads/2024/02/account-abstraction1.webp"></amp-img>	</figure>
+
+	<div class="amp-wp-article-content">
+		
+<p>The year 2024 promises to be a revolutionary for web3 adoption: account abstraction becomes a true trend. This concept transcends the limitations of externally owned accounts (EOAs) by introducing programmable smart contracts as wallets, unlocking a new era of enhanced security, flexibility, and user-centricity. Understanding its implications and embracing early adoption are crucial steps for protocols seeking to thrive in this rapidly evolving landscape.</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="747" src="../../../wp-content/uploads/2024/02/account-abstraction.webp" alt="Account abstraction becomes a true trend of the year 2024." class="wp-image-54060 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-1536x717.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-1568x732.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijc0NyIgd2lkdGg9IjE2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="747" src="../../../wp-content/uploads/2024/02/account-abstraction.webp" alt="Account abstraction becomes a true trend of the year 2024." srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-1536x717.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-1568x732.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<p>To understand the importance of account abstraction in the year 2024, let’s answer together one simple question: how many steps are obligatory to be completed to buy or sell ETH? You may be surprised, but <strong>there are at least an astonishing 17 steps! </strong>For instance, signing up to Facebook takes you just 4 simple steps.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Step</strong></td><td><strong>Buy-Sell ETH Process</strong></td><td><strong>Facebook Sign Up Process</strong></td></tr><tr><td>1</td><td>Choose a wallet.</td><td>Go to <a href="http://facebook.com/">facebook.com</a> and click Create New Account.</td></tr><tr><td>2</td><td>Save the keystore file.</td><td>Enter your name, email or mobile phone number, password, date of birth and gender.</td></tr><tr><td>3</td><td>Save your private key and keep it safe.</td><td>Click Sign Up.</td></tr><tr><td>4</td><td>Open your wallet.</td><td>To finish creating your account, you need to confirm your email or mobile phone number.</td></tr><tr><td>5</td><td>Copy your wallet address.</td><td>–</td></tr><tr><td>6</td><td>Choose an exchange.</td><td>–</td></tr><tr><td>7</td><td>Register.</td><td>–</td></tr><tr><td>8</td><td>Set up two-factor authentication.</td><td>–</td></tr><tr><td>9</td><td>Verify your account.</td><td>–</td></tr><tr><td>10</td><td>Upload your ID.</td><td>–</td></tr><tr><td>11</td><td>Deposit.</td><td>–</td></tr><tr><td>12</td><td>Buy ETH.</td><td>–</td></tr><tr><td>13</td><td>Confirm.</td><td>–</td></tr><tr><td>14</td><td>Send ETH to your wallet.</td><td>–</td></tr><tr><td>15</td><td>Input your gas price.</td><td>–</td></tr><tr><td>16</td><td>Submit the transaction.</td><td>–</td></tr><tr><td>17</td><td>Continue to hit refresh on Etherscan until the transaction is confirmed.</td><td>–</td></tr></tbody></table></figure>
+
+
+
+<p>The difference and the gap between these two processes are just impressive and account abstraction is a technology struggling to eliminate this gap.</p>
+
+
+
+<p>So, the account abstraction is a game-changer solution that potentially might drive web3 adoption drastically.</p>
+
+
+
+<p>Prominent scaling solutions like zkSync and Starknet have preemptively integrated account abstraction, recognizing its profound impact. Additionally, Vitalik Buterin is a strong advocate of this solution. This confluence of factors, coupled with the overall web3 trend towards improved user experience, paints a clear picture: <strong>account abstraction is not just an option, it’s a necessity for future-proof protocols</strong>. And, surely, that’s not it!</p>
+
+
+
+<p>According to <a href="https://twitter.com/CryptoRank_io">Cryptorank</a>, more than 60 major web3 projects implemented account abstraction technology:</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="1169" src="../../../wp-content/uploads/2024/02/account-abstraction-ethereum.webp" alt="As of year 2024 More than 60 major web3 projects implemented account abstraction technology." class="wp-image-54061 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum-1536x1122.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum-1568x1146.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjExNjkiIHdpZHRoPSIxNjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="1169" src="../../../wp-content/uploads/2024/02/account-abstraction-ethereum.webp" alt="As of year 2024 More than 60 major web3 projects implemented account abstraction technology." srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum-1536x1122.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-ethereum-1568x1146.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<p>While implementing account abstraction may require an initial investment, the long-term benefits are irrefutable. Transactions become significantly faster, more secure, and highly customizable. Imagine multi-signature wallets, social recovery options, and even dApp-specific controls seamlessly integrated within the wallet itself. This efficiency boost translates to a superior user experience, attracting and retaining valuable users within your protocol.</p>
+
+
+
+<p>This comprehensive guide dives deeper into the intricate details of account abstraction, illuminating its impact on both protocols and users. We will explore the technical aspects of ERC-4337, showcase practical use cases, and equip you with invaluable insights to navigate this transformative shift with confidence.</p>
+
+
+
+<h2 class="wp-block-heading">What is Account Abstraction and Why is it Needed?</h2>
+
+
+
+<p>The current blockchain account model, dominated by EOAs, faces an inherent paradox: prioritizing simplicity at the expense of user experience. While the benefit of a single private key for control lies in its simplicity, it suffers from limitations that hinder mainstream adoption and innovative dApp development. Enter account abstraction, a paradigm shift promising to bridge this gap by introducing programmable smart contracts as wallets.</p>
+
+
+
+<p>Imagine interacting with the blockchain not through static key pairs, but with dynamic, customizable smart contracts. This is the essence of account abstraction. It decouples the underlying account logic from the blockchain layer, empowering users with a new level of control and flexibility. But why is this change necessary?</p>
+
+
+
+<p><strong>Current limitations of EOAs are:</strong></p>
+
+
+
+<ul>
+<li><strong>Limited Security</strong>: Single private keys are susceptible to theft, phishing, and user error. Account abstraction allows for multi-signature wallets, social recovery mechanisms, and granular access control, significantly enhancing security.</li>
+
+
+
+<li><strong>Inefficient Transactions</strong>: Every transaction requires the same key signature process, hindering scalability. Account abstraction enables fee delegation, gasless transactions, and batched operations, improving transaction efficiency.</li>
+
+
+
+<li><strong>Lack of Customization</strong>: EOAs offer minimal flexibility. With account abstraction, wallets can be tailored to specific use cases, integrating features like spending limits, time-locked transactions, and dApp-specific controls.</li>
+</ul>
+
+
+
+<p>By addressing these shortcomings, account abstraction paves the way for a frictionless user experience, increased security, and a flourishing dApp ecosystem.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Current State of Accounts in Blockchains</strong></h3>
+
+
+
+<p>Traditionally, blockchain accounts, particularly in Ethereum, are categorized into two main types: EOAs and contract accounts. EOAs are controlled by private keys, and contract accounts are governed by their contract code. This division, while functional, introduces limitations in security, customizability, and scalability. EOAs face security risks due to the reliance on private keys, which, if compromised, can lead to loss of assets. Furthermore, the binary nature of account types restricts the development of more nuanced and user-specific functionalities.</p>
+
+
+
+<p>The foundation of understanding account abstraction lies in acknowledging the limitations of its predecessor, the EOA. EOAs offer simplicity, but at the cost of:</p>
+
+
+
+<ul>
+<li><strong>Unrecoverable Funds:</strong> Lost private keys result in lost funds, a major stumbling block for mainstream adoption.</li>
+
+
+
+<li><strong>Inflexible Transactions:</strong> Every transaction requires the same signature process, regardless of complexity.</li>
+
+
+
+<li><a href="../../../article-type/web3-security/9-most-common-smart-contract-vulnerabilities-found-by-blaize/index.html"><strong>Limited Security</strong></a><strong>:</strong> Single points of failure through private keys expose accounts to theft and phishing attacks.</li>
+
+
+
+<li><strong>Inefficient Scalability:</strong> As network usage increases, the EOA model struggles to keep up, leading to congestion and high transaction fees.</li>
+</ul>
+
+
+
+<p>While advancements like contract-based accounts (CBAs) and hierarchical deterministic wallets (HD wallets) offer some improvements, they remain limited in scope and functionality.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How Account Abstraction Improves User Experience</strong></h3>
+
+
+
+<p>Account abstraction proposes a unified model that blends the flexibility of contract accounts with the direct control of EOAs, thereby enhancing the blockchain user experience. Through mechanisms like signature abstraction and fee abstraction, account abstraction enables more user-friendly blockchain applications. Users can interact with smart contracts as seamlessly as with traditional accounts, without worrying about the complexities of gas payments and transaction signatures. This shift not only simplifies the user experience but also opens up new possibilities for application developers.</p>
+
+
+
+<p>Account abstraction transcends these limitations by introducing an additional layer over the blockchain, which delegates most of actions to smart contracts. This unlocks a range of features that significantly enhance user experience:</p>
+
+
+
+<ul>
+<li><strong>Signature Abstraction:</strong> Users no longer need to manually sign transactions with private keys. Instead, smart contracts handle the signing logic, eliminating the risk of user error and phishing attacks.</li>
+
+
+
+<li><strong>Fee Abstraction:</strong> Transaction fees can be dynamically managed through smart contracts, enabling features like fee delegation and gasless transactions for specific use cases.</li>
+
+
+
+<li><a href="../../../article-type/web3-security/how-to-boost-smart-contract-security-and-mitigate-risks-in-defi/index.html"><strong>Enhanced Security</strong></a><strong>:</strong> Multi-signature wallets, social recovery mechanisms, and custom access controls can be implemented within the smart contract, mitigating single points of failure and theft risks.</li>
+
+
+
+<li><strong>Customizable Transactions:</strong> Smart contracts can be programmed to include spending limits, time-locked transactions, and dApp-specific controls, tailoring the user experience to specific needs.</li>
+</ul>
+
+
+
+<p>These features translate to a seamless and secure interaction with the blockchain. From simplified transactions to robust security measures, account abstraction empowers users and fosters a more vibrant dApp ecosystem.</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-1ab873ac320267c1a60931a7b50034fc"><a href="../../../blockchain-ecosystems/index.html">Read more about Blaize’s deep expertise in building blockchain ecosystems</a>.</p>
+
+
+
+<h2 class="wp-block-heading">The Concept of Account Abstraction</h2>
+
+
+
+<p>Account abstraction represents a great step forward in how users interact with blockchains. Instead of the old method where accounts are just linked to keys (EOAs), this new approach separates the account’s operations by introducing a paradigm of decoupling, where account logic resides in programmable smart contracts. Let’s take a closer look at its core principles together.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Decoupling Address and Private Key</strong></h3>
+
+
+
+<p>Traditionally, blockchain accounts function as a singular entity, where the address serves as a representation of ownership and the private key grants access and authorizes transactions. Account abstraction disrupts this tight coupling by introducing a crucial separation. The account address remains the public face, representing ownership of assets, while the private key (or any other signing mechanism) becomes decoupled and resides within the smart contract governing the account.</p>
+
+
+
+<p>This fundamental separation unlocks plenty of benefits:</p>
+
+
+
+<ul>
+<li><strong>Flexibility and Customization:</strong> Smart contracts become programmable wallets, allowing for tailored functionalities like spending limits, transaction approvals by specific parties, and integration with dApps.</li>
+
+
+
+<li><strong>Improved User Experience:</strong> Complex signing processes get abstracted away, replaced by user-friendly interfaces within the smart contract, improving overall usability.</li>
+
+
+
+<li><strong>Higher Reliability:</strong> The private key no longer directly exposes the account, mitigating theft and phishing risks. Multi-signature, time-locked, and other advanced authorization mechanisms can be implemented within the smart contract, significantly elevating security.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Transitioning from Simple Accounts to Programmable Ones</strong></h3>
+
+
+
+<p>Imagine the evolution from a basic calculator to a fully programmable computer. Account abstraction follows a similar trajectory, transforming static EOAs into <strong>dynamic and feature-rich</strong> smart contract accounts (SCAs). Let’s trace this transformation:</p>
+
+
+
+<ul>
+<li><strong>EOAs:</strong> Limited to basic functions like sending and receiving tokens, governed solely by private keys.</li>
+
+
+
+<li><strong>CBAs (Contract-Based Accounts):</strong> Introduced a layer of complexity with smart contracts controlling account logic, but still lacked flexibility and advanced features.</li>
+
+
+
+<li><strong>HD Wallets:</strong> Offered improved key management with deterministic generation and hierarchical structures, but remained limited in functionality.</li>
+
+
+
+<li><strong>SCAs (Smart Contract Accounts with Account Abstraction):</strong> Represent the pinnacle of this evolution, empowering accounts with:</li>
+</ul>
+
+
+
+<ol>
+<li>Transactions, signing processes, and access control tailored to specific needs.</li>
+
+
+
+<li>Multi-signature, social recovery, and advanced authorization mechanisms built into the contract.</li>
+
+
+
+<li>Ability to interact seamlessly with dApps and DeFi protocols.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading"><strong>Smart Wallets and Their Capabilities</strong></h3>
+
+
+
+<p>Account abstraction unlocks a new era of account management with smart contract wallets (SCWs). Imagine EOAs evolving from simple calculators to full-fledged computers, capable of complex calculations and tailored functionalities. SCWs embody this transformation, empowering users with an unprecedented level of control and flexibility.</p>
+
+
+
+<p>Let’s explore the capabilities that differentiate SCWs from their basic counterparts:</p>
+
+
+
+<ul>
+<li><strong>Custom Logic and Rules:</strong> Unlike the rigid structure of EOAs, SCWs can be programmed with specific logic and rules governing their operation. Imagine setting spending limits, requiring multiple approvals for transactions, or integrating with specific dApps seamlessly. This customizability opens doors for a wide range of use cases.</li>
+
+
+
+<li><strong>Increased Security:</strong> Single points of failure like private keys become relics of the past. SCWs can implement multi-signature wallets, social recovery mechanisms, and time-locked transactions, significantly bolstering security and mitigating theft risks.</li>
+
+
+
+<li><strong>Advanced Authorization:</strong> Go beyond simple key-based approvals. SCWs allow for granular access control, specifying who can initiate transactions, under what conditions, and with what limits. This fine-grained control empowers users and safeguards their assets.</li>
+
+
+
+<li><a href="../../../article-type/ethereum-based-dapp-development-for-trading-platform/index.html"><strong>DApp Integration</strong></a><strong>:</strong> SCWs aren’t isolated entities. They can be programmed to interact seamlessly with various dApps and DeFi protocols, eliminating the need for multiple accounts and cumbersome manual processes. This fosters a more cohesive and user-friendly experience.</li>
+
+
+
+<li><strong>Evolving Capabilities:</strong> The beauty of SCWs lies in their inherent upgradability. New features and functionalities can be added over time, ensuring your wallet remains adaptive and future-proof. This continuous evolution unlocks a world of possibilities for developers and users alike.</li>
+</ul>
+
+
+
+<p>These capabilities paint a picture of <strong>dynamic and intelligent wallets</strong>, far exceeding the limitations of traditional EOAs. Imagine a self-custodial wallet with time-locked withdrawals for impulse control, a multi-signature DAO treasury requiring majority approval for spending, or a dApp-specific wallet pre-configured for seamless interaction within a particular ecosystem. The possibilities are truly endless.</p>
+
+
+
+<h2 class="wp-block-heading">Implementing Account Abstraction in Ethereum</h2>
+
+
+
+<p>While the concept of account abstraction holds immense potential, its practical implementation requires specific technical considerations. In the Ethereum ecosystem, the ERC-4337 standard stands as the driving force, enabling this paradigm shift without requiring fundamental changes to the underlying protocol. Let’s delve into the specifics of this implementation and dissect the key components powering account abstraction in Ethereum.</p>
+
+
+
+<h2 class="wp-block-heading">Overview of ERC-4337 Standard</h2>
+
+
+
+<p>Unlike typical Ethereum Improvement Proposals (EIPs), which often propose modifications to the core protocol, ERC-4337 takes a different approach. It introduces an additional layer, essentially building upon the existing blockchain layer without requiring consensus-level changes. This ingenious approach offers several advantages:</p>
+
+
+
+<ul>
+<li><strong>Faster Adoption:</strong> No need for network-wide upgrades, allowing protocols and users to embrace account abstraction at their own pace.</li>
+
+
+
+<li><strong>Flexibility:</strong> ERC-4337 can adapt and evolve independently, incorporating new features and functionalities without impacting the base Ethereum protocol.</li>
+
+
+
+<li><strong>Compatibility:</strong> Existing tools and infrastructure remain compatible, minimizing disruption and easing the transition for developers and users.</li>
+</ul>
+
+
+
+<p>Therefore, ERC-4337 acts as a <strong>bridge between EOAs and smart contract accounts</strong>, facilitating the adoption of this transformative technology.</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="840" src="../../../wp-content/uploads/2024/02/eth-account-abstraction.webp" alt="ERC-4337 introduces a layer-two solution, essentially building upon the existing blockchain layer without requiring consensus-level changes." class="wp-image-54062 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction-1536x806.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction-1568x823.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijg0MCIgd2lkdGg9IjE2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="840" src="../../../wp-content/uploads/2024/02/eth-account-abstraction.webp" alt="ERC-4337 introduces a layer-two solution, essentially building upon the existing blockchain layer without requiring consensus-level changes." srcset="https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction-1536x806.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/eth-account-abstraction-1568x823.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<p>Now, let’s dissect the fundamental elements that make ERC-4337 great:</p>
+
+
+
+<ul>
+<li><strong>UserOperations:</strong> These represent the core building blocks of interaction, encapsulating all transaction data, signatures, and other relevant information. They act as intermediaries between users and the blockchain, decoupling them from the complexities of key management and authorization.</li>
+
+
+
+<li><strong>EntryPoint Contract:</strong> This smart contract serves as the central hub, validating UserOperations and relaying them to the Ethereum network. It acts as a gatekeeper, ensuring compliance with protocol rules and preventing invalid transactions.</li>
+
+
+
+<li><strong>Paymasters:</strong> These optional entities handle transaction fees, offering flexibility and innovative possibilities. Paymasters can cover gas costs for users, sponsor specific transactions, or implement custom fee models, opening doors for novel use cases.</li>
+</ul>
+
+
+
+<p>With these core components working in concert, ERC-4337 successfully abstracts away the complexities of account management, empowering users with enhanced security, flexibility, and a superior user experience.</p>
+
+
+
+<p>Understanding the flow of a transaction within the ERC-4337 framework sheds light on its security and reliability:</p>
+
+
+
+<ol>
+<li><strong>User creates a UserOperation:</strong> This transaction data is signed using their preferred method, potentially involving multi-signature wallets or other advanced authorization mechanisms.</li>
+
+
+
+<li><strong>UserOperation submitted to EntryPoint:</strong> The user submits the signed UserOperation to the EntryPoint contract.</li>
+
+
+
+<li><strong>EntryPoint validates and relays:</strong> The EntryPoint verifies the signatures, ensures compliance with rules, and relays the transaction to the Ethereum network.</li>
+
+
+
+<li><strong>Paymaster (optional):</strong> If a paymaster is involved, it handles gas fees or performs additional logic before the transaction is finalized.</li>
+
+
+
+<li><strong>Ethereum network processes:</strong> The Ethereum network processes the transaction based on the relayed information.</li>
+</ol>
+
+
+
+<p>This multi-layered validation flow ensures the integrity and security of transactions while offering the flexibility and benefits of account abstraction.</p>
+
+
+
+<h2 class="wp-block-heading">Future of Account Abstraction in Ethereum</h2>
+
+
+
+<p>The ongoing evolution of account abstraction in Ethereum focuses on enhancing scalability, security, and usability. With proposals to enshrine the principles of ERC-4337 natively in Ethereum, the future holds promising advancements such as signature, fee, nonce, and network abstraction. These developments aim to further streamline the user experience and expand the blockchain’s capabilities.</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="953" src="../../../wp-content/uploads/2024/02/what-is-account-abstraction.webp" alt="The ongoing evolution of account abstraction in Ethereum focuses on enhancing scalability, security, and usability." class="wp-image-54063 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction-1536x915.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction-1568x934.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9Ijk1MyIgd2lkdGg9IjE2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="953" src="../../../wp-content/uploads/2024/02/what-is-account-abstraction.webp" alt="The ongoing evolution of account abstraction in Ethereum focuses on enhancing scalability, security, and usability." srcset="https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction-1536x915.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/what-is-account-abstraction-1568x934.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<p>While ERC-4337 paves the way for account abstraction, the journey doesn’t end there. Ongoing research and development efforts are propelling this technology to even greater heights, shaping the future of user interaction with the Ethereum blockchain.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Signature Abstraction</strong></h3>
+
+
+
+<p>Signature abstraction introduces varied authentication methods, enabling smart wallets with advanced security and customizable user experiences, such as biometric and hardware-based authentication. It also allows for the secure delegation of transaction initiation, facilitating seamless DeFi integration.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Fee Abstraction</strong></h3>
+
+
+
+<p>Fee abstraction addresses the challenge of transaction fee complexity, enabling payment in alternative assets and through sponsored transactions. This flexibility improves user experience and supports new business models and economic strategies within smart contracts.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Nonce Abstraction</strong></h3>
+
+
+
+<p>Nonce abstraction addresses the limitations of the current sequential transaction processing model in Ethereum, which can lead to bottlenecks and inefficient use of network resources. By introducing custom nonce schemes, account abstraction allows for parallel transaction processing and batching, significantly enhancing the network’s throughput and user experience.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Network Abstraction</strong></h3>
+
+
+
+<p>Network abstraction aims for cross-chain interoperability, enabling seamless interaction between Ethereum and other blockchains, thus fostering a more interconnected blockchain ecosystem and enhancing liquidity and accessibility.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Feature:</strong></td><td><strong>Descriptions:</strong></td></tr><tr><td>Signature Abstraction</td><td>Introduces diverse authentication methods for smart wallets, enhancing security and user experience. Allows secure delegation of transaction initiation</td></tr><tr><td>Fee Abstraction</td><td>Simplifies transaction fees by allowing payment in alternative assets and via sponsored transactions, improving UX and enabling new business and economic models.</td></tr><tr><td>Nonce Abstraction</td><td>Facilitates parallel transaction processing and complex transaction structures, improving network throughput and operation efficiency.</td></tr><tr><td>Network Abstraction</td><td>Aims for cross-chain interoperability, enhancing liquidity and accessibility by enabling seamless interactions across blockchain networks.</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading">Use Cases</h2>
+
+
+
+<p>Account abstraction transcends theoretical possibilities, unlocking a wealth of real-world use cases that transform user experience and empower developers. Let’s explore some most wide-spread of them:</p>
+
+
+
+<figure class="wp-block-image size-full"><amp-img width="1600" height="700" src="../../../wp-content/uploads/2024/02/account-abstraction-eip.webp" alt="Account abstraction improves the existing ones and creates new possibilities for web3 adoption via various use cases." class="wp-image-54064 amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined" srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip-1536x672.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip-1568x686.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" layout="intrinsic" disable-inline-width="" i-amphtml-layout="intrinsic"><i-amphtml-sizer slot="i-amphtml-svc" class="i-amphtml-sizer"><img alt="" aria-hidden="true" class="i-amphtml-intrinsic-sizer" role="presentation" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjcwMCIgd2lkdGg9IjE2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"></i-amphtml-sizer><noscript><img loading="lazy" decoding="async" width="1600" height="700" src="../../../wp-content/uploads/2024/02/account-abstraction-eip.webp" alt="Account abstraction improves the existing ones and creates new possibilities for web3 adoption via various use cases." srcset="https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip.webp 1600w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip-1536x672.webp 1536w, https://blaize.tech/wp-content/uploads/2024/02/account-abstraction-eip-1568x686.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px"></noscript></amp-img></figure>
+
+
+
+<h3 class="wp-block-heading"><strong>Payments UX Improvement</strong></h3>
+
+
+
+<p>A standout feature enabled by account abstraction is the <strong>Paymaster mechanism</strong>, which allows users to pay for transaction fees (gas) in tokens other than the native blockchain currency (e.g., paying Ethereum gas fees in stablecoins or other preferred tokens). This approach significantly simplifies the payment process for users, removing the need to hold and manage a separate balance of the native blockchain token solely for the purpose of covering transaction costs.</p>
+
+
+
+<p>Account abstraction also facilitates the integration of <strong>seamless conversion mechanisms</strong>, such as fiat-to-crypto ramps, directly within the user’s wallet or transaction process. This capability means users can effortlessly convert their fiat currency to the required crypto assets at the point of transaction, streamlining the payment process and enhancing the overall user experience. This seamless conversion is especially beneficial for users new to the blockchain space, reducing the complexity and steps needed to participate in dApps.</p>
+
+
+
+<p>Another significant advancement enabled by account abstraction is the <strong>facilitation of cross-chain payments</strong>. This feature allows users to execute transactions across different blockchain networks without the need for complex bridging mechanisms or third-party services. Cross-chain payments expand the usability and reach of decentralized applications by enabling a more interconnected blockchain ecosystem, where assets and information can flow freely between different networks.</p>
+
+
+
+<p>Project implementing the aforementioned features include MetaMask Snaps and Transak.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Wallet Recovery</strong></h3>
+
+
+
+<p>Losing a private key currently translates to lost funds. Account abstraction changes the situation with self-sovereign recovery mechanisms. Imagine:</p>
+
+
+
+<ul>
+<li><strong>Social recovery:</strong> Nominate trusted guardians who can help regain access if you lose your key, eliminating the single point of failure and providing peace of mind.</li>
+
+
+
+<li><strong>Time-locked recovery:</strong> Set a waiting period before accessing recovered funds, preventing impulsive decisions or unauthorized access attempts.</li>
+
+
+
+<li><strong>Multi-signature recovery:</strong> Require approval from multiple trusted parties for fund recovery, adding an extra layer of security and accountability.</li>
+</ul>
+
+
+
+<p>These advanced options, impossible with traditional EOAs, empower users and significantly reduce the risk of permanent fund loss. Real-world projects like Argent and Safe (formerly Gnosis Safe) already implement secure social recovery features, paving the way for wider adoption.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Batch Transactions</strong></h3>
+
+
+
+<p>Imagine submitting multiple related transactions with a single click. Account abstraction enables transaction batching, offering:</p>
+
+
+
+<ul>
+<li><strong>Reduced gas fees:</strong> Group smaller transactions into one, significantly lowering gas costs compared to individual submissions.</li>
+
+
+
+<li><strong>Optimized workflows:</strong> Submit complex multi-step actions (e.g., swapping and staking tokens) seamlessly in one go, streamlining user experience.</li>
+
+
+
+<li><strong>Improved dApp integration:</strong> DApps can leverage batched transactions for efficient token deposits, withdrawals, and other interactions, enhancing user flow.</li>
+</ul>
+
+
+
+<p>Projects like Zapper and InstaDapp already leverage batching features, demonstrating its practicality for DeFi and wallet management.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Automating Transactions</strong></h3>
+
+
+
+<p>Recurring payments and scheduled actions become effortless with account abstraction. Imagine:</p>
+
+
+
+<ul>
+<li><strong>Automated savings:</strong> Set up a smart contract to automatically transfer a portion of your paycheck to a savings account every month, enforcing financial discipline.</li>
+
+
+
+<li><strong>Subscription payments:</strong> Pre-configure automatic token transfers for ongoing subscriptions, eliminating manual renewals and missed payments.</li>
+
+
+
+<li><strong>Limit orders:</strong> Programmatically execute buy or sell orders at specific price points, ensuring you capture desired market opportunities.</li>
+</ul>
+
+
+
+<p>These scenarios illustrate the power of programmable wallets, opening doors for innovative use cases in finance, asset management, and beyond. Projects like Argent and Safe (formerly Gnosis Safe) already offer basic automation features, with the potential for further expansion in the future.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Shared Accounts</strong></h3>
+
+
+
+<p>Account abstraction facilitates flexible and secure shared access, ideal for:</p>
+
+
+
+<ul>
+<li><strong>DAOs:</strong> Implement multi-signature wallets with granular access control, requiring consensus for critical decisions while allowing individual members to perform routine tasks.</li>
+
+
+
+<li><strong>Family accounts:</strong> Share funds within a family, setting spending limits for specific members and requiring parental approval for larger transactions.</li>
+
+
+
+<li><strong>Business accounts:</strong> Establish shared wallets for company expenses, with designated individuals authorized for specific spending categories.</li>
+</ul>
+
+
+
+<p>These use cases highlight the versatility of smart contract accounts, enabling collaboration and shared control while maintaining robust security measures. Projects like WINR Protocol and Safe (formerly Gnosis Safe) cater to DAOs and other collaborative entities, showcasing the real-world value of flexible access control.</p>
+
+
+
+<h2 class="wp-block-heading">Challenges and Outlook</h2>
+
+
+
+<p>Despite its promising benefits, the adoption of account abstraction faces several challenges. These include the complexity of implementing such changes within existing blockchain protocols and the need for widespread ecosystem support. Furthermore, educating users and developers about the benefits and functionalities of account abstraction remains a significant hurdle.</p>
+
+
+
+<p>Another major challenge is lack of unified terminology. The concept being relatively young, its terminology remains unsettled. Discussions swirl around terms like “smart account,” “abstract account,” “smart wallet,” “smart contract account,” and more. This creates confusion and ambiguity, hindering adoption and leading to potentially competing implementations.</p>
+
+
+
+<p>Despite these challenges, the potential benefits of account abstraction are undeniable. As research and development efforts continue, we can expect advancements in several key areas:</p>
+
+
+
+<ul>
+<li><strong>Network Abstraction:</strong> Extending account abstraction beyond individual blockchains, enabling seamless cross-chain interaction and truly interoperable wallets.</li>
+
+
+
+<li><strong>Enhanced Scalability:</strong> Exploring innovative transaction processing models and fee mechanisms to handle increasing network usage efficiently.</li>
+
+
+
+<li><strong>Privacy-Preserving Features:</strong> Integrating advanced cryptographic techniques to ensure user privacy while maintaining transparency and accountability.</li>
+</ul>
+
+
+
+<p>By addressing the challenges and actively participating in shaping its evolution, protocols can position themselves at the forefront of this transformative technology. The future of blockchain interaction is bright, and account abstraction is its guiding light. Embrace the learning, overcome the hurdles, and join the journey towards a more user-centric and secure <a href="../../../blockchain-ecosystems/index.html">blockchain ecosystem</a>.</p>
+
+
+
+<p>The evolution of account abstraction, particularly through standards like ERC-4337, is a testament to the blockchain community’s commitment to innovation and improvement. As we move forward, the principles of account abstraction are likely to become increasingly integral to the design and development of blockchain technologies, heralding a new era of accessibility and functionality in the digital world.</p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-2c1569ddddcb68657238c115932f609f"><a href="../../../index.html#contacts">Contact Blaize to discover the potential business of account abstraction for your business</a>!</p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="../../category/article-type/opinion/index.html" rel="category tag">Opinion</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="../../tag/account-abstraction/index.html" rel="tag">account abstraction</a>, <a href="../../tag/blockchain-ecosystem/index.html" rel="tag">blockchain ecosystem</a>, <a href="../../tag/defi/index.html" rel="tag">DeFi</a>, <a href="../../tag/trends/index.html" rel="tag">trends</a>	</div>
+	</footer>
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Blaize</h2>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+
+		<div id="amp-mobile-version-switcher">
+			<a rel="nofollow" href="../index1862.html?noamp=mobile">
+				Exit mobile version			</a>
+		</div>
+
+				  
+  
+
+</body>
+<!-- Mirrored from blaize.tech/blog/account-abstraction-guide/amp/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:37:35 GMT -->
+</html>

@@ -1,0 +1,1577 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!-- Mirrored from blaize.tech/blog/how-amm-works-technology-basics/?noamp=mobile by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:41:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+      <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVDP48D');
+    </script>
+    <script>(function (w, d, u) { w.readyQ = []; w.bindReadyQ = []; function p(x, y) { if (x == "ready") { w.bindReadyQ.push(y); } else { w.readyQ.push(x); } } var a = { ready: p, bind: p }; w.$ = w.jQuery = function (f) { if (f === d || f === u) { return a } else { p(f) } } })(window, document)</script>
+
+  <meta name="google-site-verification" content="ZrAKmMj6IFKukIukR3WwBfWnGUtWgF5nVGfGXBFKBU0" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="preload" href="https://blaize.tech/wp-content/themes/blaize-tech/mont-fonts.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css"
+    href="https://blaize.tech/wp-content/themes/blaize-tech/assets/new-styles.css?v=1735038221">
+  
+  
+  
+  
+  
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Automated Market Maker (AMM) &amp; How it Works - Blaize</title>
+	<meta name="description" content="In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future." />
+	<link rel="canonical" href="https://blaize.tech/blog/how-amm-works-technology-basics/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Automated Market Maker (AMM) &amp; How it Works - Blaize" />
+	<meta property="og:description" content="In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future." />
+	<meta property="og:url" content="https://blaize.tech/blog/how-amm-works-technology-basics/" />
+	<meta property="og:site_name" content="Blaize" />
+	<meta property="article:published_time" content="2020-09-14T13:18:32+00:00" />
+	<meta property="article:modified_time" content="2024-10-29T11:10:18+00:00" />
+	<meta property="og:image" content="https://blaize.tech/wp-content/uploads/2020/09/amm2.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Sergey Onyshchenko" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@S_Onishchenko" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Sergey Onyshchenko" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="13 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/","url":"https://blaize.tech/blog/how-amm-works-technology-basics/","name":"Automated Market Maker (AMM) & How it Works - Blaize","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","datePublished":"2020-09-14T13:18:32+00:00","dateModified":"2024-10-29T11:10:18+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"In this article, we explain how AMM technology works and also know some basics of technology to build your AMM-based DeFi solution in future.","breadcrumb":{"@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/how-amm-works-technology-basics/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/09/amm2.png","width":1200,"height":630},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/how-amm-works-technology-basics/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"How AMM-based DEX Works: Technology Basics"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Feed" href="https://blaize.tech/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Comments Feed" href="https://blaize.tech/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; How AMM-based DEX Works: Technology Basics Comments Feed" href="https://blaize.tech/blog/how-amm-works-technology-basics/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blaize.tech\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='mpp_gutenberg-css' href='https://blaize.tech/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='https://blaize.tech/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-core-css' href='https://blaize.tech/wp-content/themes/blaize-tech/assets/css/build-core.css' type='text/css' media='' />
+<link rel='stylesheet' id='other-css' href='https://blaize.tech/wp-content/themes/blaize-tech/assets/css/other.css' type='text/css' media='' />
+<script type="text/javascript" src="https://blaize.tech/wp-content/themes/blaize-tech/js/jquery-3.4.1.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/js/jquery-migrate-3.1.0.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/js/intlTelInput.min.js" id="nb-intlTelInput-script-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/js/custom_script.js" id="nb-intlTelInput-custom-script-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.liMarquee.js" id="liMarquee-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.inputmask.bundle.js" id="inputmask-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/fm.revealator.jquery.js" id="revealator-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/main.js" id="main-js-js"></script>
+<link rel="https://api.w.org/" href="https://blaize.tech/wp-json/" /><link rel="alternate" type="application/json" href="https://blaize.tech/wp-json/wp/v2/posts/2311" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blaize.tech/xmlrpc.php?rsd" />
+
+<link rel='shortlink' href='https://blaize.tech/?p=2311' />
+<link rel="pingback" href="https://blaize.tech/xmlrpc.php"><link rel="amphtml" href="https://blaize.tech/blog/how-amm-works-technology-basics/?amp"><link rel="icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" sizes="32x32" />
+<link rel="icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+<meta name="msapplication-TileImage" content="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+      <link rel='stylesheet' id='wp-block-library-css' href='https://blaize.tech/wp-includes/css/dist/block-library/style.min.css?ver=5.2.5'
+      type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'
+      href='https://blaize.tech/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.5' type='text/css' media='all' />
+    
+  <style>
+    .blog_ajax .searchandfilter ul li.sf-field-tag ul li label {
+      padding: 5px 7px 3px 7px !important;
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <script async src="https://blaize.tech/wp-content/themes/blaize-tech/assets/js/jquery.mask.min.js"></script>
+  <script async src="https://blaize.tech/wp-content/themes/blaize-tech/assets/js/utils.js" defer></script>
+
+  </head>
+
+<body class="post-template-default single single-post postid-2311 single-format-standard wp-embed-responsive singular image-filters-enabled ">
+      <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDP48D" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  
+  
+  <header id="header"
+    class="sticky no-scroll">
+
+
+    <div
+      class="guides__block logo-header  fs-menu-header">
+      <div class="desktop-logo">
+                  <a href="https://blaize.tech/" class="logo logo-small">
+            <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/blaize_logo.svg" alt="Blaize" loading="lazy">
+          </a>
+              </div>
+
+      <div class="mobile-logo">
+        <a href="https://blaize.tech/"
+          class="logo logo-blog" aria-label="Logo">
+          <svg x="0px" y="0px" viewBox="0 0 202.4 162.6" xml:space="preserve">
+            <g transform="matrix(1.3333333,0,0,-1.3333333,0,1122.52)">
+              <g transform="translate(332.3824,384.1128)">
+                <path d="M-241.5,360l-10.4-7.6l-61.2,0v39.6h61.2l10.4-7.5l4-12.3L-241.5,360z M-313.2,440.9l56.5,0l8.4-6.1
+                        l3.2-9.9l-3.2-9.9l-8.4-6.1h-56.5V440.9z M-227.5,394.8l-10,7.3l3.6,2.6l6.6,20.3l-6.6,20.3l-17.3,12.5l-81.2,0V335.9h85.8
+                        l19.1,13.9l7.3,22.5L-227.5,394.8z" />
+              </g>
+              <g transform="translate(379.6422,359.9819)">
+                <path d="M-241.5,360l-13.7,13.7l13.7,13.7l13.7-13.7L-241.5,360z" />
+              </g>
+            </g>
+          </svg>
+                      <div class="blog-title">log</div>        </a>
+      </div>
+
+      
+
+      <div class="btn-menu">
+        <a href="https://blaize.tech/#contacts" class="contacts-link">Contact us</a>
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fs-menu">
+
+
+      <div class="guides__block">
+        <ul class="guides__block-list"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>        <div class="modeling_element"></div>
+        <div class="blockchain_element"></div>
+        <div class="mobile_element"></div>
+        <div class="front_end_element"></div>
+      </div>
+      <div class="content-menu">
+        <nav class="cd-dropdown dropdown-is-active">
+          <ul class="cd-dropdown-content"><li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2340"><a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2341" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2341"><a href="#back">Back</a></li>
+	<li id="menu-item-75842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75842"><a href="https://blaize.tech/web3-development-services/">Web3 Development Services</a></li>
+	<li id="menu-item-75843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75843"><a href="https://blaize.tech/blockchain-ecosystems/">Blockchain Development Services</a></li>
+	<li id="menu-item-75844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75844"><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+	<li id="menu-item-75845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75845"><a href="https://blaize.tech/blockchain-integration/">Blockchain Integration</a></li>
+	<li id="menu-item-75846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75846"><a href="https://blaize.tech/web3-fundraising-preparation/">Fundraising</a></li>
+	<li id="menu-item-75847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75847"><a href="https://blaize.tech/cross-chain-bridges-development/">Blockchain Bridge Development</a></li>
+	<li id="menu-item-75848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75848"><a href="https://blaize.tech/cross-chain-development-services/">Cross-chain Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-2332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2332"><a href="#" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-2333" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2333"><a href="#back">Back</a></li>
+	<li id="menu-item-75849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75849"><a href="https://blaize.tech/decentralized-application/">dApp Development</a></li>
+	<li id="menu-item-75850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75850"><a href="https://blaize.tech/decentralized-finance-development/">DeFi Development Services</a></li>
+	<li id="menu-item-75851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75851"><a href="https://blaize.tech/decentralized-exchange-development/">DeX Development Services</a></li>
+	<li id="menu-item-75852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75852"><a href="https://blaize.tech/smart-contracts/">Smart Contract Development</a></li>
+	<li id="menu-item-75853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75853"><a href="https://blaize.tech/asset-management-platform-development/">Asset Management Platform Development</a></li>
+	<li id="menu-item-75854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75854"><a href="https://blaize.tech/asset-tokenization/">Asset Tokenization</a></li>
+	<li id="menu-item-75855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75855"><a href="https://blaize.tech/token-development-services/">Token Development Services</a></li>
+	<li id="menu-item-75856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75856"><a href="https://blaize.tech/ton-development-services/">TON Blockchain Development</a></li>
+	<li id="menu-item-75857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75857"><a href="https://blaize.tech/blockchain-game-development/">Blockchain Game Development</a></li>
+	<li id="menu-item-75858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75858"><a href="https://blaize.tech/nft-marketplace-development-services/">NFT Marketplace Development</a></li>
+	<li id="menu-item-75859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75859"><a href="https://blaize.tech/nft-development-services/">NFT Development Services</a></li>
+</ul>
+</li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="https://blaize.tech/clients/">Cases</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2347"><a href="https://blaize.tech/blog/">Blog</a></li>
+<li id="menu-item-67576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67576"><a href="https://blaize.tech/whitepaper/">Whitepaper</a></li>
+</ul>        </nav>
+      </div>
+
+      <div class="foot-menu">
+        <div class="content">
+          <div class="mainBlock_social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/blaize.tech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/facebook-main.svg" alt="fb" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/blaizetech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/linkedin-main.svg" alt="LinkedIn" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/blaize_tech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/twitter-main.svg" alt="Twitter" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="location">
+            <a href="https://blaize.tech/cdn-cgi/l/email-protection#a080c9cec6cfe0c2ccc1c9dac58ed4c5c3c8"><span class="__cf_email__" data-cfemail="e1888f878ea1838d80889b84cf95848289">[email&#160;protected]</span></a>
+            <a href="tel:+351966034344">+351 966 034 344</a>
+          </div>
+          <div class="location">
+            <p>Kyiv, Ukraine </p>
+            <p>26 Metalistiv St</p>
+          </div>
+          <div class="location">
+            <p>Dnipro, Ukraine 20 </p>
+            <p>Sichovykh Striltsiv St</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    
+            <main class="blog single-post">
+    <section class="pageHeader blogPage">
+        <div class="wrapper">
+            <div class="guides__block">
+                <div class="single-post-item">
+
+                    <div class="content">
+                        <div class="post-content">
+                            <div class="breadcrumb">
+                                <div>
+                                    <!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blaize." href="https://blaize.tech/" class="home" ><span property="name">Blaize</span></a><meta property="position" content="1"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="https://blaize.tech/blog/" class="post-root post post-post" ><span property="name">Blog</span></a><meta property="position" content="2"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">How AMM-based DEX Works: Technology Basics</span><meta property="url" content="https://blaize.tech/blog/how-amm-works-technology-basics/"><meta property="position" content="3"></span>                                </div>
+                            </div>
+
+                                                            
+                                    <div class="head gray">
+                                        <h1 class="title">
+                                            How AMM-based DEX Works: Technology Basics                                        </h1>
+                                        <div class="foot">
+                                            <div class="author">
+                                                <div class="photo">
+                                                    <img width="120" height="120" src="https://blaize.tech/wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" />                                                </div>
+                                                <div class="details">
+                                                    <a href="https://blaize.tech/blog/author/sergey-o/">
+                                                        <h4>
+                                                            Sergey.O                                                        </h4>
+                                                    </a>
+                                                    <div class="date">14.09.2020</div>
+                                                </div>
+                                            </div>
+                                            <div class="share"><link rel='stylesheet' id='scriptlesssocialsharing-css' href='https://blaize.tech/wp-content/plugins/scriptless-social-sharing/includes/css/scriptlesssocialsharing-style.css' type='text/css' media='all' />
+<style id='scriptlesssocialsharing-inline-css' type='text/css'>
+.scriptlesssocialsharing__buttons a.button { padding: 12px; flex: 1; }
+</style>
+<div class="scriptlesssocialsharing"><h3 class="scriptlesssocialsharing__heading">Share:</h3><div class="scriptlesssocialsharing__buttons"><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-amm-works-technology-basics%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on Facebook</span></a><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=How%20AMM-based%20DEX%20Works%3A%20Technology%20Basics&amp;url=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-amm-works-technology-basics%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on X (Twitter)</span></a></div></div></div>
+                                        </div>
+                                    </div>
+                                                            
+                            <div class="text">
+                                                                
+<p>In this article we will explain how AMM technology works and show the difference between AMM exchange and traditional order book. You will also know some basics of technology to <a href="https://blaize.tech/article-type/how-to-build-a-successful-defi-project/">build your AMM-based DeFi solution</a> in future.</p>
+
+
+
+<p>The exchange has become a part of a traditional financial system a long time ago. Its mechanism of work is very well known, in a broad sense, an exchange is a market where sellers meet with buyers in order to make a transaction. The relationships on the exchange are supported by order books which are (electronic) lists of orders. </p>
+
+
+
+<p>This common mechanism has been successfully working until the crypto intervention. Along with the technology development and increase of locked amounts in crypto assets, holders started to seek new solutions. The automatic market maker mechanism had been known some years before that, but the creation of DEX became a huge step for its adaptation to the crypto market.&nbsp;</p>
+
+
+
+<p>Read Also: <strong><a href="https://blaize.tech/article-type/analysis/how-to-create-your-own-cryptocurrency-from-a-to-z/">How to create your own cryptocurrency</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">Some of HISTORICAL BACKGROUND&nbsp;</h2>
+
+
+
+<p>The idea of so-called “on-chain market maker” was firstly described by Vitalik Buterin and explained as the idea of “<a href="https://vitalik.ca/general/2017/06/22/marketmakers.html" target="_blank" rel="noreferrer noopener">On Path Independence</a>”. It was further implemented in Bancor (V1) Protocol and introduced to the public in 2017. Yet, protocol gathered a lot of critics and doubts around it, so stayed kind of “behind the curtain” of the AMM fame. </p>
+
+
+
+<p>The first and probably still maintained, buzz around automated market maker and decentralized finance itself happened along with the <a href="https://uniswap.org/">Uniswap</a> release in 2018. It made a real breakthrough on the market because of a couple of features: fast and secured trading deals, earnings from liquidity, and decentralization of exchange itself.</p>
+
+
+
+<p>As long as Uniswap was aimed for token exchange, we experienced <a href="https://www.curve.fi/" target="_blank" rel="noreferrer noopener">Curve</a> invention in 2019, which enabled the decentralized and non-custodial exchange of <a href="https://blaize.tech/article-type/understanding-stablecoin/">stablecoins</a>. Curve protocol has been always compared to Uniswap model and has been named as its follower, which is not really true in nature. <em><strong>This difference will be further discussed in an article dedicated to the <a href="https://blaize.tech/article-type/amm-types-differentiations/" target="_blank" rel="noreferrer noopener">AMM types</a>.&nbsp;</strong></em></p>
+
+
+
+<p>Uniswap uses a so-called <strong>constant function market maker model which, as appeared, faces a few serious obstacles, for instance,</strong> front running. This contributed to the creation of other protocols like Balancer, Mooniswap or FairSwap, all in 2020, which led to the huge boom in dApps development and DeFi in particular. </p>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background">New protocols aimed to solve the common problems classic AMM exchanges experiences and therefore use other, quasi-AMM models to perform continuous token curves. In this article, we are going to concentrate on the “traditional” Defi AMM model in order to understand the basics. If you want to know more about Balancer and <a href="https://blaize.tech/article-type/overview/amm-solutions-to-impermanent-loss-and-front-running/">how to solve the front-running problem</a> check the pinned article.</p>
+
+
+
+<h2 class="wp-block-heading">Centralized vs decentralized exchanges&nbsp;</h2>
+
+
+
+<p><em><strong>Well, how decentralized exchanges are different from traditional ones, and why users want to stay away from such a simple and universally known centralized model? </strong></em></p>
+
+
+
+<p>First of all, a centralized exchange contains risks for traders. One of the main reasons is that the custodian of all assets and information about all transactions is one organization. Additionally, the exchange requires users to deposit funds in a wallet that is owned and operated by the exchange itself. Furthermore, it is easier for hackers to detect and attack vulnerabilities concentrated in one center, so in case of attack, the hacker can shut down the exchange and “go away” with all funds. Due to traditional order book usage, the work of centralized exchange is relatively slower and sometimes may lead to funds loss, in case of certain technical mistakes.&nbsp;</p>
+
+
+
+<p>In contrast, the order book of a decentralized exchange is stored on the blockchain. All processes connected with order placement, <a href="https://blaize.tech/article-type/how-to-conduct-a-smart-contract-security-audit-of-your-project-and-why-this-is-important/">smart contract security audit</a> and maintenance are under the smart contract power. If you were looking for a <strong><a href="https://blaize.tech/smart-contracts/">smart contract audit company</a></strong>, you can contact us and get additional answers to your questions. IDEX is one of the well-known representatives of decentralized exchanges with traditional order book module. Yet, IDEX is rather should be called partially decentralized, because it uses a centralized order book which then sends the information to the smart contract on the blockchain. Hence, in order to get such a crucial decentralized environment, users can go to Dy/dx which is an IDEX mate, but with a totally decentralized order book in it.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="alignleft size-full is-resized"><img fetchpriority="high" decoding="async" src="https://blaize.tech/wp-content/uploads/2022/06/create-AMM-based-DeFi.png" alt="" class="wp-image-7561" width="371" height="315"/></figure></div>
+
+
+
+<p><em><strong>So, why do we need an AMM model if DEXs are cool with the traditional order book practice? </strong></em></p>
+
+
+
+<p>Essentially, the work of order book lies in recording the buy/sell offers and then matching traders with the same or similar requests, but in terms of blockchain, this has become the main problem of this system. These processes make the work costly and make work slow. That is why the introduction of an AMM in DEXes has brought crypto trading to a completely new level giving the ability to atomic trading or instant feedback loops. </p>
+
+
+
+<p>The main difference between those two approaches lies in the fact that while using the AMM-based DEX model, users do not need to wait for another trader to place a desirable offer. Automatic market maker creates an environment where the user trades with the smart contract within the chosen pool and then gets the requested tokens and happily leaves. The algorithm of the smart contracts dictates how the assets should be traded and therefore do the whole work by itself. What kind of magic they use to fulfill such will be further explained below.&nbsp;</p>
+
+
+
+<h3 class="has-text-align-center has-white-background-color has-background wp-block-heading"><strong><em><span class="has-inline-color has-primary-red-color">Thinking of creating your own AMM-based DeFi solution? Start DeFi development with Blaize by <a href="https://blaize.tech/#contacts" target="_blank" rel="noreferrer noopener">contacting our expert</a>!</span></em></strong></h3>
+
+
+
+<h2 class="wp-block-heading">What is AMM (Automated Market Maker)?</h2>
+
+
+
+<p>If say a general definition of an AMM model in crypto, it would sound that AMM is an automatic actor whose work is defined by conditional rules of trade inserted into smart contracts. Yet in Blaize we do not follow a general definition, so let’s dive deeper into the math. The formula for let’s call the “traditional” automatic market maker model looks as follows:&nbsp;</p>
+
+
+
+<p class="has-text-align-center">X*Y=C&nbsp;</p>
+
+
+
+<p>where X and Y are reserves of certain (chosen) assets in the AMM pool, and C is an unchangeable constant. Due to the presence of such a constant, this model is also called a constant product market maker.</p>
+
+
+
+<p>The next important part of the AMM model is a pool where actually the whole process is going on. Yet, this does not mean that the provider should put in the same amount of each token. Tokens equality in this case should be calculated out of the market price and then translated to the relevant conditional number. Imagine you create an AMM pool with ETH and Dai in it, the price for those two differs considerably on the market (when 1 ETH = $100; 1 DAI=$1), so in order to make them “equal” we need to put, for instance, 10 ETH to 1000 Dai, then the overall cost of each will be 1000:</p>
+
+
+
+<p class="has-text-align-center">$100 (ETH price) *10 = 1000&nbsp; &nbsp; and,&nbsp;</p>
+
+
+
+<p class="has-text-align-center">$1 (DAI price) *10 = 1000.&nbsp;</p>
+
+
+
+<p>In this case we can say they are supplied equally to the pool. So in terms of AMM pools, what you should pay attention to is the relation between two (chosen) tokens and its volatility on the market.</p>
+
+
+
+<p>Coming back to formula, now we can easily establish our constant value for this pool. So having ETH as X and Dai as Y we will get:&nbsp;</p>
+
+
+
+<p class="has-text-align-center">10 (ETH)*1000(DAI)= 10000</p>
+
+
+
+<p>If nothing happens, the user will see these stable values for each. Yet, what if something does happen, and somebody wants to get in and take 1 ETH, as an example. Then, the formula will change as follows:&nbsp;</p>
+
+
+
+<p class="has-text-align-center">(X-1)*(Y+(1*a+fee))=C1</p>
+
+
+
+<p class="has-text-align-center has-dark-gray-color has-text-color has-background" style="background-color:#d6d6d6">(10ETH &#8211; 1ETH)*(1000DAI + (1ETH*price + fee) = C1</p>
+
+
+
+<p>where <em>X </em>and <em>Y </em>are reserves of certain (ETH and Dai) assets, 1 is the desirable withdrawal number, <em>a </em>is the price of 1 ETH in DAI (1 ETH = 100 DAI)&nbsp; and <em>fee </em>is the amount the trader pays additionally to the DEX for the ability to fulfill such an operation. In this way, we see the constant has changed due to transaction fee, and will continuously change with every further trade. </p>
+
+
+
+<p><em><strong>But how can we say it is the “constant” if it actually changes? </strong></em></p>
+
+
+
+<p>The answer is, we can, as long as the product of <em>X*Y</em> is equal to <em>C</em>. Transaction fee does not dramatically influence the pool curve and varies each way thousands of times per day. In order to make a fair trade, AMM DEXs use the constant invariant equation to always balance assets in a pool, this happens thanks to the creation of a bonding curve.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading"><strong>How to detect an accurate price? </strong></h2>
+
+
+
+<p>In its sharp explanation, we can say that if you want to sell a token, then the price will be equal to the number of tokens in the pool, but if you want to buy a token, the price will be as if you have already purchased one. There are two main options of how the user can use the curve. Assume there are 10 certain tokens in the pool and the price is 10 for each. You want to sell back 3 tokens.&nbsp;</p>
+
+
+
+<ol><li>In the common scenario, for selling them all at once you will get 3&#215;8=24 in return (because the price after your sell will be 8 already)&nbsp;</li><li>In a smarter scenario, you would pay out 1 token at a time, and then get 10+9+8=27 in return.&nbsp;</li></ol>
+
+
+
+<p>The only problem is the <strong>gas fee</strong> which is issued for each transaction, therefore the second option seemed reasonable only while dealing with bigger amounts of tokens and needs in-depth pre-calculation.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Where does the money come from ?&nbsp;</strong></h2>
+
+
+
+<p>One of the most important questions to ask is where exactly money comes from in all this. Well, the profit may come in two scenarios: while providing the liquidity and while fulfilling the trade.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-full"><img loading="lazy" decoding="async" width="1026" height="630" src="https://blaize.tech/wp-content/uploads/2022/06/profit.png" alt="building amm dex" class="wp-image-7563"/></figure></div>
+
+
+
+<p>There are following types of actors participating in the process:&nbsp;</p>
+
+
+
+<ol><li><strong>Liquidity providers</strong> &#8211; users who want to supply their crypto assets into the pool and therefore make profit out of it;&nbsp;&nbsp;</li><li><strong>Traders </strong>&#8211; users who want to buy or sell certain type and amount of tokens;</li><li><strong>Arbitrageurs </strong>&#8211; actors who maintain the pool price in exchange for reward.</li></ol>
+
+
+
+<h2 class="wp-block-heading">How do liquidity providers make profits?&nbsp;</h2>
+
+
+
+<p><em>Remember the “+fee” in the second formula? </em><strong><em>That is how. </em></strong></p>
+
+
+
+<p>For those, who want to supply their liquidity to the pool, DEX&#8217;s work is similar to traditional banking depositing. So you hold a certain amount of crypto (assume ETH) and you want your money “to work”, so you can “give” them to the chosen exchange (assume Uniswap) and therefore you become eligible to earn profit from your assets’ usage. </p>
+
+
+
+<p>In traditional AMM DEX it works as follows: liquidity provider A supplies (assumed) 1000 ETH to the ETH/Dai pool, where (assumed) 9000 ETH have been provided already. Now the total amount of ETH in the pool is 10000 ETH (9000 ETH + 1000 ETH). So the A “share” in the pool will be 10% of the whole ETH pool. When any trade within the pool occurs, the trader pays a transaction fee which is then transferred to the liquidity providers as a reward. </p>
+
+
+
+<p>The fee is split between liquidity providers in accordance with their share percentage. Therefore, in the case of A, he will get a 10% reward from each transaction in the poll he supplied money to.&nbsp;Read: <strong><a href="https://blaize.tech/article-type/how-to-prevent-liquidity-vampire-attacks-in-defi/">How to Prevent Vampire Attacks in DeFi</a></strong></p>
+
+
+
+<h2 class="wp-block-heading">How do arbitrageurs make profits?&nbsp;</h2>
+
+
+
+<p>Arbitrageurs are usually represented by bots that are aimed to catch the best deals, trade them to the pool and therefore maintain the balance of the curve (and token price). Using the previously mentioned equation we follow the same assumption and describe the trading process as follows:&nbsp;</p>
+
+
+
+<p class="has-text-align-center">(10-1)*(1000 + (1*a +fee)) = 10000</p>
+
+
+
+<p class="has-text-align-center">assume (1*a) as X&nbsp;</p>
+
+
+
+<p class="has-text-align-center">9*(1000+X)=10000</p>
+
+
+
+<p class="has-text-align-center">1000+X = 10000/9&nbsp;</p>
+
+
+
+<p class="has-text-align-center">1000+X =1111.111….</p>
+
+
+
+<p class="has-text-align-center">X = 1111-1000=111&nbsp;</p>
+
+
+
+<p>We can see that due to a trade fulfillment, the price of tokens in the pool has changed and the price of ETH increased to $111 (instead of $100). Yet, the normal price for ETH on the regular exchange (let’s assume CoinBase) still remains $100. When such happens, the arbitrageur buys&nbsp; ETH from CoinBase and sells it to the pool (still for $111). In this particular example, the profit of the arbitrageur will be $11 (and all this from a single transaction!!!).&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">What is the difference between arbitration and trading ?&nbsp;</h2>
+
+
+
+<p>Traders are basically retailers who want to exchange their crypto assets at a good price. In traditional AMM, traders have no additional information about general market prices and have to trade only at the price offered by the pool. Well, fulfilling the trade they do influence the pool price, but this does not make them arbitrageurs. </p>
+
+
+
+<p><strong><em>The main difference lies in the purpose of conducting such an action, wherein the case of trading the purpose is to get a certain needed asset in exchange for what the trader has in the pocket, while in the case of arbitrageur the main purpose is to buy low &#8211; sell high and make a profit out of it.</em></strong>&nbsp;</p>
+
+
+
+<p>Another interesting feature of an automated market maker is that despite the insolent behavior of arbitrageurs the system basically cannot exist without them. In case of lack of permanent token supply or buy flow, the curve will not maintain at the same level so will not create a pleasant exchange environment for traders. </p>
+
+
+
+<p>As a leading <strong><a href="https://blaize.tech/for-startups/">blockchain consulting company</a></strong>, our team can help you understand these concepts better and advise on the best way to incorporate automated market makers into your trading platform.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Final thought </strong></h2>
+
+
+
+<p>An automatic market maker is a convenient resolution and very vulnerable mechanism at the same time. </p>
+
+
+
+<p>As one of the main issues with AMM DEXes is that their mechanisms are sensible to front running and pumping attacks. The paradox is, the easier to find the intrinsic value of a token, the harder it is to manipulate the system. Yet, gladly, there are already a few solutions on the DeFi DEX market that successfully solves these problems. We have discussed various types of resistance increasing in <a href="https://blaize.tech/article-type/overview/amm-solutions-to-impermanent-loss-and-front-running/" target="_blank" rel="noreferrer noopener">Impermanent loss and Front-running solutions for the AMM DEX</a> article.&nbsp;</p>
+
+
+
+<p class="has-text-align-center has-white-color has-primary-red-background-color has-text-color has-background"><strong><em>Blaize team of DeFi developers has gathered extensive knowledge of the decentralized finance market and DeFi dApps development. If you are thinking of building AMM-based DeFi project similar to Uniswap, for example, do not hesitate to <a href="https://blaize.tech/#contacts" target="_blank" rel="noreferrer noopener">contact Blaize</a> for further discussion. </em></strong></p>
+
+
+
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+
+
+
+<p><strong>What is an AMM in crypto?</strong></p>
+
+
+
+<p>An AMM stands for an Automated Market Maker, which is the underlying protocol that powers a decentralized exchange. It pools liquidity from users and prices the assets within the pool using algorithms.</p>
+
+
+
+<p><strong>How does an AMM work?</strong></p>
+
+
+
+<p>In a nutshell, an AMM allows digital assets to be bought and sold automatically at market price on a DEX, with no middlemen. This can happen with liquidity from a liquidity pool on an AMM, which prices the assets and enables the trade.</p>
+
+
+
+<p><strong>Is AMM the same as DEX?</strong></p>
+
+
+
+<p>No, AMM is a protocol that runs on liquidity pool-based DEXes, but it is not a feature inherent to all decentralized exchanges.</p>
+
+
+
+<p><strong>How does AMM determine the price?</strong></p>
+
+
+
+<p>The price of tokens is determined by a constant mathematical formula at the heart of an AMM.</p>
+
+                                <div class="block-author">
+                                    <h4 class="author-title">Post author</h4>
+                                    <div class="content">
+                                        <div class="photo">
+                                            <img width="120" height="120" src="https://blaize.tech/wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" loading="lazy" />                                        </div>
+                                        <div class="details">
+                                            <a href="https://blaize.tech/blog/author/sergey-o/">
+                                                <h4>Sergey Onyshchenko</h4>
+                                            </a>
+                                                                                            <p class="position">Co-founder & CEO of Blaize</p>
+                                                                                                                                        <p class="description">Expert on decentralized finance, 
+governance, policies and 
+blockchain technologies.
+</p>
+                                            
+                                                                                            <div class="socials">
+                                                                                                                                                                                                                                <a href="https://www.linkedin.com/in/sergeyonishenko/" target="_blank"><i class="icon-linkedin"></i></a>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sidebar">
+                                <div class="info">
+                                    <h4>Post info</h4>
+                                    <div class="cats">
+                                        <a href="https://blaize.tech/blog/?_sft_category=analysis" class="sub_link">Analysis</a><div style="clear: both;"></div>                                    </div>
+                                                                                                                <div class="tags">
+                                            <a href="https://blaize.tech/blog/?_sft_post_tag=dapps" class="tagname_link">dApps</a><a href="https://blaize.tech/blog/?_sft_post_tag=defi" class="tagname_link">DeFi</a>                                        </div>
+                                    
+                                                                                                        </div>
+                                <div class="navigation"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+            <div id="relatedposts">
+                <div class="guides__block">
+                    <div class="head">
+                        <h3>Related posts</h3>
+                    </div>
+                    <div class="posts-list-wrap">
+                        <div class="posts-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/" class="title">Introduction to DeFi Prediction Markets</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/exploring-decentralized-ai-the-intersection-of-blockchain-and-artificial-intelligence/" class="title">Exploring Decentralized AI: The Intersection of Blockchain and Artificial Intelligence</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/decentralized-social-media/" class="title">What Stands for Mysterious DeSo: The Power of Decentralized Social Media</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=case-study" class="sub_link">Case study</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/build-crypto-telegram-bot/" class="title">How to Build a Telegram Bot</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/decentralized-physical-infrastructure-networks-depin/" class="title">Decentralized Physical Infrastructure Networks: A Crypto Trend of 2024</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/defi-lending-protocol-development/" class="title">Lending Protocol instead of Money Maker Protocol</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/dex-development-guide/" class="title">All You Need to Know on How to Develop a Decentralized Exchange</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div>                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            </main><!-- #main -->
+
+<script data-cfasync="false" src="https://blaize.tech/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blaize.tech/blog/how-amm-works-technology-basics/"
+  },
+  "headline": "How AMM-based DEX Works: Technology Basics",
+  "description": "In this article we will explain how AMM technology works and show the difference between ... Read More",
+  "image": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergey Onyshchenko",
+    "url": "https://blaize.tech/blog/author/sergey-o/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blaize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png"
+    }
+  },
+  "datePublished": "14.09.2020"
+}
+</script>
+</main>
+
+<!-- <link type="text/css" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/styles/components/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<footer id="footer" class="footer">
+    <div class="guides__block">
+        <div class="footer__row footer__logo-wrap">
+            <a href="https://blaize.tech/">
+                <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/footer_logo.svg" alt="Blaize" width="120" height="33" loading="lazy">
+            </a>
+            <div id="text-10" class="widget widget_text">    <p><strong>Blaize</strong> is a Web3 software development company deeply committed to blockchain technology.</p>
+<p>Through our strategic partnership with <a href="https://ideasoft.io/" target="_blank" rel="noopener"><strong>IdeaSoft</strong></a>, we combine expertise to create impactful solutions for our clients.</p>
+    </div>        </div>
+        <div class="footer__row">
+            <div class="footer__col">
+                <div id="text-3" class="widget widget_text"><h3>Contact Us</h3>    <ul>
+<li>E-mail: <a href="https://blaize.tech/cdn-cgi/l/email-protection#462f28202906242a272f3c23683223252e"><span class="__cf_email__" data-cfemail="f990979f96b99b959890839cd78d9c9a91">[email&#160;protected]</span></a></li>
+</ul>
+    </div><div id="text-5" class="widget widget_text"><h3>Socials</h3>    <ul class="socials-responsive">
+<li><a href="https://www.facebook.com/blaize.tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/facebook_new.svg" alt="facebook" width="24" height="24" /></a></li>
+<li><a href="https://twitter.com/blaize_tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/twitter_new.svg" alt="twitter" width="24" height="24" /></a></li>
+<li><a href="https://www.linkedin.com/company/blaizetech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/linkedin_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+<li><a href="https://medium.com/blaize-tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/medium_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-4" class="widget widget_text"><h3>About Us</h3>    <ul>
+<li><a href="https://blaize.tech/clients/">Cases</a></li>
+<li><a href="https://blaize.tech/blog/">Blog</a></li>
+<li><a href="https://blaize.tech/whitepaper/">Whitepaper</a></li>
+<li><a href="https://blaize.tech/careers/">Careers</a></li>
+<li><a href="https://blaize.tech/vacancies/">Vacancies</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-6" class="widget widget_text"><h3>Services</h3>    <ul>
+<li><a href="https://blaize.tech/web3-development-services/">Web3 Development Services</a></li>
+<li><a href="https://blaize.tech/blockchain-ecosystems/">Blockchain Development Services</a></li>
+<li><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+<li><a href="https://blaize.tech/blockchain-integration/">Blockchain Integration</a></li>
+<li><a href="https://blaize.tech/web3-fundraising-preparation/">Fundraising</a></li>
+<li><a href="https://blaize.tech/cross-chain-bridges-development/">Blockchain Bridge Development</a></li>
+<li><a href="https://blaize.tech/cross-chain-development-services/">Cross-chain Solutions Development</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-9" class="widget widget_text"><h3>Solutions</h3>    <ul>
+<li><a href="https://blaize.tech/decentralized-application/">dApp Development</a></li>
+<li><a href="https://blaize.tech/decentralized-finance-development/">DeFi Development Services</a></li>
+<li><a href="https://blaize.tech/decentralized-exchange-development/">DeX Development Services</a></li>
+<li><a href="https://blaize.tech/smart-contracts/">Smart Contract Development</a></li>
+<li><a href="https://blaize.tech/asset-management-platform-development/">Asset Management Platform Development</a></li>
+<li><a href="https://blaize.tech/asset-tokenization/">Asset Tokenization</a></li>
+<li><a href="https://blaize.tech/token-development-services/">Token Development Services</a></li>
+<li><a href="https://blaize.tech/ton-development-services/">TON Blockchain Development</a></li>
+<li><a href="https://blaize.tech/blockchain-game-development/">Blockchain Game Development</a></li>
+<li><a href="https://blaize.tech/nft-marketplace-development-services/">NFT Marketplace Development</a></li>
+<li><a href="https://blaize.tech/nft-development-services/">NFT Development Services</a></li>
+</ul>
+    </div>            </div>
+        </div>
+        <div class="footer__row part">
+            <div class="partners">
+              <!--<div class="clath"><script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="1096403"></div></div>
+                -->
+              <!-- Clutch -->
+              <div id="clutch">
+                <div class="dark_theme">
+                  <div class="widgets_wrapper">
+                    <div class="content">
+                      <div class="small_widget_logo_wrapper">
+                        <span class="small_widget_logo_text">Reviewed on</span>
+                        <a class="logotype" target="_blank" data-ga-action="logo_click" href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=logo&amp;utm_term=blaize.dv" aria-label="Reviewed on Clutch">
+                        </a>
+                      </div>
+                      <div class="small_widget_text">
+                        <span class="rating">5.0</span>
+                        <div class="reviews-totals-stars">
+                          <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            <div class="fivestar-static-item">
+                              <div class="form-item form-type-item">
+                                <div class="fivestar-widget-static fivestar-widget-static-vote clearfix">
+                                  <div class="fivestar"><div class="star star-1 star-odd"><span class="on">5.000000</span></div><div class="star star-2 star-even"><span class="on"></span></div><div class="star star-3 star-odd"><span class="on"></span></div><div class="star star-4 star-even"><span class="on"></span></div><div class="star star-5 star-odd"><span class="on"></span></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <span class="reviews-count">
+                           <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=num_reviews&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            5
+                            reviews
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Clutch -->
+              <div class="top_dev">
+                    <a href="https://www.topdevelopers.co/directory/blockchain-developers" target="_blank"> <img src="https://blaize.tech/wp-content/uploads/2023/04/topDev.png" alt="top blockchain developers" title="Top Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://topappdevelopmentcompanies.com/directory/app-developers/blockchain" target="_blank"> <img src="https://blaize.tech/wp-content/uploads/2020/08/topdev_logo-1.png" alt="top blockchain developers" title="Top Blockchain Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://techreviewer.co/companies/blaize-tech" target="_blank"><img src="https://blaize.tech/wp-content/uploads/2023/03/Blockchain-1.svg" alt="techreviewer" loading="lazy"></a>
+                </div>
+                <div class="GoodFirms">
+                    <a target="_blank" href="https://www.goodfirms.co/company/blaize"><img src="https://blaize.tech/wp-content/uploads/2020/08/googfirm.svg" alt="GoodFirms Badge" width="188" height="42" loading="lazy"></a>
+                </div>
+                <div class="defisec">
+                    <a href="https://defisec.info/tproduct/1-451395809121-blaize-security" target="_blank"><img src="https://blaize.tech/wp-content/uploads/2023/04/DSAmember.png" alt="defisec" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <p class="copyright">Copyright © Blaize - blockchain development company 2018-2025</p>
+            <ul class="privacy">
+                <li><a href="https://blaize.tech/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://blaize.tech/terms-and-conditions/">Terms & Conditions</a></li>
+            </ul>
+            <!-- <p class="marketing">B2B inbound marketing with <a href="https://growpad.pro/" target="_blank"><img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/foot_marketing.svg" alt=""></a></p> -->
+        </div>
+    </div>
+    <!--<script>window.lintrk('track', { conversion_id: 11292828 });</script>-->
+</footer><!-- #colophon -->
+
+<script data-cfasync="false" src="https://blaize.tech/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var wpcf7_recaptcha = {"sitekey":"6LcrqiAqAAAAAI1UXBtZ9jRUqTeAWWLpEeKjCIM8","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+
+
+    <progress value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blaize.tech\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+  <script>
+    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+  </script>
+  
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Blaize",
+        "alternateName": "Blaize Tech",
+        "url": "https://blaize.tech/",
+        "logo": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/blaize.tech/",
+            "https://twitter.com/blaize_tech",
+            "https://ua.linkedin.com/company/blaizetech"
+        ],                "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "11"
+        }
+            }
+</script>
+
+
+
+<div class="popup">
+  <div class="popup__wrapper"></div>
+  <div class="popup__window">
+    <div class="popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+    <div class="popup__img">
+      <svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none"><path fill="#FF5C5C" d="M21 20.711h100v100H21z"/><path fill="#fff" d="M.29 70.71 71 0l70.711 70.71-70.71 70.711z"/><path fill="#FF5C5C" d="M66.75 79.75 58 71l-2.916 2.917 11.667 11.666 25-25-2.917-2.916L66.751 79.75Z"/></svg>
+    </div>
+    <p class="popup__title">Thank you!</p>
+          <p class="popup__text">We received your request and will be in touch shortly.</p>
+              <a href="#" class="btn btn-black popup__btn" onclick="return false;">okay</a>
+      </div>
+</div>
+      <script>
+      const setCookie = () => {
+        let a = new Date();
+        a = new Date(a.getTime() + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = 'blaize-cookies-info=true; path=/; expires=' + a.toGMTString() + ';';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const t = document.getElementsByClassName('js-cookies-info')[0];
+        const b = document.getElementsByClassName('js-cookies-info__button')[0];
+        const c = document.getElementsByClassName('js-cookies-close')[0];
+        b.addEventListener('click', () => {
+          setCookie()
+          t.classList.remove('active');
+        });
+        c.addEventListener('click', (e) => {
+          e.preventDefault();
+          t.classList.remove('active');
+        })
+      });
+    </script>
+    <div class="cookies-info js-cookies-info active">
+      <div class="guides__block">
+        <div class="cookies-info__text">
+          <div><div>This site uses cookies to offer you a better browsing experience.<br />
+Find out more on <a href="https://blaize.tech/privacy-policy/">how we use cookies</a></div>
+</div>
+          <span class="btn btn-gray js-cookies-close">Decline</span>
+          <span class="btn btn-black js-cookies-info__button">Accept all cookies</span>
+        </div>
+      </div>
+    </div>
+  
+
+<a class="popup-w" href="https://blaize.tech/whitepaper/">
+  <div class="popup-w__title">transform your asset management now!</div>
+  <div class="popup-w__text">Download the whitepaper now and start your journey towards a more efficient, inclusive, and secure future in the Web3 world.</div>
+  <button class="popup-w__btn">download it now!</button>
+  <div class="popup-w__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+  <div class="popup-w__square square1"></div>
+  <div class="popup-w__square square2"></div>
+  <div class="popup-w__square square3"></div>
+  <div class="popup-w__square square4"></div>
+</a>
+
+<style>
+.popup-w {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 115px 25px 60px 25px;
+  background: #ededed;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .24);
+  z-index: 9;
+  overflow: hidden;
+  transition: .3s;
+  transform: rotateY(90deg);
+}
+
+.active + .popup-w {
+  bottom: 106px;
+}
+
+.popup-w.show {
+  transform: rotateY(0deg);
+}
+
+.popup-w.hide {
+  transform: rotateY(90deg);
+}
+
+.popup-w__square {
+  position: absolute;
+  background: #fc5959;
+}
+
+.popup-w__square.square1 {
+  top: 0;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+.popup-w__square.square2 {
+  top: -50px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-35deg);
+}
+
+.popup-w__square.square3 {
+  bottom: -20px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(25deg);
+}
+
+.popup-w__square.square4 {
+  bottom: -5px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-40deg);
+}
+
+.popup-w__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-w__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.popup-w__text {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.popup-w__btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #fc5959;
+  border: 1px solid transparent;
+  margin: auto auto 0;
+  padding: 0;
+  transition: .3s;
+}
+
+.popup-w__btn:hover {
+  color: #fc5959;
+  background: transparent;
+  border: 1px solid #fc5959;
+}
+
+@media screen and (max-width: 1366px) {
+  .popup-w {
+    width: 350px;
+    height: 450px;
+    padding: 90px 25px 60px 25px;
+  }
+
+  .popup-w__title {
+    font-size: 22px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+  }
+
+  .popup-w__btn {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .popup-w__square.square1 {
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .active + .popup-w {
+    bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup-w {
+    width: 300px;
+    height: 400px;
+    padding: 75px 25px 50px 25px;
+  }
+
+  .active + .popup-w {
+    bottom: 225px;
+  }
+
+  .popup-w__square.square1 {
+    top: -50px;
+  }
+
+  .popup-w__close {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-w__title {
+    font-size: 18px;
+  }
+
+  .popup-w__text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-w__btn {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+  }
+
+  .popup-w__title {
+    font-size: 24px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .popup-w__btn {
+    height: 40px;
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+</style>
+
+<script>
+$(function() {
+  $('.popup-w').on('click', function(e) {
+    $(this).addClass('hide');
+    $('body').removeClass('no-scroll');
+    document.cookie = "popupWhitepaper=true; path=/; max-age=2592000";
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=0";
+
+    if ( $(e.target).parents('.popup-w__close')[0] ) {
+      e.preventDefault();
+    }
+  });
+});
+
+let elemPopup;
+let elemPopupPosition;
+let elemPopupHeight;
+let elemPopupPositionEnd;
+
+if ( document.querySelector('#development') ) {
+  elemPopup = document.querySelector('#development');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else if ( document.querySelector('.decentralized') ) {
+  elemPopup = document.querySelector('.decentralized');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else {
+  elemPopup = document.querySelector('body');
+  elemPopupPosition = elemPopup.offsetHeight * 0.7;
+  elemPopupHeight = 0;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+}
+
+document.addEventListener('scroll', function() {
+  let currentPosition = document.querySelector('html').scrollTop;
+
+  if ( currentPosition >= elemPopupPositionEnd || document.cookie.indexOf('popupWhitepaperOpened') !== -1 ) {
+    $('.popup-w').addClass('show');
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=2592000";
+
+    if ( window.matchMedia('(max-width: 767px)').matches && !$('.popup-w').hasClass('hide') ) {
+      $('body').addClass('no-scroll');
+    }
+  }
+});
+</script>
+
+
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)
+
+    jQuery(window).scroll(function () {
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && archivePage === false
+            && pageBlog === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+    });
+
+    jQuery(document).ready(function(){
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && pageBlog === false
+            && archivePage === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+
+        // Add red dot for parent li (active children) - on load page
+        $(".post-type-archive-clients .searchandfilter ul li.sf-field-taxonomy-clientcat ul li > ul > li, body.post-type-archive-vacancies .searchandfilter ul li.sf-field-taxonomy-vacancycat ul li > ul > li").each(function() {
+            const activeLabel = $(this).hasClass('sf-option-active');
+            if (activeLabel === true) {
+                jQuery(this).closest('li.sf-level-0').addClass('active-child');
+            }
+        });
+
+        // For drop-down cat-list (clients services)
+        jQuery('.post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>label, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>label').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery(this).closest('li').children('ul').stop().slideToggle(300);
+            e.preventDefault();
+            return false;
+        });
+
+        // Add red dot for parent li (active children)
+        $( ".post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>ul>li, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>ul>li" ).on( "change", function() {
+            const findActive = jQuery(this).closest('ul').find('input:checked').length;
+            if (findActive >= 1) {
+                jQuery(this).parent().closest('li').addClass('active-child');
+            } else {
+                jQuery(this).parent().closest('li').removeClass('active-child');
+            }
+        });
+    });
+
+    $('.wpcf7-form').on('wpcf7mailsent', function() {
+        $('.popup').fadeIn();
+        $('body').addClass('noscroll');
+    });
+
+    $('.popup__close, .popup__btn, .popup__wrapper').on('click', function() {
+        $('.popup').fadeOut();
+        $('body').removeClass('noscroll');
+    });
+
+    $('.wpcf7-form').on('submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', true);
+    });
+
+    $('.wpcf7-form').on('wpcf7submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', false);
+    });
+
+    if ( $('.navigation').length ) {
+        var navHTML = '' +
+            '<p class="navigation__title">Table of Content</p>' +
+            '<ol class="navigation__list"></ol>';
+
+        $( navHTML ).appendTo( $('.navigation') );
+
+        var navNumber = 0;
+        var h2Number = 1;
+
+        $('.text h2, .text h3').each(function() {
+            $(this).attr({
+                id: navNumber
+            });
+            if ($(this).is('h2')) {
+                $('.navigation > .navigation__list').append(
+                    '<li class="navigation__item navigation__item_' + h2Number + '">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+                h2Number++;
+            } else {
+                if ( $('.navigation__item_' + (h2Number - 1)).children('ol').length === 0 ) {
+                    $('.navigation__item_' + (h2Number - 1)).append(
+                        '<ol class="navigation__list"></ol>'
+                    );
+                }
+                $('.navigation__item_' + (h2Number - 1)).children('ol').append(
+                    '<li class="navigation__item">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+            }
+            navNumber++;
+        });
+
+        function resize() {
+            if ( $(window).width() >= 1201 ) {
+                $('.navigation').insertAfter( $('.info') );
+            } else {
+                $('.navigation').prependTo( $('.post-content .text') );
+            }
+        }
+
+        resize();
+
+        $(window).on('resize', function() {
+            resize();
+        });
+    }
+
+    $('.navigation').on('click', 'a', function (e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var top = $(link).offset().top - $('#header').height();
+        $('html').animate({scrollTop: top}, 1000);
+    });
+
+    function scriptsDefer(src) {
+      let script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.body.append(script);
+    }
+
+    document.addEventListener('scroll', load_script);
+    document.addEventListener('mousedown', load_script);
+    document.addEventListener('mousemove', load_script);
+    document.addEventListener('touchstart', load_script);
+    document.addEventListener('keydown', load_script);
+
+    function load_script() {
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/lftracker.js');
+      scriptsDefer('https://tools.luckyorange.com/core/lo.js?site-id=f50de86c');
+      if (window.matchMedia('(max-width: 799px)').matches) {
+        scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/libs.js');
+        scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/core.min.js');
+      }
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/swiper.js');
+      scriptsDefer('https://www.recaptcha.net/recaptcha/api.js?render=' + wpcf7_recaptcha.sitekey + '&#038;ver=3.0');
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/recaptcha.js');
+
+      document.removeEventListener('scroll', load_script);
+      document.removeEventListener('mousedown', load_script);
+      document.removeEventListener('mousemove', load_script);
+      document.removeEventListener('touchstart', load_script);
+      document.removeEventListener('keydown', load_script);
+    }
+
+    if (window.matchMedia('(min-width: 800px)').matches) {
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/libs.js');
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/core.min.js');
+    }
+</script>
+
+<script>
+    function countDigits(n) {
+        let i;
+        for(i = 0; n > 1; i++) {
+            n /= 10;
+        }
+        return i;
+    }
+
+    jQuery('.wpcf7-form').submit(function(){
+        const form = jQuery(this);
+        const countryCode = form.find('.custom-select .phoneInput .selected-dial-code').text();
+        const contactName = form.find('.custom-select .active-feed-field .label-title').text();
+        form.find('.userCountryCode').val(countryCode);
+        form.find('.userContactName').val(contactName);
+
+        const userContactVal = form.find('input.userContact').val();
+
+        if (userContactVal === '') {
+            form.find('.select-box .trigger').addClass('not-valid');
+            return false;
+        }
+    });
+
+    var timer;
+
+    function trackLeave(ev) {
+        if (ev.pageY > 0) {
+            return;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        if ($.exitIntent.settings.sensitivity <= 0) {
+            $.event.trigger('exitintent');
+            return;
+        }
+
+        timer = setTimeout(
+            function() {
+                timer = null;
+                $.event.trigger('exitintent');
+            }, $.exitIntent.settings.sensitivity);
+    }
+
+    function trackEnter() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+    }
+
+    $.exitIntent = function(enable, options) {
+        $.exitIntent.settings = $.extend($.exitIntent.settings, options);
+
+        if (enable === 'enable') {
+            $(window).mouseleave(trackLeave);
+            $(window).mouseenter(trackEnter);
+        } else if (enable === 'disable') {
+            trackEnter(); // Turn off any outstanding timer
+            $(window).unbind('mouseleave', trackLeave);
+            $(window).unbind('mouseenter', trackEnter);
+        } else {
+            throw "Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";
+        }
+    }
+
+    $.exitIntent.settings = {
+        'sensitivity': 300
+    };
+
+    jQuery('.exitModal-close').click(function () {
+        jQuery('#exitPopup').removeClass('active');
+        jQuery('#exitPopup').addClass('closed-modal');
+    });
+
+    jQuery(function() {
+        jQuery.exitIntent('enable');
+        jQuery(document).bind('exitintent', function() {
+            if (jQuery("#exitPopup").hasClass("closed-modal")) {
+                //
+            } else {
+                jQuery("#exitPopup").addClass("active");
+                jQuery("#exitPopup").addClass("opened-modal");
+            }
+        });
+    });
+
+    (function () {
+        const t = jQuery(".exitModal-popup");
+        t.find(".exitModal-close").on("click", function () {
+            jQuery( 'body' ).toggleClass( 'active-modal' );
+            localStorage.setItem("Blaize_exit_popup", "closed"), t.addClass("closed-modal");
+        }),
+            "closed" === localStorage.getItem("Blaize_exit_popup") ? (t.addClass("closed-modal")) : t.addClass("show-modal");
+    })();
+
+    let box = document.querySelector("#preloader");
+
+    function fadeOut() {
+        box.classList.add("visuallyhidden");
+        box.addEventListener(
+            "transitionend",
+            function (e) {
+                box.classList.add("hidden");
+            },
+            {
+                capture: false,
+                once: true,
+                passive: false
+            }
+        );
+    }
+
+    (function($) {
+        $(function() {
+            $(".userContact").intlTelInput({
+                autoPlaceholder: "off",
+                geoIpLookup: function(callback) {
+                  $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                  });
+                },
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                separateDialCode: true,
+                // utilsScript: "assets/nb_intl/js/utils.js"
+            });
+        });
+    })(jQuery);
+</script>
+
+<link rel="preload" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0a02c653bc51442fac3378bc1fc85895","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from blaize.tech/blog/how-amm-works-technology-basics/?noamp=mobile by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:41:29 GMT -->
+</html>

@@ -1,0 +1,2045 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!-- Mirrored from blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/?noamp=mobile by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:41:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+      <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVDP48D');
+    </script>
+    <script>(function (w, d, u) { w.readyQ = []; w.bindReadyQ = []; function p(x, y) { if (x == "ready") { w.bindReadyQ.push(y); } else { w.readyQ.push(x); } } var a = { ready: p, bind: p }; w.$ = w.jQuery = function (f) { if (f === d || f === u) { return a } else { p(f) } } })(window, document)</script>
+
+  <meta name="google-site-verification" content="ZrAKmMj6IFKukIukR3WwBfWnGUtWgF5nVGfGXBFKBU0" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="preload" href="https://blaize.tech/wp-content/themes/blaize-tech/mont-fonts.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css"
+    href="https://blaize.tech/wp-content/themes/blaize-tech/assets/new-styles.css?v=1735038221">
+  
+  
+  
+  
+  
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Create a NFT Marketplace: 2024 Guide</title>
+	<meta name="description" content="Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide." />
+	<link rel="canonical" href="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to Create a NFT Marketplace: 2024 Guide" />
+	<meta property="og:description" content="Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide." />
+	<meta property="og:url" content="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/" />
+	<meta property="og:site_name" content="Blaize" />
+	<meta property="article:published_time" content="2022-11-22T14:19:43+00:00" />
+	<meta property="article:modified_time" content="2024-10-29T11:09:59+00:00" />
+	<meta property="og:image" content="https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Sergey Onyshchenko" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@S_Onishchenko" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Sergey Onyshchenko" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="17 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/","url":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/","name":"How to Create a NFT Marketplace: 2024 Guide","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","datePublished":"2022-11-22T14:19:43+00:00","dateModified":"2024-10-29T11:09:59+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"Learn how to build a successful NFT marketplace platform for your business. Find all the tricks, best industry practices, and more in our full guide.","breadcrumb":{"@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","contentUrl":"https://blaize.tech/wp-content/uploads/2022/11/blaize.security-3.jpg","width":1200,"height":600},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"A Comprehensive Guide to Developing Your Own NFT Platform"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Feed" href="https://blaize.tech/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Comments Feed" href="https://blaize.tech/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blaize.tech\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='mpp_gutenberg-css' href='https://blaize.tech/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='https://blaize.tech/wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-core-css' href='https://blaize.tech/wp-content/themes/blaize-tech/assets/css/build-core.css' type='text/css' media='' />
+<link rel='stylesheet' id='other-css' href='https://blaize.tech/wp-content/themes/blaize-tech/assets/css/other.css' type='text/css' media='' />
+<script type="text/javascript" src="https://blaize.tech/wp-content/themes/blaize-tech/js/jquery-3.4.1.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/js/jquery-migrate-3.1.0.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/js/intlTelInput.min.js" id="nb-intlTelInput-script-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/js/custom_script.js" id="nb-intlTelInput-custom-script-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.liMarquee.js" id="liMarquee-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.inputmask.bundle.js" id="inputmask-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/fm.revealator.jquery.js" id="revealator-js-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/themes/blaize-tech/assets/BlaizeNew/js/main.js" id="main-js-js"></script>
+<link rel="https://api.w.org/" href="https://blaize.tech/wp-json/" /><link rel="alternate" type="application/json" href="https://blaize.tech/wp-json/wp/v2/posts/9529" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blaize.tech/xmlrpc.php?rsd" />
+
+<link rel='shortlink' href='https://blaize.tech/?p=9529' />
+<link rel="amphtml" href="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/?amp"><link rel="icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" sizes="32x32" />
+<link rel="icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+<meta name="msapplication-TileImage" content="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+      <link rel='stylesheet' id='wp-block-library-css' href='https://blaize.tech/wp-includes/css/dist/block-library/style.min.css?ver=5.2.5'
+      type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'
+      href='https://blaize.tech/wp-includes/css/dist/block-library/theme.min.css?ver=5.2.5' type='text/css' media='all' />
+    
+  <style>
+    .blog_ajax .searchandfilter ul li.sf-field-tag ul li label {
+      padding: 5px 7px 3px 7px !important;
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <script async src="https://blaize.tech/wp-content/themes/blaize-tech/assets/js/jquery.mask.min.js"></script>
+  <script async src="https://blaize.tech/wp-content/themes/blaize-tech/assets/js/utils.js" defer></script>
+
+  </head>
+
+<body class="post-template-default single single-post postid-9529 single-format-standard wp-embed-responsive singular image-filters-enabled ">
+      <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDP48D" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  
+  
+  <header id="header"
+    class="sticky no-scroll">
+
+
+    <div
+      class="guides__block logo-header  fs-menu-header">
+      <div class="desktop-logo">
+                  <a href="https://blaize.tech/" class="logo logo-small">
+            <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/blaize_logo.svg" alt="Blaize" loading="lazy">
+          </a>
+              </div>
+
+      <div class="mobile-logo">
+        <a href="https://blaize.tech/"
+          class="logo logo-blog" aria-label="Logo">
+          <svg x="0px" y="0px" viewBox="0 0 202.4 162.6" xml:space="preserve">
+            <g transform="matrix(1.3333333,0,0,-1.3333333,0,1122.52)">
+              <g transform="translate(332.3824,384.1128)">
+                <path d="M-241.5,360l-10.4-7.6l-61.2,0v39.6h61.2l10.4-7.5l4-12.3L-241.5,360z M-313.2,440.9l56.5,0l8.4-6.1
+                        l3.2-9.9l-3.2-9.9l-8.4-6.1h-56.5V440.9z M-227.5,394.8l-10,7.3l3.6,2.6l6.6,20.3l-6.6,20.3l-17.3,12.5l-81.2,0V335.9h85.8
+                        l19.1,13.9l7.3,22.5L-227.5,394.8z" />
+              </g>
+              <g transform="translate(379.6422,359.9819)">
+                <path d="M-241.5,360l-13.7,13.7l13.7,13.7l13.7-13.7L-241.5,360z" />
+              </g>
+            </g>
+          </svg>
+                      <div class="blog-title">log</div>        </a>
+      </div>
+
+      
+
+      <div class="btn-menu">
+        <a href="https://blaize.tech/#contacts" class="contacts-link">Contact us</a>
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fs-menu">
+
+
+      <div class="guides__block">
+        <ul class="guides__block-list"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>        <div class="modeling_element"></div>
+        <div class="blockchain_element"></div>
+        <div class="mobile_element"></div>
+        <div class="front_end_element"></div>
+      </div>
+      <div class="content-menu">
+        <nav class="cd-dropdown dropdown-is-active">
+          <ul class="cd-dropdown-content"><li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2340"><a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2341" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2341"><a href="#back">Back</a></li>
+	<li id="menu-item-75842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75842"><a href="https://blaize.tech/web3-development-services/">Web3 Development Services</a></li>
+	<li id="menu-item-75843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75843"><a href="https://blaize.tech/blockchain-ecosystems/">Blockchain Development Services</a></li>
+	<li id="menu-item-75844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75844"><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+	<li id="menu-item-75845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75845"><a href="https://blaize.tech/blockchain-integration/">Blockchain Integration</a></li>
+	<li id="menu-item-75846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75846"><a href="https://blaize.tech/web3-fundraising-preparation/">Fundraising</a></li>
+	<li id="menu-item-75847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75847"><a href="https://blaize.tech/cross-chain-bridges-development/">Blockchain Bridge Development</a></li>
+	<li id="menu-item-75848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75848"><a href="https://blaize.tech/cross-chain-development-services/">Cross-chain Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-2332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2332"><a href="#" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-2333" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2333"><a href="#back">Back</a></li>
+	<li id="menu-item-75849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75849"><a href="https://blaize.tech/decentralized-application/">dApp Development</a></li>
+	<li id="menu-item-75850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75850"><a href="https://blaize.tech/decentralized-finance-development/">DeFi Development Services</a></li>
+	<li id="menu-item-75851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75851"><a href="https://blaize.tech/decentralized-exchange-development/">DeX Development Services</a></li>
+	<li id="menu-item-75852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75852"><a href="https://blaize.tech/smart-contracts/">Smart Contract Development</a></li>
+	<li id="menu-item-75853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75853"><a href="https://blaize.tech/asset-management-platform-development/">Asset Management Platform Development</a></li>
+	<li id="menu-item-75854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75854"><a href="https://blaize.tech/asset-tokenization/">Asset Tokenization</a></li>
+	<li id="menu-item-75855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75855"><a href="https://blaize.tech/token-development-services/">Token Development Services</a></li>
+	<li id="menu-item-75856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75856"><a href="https://blaize.tech/ton-development-services/">TON Blockchain Development</a></li>
+	<li id="menu-item-75857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75857"><a href="https://blaize.tech/blockchain-game-development/">Blockchain Game Development</a></li>
+	<li id="menu-item-75858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75858"><a href="https://blaize.tech/nft-marketplace-development-services/">NFT Marketplace Development</a></li>
+	<li id="menu-item-75859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75859"><a href="https://blaize.tech/nft-development-services/">NFT Development Services</a></li>
+</ul>
+</li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="https://blaize.tech/clients/">Cases</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2347"><a href="https://blaize.tech/blog/">Blog</a></li>
+<li id="menu-item-67576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67576"><a href="https://blaize.tech/whitepaper/">Whitepaper</a></li>
+</ul>        </nav>
+      </div>
+
+      <div class="foot-menu">
+        <div class="content">
+          <div class="mainBlock_social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/blaize.tech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/facebook-main.svg" alt="fb" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/blaizetech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/linkedin-main.svg" alt="LinkedIn" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/blaize_tech" target="_blank">
+                  <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/twitter-main.svg" alt="Twitter" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="location">
+            <a href="https://blaize.tech/cdn-cgi/l/email-protection#587831363e37183a343931223d762c3d3b30"><span class="__cf_email__" data-cfemail="472e29212807252b262e3d22693322242f">[email&#160;protected]</span></a>
+            <a href="tel:+351966034344">+351 966 034 344</a>
+          </div>
+          <div class="location">
+            <p>Kyiv, Ukraine </p>
+            <p>26 Metalistiv St</p>
+          </div>
+          <div class="location">
+            <p>Dnipro, Ukraine 20 </p>
+            <p>Sichovykh Striltsiv St</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    
+            <main class="blog single-post">
+    <section class="pageHeader blogPage">
+        <div class="wrapper">
+            <div class="guides__block">
+                <div class="single-post-item">
+
+                    <div class="content">
+                        <div class="post-content">
+                            <div class="breadcrumb">
+                                <div>
+                                    <!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blaize." href="https://blaize.tech/" class="home" ><span property="name">Blaize</span></a><meta property="position" content="1"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="https://blaize.tech/blog/" class="post-root post post-post" ><span property="name">Blog</span></a><meta property="position" content="2"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">A Comprehensive Guide to Developing Your Own NFT Platform</span><meta property="url" content="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/"><meta property="position" content="3"></span>                                </div>
+                            </div>
+
+                                                            
+                                    <div class="head redimg">
+                                        <h1 class="title">
+                                            A Comprehensive Guide to Developing Your Own NFT Platform                                        </h1>
+                                        <div class="foot">
+                                            <div class="author">
+                                                <div class="photo">
+                                                    <img width="120" height="120" src="https://blaize.tech/wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" />                                                </div>
+                                                <div class="details">
+                                                    <a href="https://blaize.tech/blog/author/sergey-o/">
+                                                        <h4>
+                                                            Sergey.O                                                        </h4>
+                                                    </a>
+                                                    <div class="date">22.11.2022</div>
+                                                </div>
+                                            </div>
+                                            <div class="share"><link rel='stylesheet' id='scriptlesssocialsharing-css' href='https://blaize.tech/wp-content/plugins/scriptless-social-sharing/includes/css/scriptlesssocialsharing-style.css' type='text/css' media='all' />
+<style id='scriptlesssocialsharing-inline-css' type='text/css'>
+.scriptlesssocialsharing__buttons a.button { padding: 12px; flex: 1; }
+</style>
+<div class="scriptlesssocialsharing"><h3 class="scriptlesssocialsharing__heading">Share:</h3><div class="scriptlesssocialsharing__buttons"><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-to-develop-your-own-nft-platform-in-2023%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on Facebook</span></a><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=A%20Comprehensive%20Guide%20to%20Developing%20Your%20Own%20NFT%20Platform&amp;url=https%3A%2F%2Fblaize.tech%2Fblog%2Fhow-to-develop-your-own-nft-platform-in-2023%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on X (Twitter)</span></a></div></div></div>
+                                        </div>
+                                    </div>
+                                                            
+                            <div class="text">
+                                                                    <div class="last_upd">
+                                        <svg width="14px" height="14px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Two-Tone" transform="translate(-817.000000, -465.000000)">
+                                                    <g id="Action" transform="translate(100.000000, 100.000000)">
+                                                        <g id="Two-Tone-/-Action-/-update" transform="translate(714.000000, 362.000000)">
+                                                            <g>
+                                                                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                                                                <path d="M11,8 L11,13 L15.25,15.52 L16.02,14.24 L12.5,12.15 L12.5,8 L11,8 Z M21,10 L21,3 L18.36,5.64 C16.74,4.01 14.49,3 12,3 C7.03,3 3,7.03 3,12 C3,16.97 7.03,21 12,21 C16.97,21 21,16.97 21,12 L19,12 C19,15.86 15.86,19 12,19 C8.14,19 5,15.86 5,12 C5,8.14 8.14,5 12,5 C13.93,5 15.68,5.79 16.95,7.05 L14,10 L21,10 Z" id="🔹-Primary-Color" fill="#1D1D1D"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        Last update: January 30, 2024                                    </div>
+                                                                
+<p>NFT platform development has become a hot topic in the world of cryptocurrency and blockchain, as more and more projects seek to implement NFT into their businesses.</p>
+
+
+
+<p>The NFT market has gone through a hard journey in the past three years. 2021 witnessed an explosive eruption, reaching an estimated total sales volume of $41 billion. This surge was fueled by excitement surrounding digital art, collectibles, and the burgeoning play-to-earn gaming sector.&nbsp;</p>
+
+
+
+<p>The following year witnessed a continuation of this boom, with the market surpassing a staggering $100 billion fueled by sustained hype and diversification into previously untapped domains like music, sports, and metaverse projects.</p>
+
+
+
+<p>However, after scaling such heights of popularity and value, the NFT market encountered a decline. The year 2023 ushered in a sharp correction, with sales volume plummeting to approximately $25 billion. This downturn can be attributed to a confluence of factors, including broader macroeconomic challenges and a sense of market saturation that dampened initial enthusiasm. As a result, concerns regarding the long-term sustainability and future of NFT art proliferated. Despite these apprehensions, key industry players remain optimistic, actively contemplating and even anticipating a market rebirth.</p>
+
+
+
+<p>That is why developing an NFT platform in 2024 is a perfect idea – the enduring relevance of NFTs extends beyond the current year: NFTs present new utility opportunities besides just objects of art. Indeed, 2024 presents a great moment for the development of innovative NFT platforms.</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-00850f0fc854a9a880165af6f96996bb">Here at Blaize, we’ve been working with NFTs for years, developing custom solutions for <a href="https://blaize.tech/clients/"><strong>world-known clients</strong></a>. We have <strong>successfully launched several NFT projects</strong> and released numerous collections that were quickly recognized by the general public.</p>
+
+
+
+<p>But today, we won’t be deploying anything – our main goal is to share experience and guide you through the exciting NFT platform development. Let’s take a closer look at the intricacies of the process of developing an NFT platform.</p>
+
+
+
+<h2 class="wp-block-heading">HOW TO CREATE AN NFT PLATFORM IN 10 STEPS</h2>
+
+
+
+<p>1.<strong>Define the concept of your platform:</strong></p>
+
+
+
+<p>Clearly define the purpose, target audience, core functionalities of your platform and revenue-generating opportunities. Who are you trying to serve? What unique experience will you offer? Imagine your ideal user and tailor the platform experience to their specific needs and preferences.</p>
+
+
+
+<p>2.<strong>Gather a reliable and experienced team:</strong></p>
+
+
+
+<p>Building a successful platform requires a skilled and experienced team. Hire developers with expertise in blockchain technology and NFT development, alongside talented designers, marketing professionals, and anyone else crucial to your vision. Prioritize individuals with a proven track record in relevant fields.</p>
+
+
+
+<p>3.<strong>Take care of the technical development:</strong></p>
+
+
+
+<p>Choosing the right blockchain is paramount. Consider factors like users engagement, ecosystem, and liquidity. There’re several options which offer ready to work infrastructure solutions. Develop secure smart contracts to govern core functionalities and seamlessly integrate them with your chosen blockchain. Ensure your platform adheres to industry standards and best securitypractices.</p>
+
+
+
+<p>4.<strong>Select and connect all the necessary infrastructure, including the chosen metadata storage provider:</strong></p>
+
+
+
+<p>Select and connect reliable 3rd-parties that seamlessly integrate with popular NFT marketplaces, wallets, and metadata storage providers. Prioritize reliability, security, and SDKs that align seamlessly with your platform&#8217;s overall architecture and functionalities.</p>
+
+
+
+<p>5.<strong>Work on the UI/UX design:</strong></p>
+
+
+
+<p>Create an intuitive and user-friendly interface that makes navigating and interacting with your platform a joy. Prioritize visual appeal, accessibility, and a smooth user journey. Remember, first impressions matter – make sure your design is both beautiful and functional.</p>
+
+
+
+<p>6.<strong>Complete the front-end part of the product development:</strong></p>
+
+
+
+<p>Translate your stunning UI/UX design into a functional and responsive front-end application. Optimize performance for speed and ensure cross-browser compatibility to reach a wider audience. Meticulously craft every pixel to deliver an exceptional user experience on any device.</p>
+
+
+
+<p>7.<strong>Prioritize a comprehensive smart contract security audit before public release:&nbsp;</strong></p>
+
+
+
+<p>Similar to testing of any final product, meticulously examining your platform&#8217;s smart contracts for vulnerabilities and potential exploits is crucial. Enlist qualified security professionals like <a href="https://blaize.tech/">Blaize</a> to conduct this audit. By proactively addressing identified vulnerabilities, you significantly mitigate financial losses, reputational damage, and foster additional trust among your users.</p>
+
+
+
+<p>8.<strong>Test the final product before public release:</strong></p>
+
+
+
+<p>Before unleashing your platform to the world, put it through rigorous testing. Conduct thorough functionality, security, and user experience tests across various devices and scenarios. Consider involving potential users in beta testing to gather valuable feedback and identify areas for improvement.</p>
+
+
+
+<p>9.<strong>Deploy the platform and launch it in the market:</strong></p>
+
+
+
+<p>Deploy your platform on the chosen infrastructure and <a href="https://blaize.tech/services/blockchain-marketing/marketing-for-blockchain-projects-a-comprehensive-guide/">initiate a strategic marketing campaign</a>. Build community engagement, attract early adopters, and generate media coverage to create buzz and excitement. Remember, a successful launch is just the beginning.</p>
+
+
+
+<p>10.<strong>Provide continuous support and maintenance:</strong></p>
+
+
+
+<p>The whole process doesn&#8217;t end with launch. Continuously provide technical support, address user feedback, and implement platform updates to ensure its long-term success. Don’t forget to carry on security audits on a regular basis. Stay adaptable to evolving industry trends and user needs to keep your platform at the forefront of the NFT market.</p>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-3777d8b377acae5ca367180485d95aa2"><a href="https://blaize.tech/security/">Discover more about Blaize expertise in security auditing services here</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Decide on The Type of Your NFT Platform</h2>
+
+
+
+<p>The first crucial step is selecting the platform that aligns with your vision. Remember, an NFT platform isn&#8217;t solely a marketplace &#8211; it&#8217;s your launchpad for diverse possibilities. Let&#8217;s explore various platform types to aid your informed decision:</p>
+
+
+
+<p>1. Marketplaces: These familiar platforms facilitate buying, selling, and trading NFTs. They excel at connecting creators and collectors, providing exposure and liquidity. Ideal for established creators with ready-to-sell collections or projects focused on tradable assets.</p>
+
+
+
+<p>2. Minting Platforms: Focus on creating and launching NFT collections. They offer tools for minting, setting smart contracts, and managing drops. Well-suited for artists, startups, or projects with unique collections needing tailored minting solutions.</p>
+
+
+
+<p>3. Tokenization Platforms: These delve deeper, tokenizing real-world assets (e.g., real estate, artwork) into NFTs (think security token offerings or fractional ownership platforms). They bridge the gap between traditional and digital assets, unlocking new investment and ownership opportunities. Consider this if your project involves tokenizing tangible assets or creating unique ownership structures.</p>
+
+
+
+<p>4. Gaming Platforms: Integrate NFTs into the gaming experience. These platforms enable in-game item ownership, character creation, and even play-to-earn mechanics. Perfect for projects aiming to build NFT-powered games or metaverses where users interact and derive value through NFTs.</p>
+
+
+
+<p>We’ll describe the major types of NFT platforms below so that you can assess your needs and make a well-grounded decision.</p>
+
+
+
+<p>Read Also: <a href="https://blaize.tech/article-type/web3-security/best-practices-for-secure-nft-development/">Best practices for secure NFT development</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT MARKETPLACE</strong></h3>
+
+
+
+<p>The first option we’d like to mention is a universal trading platform for non-fungible assets. By creating your own NFT marketplace platform, you make NFTs a bit more available to a wider audience and, thus, speed up their global adoption.</p>
+
+
+
+<p>Currently, there are a few popular websites for such purposes, so if you’d like to build an NFT marketplace platform, you’d better do thorough research before you kick into gear.</p>
+
+
+
+<p>Here are just a few honorable mentions:</p>
+
+
+
+<ul>
+<li><strong>Blur </strong>– currently the biggest NFT marketplace, a rising star for professional traders, offering low fees, fast interface, and innovative features like fee-less bidding. Targets high-volume traders with advanced portfolio management tools.</li>
+
+
+
+<li><strong>OpenSea</strong> – is the world’s first web3 marketplace for NFTs and crypto collectibles. It enables creating and trading NFTs, starting auctions, and browsing digital art for inspiration.</li>
+
+
+
+<li><strong>Element Market</strong> – focuses on curated experiences and community. Offers a selective, high-quality collection of NFTs and fosters connections between collectors and creators through events and dedicated channels. Caters to collectors seeking unique pieces and a vibrant community.</li>
+
+
+
+<li><strong>Rarible </strong>– a multichain community-centric NFT marketplace that is known for low fees for NFT creators.</li>
+</ul>
+
+
+
+<p>Most NFT marketplaces allow users to mint and trade different types of non-interchangeable tokens on Ethereum, BNB Chain, or other blockchains. In return for their services, marketplaces get a commission, which is the foundation of their revenue.</p>
+
+
+
+<p class="has-white-color has-light-gray-background-color has-text-color has-background has-link-color wp-elements-d2c4d5c8946cc94b8cd1acd10a5e3828">By the way, hiring a professional <a href="https://blaize.tech/token-development-services/"><strong>web3 development company</strong></a> can help ensure a successful launch of your NFT marketplace platform.</p>
+
+
+
+<p><a href="https://blaize.tech/article-type/overview/crypto-art-explained/">Read More about the NFT art marketplaces and the tendencies of its development</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT COLLECTION</strong></h3>
+
+
+
+<p>The digital art is still one of the most common NFT utilities no matter whether it’s the initial generation of monsters for a new game, the initial balance of shares from a tokenized villa, or even a preliminary art collection to raise money for further development of your platform.</p>
+
+
+
+<p>The pros of NFT collections include the following:</p>
+
+
+
+<ul>
+<li>Relatively simple development process as you won’t actually need to build an NFT platform – you can easily mint your NFTs on one of the existing marketplaces.</li>
+
+
+
+<li>The possibility to receive quick profit if you have a strong community or market your collection well.</li>
+
+
+
+<li>Plenty of choices when it comes to NFT utility – your collection can consist of digital art, music, AR/VR items, real-world objects, metaverse real estate, and much more.</li>
+</ul>
+
+
+
+<p>Even though NFT collections don’t require separate platforms, you can still create one for your company. Yet, in this case, the whole NFT platform development would take much more time and resources.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT GAMING SOLUTION</strong></h3>
+
+
+
+<p>The GameFi segment is another major type of NFT platforms. Blockchain games with NFT rewards and in-game objects have been on the rise regardless of the overall market decline. And we are sure this will remain so.</p>
+
+
+
+<p>According to the research held at the beginning of 2022, some NFT games <a href="https://www.statista.com/statistics/1266486/blockchain-games-user-number/"><strong>attracted up to 1.1 million unique users</strong></a> monthly, which is an incredible number for a rather niche product.</p>
+
+
+
+<p>And the best part about gamefi is that you don’t need to limit your imagination. While standard NFT platforms, such as marketplaces, offer similar functions, games are definitely not meant to put you in the box.&nbsp;</p>
+
+
+
+<p>However, you should keep in mind that NFT gaming platform development requires much more dedication and resources than many other types of NFT utility. On top of blockchain development expertise, your team must have experience working with game mechanics, creating engaging plots, and designing characters.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT IN DEFI</strong></h3>
+
+
+
+<p>Decentralized finance also provides a vast field for NFT application. However, NFT utility here is much less evident than when it comes to gaming or marketplaces, so let us guide you through it.</p>
+
+
+
+<p>First, NFTs might serve as liquidity provider (LP) position representation, similar to the Uniswap V3 solution. Based on the pool and the selected parameters, users will receive a unique NFT representing their position in that specific pool.</p>
+
+
+
+<p>Second, there is a separate niche of NFT lending that allows for collateralizing users’ NFTs as a loan in exchange for immediate crypto payment.</p>
+
+
+
+<p>Third, we have various financial instruments inherited from traditional finance and transformed into DeFi NFT-based solutions. These are NFT bonds, options, and different derivatives in the form of NFTs.</p>
+
+
+
+<p>NFTs can have many other DeFi utilities, like serving as a yield farming boost, so we’ll leave the rest to your imagination and business needs.</p>
+
+
+
+<p>Did you know that by using the power of <a href="https://blaize.tech/for-enterprises/"><strong>enterprise blockchain</strong></a>, businesses can unlock new revenue streams, reduce costs, and streamline operations? So why not explore the full potential of enterprise blockchain and NFTs for your business today?</p>
+
+
+
+<h2 class="wp-block-heading">NFT AS A KEY TO SMART ACCOUNTS</h2>
+
+
+
+<p>Beyond their current application as static assets, NFTs are poised to unlock a new dimension of user interaction – serving as the keys to smart accounts enabled by the ERC-6551 standard. This transformative integration elevates NFTs from ownership tokens into personalized passports to a secure, on-chain identity.&nbsp;</p>
+
+
+
+<p>Imagine an NFT not simply representing digital ownership, but acting as the exclusive key to a smart contract wallet – your gateway to interacting with DeFi protocols, managing digital assets, and executing complex financial transactions, all without the traditional vulnerabilities of custodial wallets.</p>
+
+
+
+<h2 class="wp-block-heading">NFT PLATFORM COMPONENTS</h2>
+
+
+
+<p>NFT platforms exhibit diverse specializations, including marketplaces, tokenization platforms, RWA protocols, simple minting pages, and sophisticated digital art auctions. Despite their distinct functionalities, these platforms share many common components and necessitate a comprehensive development approach involving a team of professionals.</p>
+
+
+
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1600" height="900" src="https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_.webp" alt="NFT platforms exhibit diverse specializations, including marketplaces, tokenization platforms, RWA protocols, simple minting pages, and sophisticated digital art auctions." class="wp-image-53719" srcset="https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_.webp 1600w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1536x864.webp 1536w, https://blaize.tech/wp-content/uploads/2024/01/pic_6-_3_-1568x882.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" /></figure>
+
+
+
+<p class="has-dark-gray-color has-text-color has-link-color wp-elements-02470407ea245289a534e5c690ad7bb1"><strong>Smart Contracts at the Core</strong>: Smart contracts are fundamental in decentralizing protocols, with NFTs being a primary application. Platforms typically require standards such as ERC721, ERC1155, or newer ones like ERC-5956 and ERC-6220. Their implementations are often straightforward, thanks to libraries like OpenZeppelin and ERC721A, which provide fully audited contracts with essential plugins. While other chains have unique NFT standards, most adhere to traditional EVM standards, facilitating development across various platforms including Solana and Sui.<br>However, there are a few points that require additional attention:</p>
+
+
+
+<ul>
+<li>Royalty: This may involve ERC-2981 or other formats agreed upon by the marketplace and demands high attention from the security team.</li>
+
+
+
+<li>Minting Process: Airdrops, batch mints, auctions, and sales usually incorporate custom logic, necessitating an experienced team to adapt proven concepts to the protocol&#8217;s needs.</li>
+</ul>
+
+
+
+<p><strong>Metadata and Storage</strong>: A crucial element of any NFT platform is the metadata associated with NFTs, including the infrastructure for its storage, which involves SDKs and gateways.&nbsp;</p>
+
+
+
+<p>For storage, there are many reliable solutions like Moralis, Alchemy, Arweave, and Filecoin, offering both storage and tools for efficient metadata management. Integration into the project&#8217;s pipeline is essential. While working with pure IPFS might not be necessary, automating metadata formatting, optimizing the NFT minting process, and connecting storage SDK endpoints with your dApp and backend services are crucial.&nbsp;</p>
+
+
+
+<p>Blaize manages all integration processes and additional development for rapid metadata management for thousands of NFTs, handling metadata updates for flippers and metaverse projects, or uploading digital certificates for RWA protocols.</p>
+
+
+
+<p><strong>dApp and UI</strong>: The purpose of your NFT platform might vary, but essential components include:</p>
+
+
+
+<ul>
+<li>Explorer Functionality: To view assets or browse existing collections.</li>
+
+
+
+<li>Basic Transfer, Minting, and Sale Interfaces: Allowing users to interact with NFTs on your platform.</li>
+
+
+
+<li>Integrated Wallets: Such as MetaMask, WalletConnect, Coinbase wallet, or specific chain wallets like Phantom and Solflare for Solana, or Martian and SuiWallet for Sui.</li>
+</ul>
+
+
+
+<p>Frontend and web3 engineers are required to build the dApp with all necessary functionality. Additionally, UI/UX design, covered by our in-house designers, is crucial for an engaging user experience.</p>
+
+
+
+<p><strong>Offchain Services</strong>: Despite their decentralized nature, every dApp requires backend services. NFT platforms are no exception, necessitating services for aggregating and indexing on-chain information, bootstrapping and caching metadata, providing reliable price feeds, and maintaining databases for prices, transaction histories, and user accounts. Even a small NFT minting page will need integration with tools like Subgraph, Airstack, or Moralis SDK, enabling functionalities like displaying all NFT owners and sales history. A backend engineer is thus an indispensable part of the team.</p>
+
+
+
+<p><strong>Even More Smart Contracts</strong>: Depending on the platform type, additional functionality often requires the development of more smart contracts, such as:</p>
+
+
+
+<ul>
+<li><strong>Upgrades and Wraps for NFTs</strong></li>
+
+
+
+<li><strong>Various Auctions, Drops, and Sale Types</strong></li>
+
+
+
+<li><strong>NFT Locks, Staking, Depositing as Collateral</strong></li>
+
+
+
+<li><strong>Tokenization Pipelines and Vaults for NFT Fractioning</strong></li>
+
+
+
+<li><strong>Custom Solutions or Protocol Integrations as Needed by the Platform</strong></li>
+</ul>
+
+
+
+<p>Blaize is well-equipped with a team of specialists covering all necessary development areas, ensuring comprehensive and effective NFT platform development. This way, you will be sure that the project is done according to industry best practices and that the <a href="https://blaize.tech/article-type/web3-security/best-practices-for-secure-nft-development/">final product is reliable and secure</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>NFT MARKETPLACE FEATURES FOR DIFFERENT PARTIES</strong></h3>
+
+
+
+<p>Let’s say you decided to create an NFT platform<strong> </strong>for trading assets. What should you start with, and which functionality should you include?</p>
+
+
+
+<p>If you’re wondering how to develop your own NFT marketplace, one of the most important things to consider is business logic. The underlying smart contracts must work impeccably so that none of the involved parties could get deceived or feel uncomfortable while using your product.</p>
+
+
+
+<p>We’ll describe the key functionality for different categories of users, including buyers, sellers, and administrators. Make sure to develop a solution that considers all of these points, and don’t hesitate to add custom features that would be unique to your project.</p>
+
+
+
+<p>Please note that we also provide <a href="https://blaize.tech/for-startups/"><strong>blockchain development services for startups</strong></a>, so if you need additional advice, please contact us.</p>
+
+
+
+<p>So, the parties of this process include:</p>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-05374acffe9b514b1f77e393371b7240">1.<strong>NFT Buyer:</strong></p>
+
+
+
+<ul>
+<li>Registration and authorization.</li>
+
+
+
+<li>Connecting the wallet.</li>
+
+
+
+<li>Browsing NFTs, searching with keywords or tags.</li>
+
+
+
+<li>Completing the purchase, whether through a fixed payment or an auction.</li>
+
+
+
+<li>Completing the transaction, including gas fees and a platform commission.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-40e67b06616414d838b5d90189be1cdc">2.<strong>NFT Seller:</strong></p>
+
+
+
+<ul>
+<li>Registration and authorization.</li>
+
+
+
+<li>A dedicated space for creating NFTs.</li>
+
+
+
+<li>The possibility to transfer NFTs from other marketplaces.</li>
+
+
+
+<li>Choosing a place to store NFTs before minting them.</li>
+
+
+
+<li>The possibility to select a custom name, description, store images and other files when creating an NFT.</li>
+
+
+
+<li>Creating collections.</li>
+
+
+
+<li>Selecting the type of payment – fixed or auctioned. Creating auctions.</li>
+
+
+
+<li>Putting the NFT for sale and ending the sale if their intentions have changed.</li>
+
+
+
+<li>Revising the price of an NFT.</li>
+
+
+
+<li>Receiving the funds for the sold NFTs.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-9a056ac36b5bf698c220a994cfef7c8e">3.<strong>Administrator:</strong></p>
+
+
+
+<ul>
+<li>Viewing all NFTs created on the platform.</li>
+
+
+
+<li>Viewing all users and their trading history.</li>
+
+
+
+<li>The possibility to remove NFTs in case there are duplicated assets or ones that break the Terms of Use of the platform.</li>
+
+
+
+<li>Editing and adding categories of assets.</li>
+
+
+
+<li>Adding users to the whitelist if necessary and blocking them.</li>
+
+
+
+<li>Managing fees for buyers and sellers.</li>
+
+
+
+<li>Setting up the integration with IPFS for file storage.</li>
+
+
+
+<li>Other necessary technical functionality peculiar to your platform.</li>
+</ul>
+
+
+
+<p>Regardless of the chosen NFT platform features and its type, you’ll need to use APIs and third-party services to extend the functionality. Most of these solutions will be connected with data storage, which is crucial for the NFT industry.</p>
+
+
+
+<p>The vital part is choosing a secure service and integrating it into your platform correctly. That is why hiring NFT developers with proven expertise should be your number one priority.</p>
+
+
+
+<h2 class="wp-block-heading">Final Architecture of a Typical NFT Platform</h2>
+
+
+
+<p>As soon as you understand the main business logic behind your NFT platform, all the features, and user flows, it’s time to create the final architecture. Don’t get frustrated if it turns out pretty complex because your product might also be far from simple.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1600" height="1444" src="https://blaize.tech/wp-content/uploads/2024/01/image-1.jpeg" alt="" class="wp-image-53720" srcset="https://blaize.tech/wp-content/uploads/2024/01/image-1.jpeg 1600w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1536x1386.jpeg 1536w, https://blaize.tech/wp-content/uploads/2024/01/image-1-1568x1415.jpeg 1568w" sizes="(max-width: 1600px) 100vw, 1600px" /><figcaption class="wp-element-caption"><em>An example of NFT game architecture </em><a href="https://blaize.tech/clients/decentralized-app-development-for-the-crypto-game/"><em>created by Blaize for LeagueDAO</em></a></figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">Scaling Your NFT Solution</h2>
+
+
+
+<p>After you <a href="https://blaize.tech/nft-marketplace-development-services/">build an NFT marketplace platform</a> or other types of NFT platform and release it to a wider audience, the only thing to do is to take care of promoting it and growing the community.</p>
+
+
+
+<p>But as you achieve the majority of milestones on your roadmap, you’ll need to think of the next steps for your NFT platform. And the most obvious one is scaling it not only in terms of internal features and the number of users but also to other chains.</p>
+
+
+
+<p>Trust us, your NFT platform journey doesn’t stop at the moment you deploy the product – it only begins. And here at <a href="https://blaize.tech/"><strong>Blaize</strong></a>, we have witnessed many projects that have scaled fast right after the public launch. Moreover, we have <a href="https://blaize.tech/clients/"><strong>helped them do it</strong></a>, and we’ll be happy to assist your NFT platform in reaching success in the current market.</p>
+
+
+
+<h2 class="wp-block-heading">BUILD A NFT MARKETPLACE WITH BLAIZE</h2>
+
+
+
+<p>If you have an idea to create an NFT platform for your business, it’s time to act. Even though the market might not seem perfect, you can achieve great results with the help of knowledgeable blockchain developers.</p>
+
+
+
+<p>The Blaize team has over 6 years of experience in the blockchain industry, including vast expertise with NFT projects. So far, we have successfully completed 70+ projects.&nbsp;</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-7595c7757f780c3a778db971ae267ada">We can help you grow your business with blockchain and NFT technologies fast and efficiently. <a href="https://blaize.tech/#contacts">Book a call to discuss a custom solution for your company</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Final Thoughts</h2>
+
+
+
+<p>The realm of non-fungible tokens (NFTs) presents a captivating landscape, teeming with potential for enterprising individuals and organizations alike. The prospect of developing your own NFT platform beckons, offering the opportunity to carve a unique niche within this burgeoning market. This comprehensive guide serves as your navigational compass, equipping you with essential considerations and expert insights to ensure a successful voyage.</p>
+
+
+
+<p>While the NFT market remains nascent and, undeniably, imperfect, several indicators suggest its imminent maturation and subsequent flourish. The interest from established institutions, coupled with the continuous refinement of underlying technologies, fosters optimism for its sustained growth.</p>
+
+
+
+<p>To make an NFT marketplace successful when developing it from scratch, the following principles are recommended to be strictly maintained:</p>
+
+
+
+<ul>
+<li>Profound Market Analysis&nbsp;</li>
+
+
+
+<li>Assembling a Competent Crew&nbsp;</li>
+
+
+
+<li>Selecting the Right Blockchain</li>
+
+
+
+<li>Prioritizing Intuitive UI/UX</li>
+
+
+
+<li>Rigorous Testing and Quality Assurance</li>
+
+
+
+<li>Strategic Launch and Creating Community Engagement</li>
+
+
+
+<li>Ongoing Support and Maintenance</li>
+</ul>
+
+
+
+<p>By adhering to these guiding principles and drawing upon the insights provided, you can transform your NFT platform vision into a remarkable reality. Remember, the NFT market is a dynamic entity, demanding continuous adaptation and innovation. Embrace the ever-evolving landscape, and remain steadfast in your commitment to excellence.</p>
+
+
+
+<p>Should you require assistance in navigating the intricacies of NFT platform development, the team at Blaize stands ready to offer its unwavering support.</p>
+
+
+
+<h2 class="wp-block-heading">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading"><strong>What are the main types of NFT platforms?</strong></h3>
+
+
+
+<p>There are many different platforms for all kinds of NFT utilities. The most popular solutions on the market include NFT marketplaces, P2E gaming platforms, collections, and multiple DeFi solutions.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How can I </strong><strong>develop an NFT platform</strong><strong>?</strong></h3>
+
+
+
+<p>To create an NFT platform, you should follow these steps:</p>
+
+
+
+<ul>
+<li>Conduct market research and analysis.</li>
+
+
+
+<li>Create the concept of your platform.</li>
+
+
+
+<li>Gather a reliable and experienced team.</li>
+
+
+
+<li>Take care of the technical development.</li>
+
+
+
+<li>Select and connect all the necessary APIs, including the chosen metadata storage provider.</li>
+
+
+
+<li>Work on the UI/UX design.</li>
+
+
+
+<li>Complete the front-end part of the product development.</li>
+
+
+
+<li>Test the final product before public release.</li>
+
+
+
+<li>Deploy the platform and launch it in the market.</li>
+
+
+
+<li>Provide continuous support and maintenance.</li>
+</ul>
+
+
+
+<p>Learn more in our full article.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How to choose a reliable team for </strong><strong>NFT platform development</strong><strong>?</strong></h3>
+
+
+
+<p>When looking for a reliable team of NFT developers, you should consider their experience first. Specialized blockchain teams will be happy to share their case studies and guide you briefly through the whole development process before you start working with them.</p>
+
+                                <div class="block-author">
+                                    <h4 class="author-title">Post author</h4>
+                                    <div class="content">
+                                        <div class="photo">
+                                            <img width="120" height="120" src="https://blaize.tech/wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" loading="lazy" />                                        </div>
+                                        <div class="details">
+                                            <a href="https://blaize.tech/blog/author/sergey-o/">
+                                                <h4>Sergey Onyshchenko</h4>
+                                            </a>
+                                                                                            <p class="position">Co-founder & CEO of Blaize</p>
+                                                                                                                                        <p class="description">Expert on decentralized finance, 
+governance, policies and 
+blockchain technologies.
+</p>
+                                            
+                                                                                            <div class="socials">
+                                                                                                                                                                                                                                <a href="https://www.linkedin.com/in/sergeyonishenko/" target="_blank"><i class="icon-linkedin"></i></a>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sidebar">
+                                <div class="info">
+                                    <h4>Post info</h4>
+                                    <div class="cats">
+                                        <a href="https://blaize.tech/blog/?_sft_category=analysis" class="sub_link">Analysis</a><a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>                                    </div>
+                                                                                                                <div class="tags">
+                                            <a href="https://blaize.tech/blog/?_sft_post_tag=blockchain-platforms" class="tagname_link">blockchain platforms</a><a href="https://blaize.tech/blog/?_sft_post_tag=defi" class="tagname_link">DeFi</a><a href="https://blaize.tech/blog/?_sft_post_tag=nft-development" class="tagname_link">NFT development</a><a href="https://blaize.tech/blog/?_sft_post_tag=smart-contract" class="tagname_link">smart contract</a>                                        </div>
+                                    
+                                                                                                                <div class="related-services">
+                                                                                                                                            <div class="related-service red-border">
+                                                                                                            <div class="service-icon">
+                                                            <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/comp-img.png" alt="">
+                                                        </div>
+                                                                                                        <h4>NFT Development</h4>
+                                                                                                                                                                        <a href="https://blaize.tech/nft-development-services/">
+                                                                <span>More details</span>
+                                                                <svg version="1.1" x="0px" y="0px" viewBox="0 0 476.213 476.213" xml:space="preserve"><polygon points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5 345.606,368.713 476.213,238.106 "/></svg>
+                                                            </a>
+                                                                                                                                                                                                                </div>
+
+                                                                                    </div>
+                                                                    </div>
+                                <div class="navigation"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <section id="post_contact">
+            <div class="guides__block">
+                <div class="content">
+                    <div class="text">
+                        <h3>Want the consultation about your NFT project?</h3>
+                        <p>Fill out this form and get an individual consultation from our specialist</p>
+                    </div>
+                    <div class="form">
+                        
+<div class="wpcf7 no-js" id="wpcf7-f3898-p9529-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/?noamp=mobile#wpcf7-f3898-p9529-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="3898" />
+<input type="hidden" name="_wpcf7_version" value="5.8.6" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3898-p9529-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="9529" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+<input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="your-name" /></span>
+	</p>
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="your-email" /></span>
+	</p>
+</div>
+<p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span><br />
+<span class="wpcf7-form-control-wrap" data-name="your-subject"><input size="40" class="wpcf7-form-control wpcf7-text hidden" aria-invalid="false" value="Contact us" type="text" name="your-subject" /></span><br />
+<label class="control control--checkbox"><br />
+<span class="wpcf7-form-control-wrap" data-name="your-policy"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-policy" value="1" aria-invalid="false" /></span></span></span><br />
+<span class="checkbox-text">I agree with <a href="https://blaize.tech/terms-and-conditions/">Terms &amp; Conditions</a></span><br />
+</label>
+</p>
+<div class="input_block recaptcha">
+	<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+	</p>
+</div>
+<p><span id="wpcf7-69208785e6759-wrapper" class="wpcf7-form-control-wrap honeypot-339-wrap" style="display:none !important; visibility:hidden !important;"><input type="hidden" name="honeypot-339-time-start" value="1763739525"><input type="hidden" name="honeypot-339-time-check" value="3"><label for="wpcf7-69208785e6759-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-69208785e6759-field"  class="wpcf7-form-control wpcf7-text" type="text" name="honeypot-339" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input class="wpcf7-form-control wpcf7-submit has-spinner btn btn-black" type="submit" value="Send" />
+</p><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+            <div id="relatedposts">
+                <div class="guides__block">
+                    <div class="head">
+                        <h3>Related posts</h3>
+                    </div>
+                    <div class="posts-list-wrap">
+                        <div class="posts-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=opinion" class="sub_link">Opinion</a><a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/top-5-blockchain-development-companies-for-2025/" class="title">Top 5 Blockchain Development Companies for 2025</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=analysis" class="sub_link">Analysis</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/blockchain-platform-comparison-a-comprehensive-analysis/" class="title">Blockchain Platform Comparison: A Comprehensive Analysis</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/memecoin-where-entertainment-meets-blockchain-and-digital-art/" class="title">Memecoin: Where Entertainment Meets Blockchain and Digital Art</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/how-defi-prediction-markets-work-exploring-blockchain-based-forecasting-platforms/" class="title">Introduction to DeFi Prediction Markets</a>
+	<div class="author">Pavlo Horbonos    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/decentralized-social-media/" class="title">What Stands for Mysterious DeSo: The Power of Decentralized Social Media</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=case-study" class="sub_link">Case study</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/build-crypto-telegram-bot/" class="title">How to Build a Telegram Bot</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="https://blaize.tech/blog/?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="https://blaize.tech/blog/defi-lending-protocol-development/" class="title">Lending Protocol instead of Money Maker Protocol</a>
+	<div class="author">Sergey Onyshchenko    </div>
+</div>                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            </main><!-- #main -->
+
+<script data-cfasync="false" src="https://blaize.tech/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/"
+  },
+  "headline": "A Comprehensive Guide to Developing Your Own NFT Platform",
+  "description": "NFT platform development has become a hot topic in the world of cryptocurrency and blockchain, ... Read More",
+  "image": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergey Onyshchenko",
+    "url": "https://blaize.tech/blog/author/sergey-o/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blaize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png"
+    }
+  },
+  "datePublished": "22.11.2022"
+}
+</script>
+</main>
+
+<!-- <link type="text/css" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/styles/components/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<footer id="footer" class="footer">
+    <div class="guides__block">
+        <div class="footer__row footer__logo-wrap">
+            <a href="https://blaize.tech/">
+                <img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/footer_logo.svg" alt="Blaize" width="120" height="33" loading="lazy">
+            </a>
+            <div id="text-10" class="widget widget_text">    <p><strong>Blaize</strong> is a Web3 software development company deeply committed to blockchain technology.</p>
+<p>Through our strategic partnership with <a href="https://ideasoft.io/" target="_blank" rel="noopener"><strong>IdeaSoft</strong></a>, we combine expertise to create impactful solutions for our clients.</p>
+    </div>        </div>
+        <div class="footer__row">
+            <div class="footer__col">
+                <div id="text-3" class="widget widget_text"><h3>Contact Us</h3>    <ul>
+<li>E-mail: <a href="https://blaize.tech/cdn-cgi/l/email-protection#f49d9a929bb49698959d8e91da8091979c"><span class="__cf_email__" data-cfemail="50393e363f10323c31392a357e24353338">[email&#160;protected]</span></a></li>
+</ul>
+    </div><div id="text-5" class="widget widget_text"><h3>Socials</h3>    <ul class="socials-responsive">
+<li><a href="https://www.facebook.com/blaize.tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/facebook_new.svg" alt="facebook" width="24" height="24" /></a></li>
+<li><a href="https://twitter.com/blaize_tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/twitter_new.svg" alt="twitter" width="24" height="24" /></a></li>
+<li><a href="https://www.linkedin.com/company/blaizetech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/linkedin_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+<li><a href="https://medium.com/blaize-tech" target="_blank" rel="noopener"><img src="https://blaize.tech/wp-content/themes/blaize-tech//assets/img/medium_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-4" class="widget widget_text"><h3>About Us</h3>    <ul>
+<li><a href="https://blaize.tech/clients/">Cases</a></li>
+<li><a href="https://blaize.tech/blog/">Blog</a></li>
+<li><a href="https://blaize.tech/whitepaper/">Whitepaper</a></li>
+<li><a href="https://blaize.tech/careers/">Careers</a></li>
+<li><a href="https://blaize.tech/vacancies/">Vacancies</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-6" class="widget widget_text"><h3>Services</h3>    <ul>
+<li><a href="https://blaize.tech/web3-development-services/">Web3 Development Services</a></li>
+<li><a href="https://blaize.tech/blockchain-ecosystems/">Blockchain Development Services</a></li>
+<li><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+<li><a href="https://blaize.tech/blockchain-integration/">Blockchain Integration</a></li>
+<li><a href="https://blaize.tech/web3-fundraising-preparation/">Fundraising</a></li>
+<li><a href="https://blaize.tech/cross-chain-bridges-development/">Blockchain Bridge Development</a></li>
+<li><a href="https://blaize.tech/cross-chain-development-services/">Cross-chain Solutions Development</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-9" class="widget widget_text"><h3>Solutions</h3>    <ul>
+<li><a href="https://blaize.tech/decentralized-application/">dApp Development</a></li>
+<li><a href="https://blaize.tech/decentralized-finance-development/">DeFi Development Services</a></li>
+<li><a href="https://blaize.tech/decentralized-exchange-development/">DeX Development Services</a></li>
+<li><a href="https://blaize.tech/smart-contracts/">Smart Contract Development</a></li>
+<li><a href="https://blaize.tech/asset-management-platform-development/">Asset Management Platform Development</a></li>
+<li><a href="https://blaize.tech/asset-tokenization/">Asset Tokenization</a></li>
+<li><a href="https://blaize.tech/token-development-services/">Token Development Services</a></li>
+<li><a href="https://blaize.tech/ton-development-services/">TON Blockchain Development</a></li>
+<li><a href="https://blaize.tech/blockchain-game-development/">Blockchain Game Development</a></li>
+<li><a href="https://blaize.tech/nft-marketplace-development-services/">NFT Marketplace Development</a></li>
+<li><a href="https://blaize.tech/nft-development-services/">NFT Development Services</a></li>
+</ul>
+    </div>            </div>
+        </div>
+        <div class="footer__row part">
+            <div class="partners">
+              <!--<div class="clath"><script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="1096403"></div></div>
+                -->
+              <!-- Clutch -->
+              <div id="clutch">
+                <div class="dark_theme">
+                  <div class="widgets_wrapper">
+                    <div class="content">
+                      <div class="small_widget_logo_wrapper">
+                        <span class="small_widget_logo_text">Reviewed on</span>
+                        <a class="logotype" target="_blank" data-ga-action="logo_click" href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=logo&amp;utm_term=blaize.dv" aria-label="Reviewed on Clutch">
+                        </a>
+                      </div>
+                      <div class="small_widget_text">
+                        <span class="rating">5.0</span>
+                        <div class="reviews-totals-stars">
+                          <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            <div class="fivestar-static-item">
+                              <div class="form-item form-type-item">
+                                <div class="fivestar-widget-static fivestar-widget-static-vote clearfix">
+                                  <div class="fivestar"><div class="star star-1 star-odd"><span class="on">5.000000</span></div><div class="star star-2 star-even"><span class="on"></span></div><div class="star star-3 star-odd"><span class="on"></span></div><div class="star star-4 star-even"><span class="on"></span></div><div class="star star-5 star-odd"><span class="on"></span></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <span class="reviews-count">
+                           <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=num_reviews&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            5
+                            reviews
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Clutch -->
+              <div class="top_dev">
+                    <a href="https://www.topdevelopers.co/directory/blockchain-developers" target="_blank"> <img src="https://blaize.tech/wp-content/uploads/2023/04/topDev.png" alt="top blockchain developers" title="Top Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://topappdevelopmentcompanies.com/directory/app-developers/blockchain" target="_blank"> <img src="https://blaize.tech/wp-content/uploads/2020/08/topdev_logo-1.png" alt="top blockchain developers" title="Top Blockchain Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://techreviewer.co/companies/blaize-tech" target="_blank"><img src="https://blaize.tech/wp-content/uploads/2023/03/Blockchain-1.svg" alt="techreviewer" loading="lazy"></a>
+                </div>
+                <div class="GoodFirms">
+                    <a target="_blank" href="https://www.goodfirms.co/company/blaize"><img src="https://blaize.tech/wp-content/uploads/2020/08/googfirm.svg" alt="GoodFirms Badge" width="188" height="42" loading="lazy"></a>
+                </div>
+                <div class="defisec">
+                    <a href="https://defisec.info/tproduct/1-451395809121-blaize-security" target="_blank"><img src="https://blaize.tech/wp-content/uploads/2023/04/DSAmember.png" alt="defisec" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <p class="copyright">Copyright © Blaize - blockchain development company 2018-2025</p>
+            <ul class="privacy">
+                <li><a href="https://blaize.tech/privacy-policy">Privacy Policy</a></li>
+                <li><a href="https://blaize.tech/terms-and-conditions/">Terms & Conditions</a></li>
+            </ul>
+            <!-- <p class="marketing">B2B inbound marketing with <a href="https://growpad.pro/" target="_blank"><img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/foot_marketing.svg" alt=""></a></p> -->
+        </div>
+    </div>
+    <!--<script>window.lintrk('track', { conversion_id: 11292828 });</script>-->
+</footer><!-- #colophon -->
+
+<script data-cfasync="false" src="https://blaize.tech/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var wpcf7_recaptcha = {"sitekey":"6LcrqiAqAAAAAI1UXBtZ9jRUqTeAWWLpEeKjCIM8","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+
+
+    <progress value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-elements-00850f0fc854a9a880165af6f96996bb a{color:var(--wp--preset--color--white);}.wp-elements-3777d8b377acae5ca367180485d95aa2 a{color:var(--wp--preset--color--primary-red);}.wp-elements-d2c4d5c8946cc94b8cd1acd10a5e3828 a{color:var(--wp--preset--color--white);}.wp-elements-02470407ea245289a534e5c690ad7bb1 a{color:var(--wp--preset--color--dark-gray);}.wp-elements-05374acffe9b514b1f77e393371b7240 a{color:var(--wp--preset--color--primary-red);}.wp-elements-40e67b06616414d838b5d90189be1cdc a{color:var(--wp--preset--color--primary-red);}.wp-elements-9a056ac36b5bf698c220a994cfef7c8e a{color:var(--wp--preset--color--primary-red);}.wp-elements-7595c7757f780c3a778db971ae267ada a{color:var(--wp--preset--color--white);}
+</style>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blaize.tech\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://blaize.tech/wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+  <script>
+    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+  </script>
+  
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Blaize",
+        "alternateName": "Blaize Tech",
+        "url": "https://blaize.tech/",
+        "logo": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/blaize.tech/",
+            "https://twitter.com/blaize_tech",
+            "https://ua.linkedin.com/company/blaizetech"
+        ],                "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "11"
+        }
+            }
+</script>
+
+
+
+<div class="popup">
+  <div class="popup__wrapper"></div>
+  <div class="popup__window">
+    <div class="popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+    <div class="popup__img">
+      <svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none"><path fill="#FF5C5C" d="M21 20.711h100v100H21z"/><path fill="#fff" d="M.29 70.71 71 0l70.711 70.71-70.71 70.711z"/><path fill="#FF5C5C" d="M66.75 79.75 58 71l-2.916 2.917 11.667 11.666 25-25-2.917-2.916L66.751 79.75Z"/></svg>
+    </div>
+    <p class="popup__title">Thank you!</p>
+          <p class="popup__text">We received your request and will be in touch shortly.</p>
+              <a href="#" class="btn btn-black popup__btn" onclick="return false;">okay</a>
+      </div>
+</div>
+      <script>
+      const setCookie = () => {
+        let a = new Date();
+        a = new Date(a.getTime() + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = 'blaize-cookies-info=true; path=/; expires=' + a.toGMTString() + ';';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const t = document.getElementsByClassName('js-cookies-info')[0];
+        const b = document.getElementsByClassName('js-cookies-info__button')[0];
+        const c = document.getElementsByClassName('js-cookies-close')[0];
+        b.addEventListener('click', () => {
+          setCookie()
+          t.classList.remove('active');
+        });
+        c.addEventListener('click', (e) => {
+          e.preventDefault();
+          t.classList.remove('active');
+        })
+      });
+    </script>
+    <div class="cookies-info js-cookies-info active">
+      <div class="guides__block">
+        <div class="cookies-info__text">
+          <div><div>This site uses cookies to offer you a better browsing experience.<br />
+Find out more on <a href="https://blaize.tech/privacy-policy/">how we use cookies</a></div>
+</div>
+          <span class="btn btn-gray js-cookies-close">Decline</span>
+          <span class="btn btn-black js-cookies-info__button">Accept all cookies</span>
+        </div>
+      </div>
+    </div>
+  
+
+<a class="popup-w" href="https://blaize.tech/whitepaper/">
+  <div class="popup-w__title">transform your asset management now!</div>
+  <div class="popup-w__text">Download the whitepaper now and start your journey towards a more efficient, inclusive, and secure future in the Web3 world.</div>
+  <button class="popup-w__btn">download it now!</button>
+  <div class="popup-w__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+  <div class="popup-w__square square1"></div>
+  <div class="popup-w__square square2"></div>
+  <div class="popup-w__square square3"></div>
+  <div class="popup-w__square square4"></div>
+</a>
+
+<style>
+.popup-w {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 115px 25px 60px 25px;
+  background: #ededed;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .24);
+  z-index: 9;
+  overflow: hidden;
+  transition: .3s;
+  transform: rotateY(90deg);
+}
+
+.active + .popup-w {
+  bottom: 106px;
+}
+
+.popup-w.show {
+  transform: rotateY(0deg);
+}
+
+.popup-w.hide {
+  transform: rotateY(90deg);
+}
+
+.popup-w__square {
+  position: absolute;
+  background: #fc5959;
+}
+
+.popup-w__square.square1 {
+  top: 0;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+.popup-w__square.square2 {
+  top: -50px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-35deg);
+}
+
+.popup-w__square.square3 {
+  bottom: -20px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(25deg);
+}
+
+.popup-w__square.square4 {
+  bottom: -5px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-40deg);
+}
+
+.popup-w__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-w__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.popup-w__text {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.popup-w__btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #fc5959;
+  border: 1px solid transparent;
+  margin: auto auto 0;
+  padding: 0;
+  transition: .3s;
+}
+
+.popup-w__btn:hover {
+  color: #fc5959;
+  background: transparent;
+  border: 1px solid #fc5959;
+}
+
+@media screen and (max-width: 1366px) {
+  .popup-w {
+    width: 350px;
+    height: 450px;
+    padding: 90px 25px 60px 25px;
+  }
+
+  .popup-w__title {
+    font-size: 22px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+  }
+
+  .popup-w__btn {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .popup-w__square.square1 {
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .active + .popup-w {
+    bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup-w {
+    width: 300px;
+    height: 400px;
+    padding: 75px 25px 50px 25px;
+  }
+
+  .active + .popup-w {
+    bottom: 225px;
+  }
+
+  .popup-w__square.square1 {
+    top: -50px;
+  }
+
+  .popup-w__close {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-w__title {
+    font-size: 18px;
+  }
+
+  .popup-w__text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-w__btn {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+  }
+
+  .popup-w__title {
+    font-size: 24px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .popup-w__btn {
+    height: 40px;
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+</style>
+
+<script>
+$(function() {
+  $('.popup-w').on('click', function(e) {
+    $(this).addClass('hide');
+    $('body').removeClass('no-scroll');
+    document.cookie = "popupWhitepaper=true; path=/; max-age=2592000";
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=0";
+
+    if ( $(e.target).parents('.popup-w__close')[0] ) {
+      e.preventDefault();
+    }
+  });
+});
+
+let elemPopup;
+let elemPopupPosition;
+let elemPopupHeight;
+let elemPopupPositionEnd;
+
+if ( document.querySelector('#development') ) {
+  elemPopup = document.querySelector('#development');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else if ( document.querySelector('.decentralized') ) {
+  elemPopup = document.querySelector('.decentralized');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else {
+  elemPopup = document.querySelector('body');
+  elemPopupPosition = elemPopup.offsetHeight * 0.7;
+  elemPopupHeight = 0;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+}
+
+document.addEventListener('scroll', function() {
+  let currentPosition = document.querySelector('html').scrollTop;
+
+  if ( currentPosition >= elemPopupPositionEnd || document.cookie.indexOf('popupWhitepaperOpened') !== -1 ) {
+    $('.popup-w').addClass('show');
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=2592000";
+
+    if ( window.matchMedia('(max-width: 767px)').matches && !$('.popup-w').hasClass('hide') ) {
+      $('body').addClass('no-scroll');
+    }
+  }
+});
+</script>
+
+
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)
+
+    jQuery(window).scroll(function () {
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && archivePage === false
+            && pageBlog === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+    });
+
+    jQuery(document).ready(function(){
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && pageBlog === false
+            && archivePage === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+
+        // Add red dot for parent li (active children) - on load page
+        $(".post-type-archive-clients .searchandfilter ul li.sf-field-taxonomy-clientcat ul li > ul > li, body.post-type-archive-vacancies .searchandfilter ul li.sf-field-taxonomy-vacancycat ul li > ul > li").each(function() {
+            const activeLabel = $(this).hasClass('sf-option-active');
+            if (activeLabel === true) {
+                jQuery(this).closest('li.sf-level-0').addClass('active-child');
+            }
+        });
+
+        // For drop-down cat-list (clients services)
+        jQuery('.post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>label, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>label').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery(this).closest('li').children('ul').stop().slideToggle(300);
+            e.preventDefault();
+            return false;
+        });
+
+        // Add red dot for parent li (active children)
+        $( ".post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>ul>li, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>ul>li" ).on( "change", function() {
+            const findActive = jQuery(this).closest('ul').find('input:checked').length;
+            if (findActive >= 1) {
+                jQuery(this).parent().closest('li').addClass('active-child');
+            } else {
+                jQuery(this).parent().closest('li').removeClass('active-child');
+            }
+        });
+    });
+
+    $('.wpcf7-form').on('wpcf7mailsent', function() {
+        $('.popup').fadeIn();
+        $('body').addClass('noscroll');
+    });
+
+    $('.popup__close, .popup__btn, .popup__wrapper').on('click', function() {
+        $('.popup').fadeOut();
+        $('body').removeClass('noscroll');
+    });
+
+    $('.wpcf7-form').on('submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', true);
+    });
+
+    $('.wpcf7-form').on('wpcf7submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', false);
+    });
+
+    if ( $('.navigation').length ) {
+        var navHTML = '' +
+            '<p class="navigation__title">Table of Content</p>' +
+            '<ol class="navigation__list"></ol>';
+
+        $( navHTML ).appendTo( $('.navigation') );
+
+        var navNumber = 0;
+        var h2Number = 1;
+
+        $('.text h2, .text h3').each(function() {
+            $(this).attr({
+                id: navNumber
+            });
+            if ($(this).is('h2')) {
+                $('.navigation > .navigation__list').append(
+                    '<li class="navigation__item navigation__item_' + h2Number + '">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+                h2Number++;
+            } else {
+                if ( $('.navigation__item_' + (h2Number - 1)).children('ol').length === 0 ) {
+                    $('.navigation__item_' + (h2Number - 1)).append(
+                        '<ol class="navigation__list"></ol>'
+                    );
+                }
+                $('.navigation__item_' + (h2Number - 1)).children('ol').append(
+                    '<li class="navigation__item">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+            }
+            navNumber++;
+        });
+
+        function resize() {
+            if ( $(window).width() >= 1201 ) {
+                $('.navigation').insertAfter( $('.info') );
+            } else {
+                $('.navigation').prependTo( $('.post-content .text') );
+            }
+        }
+
+        resize();
+
+        $(window).on('resize', function() {
+            resize();
+        });
+    }
+
+    $('.navigation').on('click', 'a', function (e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var top = $(link).offset().top - $('#header').height();
+        $('html').animate({scrollTop: top}, 1000);
+    });
+
+    function scriptsDefer(src) {
+      let script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.body.append(script);
+    }
+
+    document.addEventListener('scroll', load_script);
+    document.addEventListener('mousedown', load_script);
+    document.addEventListener('mousemove', load_script);
+    document.addEventListener('touchstart', load_script);
+    document.addEventListener('keydown', load_script);
+
+    function load_script() {
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/lftracker.js');
+      scriptsDefer('https://tools.luckyorange.com/core/lo.js?site-id=f50de86c');
+      if (window.matchMedia('(max-width: 799px)').matches) {
+        scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/libs.js');
+        scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/core.min.js');
+      }
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/swiper.js');
+      scriptsDefer('https://www.recaptcha.net/recaptcha/api.js?render=' + wpcf7_recaptcha.sitekey + '&#038;ver=3.0');
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/recaptcha.js');
+
+      document.removeEventListener('scroll', load_script);
+      document.removeEventListener('mousedown', load_script);
+      document.removeEventListener('mousemove', load_script);
+      document.removeEventListener('touchstart', load_script);
+      document.removeEventListener('keydown', load_script);
+    }
+
+    if (window.matchMedia('(min-width: 800px)').matches) {
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/libs.js');
+      scriptsDefer('https://blaize.tech/wp-content/themes/blaize-tech/assets/js/core.min.js');
+    }
+</script>
+
+<script>
+    function countDigits(n) {
+        let i;
+        for(i = 0; n > 1; i++) {
+            n /= 10;
+        }
+        return i;
+    }
+
+    jQuery('.wpcf7-form').submit(function(){
+        const form = jQuery(this);
+        const countryCode = form.find('.custom-select .phoneInput .selected-dial-code').text();
+        const contactName = form.find('.custom-select .active-feed-field .label-title').text();
+        form.find('.userCountryCode').val(countryCode);
+        form.find('.userContactName').val(contactName);
+
+        const userContactVal = form.find('input.userContact').val();
+
+        if (userContactVal === '') {
+            form.find('.select-box .trigger').addClass('not-valid');
+            return false;
+        }
+    });
+
+    var timer;
+
+    function trackLeave(ev) {
+        if (ev.pageY > 0) {
+            return;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        if ($.exitIntent.settings.sensitivity <= 0) {
+            $.event.trigger('exitintent');
+            return;
+        }
+
+        timer = setTimeout(
+            function() {
+                timer = null;
+                $.event.trigger('exitintent');
+            }, $.exitIntent.settings.sensitivity);
+    }
+
+    function trackEnter() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+    }
+
+    $.exitIntent = function(enable, options) {
+        $.exitIntent.settings = $.extend($.exitIntent.settings, options);
+
+        if (enable === 'enable') {
+            $(window).mouseleave(trackLeave);
+            $(window).mouseenter(trackEnter);
+        } else if (enable === 'disable') {
+            trackEnter(); // Turn off any outstanding timer
+            $(window).unbind('mouseleave', trackLeave);
+            $(window).unbind('mouseenter', trackEnter);
+        } else {
+            throw "Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";
+        }
+    }
+
+    $.exitIntent.settings = {
+        'sensitivity': 300
+    };
+
+    jQuery('.exitModal-close').click(function () {
+        jQuery('#exitPopup').removeClass('active');
+        jQuery('#exitPopup').addClass('closed-modal');
+    });
+
+    jQuery(function() {
+        jQuery.exitIntent('enable');
+        jQuery(document).bind('exitintent', function() {
+            if (jQuery("#exitPopup").hasClass("closed-modal")) {
+                //
+            } else {
+                jQuery("#exitPopup").addClass("active");
+                jQuery("#exitPopup").addClass("opened-modal");
+            }
+        });
+    });
+
+    (function () {
+        const t = jQuery(".exitModal-popup");
+        t.find(".exitModal-close").on("click", function () {
+            jQuery( 'body' ).toggleClass( 'active-modal' );
+            localStorage.setItem("Blaize_exit_popup", "closed"), t.addClass("closed-modal");
+        }),
+            "closed" === localStorage.getItem("Blaize_exit_popup") ? (t.addClass("closed-modal")) : t.addClass("show-modal");
+    })();
+
+    let box = document.querySelector("#preloader");
+
+    function fadeOut() {
+        box.classList.add("visuallyhidden");
+        box.addEventListener(
+            "transitionend",
+            function (e) {
+                box.classList.add("hidden");
+            },
+            {
+                capture: false,
+                once: true,
+                passive: false
+            }
+        );
+    }
+
+    (function($) {
+        $(function() {
+            $(".userContact").intlTelInput({
+                autoPlaceholder: "off",
+                geoIpLookup: function(callback) {
+                  $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                  });
+                },
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                separateDialCode: true,
+                // utilsScript: "assets/nb_intl/js/utils.js"
+            });
+        });
+    })(jQuery);
+</script>
+
+<link rel="preload" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/nb_intl/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0a02c653bc51442fac3378bc1fc85895","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from blaize.tech/blog/how-to-develop-your-own-nft-platform-in-2023/?noamp=mobile by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:41:37 GMT -->
+</html>

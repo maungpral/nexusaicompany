@@ -1,0 +1,1874 @@
+<!doctype html>
+<html lang="en-US">
+
+
+<!-- Mirrored from blaize.tech/blog/build-a-blockchain-game-infrastructure/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:39:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+      <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVDP48D');
+    </script>
+    <script>(function (w, d, u) { w.readyQ = []; w.bindReadyQ = []; function p(x, y) { if (x == "ready") { w.bindReadyQ.push(y); } else { w.readyQ.push(x); } } var a = { ready: p, bind: p }; w.$ = w.jQuery = function (f) { if (f === d || f === u) { return a } else { p(f) } } })(window, document)</script>
+
+  <meta name="google-site-verification" content="ZrAKmMj6IFKukIukR3WwBfWnGUtWgF5nVGfGXBFKBU0" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link rel="preload" href="../../wp-content/themes/blaize-tech/mont-fonts.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css"
+    href="../../wp-content/themes/blaize-tech/assets/new-stylesc04c.css?v=1735038221">
+  
+  
+  
+  
+  
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Develop a Blockchain Game: An Introduction</title>
+	<meta name="description" content="Explore blockchain gaming &amp; build your mainstream project with us. Click to discover how to revolutionize gaming infrastructure!" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to Develop a Blockchain Game: An Introduction" />
+	<meta property="og:description" content="Explore blockchain gaming &amp; build your mainstream project with us. Click to discover how to revolutionize gaming infrastructure!" />
+	<meta property="og:url" content="index.html" />
+	<meta property="og:site_name" content="Blaize" />
+	<meta property="article:published_time" content="2024-03-21T16:19:02+00:00" />
+	<meta property="article:modified_time" content="2024-10-29T11:09:47+00:00" />
+	<meta property="og:image" content="../../wp-content/uploads/2024/03/Blockchain-Technology-in-Healthcare.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Sergey Onyshchenko" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@S_Onishchenko" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Sergey Onyshchenko" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="22 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/","url":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/","name":"How to Develop a Blockchain Game: An Introduction","isPartOf":{"@id":"https://blaize.tech/#website"},"primaryImageOfPage":{"@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#primaryimage"},"image":{"@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#primaryimage"},"thumbnailUrl":"https://blaize.tech/wp-content/uploads/2024/03/Blockchain-Technology-in-Healthcare.png","datePublished":"2024-03-21T16:19:02+00:00","dateModified":"2024-10-29T11:09:47+00:00","author":{"@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670"},"description":"Explore blockchain gaming & build your mainstream project with us. Click to discover how to revolutionize gaming infrastructure!","breadcrumb":{"@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blaize.tech/blog/build-a-blockchain-game-infrastructure/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#primaryimage","url":"https://blaize.tech/wp-content/uploads/2024/03/Blockchain-Technology-in-Healthcare.png","contentUrl":"https://blaize.tech/wp-content/uploads/2024/03/Blockchain-Technology-in-Healthcare.png","width":1200,"height":675},{"@type":"BreadcrumbList","@id":"https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blaize.tech/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blaize.tech/blog/"},{"@type":"ListItem","position":3,"name":"Introduction to Blockchain Gaming and Infrastructure"}]},{"@type":"WebSite","@id":"https://blaize.tech/#website","url":"https://blaize.tech/","name":"Blaize","description":"Know the rules, create new ones","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blaize.tech/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blaize.tech/#/schema/person/e98fbc01607fcb2fafa9bd7068749670","name":"Sergey Onyshchenko","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blaize.tech/#/schema/person/image/","url":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","contentUrl":"https://blaize.tech/wp-content/uploads/2020/04/sergey.png","caption":"Sergey Onyshchenko"},"sameAs":["https://www.linkedin.com/in/sergeyonishenko/","https://twitter.com/S_Onishchenko"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Feed" href="../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Blaize &raquo; Comments Feed" href="../../comments/feed/index.html" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blaize.tech\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='mpp_gutenberg-css' href='../../wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='../../wp-content/plugins/contact-form-7/includes/css/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='new-core-css' href='../../wp-content/themes/blaize-tech/assets/css/build-core.css' type='text/css' media='' />
+<link rel='stylesheet' id='other-css' href='../../wp-content/themes/blaize-tech/assets/css/other.css' type='text/css' media='' />
+<script type="text/javascript" src="../../wp-content/themes/blaize-tech/js/jquery-3.4.1.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/js/jquery-migrate-3.1.0.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/intlTelInput.min.js" id="nb-intlTelInput-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/nb_intl/js/custom_script.js" id="nb-intlTelInput-custom-script-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.liMarquee.js" id="liMarquee-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/jquery.inputmask.bundle.js" id="inputmask-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/fm.revealator.jquery.js" id="revealator-js-js"></script>
+<script type="text/javascript" defer src="../../wp-content/themes/blaize-tech/assets/BlaizeNew/js/main.js" id="main-js-js"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/posts/58689.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.html?rsd" />
+
+<link rel='shortlink' href='../../index64ea.html?p=58689' />
+<link rel="amphtml" href="amp/index.html"><link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2020/01/Group-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/01/Group-1.png" />
+<meta name="msapplication-TileImage" content="https://blaize.tech/wp-content/uploads/2020/01/Group-1.png" />
+      <link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min6619.css?ver=5.2.5'
+      type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-theme-css'
+      href='../../wp-includes/css/dist/block-library/theme.min6619.css?ver=5.2.5' type='text/css' media='all' />
+    
+  <style>
+    .blog_ajax .searchandfilter ul li.sf-field-tag ul li label {
+      padding: 5px 7px 3px 7px !important;
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/jquery.mask.min.js"></script>
+  <script async src="../../wp-content/themes/blaize-tech/assets/js/utils.js" defer></script>
+
+  </head>
+
+<body class="post-template-default single single-post postid-58689 single-format-standard wp-embed-responsive singular image-filters-enabled ">
+      <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVDP48D" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  
+  
+  <header id="header"
+    class="sticky no-scroll">
+
+
+    <div
+      class="guides__block logo-header  fs-menu-header">
+      <div class="desktop-logo">
+                  <a href="../../index.html" class="logo logo-small">
+            <img src="../../wp-content/themes/blaize-tech/assets/img/blaize_logo.svg" alt="Blaize" loading="lazy">
+          </a>
+              </div>
+
+      <div class="mobile-logo">
+        <a href="../../index.html"
+          class="logo logo-blog" aria-label="Logo">
+          <svg x="0px" y="0px" viewBox="0 0 202.4 162.6" xml:space="preserve">
+            <g transform="matrix(1.3333333,0,0,-1.3333333,0,1122.52)">
+              <g transform="translate(332.3824,384.1128)">
+                <path d="M-241.5,360l-10.4-7.6l-61.2,0v39.6h61.2l10.4-7.5l4-12.3L-241.5,360z M-313.2,440.9l56.5,0l8.4-6.1
+                        l3.2-9.9l-3.2-9.9l-8.4-6.1h-56.5V440.9z M-227.5,394.8l-10,7.3l3.6,2.6l6.6,20.3l-6.6,20.3l-17.3,12.5l-81.2,0V335.9h85.8
+                        l19.1,13.9l7.3,22.5L-227.5,394.8z" />
+              </g>
+              <g transform="translate(379.6422,359.9819)">
+                <path d="M-241.5,360l-13.7,13.7l13.7,13.7l13.7-13.7L-241.5,360z" />
+              </g>
+            </g>
+          </svg>
+                      <div class="blog-title">log</div>        </a>
+      </div>
+
+      
+
+      <div class="btn-menu">
+        <a href="../../index.html#contacts" class="contacts-link">Contact us</a>
+        <div class="b-menu">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="fs-menu">
+
+
+      <div class="guides__block">
+        <ul class="guides__block-list"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>        <div class="modeling_element"></div>
+        <div class="blockchain_element"></div>
+        <div class="mobile_element"></div>
+        <div class="front_end_element"></div>
+      </div>
+      <div class="content-menu">
+        <nav class="cd-dropdown dropdown-is-active">
+          <ul class="cd-dropdown-content"><li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2340"><a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2341" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2341"><a href="#back">Back</a></li>
+	<li id="menu-item-75842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75842"><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+	<li id="menu-item-75843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75843"><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+	<li id="menu-item-75844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75844"><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+	<li id="menu-item-75845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75845"><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+	<li id="menu-item-75846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75846"><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+	<li id="menu-item-75847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75847"><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+	<li id="menu-item-75848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75848"><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-2332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2332"><a href="#" aria-haspopup="true" aria-expanded="false">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-2333" class="go-back menu-item menu-item-type-custom menu-item-object-custom menu-item-2333"><a href="#back">Back</a></li>
+	<li id="menu-item-75849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75849"><a href="../../decentralized-application/index.html">dApp Development</a></li>
+	<li id="menu-item-75850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75850"><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+	<li id="menu-item-75851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75851"><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+	<li id="menu-item-75852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75852"><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+	<li id="menu-item-75853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75853"><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+	<li id="menu-item-75854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75854"><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+	<li id="menu-item-75855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75855"><a href="../../token-development-services/index.html">Token Development Services</a></li>
+	<li id="menu-item-75856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75856"><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+	<li id="menu-item-75857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75857"><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+	<li id="menu-item-75858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75858"><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+	<li id="menu-item-75859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75859"><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+</li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="../../clients/index.html">Cases</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2347"><a href="../index.html">Blog</a></li>
+<li id="menu-item-67576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67576"><a href="../../whitepaper/index.html">Whitepaper</a></li>
+</ul>        </nav>
+      </div>
+
+      <div class="foot-menu">
+        <div class="content">
+          <div class="mainBlock_social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/blaize.tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/facebook-main.svg" alt="fb" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/blaizetech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/linkedin-main.svg" alt="LinkedIn" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/blaize_tech" target="_blank">
+                  <img src="../../wp-content/themes/blaize-tech/assets/img/twitter-main.svg" alt="Twitter" width="21" height="21" loading="lazy">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="location">
+            <a href="../../cdn-cgi/l/email-protection.html#3a1a53545c557a58565b53405f144e5f5952"><span class="__cf_email__" data-cfemail="1c75727a735c7e707d7566793268797f74">[email&#160;protected]</span></a>
+            <a href="tel:+351966034344">+351 966 034 344</a>
+          </div>
+          <div class="location">
+            <p>Kyiv, Ukraine </p>
+            <p>26 Metalistiv St</p>
+          </div>
+          <div class="location">
+            <p>Dnipro, Ukraine 20 </p>
+            <p>Sichovykh Striltsiv St</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    
+            <main class="blog single-post">
+    <section class="pageHeader blogPage">
+        <div class="wrapper">
+            <div class="guides__block">
+                <div class="single-post-item">
+
+                    <div class="content">
+                        <div class="post-content">
+                            <div class="breadcrumb">
+                                <div>
+                                    <!-- Breadcrumb NavXT 7.2.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blaize." href="../../index.html" class="home" ><span property="name">Blaize</span></a><meta property="position" content="1"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="../index.html" class="post-root post post-post" ><span property="name">Blog</span></a><meta property="position" content="2"></span><span class="sep"> / </span><span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">Introduction to Blockchain Gaming and Infrastructure</span><meta property="url" content="index.html"><meta property="position" content="3"></span>                                </div>
+                            </div>
+
+                                                            
+                                    <div class="head blackimg">
+                                        <h1 class="title">
+                                            Introduction to Blockchain Gaming and Infrastructure                                        </h1>
+                                        <div class="foot">
+                                            <div class="author">
+                                                <div class="photo">
+                                                    <img width="120" height="120" src="../../wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" />                                                </div>
+                                                <div class="details">
+                                                    <a href="../author/sergey-o/index.html">
+                                                        <h4>
+                                                            Sergey.O                                                        </h4>
+                                                    </a>
+                                                    <div class="date">21.03.2024</div>
+                                                </div>
+                                            </div>
+                                            <div class="share"><link rel='stylesheet' id='scriptlesssocialsharing-css' href='../../wp-content/plugins/scriptless-social-sharing/includes/css/scriptlesssocialsharing-style.css' type='text/css' media='all' />
+<style id='scriptlesssocialsharing-inline-css' type='text/css'>
+.scriptlesssocialsharing__buttons a.button { padding: 12px; flex: 1; }
+</style>
+<div class="scriptlesssocialsharing"><h3 class="scriptlesssocialsharing__heading">Share:</h3><div class="scriptlesssocialsharing__buttons"><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblaize.tech%2Fblog%2Fbuild-a-blockchain-game-infrastructure%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on Facebook</span></a><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Introduction%20to%20Blockchain%20Gaming%20and%20Infrastructure&amp;url=https%3A%2F%2Fblaize.tech%2Fblog%2Fbuild-a-blockchain-game-infrastructure%2F" rel="noopener noreferrer nofollow" ><span class="screen-reader-text">Share on X (Twitter)</span></a></div></div></div>
+                                        </div>
+                                    </div>
+                                                            
+                            <div class="text">
+                                                                
+<p>Traditional gaming experiences often leave players feeling like renters in a virtual world. In-game items and characters, despite countless hours invested, are ultimately controlled by the developers. This lack of ownership translates to limited player agency and the inability to monetize their digital efforts. Blockchain gaming infrastructure shatters this paradigm by introducing a revolutionary concept: <strong>true digital asset ownership</strong>.</p>
+
+
+
+<figure class="wp-block-image size-full"><img fetchpriority="high" decoding="async" width="1600" height="900" src="../../wp-content/uploads/2024/03/pic_2-_4_.webp" alt="Blockchain gaming implements true digital assets' ownership for players." class="wp-image-58690" srcset="https://blaize.tech/wp-content/uploads/2024/03/pic_2-_4_.webp 1600w, https://blaize.tech/wp-content/uploads/2024/03/pic_2-_4_-1536x864.webp 1536w, https://blaize.tech/wp-content/uploads/2024/03/pic_2-_4_-1568x882.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" /></figure>
+
+
+
+<p>Imagine a world like <a href="https://dappradar.com/dapp/decimated">Decimated</a>, a captivating blockchain game. In Decimated, players take command of fearsome warriors immortalized as NFTs, granting them true ownership of these digital combatants. These warriors can be strategically trained, unleashed in heart-pounding battles, and even offered for sale on marketplaces for real-world currency.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="2560" height="1463" src="../../wp-content/uploads/2024/03/0-HD-art-width-3839px-scaled-1.webp" alt="" class="wp-image-58691" srcset="https://blaize.tech/wp-content/uploads/2024/03/0-HD-art-width-3839px-scaled-1.webp 2560w, https://blaize.tech/wp-content/uploads/2024/03/0-HD-art-width-3839px-scaled-1-1536x878.webp 1536w, https://blaize.tech/wp-content/uploads/2024/03/0-HD-art-width-3839px-scaled-1-2048x1170.webp 2048w, https://blaize.tech/wp-content/uploads/2024/03/0-HD-art-width-3839px-scaled-1-1568x896.webp 1568w" sizes="(max-width: 2560px) 100vw, 2560px" /></figure>
+
+
+
+<p>True ownership isn’t indeed a single advantage of this domain. Blockchain gaming infrastructure unlocks a multitude of benefits for both players and developers:</p>
+
+
+
+<ul>
+<li><strong>Interoperability</strong>: Imagine wielding your legendary weapon across a vast array of blockchain-powered games. Interoperability allows players to seamlessly move their NFTs between compatible games, fostering a connected gaming ecosystem and expanding the utility of digital assets.</li>
+
+
+
+<li><strong>Decentralization &amp; Security</strong>: Blockchain eliminates the need for centralized control by game publishers. This fosters a more democratic gaming environment, where players have a greater say in the development and direction of the games they invest their time in. Blockchain&#8217;s immutable ledger ensures the authenticity and security of in-game assets. Players can rest assured that their NFTs cannot be duplicated or tampered with.</li>
+
+
+
+<li><strong>Easy Monetization</strong>: Blockchain game platforms provide more opportunities for monetization, including in-game items, native cryptocurrency, coins, etc.</li>
+</ul>
+
+
+
+<p>The integration of blockchain technology is transforming the gaming industry from a closed ecosystem to a more open and player-centric environment. With true ownership, interoperability, and enhanced security, blockchain gaming infrastructure is paving the way for a future where players are empowered and in control of their digital experiences.</p>
+
+
+
+<p class="has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-84585f68bed241462c0abb5e59c58a9a"><a href="../../blockchain-game-development/index.html">Blaize has extensive expertise in blockchain gaming development, ready to assist your most sophisticated web3 gaming needs</a>.</p>
+
+
+
+<p>This article delves into the world of blockchain gaming infrastructure, its explosive growth, and how it&#8217;s fundamentally altering the way we interact with games.</p>
+
+
+
+<h2 class="wp-block-heading">Understanding the Web3 Gaming Ecosystem</h2>
+
+
+
+<p>The web3 gaming ecosystem represents a rapid development vector in the gaming industry, empowering players with unprecedented ownership and control over their digital experiences. Unlike traditional gaming environments, web3 games leverage blockchain technology to create a decentralized, interconnected, and player-driven ecosystem.&nbsp;</p>
+
+
+
+<p>Let’s take a closer look at the key components and principles that define this exciting new frontier:</p>
+
+
+
+<p><strong>Decentralization</strong>: At the heart of web3 gaming lies the concept of decentralization. This means that control over the game world and its assets is no longer solely vested in a central authority (game developer or publisher). Instead, power is distributed among players and developers who interact through a shared ledger system (blockchain). This fosters a more democratic environment where players have a say in the game&#8217;s development and evolution, potentially through DAOs.</p>
+
+
+
+<p><strong>Composability</strong>: A hallmark of web3 gaming is composability.&nbsp; Composability allows players to seamlessly move their in-game assets (represented as NFTs) between compatible games, fostering a connected gaming metaverse. This unlocks new avenues for developers to create interoperable experiences and expand the utility of digital assets.</p>
+
+
+
+<p><strong>Interoperability</strong>: Building upon composability, interoperability allows players to not only transfer NFTs but also utilize them across different games. This fosters a more interconnected gaming experience, where your digital assets hold value beyond the confines of a single game. Imagine using your virtual land parcel from one game to host events or build structures that can be interacted with by players in other compatible games. Interoperability creates a richer and more dynamic gaming universe.</p>
+
+
+
+<p><strong>NFTs</strong>:&nbsp; These digital certificates of ownership underpin the concept of true digital asset ownership in web3 gaming. Every in-game item, character, or land parcel can be tokenized as an NFT, granting players verifiable ownership and the ability to freely buy, sell, or trade these assets on marketplaces. NFTs empower players to monetize their time and effort invested in the game, while keeping full ownership over own assets.</p>
+
+
+
+<p><strong>Smart Contracts</strong>: As simple as pieces of code stored onchain, smart contracts are the core of each decentralized application &#8211; web3 games included. Apart of key role in automating work with in-game assets and other processes, they govern in-game mechanics, facilitate secure transactions, and ensure fair play. For example, smart contracts could manage breeding mechanics for in-game pets or ensure rewards are distributed automatically upon completing quests. Smart contracts eliminate the need for manual intervention and foster trust within the game&#8217;s ecosystem.</p>
+
+
+
+<p><a href="../../article-type/opinion/account-abstraction-guide/index.html"><strong>Account abstraction</strong></a>: Account Abstraction in the web3 gaming ecosystem significantly enhances user experience, particularly for newcomers, by facilitating a seamless transition similar to traditional gaming interfaces. It introduces a unified game account system that serves as a single login for multiple games, simplifying the way players interact with Web3 platforms. This innovation is not just about ease of use; it&#8217;s foundational for the future of Web3 gaming, offering a streamlined approach to managing digital identities, assets, and achievements through one account. This account can be effortlessly managed, transferred, or sold, breaking down barriers to blockchain technology and making complex on-chain operations accessible via a simple user interface. Account Abstraction, therefore, represents a critical step towards democratizing the gaming experience, ensuring that technology serves to enhance gameplay and community engagement rather than complicate it.</p>
+
+
+
+<p>By harnessing these core components, web3 gaming is blurring the lines between play and work, creating new avenues for player agency, and fostering a more vibrant and interconnected gaming experience.</p>
+
+
+
+<h2 class="wp-block-heading">Choosing the Right Blockchain Infrastructure for Your Game</h2>
+
+
+
+<p>In blockchain gaming, several critical factors play essential roles in the overall user and developer experience. Understanding these components is crucial for choosing the right platform for gaming projects and for gamers looking to engage in the blockchain space.</p>
+
+
+
+<p><strong>Availability of Liquidity on the Chain</strong>: It&#8217;s essential to choose a blockchain that is actively used, indicating a healthy level of liquidity. A blockchain with high liquidity means there&#8217;s a vibrant economy in place, facilitating smoother transactions and interactions within your game.</p>
+
+
+
+<p><strong>Ecosystem Interaction</strong>: The presence of a supportive ecosystem is crucial. Look for blockchains that host a variety of marketplaces, protocols for NFT lending, exchanges, and other services. This interconnectedness allows your game to offer more complex and integrated experiences, leveraging the broader blockchain ecosystem.</p>
+
+
+
+<p><strong>Infrastructure for NFTs</strong>: Ensure the blockchain offers comprehensive NFT infrastructure, including storage solutions, gateways, and indexing services like Subgraph, along with APIs similar to Moralis. This infrastructure is vital for managing NFTs effectively, from creation and storage to transactions and player interaction.</p>
+
+
+
+<p><strong>Chain Hype and Developer Preferences</strong>: The general buzz around a blockchain can impact player and developer interest. Additionally, consider the technical compatibility with your development team&#8217;s expertise &#8211; whether the chain supports the EVM, or if it operates on different protocols like Solana, Sui, or Cosmos. This compatibility will influence development ease and potential integration challenges.</p>
+
+
+
+<p><strong>Support for Abstract Accounts</strong>: A platform that supports abstract accounts can greatly enhance user experience by simplifying interactions with the blockchain. This feature allows for a more seamless integration of blockchain elements into your game, making it accessible to a wider audience, including those new to blockchain gaming.</p>
+
+
+
+<p>Incorporating these considerations into the selection process enhances the foundation upon which your game is built, ensuring it thrives within the dynamic landscape of blockchain gaming.&nbsp;</p>
+
+
+
+<p class="has-text-align-center has-white-color has-light-gray-background-color has-text-color has-background has-link-color wp-elements-1101d088070091e706b79e724ed401ae"><a href="../../article-type/overview/crypto-art-explained/index.html">Read Also: Blaize comprehensive article about the rise of NFT marketplaces.</a></p>
+
+
+
+<p>Moreover, for those projects with very specific needs or looking to pioneer new blockchain gaming models, the option to launch your own blockchain, such as a dApp-chain, becomes relevant. Platforms like Cosmos or Avalanche offer the flexibility of creating subnets or custom chains. This can provide unparalleled control over your game&#8217;s infrastructure, allowing for tailor-made solutions that perfectly fit your game&#8217;s requirements while still benefiting from the security and interoperability features of established blockchains.</p>
+
+
+
+<p>This strategic exploration into choosing the right blockchain infrastructure underscores the importance of aligning technical capabilities with your game&#8217;s long-term vision. By carefully evaluating these factors, developers can ensure their projects are not just innovative but also integrated within the broader ecosystem, offering players a rich, interconnected gaming experience.</p>
+
+
+
+<p>Each blockchain platform offers a unique balance of these factors, catering to different needs within the gaming community. Developers must weigh these considerations carefully when choosing a platform to build their games, while gamers should be aware of how these factors affect their gameplay and asset management. As the blockchain gaming industry evolves, continuous improvements and innovations in these areas will further enhance the user experience and expand the possibilities within the gaming world.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Blockchain</strong></td><td><strong>Unique Features</strong></td></tr><tr><td><strong>Polygon</strong></td><td>Zero-knowledge proofs, Chain Development Kit</td></tr><tr><td><strong>Immutable X</strong></td><td>Layer-2 on Ethereum, Immutable Passport for easy wallet creation</td></tr><tr><td><strong>Ronin Network</strong></td><td>Strong community, focus on developer relationships</td></tr><tr><td><strong>SKALE Network</strong></td><td>Compatible with EVM chains, customizable for developers</td></tr><tr><td><strong>Solana</strong></td><td>Thriving community, rich developer services</td></tr><tr><td><strong>Avalanche</strong></td><td>Customizable subnets, private blockchain options</td></tr><tr><td><strong>NEAR Protocol</strong></td><td>Infinite scalability, carbon-neutral</td></tr><tr><td><strong>Arbitrum</strong></td><td>Layer-2 for Ethereum, tailored solutions for gaming</td></tr><tr><td><strong>Base</strong></td><td>Optimism’s OP Stack, direct Coinbase integration</td></tr><tr><td><strong>Oasys</strong></td><td>EVM compatibility, partnership with major gaming companies</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading">Developing Your Blockchain Game: A Step-by-Step Guide</h2>
+
+
+
+<p>The world of blockchain gaming presents plenty of opportunities for developers and creatives alike. The next potential question you may come up with is &#8211; how to create a blockchain game. Let’s walk through several essential steps from concept to launch to know the intricacies of this process.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1600" height="900" src="../../wp-content/uploads/2024/03/pic_3-_6_-%d0%ba%d0%be%d0%bf%d1%96%d1%8f.webp" alt="The world of blockchain gaming presents plenty of opportunities for developers and creatives alike." class="wp-image-58692" srcset="https://blaize.tech/wp-content/uploads/2024/03/pic_3-_6_-копія.webp 1600w, https://blaize.tech/wp-content/uploads/2024/03/pic_3-_6_-копія-1536x864.webp 1536w, https://blaize.tech/wp-content/uploads/2024/03/pic_3-_6_-копія-1568x882.webp 1568w" sizes="(max-width: 1600px) 100vw, 1600px" /></figure>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-3c2c96fdc8e0f887ad5028c8201a9312"><strong>Step 1: Concept and Game Mechanics Development</strong></p>
+
+
+
+<p>The foundation of any game lies in a compelling concept. Here, the unique capabilities of Web3 can be harnessed to create truly groundbreaking experiences.&nbsp; Move beyond traditional game mechanics and explore innovative possibilities:</p>
+
+
+
+<ul>
+<li>Start by defining compelling game mechanics that will attract and retain players. This involves brainstorming and conceptualizing the gameplay elements that make your game unique and enjoyable.</li>
+
+
+
+<li>Understand that while your game should be community-driven, integrating a DAO from the onset may not be necessary. Focus on building a strong, engaged community around your game, as this will be crucial for feedback and growth.</li>
+
+
+
+<li>Decide which aspects of your game will benefit from blockchain technology. This includes determining which game mechanics to decentralize, how assets will be managed and distributed, and which parts of your game should be tokenized. Tokenization can apply to in-game assets, rewards, or even the game&#8217;s currency, offering a new layer of value and ownership to players.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-a33ba728947a8c9d93efefcf76f7af5c"><strong>Step 2:&nbsp; Selecting the Blockchain Platform</strong></p>
+
+
+
+<p>After establishing your game&#8217;s mechanics and community focus, the next crucial step involves selecting the appropriate blockchain platform. This choice is pivotal as it will dictate the capabilities, scalability, and user experience of your game.&nbsp;</p>
+
+
+
+<p>Considerations for this selection include:</p>
+
+
+
+<ul>
+<li><strong>NFT Infrastructure</strong>: Opt for a blockchain that supports a robust infrastructure for NFTs, including indexers, APIs, and gateways. This infrastructure is essential for managing and transacting NFTs efficiently, providing a seamless experience for users.</li>
+
+
+
+<li><strong>NFT Marketplaces Presence</strong>: The blockchain should have access to vibrant NFT marketplaces. These platforms will be instrumental for players to trade, sell, or buy in-game assets, enhancing the game&#8217;s economy and player engagement.</li>
+
+
+
+<li>I<strong>nteroperability and Bridges</strong>: Look for blockchains that offer bridges and interoperability solutions. These features enable asset transfer across different blockchain ecosystems, expanding your game’s reach and accessibility.</li>
+
+
+
+<li><strong>Integration with Existing Projects</strong>: Consider blockchains that host projects beneficial for integration with your game. This could include DeFi protocols, other games, or platforms that could synergize with your game&#8217;s mechanics, enriching the overall ecosystem and providing additional value to players.</li>
+</ul>
+
+
+
+<p>Selecting a blockchain that meets these criteria ensures your game can leverage the full potential of blockchain technology, from NFTs and marketplaces to interoperability and ecosystem integration. This foundational decision shapes the technical development and future expansion possibilities of your blockchain game, making it crucial to choose wisely based on your game&#8217;s specific needs and ambitions.</p>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-a08f87a579c292e1e90dfccf59794cd7"><strong>Step 3:&nbsp; Designing the In-Game Economy and Tokenomics</strong></p>
+
+
+
+<p>A meticulously designed in-game economy is the lifeblood of your blockchain game.&nbsp; Here&#8217;s a breakdown of key considerations:</p>
+
+
+
+<ul>
+<li><strong>NFT Design and Utility</strong>: Define the types of NFTs your game will utilize (characters, items, land parcels). Determine how these NFTs will be earned (in-game activities, purchase) and their role within the game&#8217;s ecosystem (utility for gameplay, breeding mechanics).</li>
+
+
+
+<li><a href="../../article-type/tokenomics-for-crypto-games-how-to-develop-economy-for-gamefi/index.html"><strong>Tokenomics Model</strong></a>: Establish a clear tokenomics model outlining the utility and value proposition of your game&#8217;s cryptocurrency. Consider factors like inflation control mechanisms (burning mechanics), reward structures for players, and potential use cases for your token beyond the confines of your game (governance within a DAO, access to exclusive features in other web3 projects).</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-695a97ddbfd86df3125708cf804a51f2"><strong>Step 4:&nbsp; Developing Secure Smart Contracts</strong></p>
+
+
+
+<p>Smart contracts are the foundation of your blockchain game. They enforce game rules, manage NFTs, and automate critical functionalities. Here&#8217;s how to ensure their effectiveness and security:</p>
+
+
+
+<ul>
+<li><strong>Partner with Experienced Developers</strong>: Engage with blockchain developers who possess a deep understanding of smart contract development best practices and security considerations.</li>
+
+
+
+<li><strong>Multi-Signature Wallets and Secure Coding Practices</strong>: Implement multi-signature wallets for added security when deploying and managing smart contracts. Adhere to secure coding practices and the pipelines with internal security checks at each development stage. Have the testnet environment for testing the functionality during the development</li>
+
+
+
+<li><strong>Security Audit:</strong> Conduct thorough audits by reputable blockchain security firms to identify and rectify any vulnerabilities before launch.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-9023fa5ff933c6e95214aa84030bcac9"><strong>Step 5:&nbsp; Building the Game and Integrating with Blockchain</strong></p>
+
+
+
+<p>In the development journey of a blockchain game, alongside implementing game mechanics using the chosen game engine, a significant portion of effort is devoted to the integration of blockchain technology. This integration is multifaceted, involving several key components that ensure the game operates smoothly within the blockchain ecosystem:</p>
+
+
+
+<ul>
+<li><strong>Subgraphs and Onchain Data Aggregation</strong>: Consider building your own Subgraphs or integrating other onchain data aggregating solutions. These tools are vital for querying blockchain data efficiently, enabling your game to react to changes in blockchain state in real time.</li>
+
+
+
+<li><strong>Smart Contract Interactions with Multicalls</strong>: Employ multicalls for more efficient interactions with smart contracts. This approach reduces the need for multiple transactions by batching them, enhancing the user experience with faster and cheaper interactions.</li>
+
+
+
+<li><strong>Metadata Storage and NFT Gateways</strong>: Integrate metadata storage solutions and NFT gateways to facilitate rapid interactions with NFT metadata. This is crucial for displaying NFT assets in-game and ensuring that transactions involving NFTs are processed smoothly.</li>
+
+
+
+<li><strong>Utilizing APIs and SDKs</strong>: Leverage available APIs and SDKs, such as Airstack or Moralis, to streamline the development process. These tools offer pre-built functions and services that can significantly speed up the integration of blockchain features into your game.</li>
+
+
+
+<li><strong>RPC Integration for Access to Online Data</strong>: Integrate with Remote Procedure Call (RPC) services like Blaize <a href="../../article-type/company-news/blaize-and-getblock-an-essential-partnership-for-development-expertise/index.html">partner GetBlock</a> for quick access to blockchain data. RPCs are essential for interacting with the blockchain network, allowing your game to retrieve the latest blockchain state efficiently.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-17990e206171c7da28449b2412b60091"><strong>Step 6:&nbsp; Rigorous Testing and Deployment</strong></p>
+
+
+
+<p>Extensive testing is paramount before unleashing your game to the world. Here&#8217;s a structured approach:</p>
+
+
+
+<ul>
+<li><strong>Internal Testing</strong>: Conduct rigorous internal testing to identify and rectify bugs within the game mechanics and smart contracts. Focus on functionality, security, and ensuring a balanced gameplay experience.</li>
+
+
+
+<li><strong>Public Beta Phase</strong>: Launch a public beta phase to gather valuable player feedback on gameplay mechanics, balance issues, and overall user experience. Utilize this phase to refine your game based on player insights and squash any remaining bugs or security vulnerabilities within your smart contracts.</li>
+
+
+
+<li><strong>Deployment Strategy</strong>: Carefully plan your deployment strategy, considering factors like network congestion and gas fees. Explore options like deploying on a Layer 2 scaling solution to optimize transaction costs for players.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-95dc1f51acd37869f1390948a66a5c1e"><strong>Step 7:&nbsp; DAO Creating and Marketing</strong></p>
+
+
+
+<p>A thriving community is the fuel that propels your blockchain game towards long-term success. Here&#8217;s how to cultivate a passionate player base:</p>
+
+
+
+<ul>
+<li><strong>Community Engagement</strong>: Actively engage with potential players on social media platforms, gaming forums, and relevant Discord communities. Host regular AMA sessions to answer player questions and build anticipation for your game&#8217;s launch.</li>
+
+
+
+<li><strong>Influencer Marketing</strong>: Collaborate with established influencers within the blockchain gaming space to reach a wider audience. Leverage their expertise and reach to generate excitement for your game and its unique features.</li>
+
+
+
+<li><strong>Strategic Partnerships</strong>: Explore partnerships with other blockchain projects or established gaming platforms to gain additional exposure and attract players already invested in the Web3 ecosystem.</li>
+
+
+
+<li><strong>Clear Communication</strong>: Maintain clear and consistent communication with your community. Regularly share updates on development progress, roadmap milestones, and upcoming events. Be transparent about any challenges you encounter and address player concerns promptly.</li>
+</ul>
+
+
+
+<p class="has-primary-red-color has-text-color has-link-color wp-elements-10e273eeb407963176d11d7cca8c183c"><strong>Step 8:&nbsp; Evolving and Adapting to the Blockchain Landscape</strong></p>
+
+
+
+<p>The world of blockchain gaming is a dynamic and ever-evolving space. Here&#8217;s how to ensure your game thrives in the long run:</p>
+
+
+
+<ul>
+<li><strong>Stay Informed</strong>: Continuously stay updated on the latest trends and innovations within the blockchain gaming landscape. Monitor emerging technologies like interoperable NFT standards to adapt your game and remain competitive.</li>
+
+
+
+<li><strong>Gather Player Feedback</strong>: Actively solicit feedback from your player base. Utilize in-game surveys, community forums, and social media platforms to understand player preferences and identify areas for improvement.</li>
+
+
+
+<li><strong>Iterate and Enhance</strong>: Be prepared to iterate and build upon your game based on player feedback and evolving market trends. Introduce new content, features, and gameplay mechanics to maintain player engagement and ensure your game remains fresh and exciting.</li>
+</ul>
+
+
+
+<p>By following these steps and leveraging the powerful tools and best practices outlined throughout this guide, you&#8217;ll be well-equipped to navigate the exciting world of blockchain game development. Remember, success hinges on a captivating concept, a robust infrastructure, a thriving community, and the continuous pursuit of innovation.&nbsp; With dedication, expertise, and a passion for gaming, you can be a part of shaping the future of this revolutionary new landscape.</p>
+
+
+
+<h2 class="wp-block-heading">Essential Tools and SDKs for Blockchain Game Development</h2>
+
+
+
+<p>In the evolving landscape of blockchain game development, leveraging the right tools and SDKs is paramount for creating engaging, innovative, and technically sound gaming experiences. Here&#8217;s an overview of essential components and resources developers should consider:</p>
+
+
+
+<p><strong>Aggregators (Subgraph)</strong>: The Graph&#8217;s Subgraph acts as a powerful tool for indexing and querying blockchain data efficiently. It allows developers to construct queries that can fetch specific subsets of data relevant to their game, enabling dynamic content updates and interactions based on blockchain events.</p>
+
+
+
+<p><strong>APIs for Working with NFTs and Onchain Information (Moralis, Airstack)</strong>: Platforms like Moralis and Airstack offer comprehensive APIs that simplify the integration of blockchain functionalities into games. These services provide easy access to NFT operations, user authentication, and real-time onchain data, streamlining the development process and enhancing the gaming experience.</p>
+
+
+
+<p><strong>NFT Gateway (Moralis)</strong>: Moralis also serves as an NFT gateway, offering developers a straightforward method to manage and transact NFTs within their games. This facilitates the incorporation of digital collectibles and assets, pivotal in building a game&#8217;s economy and player engagement.</p>
+
+
+
+<p><strong>Metadata Storage (Arweave)</strong>: For permanent, decentralized storage of game assets and metadata, Arweave presents a reliable solution. Its blockweave technology ensures data permanence, making it ideal for storing NFT metadata and other critical game information that must remain unaltered and accessible.</p>
+
+
+
+<p><strong>RPC (GetBlock)</strong>: Integrating with Remote Procedure Call (RPC) services like GetBlock provides developers with seamless access to various blockchain networks. This is crucial for executing smart contracts, making transactions, and retrieving blockchain data, thereby maintaining the game&#8217;s connection to the blockchain ecosystem.</p>
+
+
+
+<p><strong>Oracles</strong>: Incorporating oracles into blockchain games is essential for accessing real-world data and ensuring that in-game events can be triggered by external conditions. Oracles serve as bridges between blockchains and external data sources, enabling dynamic game scenarios and mechanics influenced by real-world events or conditions.</p>
+
+
+
+<p>By incorporating these tools and SDKs into their development toolkit, blockchain game developers can significantly enhance their productivity and the quality of the gaming experience. These components not only facilitate the technical implementation of blockchain features but also open up new possibilities for game design and player interaction.</p>
+
+
+
+<h2 class="wp-block-heading">On-Chain Gaming: Best Practices and Case Studies</h2>
+
+
+
+<p>On-chain gaming represents the cutting edge of blockchain gaming, pushing the boundaries of decentralization by placing critical game logic and asset ownership directly on the blockchain. This approach stands in stark contrast to traditional blockchain games, where some functionalities may rely on off-chain servers, potentially compromising transparency and security.&nbsp;</p>
+
+
+
+<p>Best practices for on-chain game development:</p>
+
+
+
+<ul>
+<li><strong>Prioritize Engaging Core Gameplay</strong>: The foundation of any successful game lies in captivating core mechanics. Focus on crafting a fun and engaging gameplay experience that keeps players coming back for more. Remember, innovative technology doesn&#8217;t guarantee player retention – a well-designed and enjoyable game is paramount.</li>
+
+
+
+<li><strong>Gas Fee Optimization</strong>: Transaction fees (gas fees) on the blockchain can be a significant hurdle for on-chain games, especially for those with frequent player interactions. Explore gas optimization techniques like batching transactions or utilizing Layer 2 scaling solutions to maintain a smooth player experience and avoid pricing out potential users.</li>
+
+
+
+<li><strong>Embrace Decentralization</strong>: Fully immerse yourself in the core tenets of blockchain technology by striving for a decentralized game world. Minimize reliance on centralized servers and empower players through DAO governance structures where applicable. This fosters a more democratic and community-driven gaming environment.</li>
+</ul>
+
+
+
+<p>Showing Blaize&#8217;s prowess in the domain of web3 games development, we are delighted to pay attention to our following successful cases:</p>
+
+
+
+<h3 class="wp-block-heading"><strong>1. Nomo Fantasy Leagues for LeagueDAO</strong></h3>
+
+
+
+<p>Blaize showcased its deep expertise in Web3 game development through the creation of the Nomo Fantasy Leagues for LeagueDAO, a project that joints DeFi, rewards, and digital collectibles in the realm of fantasy sports. Tasked with developing a blockchain-based protocol, Blaize&#8217;s team demonstrated proficiency in handling complex web3 architectures. The project architecture, centered around a smart-contract system that includes NFTs representing real-world sports players, oracles, and fantasy league games, underscores Blaize&#8217;s ability to create immersive and engaging gaming experiences.</p>
+
+
+
+<p>Their development process involved a robust Solidity team, alongside skilled back-end, Subgraph specialists, and front-end developers, tackling milestones such as creating Nomo NFT contracts, developing leagues for staking NFTs, and integrating APIs from leading sports data providers. Blaize adeptly met challenges related to optimizing NFT structures for player parameters and designing game contracts for efficient points and rewards calculation.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>2. Decimated</strong></h3>
+
+
+
+<p>Blaize undertook a significant project to enrich the Decimated game, a AAA title known for its post-apocalyptic survival theme with cyberpunk elements, by integrating advanced payment and trading systems. Decimated was ranked by <a href="https://dappradar.com/blog/top-blockchains-for-gaming">DappRadar</a> as one of the most friendly gamer experience games in 2023.</p>
+
+
+
+<p>Tasked with incorporating the Swipelux fiat-on-ramp into the game, Blaize enabled players to efficiently convert fiat money into the game&#8217;s cryptocurrency, enhancing the player experience by facilitating seamless in-game transactions.</p>
+
+
+
+<p>The project&#8217;s scope extended to developing a comprehensive ecosystem comprising a Webstore for in-game purchases, a P2P trading system for direct player transactions, and the integration of both non-custodial and Stardust-backed custodial wallets for secure transactions. The architecture centered around the Microsoft Azure PlayFab service, with a microservices setup including payment, user services, and the webstore, all aimed at simplifying purchases and trades within the game.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="2035" height="2560" src="../../wp-content/uploads/2024/03/Pictures-for-decimated-case-scaled.webp" alt="The scheme illustrates a part of the infrastructure Blaize built for Decimated." class="wp-image-58693" srcset="https://blaize.tech/wp-content/uploads/2024/03/Pictures-for-decimated-case-scaled.webp 2035w, https://blaize.tech/wp-content/uploads/2024/03/Pictures-for-decimated-case-1221x1536.webp 1221w, https://blaize.tech/wp-content/uploads/2024/03/Pictures-for-decimated-case-1628x2048.webp 1628w, https://blaize.tech/wp-content/uploads/2024/03/Pictures-for-decimated-case-1568x1973.webp 1568w" sizes="(max-width: 2035px) 100vw, 2035px" /></figure>
+
+
+
+<p>Several innovative games have emerged as leaders in the on-chain gaming space, showcasing the immense potential of this revolutionary approach:</p>
+
+
+
+<ul>
+<li><strong>Mines of Dalarnia (DAR)</strong>: This action RPG takes on-chain capabilities to a new level. Players explore a procedurally generated universe, collect valuable resources, and battle hostile creatures. All in-game items, resources, and land parcels are represented by NFTs, stored directly on the blockchain, and freely tradable on secondary marketplaces. Mines of Dalarnia exemplifies the potential for complex and engaging gameplay experiences within the on-chain framework.</li>
+
+
+
+<li><strong>The Sandbox (SAND):</strong> This highly anticipated metaverse project allows players to acquire virtual land parcels as NFTs, own and monetize their creations, and participate in a thriving player-driven economy. The game leverages the Polygon blockchain for its scalability, enabling a smooth player experience with minimal gas fees. The Sandbox highlights the potential of on-chain gaming for fostering user-generated content and fostering a vibrant virtual world.</li>
+
+
+
+<li><strong>Illuvium (ILV)</strong>: This open-world RPG boasts a captivating blend of on-chain and off-chain mechanics. Players capture and battle colossal beasts called &#8220;Illuvials,&#8221; which are represented by NFTs. While core gameplay mechanics like exploration and battling occur in-game, ownership and trading of Illuvials leverage the security and transparency of the Immutable X blockchain. Illuvium demonstrates the potential for a hybrid approach, leveraging on-chain benefits for asset ownership while maintaining a smooth player experience through strategic use of off-chain elements.</li>
+</ul>
+
+
+
+<p>On-chain gaming represents a paradigm shift in the gaming industry, empowering players with unprecedented ownership and control over their digital experiences. As blockchain technology continues to evolve, on-chain games will benefit from increased scalability solutions (Layer 2 scaling, rollups), lower transaction fees, and more sophisticated smart contract functionalities. This will unlock the potential for even more immersive, strategically complex, and truly player-driven experiences within the on-chain gaming landscape.</p>
+
+
+
+<h2 class="wp-block-heading">FAQ</h2>
+
+
+
+<h3 class="wp-block-heading"><strong>What are the benefits of using blockchain for online gaming?</strong></h3>
+
+
+
+<p>Blockchain technology in online gaming introduces true digital asset ownership, transparency, and security, enhancing player trust. It enables interoperability across games and platforms, allowing for the transfer and use of assets in multiple gaming ecosystems. Additionally, blockchain facilitates unique models, rewarding players for their time and skills with real-world value.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>What are the essential technical skills required to develop a blockchain game?</strong></h3>
+
+
+
+<p>Developing a blockchain game requires proficiency in smart contract development, typically with Solidity for EVM-based projects, and an understanding of blockchain architecture.&nbsp; Also, the team should contain specialists in blockchain gaming infrastructure: Moralis, Airstack, Subgraph, RPC-providers like GetBlock, oracles like Chainlink, decentralized storage.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How do I ensure the scalability of my gaming platform?</strong></h3>
+
+
+
+<p>To ensure scalability, consider using Layer-2 solutions that offer faster transaction speeds and lower costs than mainnet blockchain transactions. Opting for blockchains known for high throughput and scalability, such as Polygon or Solana, can also address scalability concerns. Implementing efficient smart contract code that minimizes gas usage and optimizes transaction processing can further enhance scalability.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Can you make a marketplace for my game?</strong></h3>
+
+
+
+<p>Yes, developing a custom NFT marketplace for your game is within our capabilities. This platform will enable players to trade, sell, and purchase in-game assets seamlessly, enhancing the overall gaming experience. By leveraging blockchain technology, we ensure a secure and transparent environment for all transactions, fostering a vibrant game economy.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Do you integrate an account abstraction?</strong></h3>
+
+
+
+<p>Integrating account abstraction into your game is a service we offer to simplify the user experience, making it as intuitive as interacting with traditional games. This approach streamlines the login process and interactions with the blockchain, making the game accessible to a broader audience, including those new to blockchain technology.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Can you help with the mint of gaming NFTs?</strong></h3>
+
+
+
+<p>Assisting in the minting process of gaming NFTs is part of our expertise. We guide you through the creation, deployment, and management of NFTs, ensuring they are seamlessly integrated into your game. This includes setting up smart contracts, metadata storage solutions, and ensuring compliance with relevant standards to enhance the in-game asset&#8217;s value and utility.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Do you work on Solana and other non-EVM chains?</strong></h3>
+
+
+
+<p>Our development team is proficient in working with a variety of blockchain platforms, including Solana and other non-EVM chains. This flexibility allows us to select the most suitable blockchain based on your game&#8217;s requirements, ensuring optimal performance, scalability, and user experience across different blockchain ecosystems.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Can you make a separate blockchain for my game?</strong></h3>
+
+
+
+<p>Creating a dedicated blockchain for your game, such as a dApp-chain or leveraging a subnet from platforms like Cosmos or Avalanche, is a service we provide. This bespoke approach offers unparalleled control over your game&#8217;s environment, allowing for custom features, scalability, and governance models tailored to your specific needs, all while maintaining interoperability and security.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>How does Blaize leverage blockchain technology to transform online gaming?</strong></h3>
+
+
+
+<p>Blaize harnesses blockchain technology to revolutionize online gaming by offering robust development services that ensure seamless integration of blockchain into games. Specializing in smart contract development, Blaize provides secure, scalable, and innovative solutions that empower game developers to create decentralized games with true digital asset ownership and novel GameFi opportunities, elevating the gaming experience to new heights.</p>
+
+
+
+<h4 class="wp-block-heading has-white-color has-primary-red-background-color has-text-color has-background has-link-color wp-elements-a1272d8c5e3ffa4295e951dd0d2f9f45"><strong><a href="../../index.html#contacts">Reach out Blaize to revolutionize &amp; upgrade your gaming project with blockchain technology</a>.</strong></h4>
+
+                                <div class="block-author">
+                                    <h4 class="author-title">Post author</h4>
+                                    <div class="content">
+                                        <div class="photo">
+                                            <img width="120" height="120" src="../../wp-content/uploads/2020/04/sergey.png" class="avatar avatar-120 photo wt-author-img" alt="Sergey.O" decoding="async" loading="lazy" />                                        </div>
+                                        <div class="details">
+                                            <a href="../author/sergey-o/index.html">
+                                                <h4>Sergey Onyshchenko</h4>
+                                            </a>
+                                                                                            <p class="position">Co-founder & CEO of Blaize</p>
+                                                                                                                                        <p class="description">Expert on decentralized finance, 
+governance, policies and 
+blockchain technologies.
+</p>
+                                            
+                                                                                            <div class="socials">
+                                                                                                                                                                                                                                <a href="https://www.linkedin.com/in/sergeyonishenko/" target="_blank"><i class="icon-linkedin"></i></a>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sidebar">
+                                <div class="info">
+                                    <h4>Post info</h4>
+                                    <div class="cats">
+                                        <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>                                    </div>
+                                                                                                                <div class="tags">
+                                            <a href="../indexc770.html?_sft_post_tag=blockchain-platforms" class="tagname_link">blockchain platforms</a><a href="../indexf349.html?_sft_post_tag=integration" class="tagname_link">integration</a><a href="../index0f60.html?_sft_post_tag=sdk" class="tagname_link">sdk</a><a href="../indexcb3c.html?_sft_post_tag=trends" class="tagname_link">trends</a>                                        </div>
+                                    
+                                                                                                        </div>
+                                <div class="navigation"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <section id="post_contact">
+            <div class="guides__block">
+                <div class="content">
+                    <div class="text">
+                        <h3>To get the consultation</h3>
+                        <p>Fill out this form and get an individual consultation from our specialist</p>
+                    </div>
+                    <div class="form">
+                        
+<div class="wpcf7 no-js" id="wpcf7-f3898-p58689-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="https://blaize.tech/blog/build-a-blockchain-game-infrastructure/#wpcf7-f3898-p58689-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="3898" />
+<input type="hidden" name="_wpcf7_version" value="5.8.6" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3898-p58689-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="58689" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+<input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="your-name" /></span>
+	</p>
+</div>
+<div class="input_block">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="your-email" /></span>
+	</p>
+</div>
+<p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span><br />
+<span class="wpcf7-form-control-wrap" data-name="your-subject"><input size="40" class="wpcf7-form-control wpcf7-text hidden" aria-invalid="false" value="Contact us" type="text" name="your-subject" /></span><br />
+<label class="control control--checkbox"><br />
+<span class="wpcf7-form-control-wrap" data-name="your-policy"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-policy" value="1" aria-invalid="false" /></span></span></span><br />
+<span class="checkbox-text">I agree with <a href="../../terms-and-conditions/index.html">Terms &amp; Conditions</a></span><br />
+</label>
+</p>
+<div class="input_block recaptcha">
+	<p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+	</p>
+</div>
+<p><span id="wpcf7-692086cfeb606-wrapper" class="wpcf7-form-control-wrap honeypot-339-wrap" style="display:none !important; visibility:hidden !important;"><input type="hidden" name="honeypot-339-time-start" value="1763739343"><input type="hidden" name="honeypot-339-time-check" value="3"><label for="wpcf7-692086cfeb606-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-692086cfeb606-field"  class="wpcf7-form-control wpcf7-text" type="text" name="honeypot-339" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input class="wpcf7-form-control wpcf7-submit has-spinner btn btn-black" type="submit" value="Send" />
+</p><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+            <div id="relatedposts">
+                <div class="guides__block">
+                    <div class="head">
+                        <h3>Related posts</h3>
+                    </div>
+                    <div class="posts-list-wrap">
+                        <div class="posts-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+	<div class="category">
+    <a href="../index7279.html?_sft_category=opinion" class="sub_link">Opinion</a><a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../top-5-blockchain-development-companies-for-2025/index.html" class="title">Top 5 Blockchain Development Companies for 2025</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexe3e3.html?_sft_category=analysis" class="sub_link">Analysis</a><div style="clear: both;"></div>	</div>
+	<a href="../blockchain-platform-comparison-a-comprehensive-analysis/index.html" class="title">Blockchain Platform Comparison: A Comprehensive Analysis</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../top-web3-trends-to-watch-in-2025/index.html" class="title">Top Web3 Trends to Watch in 2025</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../memecoin-where-entertainment-meets-blockchain-and-digital-art/index.html" class="title">Memecoin: Where Entertainment Meets Blockchain and Digital Art</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../exploring-decentralized-ai-the-intersection-of-blockchain-and-artificial-intelligence/index.html" class="title">Exploring Decentralized AI: The Intersection of Blockchain and Artificial Intelligence</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../building-a-decentralized-energy-brokerage-platform-blockchain-and-smart-contracts-for-energy-trading/index.html" class="title">How To Build A Decentralized Energy Brokerage Platform</a>
+	<div class="author">Anna Korunska    </div>
+</div><div class="swiper-slide">
+	<div class="category">
+    <a href="../indexdfca.html?_sft_category=overview" class="sub_link">Overview</a><div style="clear: both;"></div>	</div>
+	<a href="../energy-brokerage-in-a-decentralized-markets/index.html" class="title">Introduction To Energy Brokerage In Traditional Markets</a>
+	<div class="author">Anna Korunska    </div>
+</div>                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            </main><!-- #main -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blaize.tech/blog/build-a-blockchain-game-infrastructure/"
+  },
+  "headline": "Introduction to Blockchain Gaming and Infrastructure",
+  "description": "Traditional gaming experiences often leave players feeling like renters in a virtual world. In-game items ... Read More",
+  "image": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergey Onyshchenko",
+    "url": "https://blaize.tech/blog/author/sergey-o/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blaize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png"
+    }
+  },
+  "datePublished": "21.03.2024"
+}
+</script>
+</main>
+
+<!-- <link type="text/css" href="https://blaize.tech/wp-content/themes/blaize-tech/assets/styles/components/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<footer id="footer" class="footer">
+    <div class="guides__block">
+        <div class="footer__row footer__logo-wrap">
+            <a href="../../index.html">
+                <img src="../../wp-content/themes/blaize-tech/assets/img/footer_logo.svg" alt="Blaize" width="120" height="33" loading="lazy">
+            </a>
+            <div id="text-10" class="widget widget_text">    <p><strong>Blaize</strong> is a Web3 software development company deeply committed to blockchain technology.</p>
+<p>Through our strategic partnership with <a href="https://ideasoft.io/" target="_blank" rel="noopener"><strong>IdeaSoft</strong></a>, we combine expertise to create impactful solutions for our clients.</p>
+    </div>        </div>
+        <div class="footer__row">
+            <div class="footer__col">
+                <div id="text-3" class="widget widget_text"><h3>Contact Us</h3>    <ul>
+<li>E-mail: <a href="../../cdn-cgi/l/email-protection.html#e0898e868fa0828c81899a85ce94858388"><span class="__cf_email__" data-cfemail="7910171f16391b151810031c570d1c1a11">[email&#160;protected]</span></a></li>
+</ul>
+    </div><div id="text-5" class="widget widget_text"><h3>Socials</h3>    <ul class="socials-responsive">
+<li><a href="https://www.facebook.com/blaize.tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/facebook_new.svg" alt="facebook" width="24" height="24" /></a></li>
+<li><a href="https://twitter.com/blaize_tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/twitter_new.svg" alt="twitter" width="24" height="24" /></a></li>
+<li><a href="https://www.linkedin.com/company/blaizetech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/linkedin_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+<li><a href="https://medium.com/blaize-tech" target="_blank" rel="noopener"><img src="../../wp-content/themes/blaize-tech/assets/img/medium_new.svg" alt="linkedin" width="24" height="24" /></a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-4" class="widget widget_text"><h3>About Us</h3>    <ul>
+<li><a href="../../clients/index.html">Cases</a></li>
+<li><a href="../index.html">Blog</a></li>
+<li><a href="../../whitepaper/index.html">Whitepaper</a></li>
+<li><a href="../../careers/index.html">Careers</a></li>
+<li><a href="../../vacancies/index.html">Vacancies</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-6" class="widget widget_text"><h3>Services</h3>    <ul>
+<li><a href="../../web3-development-services/index.html">Web3 Development Services</a></li>
+<li><a href="../../blockchain-ecosystems/index.html">Blockchain Development Services</a></li>
+<li><a href="https://security.blaize.tech/">Security Audit Services</a></li>
+<li><a href="../../blockchain-integration/index.html">Blockchain Integration</a></li>
+<li><a href="../../web3-fundraising-preparation/index.html">Fundraising</a></li>
+<li><a href="../../cross-chain-bridges-development/index.html">Blockchain Bridge Development</a></li>
+<li><a href="../../cross-chain-development-services/index.html">Cross-chain Solutions Development</a></li>
+</ul>
+    </div>            </div>
+            <div class="footer__col">
+                <div id="text-9" class="widget widget_text"><h3>Solutions</h3>    <ul>
+<li><a href="../../decentralized-application/index.html">dApp Development</a></li>
+<li><a href="../../decentralized-finance-development/index.html">DeFi Development Services</a></li>
+<li><a href="../../decentralized-exchange-development/index.html">DeX Development Services</a></li>
+<li><a href="../../smart-contracts/index.html">Smart Contract Development</a></li>
+<li><a href="../../asset-management-platform-development/index.html">Asset Management Platform Development</a></li>
+<li><a href="../../asset-tokenization/index.html">Asset Tokenization</a></li>
+<li><a href="../../token-development-services/index.html">Token Development Services</a></li>
+<li><a href="../../ton-development-services/index.html">TON Blockchain Development</a></li>
+<li><a href="../../blockchain-game-development/index.html">Blockchain Game Development</a></li>
+<li><a href="../../nft-marketplace-development-services/index.html">NFT Marketplace Development</a></li>
+<li><a href="../../nft-development-services/index.html">NFT Development Services</a></li>
+</ul>
+    </div>            </div>
+        </div>
+        <div class="footer__row part">
+            <div class="partners">
+              <!--<div class="clath"><script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="50" data-darkbg="1" data-clutchcompany-id="1096403"></div></div>
+                -->
+              <!-- Clutch -->
+              <div id="clutch">
+                <div class="dark_theme">
+                  <div class="widgets_wrapper">
+                    <div class="content">
+                      <div class="small_widget_logo_wrapper">
+                        <span class="small_widget_logo_text">Reviewed on</span>
+                        <a class="logotype" target="_blank" data-ga-action="logo_click" href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=logo&amp;utm_term=blaize.dv" aria-label="Reviewed on Clutch">
+                        </a>
+                      </div>
+                      <div class="small_widget_text">
+                        <span class="rating">5.0</span>
+                        <div class="reviews-totals-stars">
+                          <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            <div class="fivestar-static-item">
+                              <div class="form-item form-type-item">
+                                <div class="fivestar-widget-static fivestar-widget-static-vote clearfix">
+                                  <div class="fivestar"><div class="star star-1 star-odd"><span class="on">5.000000</span></div><div class="star star-2 star-even"><span class="on"></span></div><div class="star star-3 star-odd"><span class="on"></span></div><div class="star star-4 star-even"><span class="on"></span></div><div class="star star-5 star-odd"><span class="on"></span></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <span class="reviews-count">
+                           <a href="https://clutch.co/profile/blaize?utm_source=widget&amp;utm_medium=2&amp;utm_campaign=widget&amp;utm_content=num_reviews&amp;utm_term=blaize.dv#reviews" target="_blank">
+                            5
+                            reviews
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- End Clutch -->
+              <div class="top_dev">
+                    <a href="https://www.topdevelopers.co/directory/blockchain-developers" target="_blank"> <img src="../../wp-content/uploads/2023/04/topDev.png" alt="top blockchain developers" title="Top Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://topappdevelopmentcompanies.com/directory/app-developers/blockchain" target="_blank"> <img src="../../wp-content/uploads/2020/08/topdev_logo-1.png" alt="top blockchain developers" title="Top Blockchain Developers" loading="lazy"></a></div>
+                <div class="top_dev">
+                    <a href="https://techreviewer.co/companies/blaize-tech" target="_blank"><img src="../../wp-content/uploads/2023/03/Blockchain-1.svg" alt="techreviewer" loading="lazy"></a>
+                </div>
+                <div class="GoodFirms">
+                    <a target="_blank" href="https://www.goodfirms.co/company/blaize"><img src="../../wp-content/uploads/2020/08/googfirm.svg" alt="GoodFirms Badge" width="188" height="42" loading="lazy"></a>
+                </div>
+                <div class="defisec">
+                    <a href="https://defisec.info/tproduct/1-451395809121-blaize-security" target="_blank"><img src="../../wp-content/uploads/2023/04/DSAmember.png" alt="defisec" loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__row">
+            <p class="copyright">Copyright © Blaize - blockchain development company 2018-2025</p>
+            <ul class="privacy">
+                <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                <li><a href="../../terms-and-conditions/index.html">Terms & Conditions</a></li>
+            </ul>
+            <!-- <p class="marketing">B2B inbound marketing with <a href="https://growpad.pro/" target="_blank"><img src="https://blaize.tech/wp-content/themes/blaize-tech/assets/img/foot_marketing.svg" alt=""></a></p> -->
+        </div>
+    </div>
+    <!--<script>window.lintrk('track', { conversion_id: 11292828 });</script>-->
+</footer><!-- #colophon -->
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  var wpcf7_recaptcha = {"sitekey":"6LcrqiAqAAAAAI1UXBtZ9jRUqTeAWWLpEeKjCIM8","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+
+
+    <progress value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-elements-84585f68bed241462c0abb5e59c58a9a a{color:var(--wp--preset--color--white);}.wp-elements-1101d088070091e706b79e724ed401ae a{color:var(--wp--preset--color--white);}.wp-elements-3c2c96fdc8e0f887ad5028c8201a9312 a{color:var(--wp--preset--color--primary-red);}.wp-elements-a33ba728947a8c9d93efefcf76f7af5c a{color:var(--wp--preset--color--primary-red);}.wp-elements-a08f87a579c292e1e90dfccf59794cd7 a{color:var(--wp--preset--color--primary-red);}.wp-elements-695a97ddbfd86df3125708cf804a51f2 a{color:var(--wp--preset--color--primary-red);}.wp-elements-9023fa5ff933c6e95214aa84030bcac9 a{color:var(--wp--preset--color--primary-red);}.wp-elements-17990e206171c7da28449b2412b60091 a{color:var(--wp--preset--color--primary-red);}.wp-elements-95dc1f51acd37869f1390948a66a5c1e a{color:var(--wp--preset--color--primary-red);}.wp-elements-10e273eeb407963176d11d7cca8c183c a{color:var(--wp--preset--color--primary-red);}.wp-elements-a1272d8c5e3ffa4295e951dd0d2f9f45 a{color:var(--wp--preset--color--white);}
+</style>
+<script type="text/javascript" defer src="../../wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/blaize.tech\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="../../wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
+  <script>
+    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+  </script>
+  
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Blaize",
+        "alternateName": "Blaize Tech",
+        "url": "https://blaize.tech/",
+        "logo": "https://blaize.tech/wp-content/themes/blaize-tech/assets/img/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/blaize.tech/",
+            "https://twitter.com/blaize_tech",
+            "https://ua.linkedin.com/company/blaizetech"
+        ],                "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "11"
+        }
+            }
+</script>
+
+
+
+<div class="popup">
+  <div class="popup__wrapper"></div>
+  <div class="popup__window">
+    <div class="popup__close"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+    <div class="popup__img">
+      <svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none"><path fill="#FF5C5C" d="M21 20.711h100v100H21z"/><path fill="#fff" d="M.29 70.71 71 0l70.711 70.71-70.71 70.711z"/><path fill="#FF5C5C" d="M66.75 79.75 58 71l-2.916 2.917 11.667 11.666 25-25-2.917-2.916L66.751 79.75Z"/></svg>
+    </div>
+    <p class="popup__title">Thank you!</p>
+          <p class="popup__text">We received your request and will be in touch shortly.</p>
+              <a href="#" class="btn btn-black popup__btn" onclick="return false;">okay</a>
+      </div>
+</div>
+      <script>
+      const setCookie = () => {
+        let a = new Date();
+        a = new Date(a.getTime() + 1000 * 60 * 60 * 24 * 365);
+        document.cookie = 'blaize-cookies-info=true; path=/; expires=' + a.toGMTString() + ';';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const t = document.getElementsByClassName('js-cookies-info')[0];
+        const b = document.getElementsByClassName('js-cookies-info__button')[0];
+        const c = document.getElementsByClassName('js-cookies-close')[0];
+        b.addEventListener('click', () => {
+          setCookie()
+          t.classList.remove('active');
+        });
+        c.addEventListener('click', (e) => {
+          e.preventDefault();
+          t.classList.remove('active');
+        })
+      });
+    </script>
+    <div class="cookies-info js-cookies-info active">
+      <div class="guides__block">
+        <div class="cookies-info__text">
+          <div><div>This site uses cookies to offer you a better browsing experience.<br />
+Find out more on <a href="../../privacy-policy/index.html">how we use cookies</a></div>
+</div>
+          <span class="btn btn-gray js-cookies-close">Decline</span>
+          <span class="btn btn-black js-cookies-info__button">Accept all cookies</span>
+        </div>
+      </div>
+    </div>
+  
+
+<a class="popup-w" href="../../whitepaper/index.html">
+  <div class="popup-w__title">transform your asset management now!</div>
+  <div class="popup-w__text">Download the whitepaper now and start your journey towards a more efficient, inclusive, and secure future in the Web3 world.</div>
+  <button class="popup-w__btn">download it now!</button>
+  <div class="popup-w__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path stroke="#1E1E23" stroke-linecap="square" stroke-linejoin="round" d="M33 11 11 33m0-22 22 22"/></svg></div>
+  <div class="popup-w__square square1"></div>
+  <div class="popup-w__square square2"></div>
+  <div class="popup-w__square square3"></div>
+  <div class="popup-w__square square4"></div>
+</a>
+
+<style>
+.popup-w {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 115px 25px 60px 25px;
+  background: #ededed;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .24);
+  z-index: 9;
+  overflow: hidden;
+  transition: .3s;
+  transform: rotateY(90deg);
+}
+
+.active + .popup-w {
+  bottom: 106px;
+}
+
+.popup-w.show {
+  transform: rotateY(0deg);
+}
+
+.popup-w.hide {
+  transform: rotateY(90deg);
+}
+
+.popup-w__square {
+  position: absolute;
+  background: #fc5959;
+}
+
+.popup-w__square.square1 {
+  top: 0;
+  left: -55px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(15deg);
+}
+
+.popup-w__square.square2 {
+  top: -50px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-35deg);
+}
+
+.popup-w__square.square3 {
+  bottom: -20px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(25deg);
+}
+
+.popup-w__square.square4 {
+  bottom: -5px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-40deg);
+}
+
+.popup-w__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.popup-w__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.popup-w__text {
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.popup-w__btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #fc5959;
+  border: 1px solid transparent;
+  margin: auto auto 0;
+  padding: 0;
+  transition: .3s;
+}
+
+.popup-w__btn:hover {
+  color: #fc5959;
+  background: transparent;
+  border: 1px solid #fc5959;
+}
+
+@media screen and (max-width: 1366px) {
+  .popup-w {
+    width: 350px;
+    height: 450px;
+    padding: 90px 25px 60px 25px;
+  }
+
+  .popup-w__title {
+    font-size: 22px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+  }
+
+  .popup-w__btn {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .popup-w__square.square1 {
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .active + .popup-w {
+    bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup-w {
+    width: 300px;
+    height: 400px;
+    padding: 75px 25px 50px 25px;
+  }
+
+  .active + .popup-w {
+    bottom: 225px;
+  }
+
+  .popup-w__square.square1 {
+    top: -50px;
+  }
+
+  .popup-w__close {
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-w__title {
+    font-size: 18px;
+  }
+
+  .popup-w__text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-w__btn {
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+  }
+
+  .popup-w__title {
+    font-size: 24px;
+  }
+
+  .popup-w__text {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .popup-w__btn {
+    height: 40px;
+    font-size: 20px;
+    margin: 30px auto 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+</style>
+
+<script>
+$(function() {
+  $('.popup-w').on('click', function(e) {
+    $(this).addClass('hide');
+    $('body').removeClass('no-scroll');
+    document.cookie = "popupWhitepaper=true; path=/; max-age=2592000";
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=0";
+
+    if ( $(e.target).parents('.popup-w__close')[0] ) {
+      e.preventDefault();
+    }
+  });
+});
+
+let elemPopup;
+let elemPopupPosition;
+let elemPopupHeight;
+let elemPopupPositionEnd;
+
+if ( document.querySelector('#development') ) {
+  elemPopup = document.querySelector('#development');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else if ( document.querySelector('.decentralized') ) {
+  elemPopup = document.querySelector('.decentralized');
+  elemPopupPosition = elemPopup.offsetTop;
+  elemPopupHeight = elemPopup.offsetHeight;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+} else {
+  elemPopup = document.querySelector('body');
+  elemPopupPosition = elemPopup.offsetHeight * 0.7;
+  elemPopupHeight = 0;
+  elemPopupPositionEnd = elemPopupPosition + elemPopupHeight;
+}
+
+document.addEventListener('scroll', function() {
+  let currentPosition = document.querySelector('html').scrollTop;
+
+  if ( currentPosition >= elemPopupPositionEnd || document.cookie.indexOf('popupWhitepaperOpened') !== -1 ) {
+    $('.popup-w').addClass('show');
+    document.cookie = "popupWhitepaperOpened=true; path=/; max-age=2592000";
+
+    if ( window.matchMedia('(max-width: 767px)').matches && !$('.popup-w').hasClass('hide') ) {
+      $('body').addClass('no-scroll');
+    }
+  }
+});
+</script>
+
+
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)
+
+    jQuery(window).scroll(function () {
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && archivePage === false
+            && pageBlog === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+    });
+
+    jQuery(document).ready(function(){
+        const singleBlog = jQuery('body').hasClass('single-post');
+        const archivePage = jQuery('body').hasClass('archive');
+        const singleClients = jQuery('body').hasClass('single-clients');
+        const pageBlog = jQuery('body').hasClass('blog');
+        const pageCareers = jQuery('body').hasClass('post-type-archive-vacancies');
+        const pageCareersSingle = jQuery('body').hasClass('single-vacancies');
+        const pageClients = jQuery('body').hasClass('post-type-archive-clients');
+        const pageCategory = jQuery('body').hasClass('category');
+        if (jQuery(this).scrollTop() > 1 && singleBlog === false
+            && singleClients === false
+            && pageBlog === false
+            && archivePage === false
+            && pageClients === false
+            && pageCategory === false
+            && pageCareers === false
+            && pageCareersSingle === false) {
+            jQuery('#header').addClass('sticky');
+        } else {
+            if (singleBlog === false
+                && singleClients === false
+                && archivePage === false
+                && pageBlog === false
+                && pageClients === false
+                && pageCategory === false
+                && pageCareers === false
+                && pageCareersSingle === false) {
+                jQuery('#header').removeClass('sticky');
+            }
+        }
+
+        // Add red dot for parent li (active children) - on load page
+        $(".post-type-archive-clients .searchandfilter ul li.sf-field-taxonomy-clientcat ul li > ul > li, body.post-type-archive-vacancies .searchandfilter ul li.sf-field-taxonomy-vacancycat ul li > ul > li").each(function() {
+            const activeLabel = $(this).hasClass('sf-option-active');
+            if (activeLabel === true) {
+                jQuery(this).closest('li.sf-level-0').addClass('active-child');
+            }
+        });
+
+        // For drop-down cat-list (clients services)
+        jQuery('.post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>label, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>label').click(function(e) {
+            jQuery(this).toggleClass('active');
+            jQuery(this).closest('li').children('ul').stop().slideToggle(300);
+            e.preventDefault();
+            return false;
+        });
+
+        // Add red dot for parent li (active children)
+        $( ".post-type-archive-clients .searchandfilter>ul>li.sf-field-taxonomy-clientcat>ul>li>ul>li, body.post-type-archive-vacancies .searchandfilter>ul>li.sf-field-taxonomy-vacancycat>ul>li>ul>li" ).on( "change", function() {
+            const findActive = jQuery(this).closest('ul').find('input:checked').length;
+            if (findActive >= 1) {
+                jQuery(this).parent().closest('li').addClass('active-child');
+            } else {
+                jQuery(this).parent().closest('li').removeClass('active-child');
+            }
+        });
+    });
+
+    $('.wpcf7-form').on('wpcf7mailsent', function() {
+        $('.popup').fadeIn();
+        $('body').addClass('noscroll');
+    });
+
+    $('.popup__close, .popup__btn, .popup__wrapper').on('click', function() {
+        $('.popup').fadeOut();
+        $('body').removeClass('noscroll');
+    });
+
+    $('.wpcf7-form').on('submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', true);
+    });
+
+    $('.wpcf7-form').on('wpcf7submit', function() {
+      $(this).find( $('.wpcf7-submit') ).prop('disabled', false);
+    });
+
+    if ( $('.navigation').length ) {
+        var navHTML = '' +
+            '<p class="navigation__title">Table of Content</p>' +
+            '<ol class="navigation__list"></ol>';
+
+        $( navHTML ).appendTo( $('.navigation') );
+
+        var navNumber = 0;
+        var h2Number = 1;
+
+        $('.text h2, .text h3').each(function() {
+            $(this).attr({
+                id: navNumber
+            });
+            if ($(this).is('h2')) {
+                $('.navigation > .navigation__list').append(
+                    '<li class="navigation__item navigation__item_' + h2Number + '">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+                h2Number++;
+            } else {
+                if ( $('.navigation__item_' + (h2Number - 1)).children('ol').length === 0 ) {
+                    $('.navigation__item_' + (h2Number - 1)).append(
+                        '<ol class="navigation__list"></ol>'
+                    );
+                }
+                $('.navigation__item_' + (h2Number - 1)).children('ol').append(
+                    '<li class="navigation__item">' +
+                        '<a href="#' + navNumber + '" class="navigation__link">' +
+                            $(this).text() +
+                        '</a>' +
+                    '</li>'
+                );
+            }
+            navNumber++;
+        });
+
+        function resize() {
+            if ( $(window).width() >= 1201 ) {
+                $('.navigation').insertAfter( $('.info') );
+            } else {
+                $('.navigation').prependTo( $('.post-content .text') );
+            }
+        }
+
+        resize();
+
+        $(window).on('resize', function() {
+            resize();
+        });
+    }
+
+    $('.navigation').on('click', 'a', function (e) {
+        e.preventDefault();
+        var link = $(this).attr('href');
+        var top = $(link).offset().top - $('#header').height();
+        $('html').animate({scrollTop: top}, 1000);
+    });
+
+    function scriptsDefer(src) {
+      let script = document.createElement('script');
+      script.src = src;
+      script.async = false;
+      document.body.append(script);
+    }
+
+    document.addEventListener('scroll', load_script);
+    document.addEventListener('mousedown', load_script);
+    document.addEventListener('mousemove', load_script);
+    document.addEventListener('touchstart', load_script);
+    document.addEventListener('keydown', load_script);
+
+    function load_script() {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/lftracker.js');
+      scriptsDefer('../../../tools.luckyorange.com/core/lo4c35.js?site-id=f50de86c');
+      if (window.matchMedia('(max-width: 799px)').matches) {
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+        scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+      }
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/swiper.js');
+      scriptsDefer('../../../www.recaptcha.net/recaptcha/api3398.js?render=' + wpcf7_recaptcha.sitekey + '&#038;ver=3.0');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/recaptcha.js');
+
+      document.removeEventListener('scroll', load_script);
+      document.removeEventListener('mousedown', load_script);
+      document.removeEventListener('mousemove', load_script);
+      document.removeEventListener('touchstart', load_script);
+      document.removeEventListener('keydown', load_script);
+    }
+
+    if (window.matchMedia('(min-width: 800px)').matches) {
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/libs.js');
+      scriptsDefer('../../wp-content/themes/blaize-tech/assets/js/core.min.js');
+    }
+</script>
+
+<script>
+    function countDigits(n) {
+        let i;
+        for(i = 0; n > 1; i++) {
+            n /= 10;
+        }
+        return i;
+    }
+
+    jQuery('.wpcf7-form').submit(function(){
+        const form = jQuery(this);
+        const countryCode = form.find('.custom-select .phoneInput .selected-dial-code').text();
+        const contactName = form.find('.custom-select .active-feed-field .label-title').text();
+        form.find('.userCountryCode').val(countryCode);
+        form.find('.userContactName').val(contactName);
+
+        const userContactVal = form.find('input.userContact').val();
+
+        if (userContactVal === '') {
+            form.find('.select-box .trigger').addClass('not-valid');
+            return false;
+        }
+    });
+
+    var timer;
+
+    function trackLeave(ev) {
+        if (ev.pageY > 0) {
+            return;
+        }
+
+        if (timer) {
+            clearTimeout(timer);
+        }
+
+        if ($.exitIntent.settings.sensitivity <= 0) {
+            $.event.trigger('exitintent');
+            return;
+        }
+
+        timer = setTimeout(
+            function() {
+                timer = null;
+                $.event.trigger('exitintent');
+            }, $.exitIntent.settings.sensitivity);
+    }
+
+    function trackEnter() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+    }
+
+    $.exitIntent = function(enable, options) {
+        $.exitIntent.settings = $.extend($.exitIntent.settings, options);
+
+        if (enable === 'enable') {
+            $(window).mouseleave(trackLeave);
+            $(window).mouseenter(trackEnter);
+        } else if (enable === 'disable') {
+            trackEnter(); // Turn off any outstanding timer
+            $(window).unbind('mouseleave', trackLeave);
+            $(window).unbind('mouseenter', trackEnter);
+        } else {
+            throw "Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";
+        }
+    }
+
+    $.exitIntent.settings = {
+        'sensitivity': 300
+    };
+
+    jQuery('.exitModal-close').click(function () {
+        jQuery('#exitPopup').removeClass('active');
+        jQuery('#exitPopup').addClass('closed-modal');
+    });
+
+    jQuery(function() {
+        jQuery.exitIntent('enable');
+        jQuery(document).bind('exitintent', function() {
+            if (jQuery("#exitPopup").hasClass("closed-modal")) {
+                //
+            } else {
+                jQuery("#exitPopup").addClass("active");
+                jQuery("#exitPopup").addClass("opened-modal");
+            }
+        });
+    });
+
+    (function () {
+        const t = jQuery(".exitModal-popup");
+        t.find(".exitModal-close").on("click", function () {
+            jQuery( 'body' ).toggleClass( 'active-modal' );
+            localStorage.setItem("Blaize_exit_popup", "closed"), t.addClass("closed-modal");
+        }),
+            "closed" === localStorage.getItem("Blaize_exit_popup") ? (t.addClass("closed-modal")) : t.addClass("show-modal");
+    })();
+
+    let box = document.querySelector("#preloader");
+
+    function fadeOut() {
+        box.classList.add("visuallyhidden");
+        box.addEventListener(
+            "transitionend",
+            function (e) {
+                box.classList.add("hidden");
+            },
+            {
+                capture: false,
+                once: true,
+                passive: false
+            }
+        );
+    }
+
+    (function($) {
+        $(function() {
+            $(".userContact").intlTelInput({
+                autoPlaceholder: "off",
+                geoIpLookup: function(callback) {
+                  $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    callback(countryCode);
+                  });
+                },
+                hiddenInput: "full_number",
+                initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                separateDialCode: true,
+                // utilsScript: "assets/nb_intl/js/utils.js"
+            });
+        });
+    })(jQuery);
+</script>
+
+<link rel="preload" href="../../wp-content/themes/blaize-tech/assets/nb_intl/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0a02c653bc51442fac3378bc1fc85895","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from blaize.tech/blog/build-a-blockchain-game-infrastructure/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Nov 2025 15:39:21 GMT -->
+</html>
